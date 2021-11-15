@@ -313,7 +313,7 @@ function LandingPage() {
                   </div>
                   <div className="allocation__row">
                     <span className="allocation__label cgray">Required Staked Tokens</span>
-                    <span className="allocation__value">25.000 $TRIBEX</span>
+                    <span className="allocation__value">2.500 $TRIBEX</span>
                   </div>
                   <div className="allocation__row">
                     <span className="allocation__label cgray">Odds Ratios</span>
@@ -332,7 +332,7 @@ function LandingPage() {
                   </div>
                   <div className="allocation__row">
                     <span className="allocation__label cgray">Required Staked Tokens</span>
-                    <span className="allocation__value">175.000 $TRIBEX</span>
+                    <span className="allocation__value">17.500 $TRIBEX</span>
                   </div>
                   <div className="allocation__row">
                     <span className="allocation__label cgray">Odds Ratios</span>
@@ -351,7 +351,7 @@ function LandingPage() {
                   </div>
                   <div className="allocation__row">
                     <span className="allocation__label cgray">Required Staked Tokens</span>
-                    <span className="allocation__value">500.000 $TRIBEX</span>
+                    <span className="allocation__value">50.000 $TRIBEX</span>
                   </div>
                   <div className="allocation__row">
                     <span className="allocation__label cgray">Odds Ratios</span>
