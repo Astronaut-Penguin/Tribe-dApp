@@ -1,2 +1,7 @@
-# Tribe-dApp
- dApp for tribe core contracts
+# Tribe
+
+## Steps to install
+
+### `npm i`
+
+### `npm start`
