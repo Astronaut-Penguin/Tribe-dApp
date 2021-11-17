@@ -46,20 +46,28 @@ function Sidebar(props) {
 
 				<nav>
 					<ul className="Sidebar_items__1Hqtp">
-						{/* <li className="Sidebar_item__rJc2e">
-                            <NavLink className="Sidebar_link__3B0JM" to="/dashboard/celebrity-nfts" activeClassName="Sidebar_link__3B0JM_active" onClick={() => props.getToggleStatus(false)}>
-                                <span className="Sidebar_icon__2uqhU">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.55 23.66">
-                                        <path d="M18.82,3.05l-.89.13a12.64,12.64,0,0,0-7.19,3.59l-.58.58S7.22,6,3.24,8.53a.55.55,0,0,0,.1,1l3.42,1.24-.3.3a1,1,0,0,0,0,1.42l4.68,4.68a1,1,0,0,0,1.41,0l.31-.3,1.24,3.42a.55.55,0,0,0,1,.1c2.52-4,1.18-6.93,1.18-6.93l.58-.57a12.76,12.76,0,0,0,3.59-7.2l.13-.89A1.53,1.53,0,0,0,18.82,3.05Zm-2.71,6.5a1.46,1.46,0,0,1-2,0,1.45,1.45,0,1,1,2,0Z" />
-                                        <path
-                                            className="cls-1"
-                                            d="M8,15.59H8a1.86,1.86,0,0,1-.62,3L3.35,20.26,5,16.21A1.86,1.86,0,0,1,8,15.59Z"
-                                        />
-                                    </svg>
-                                </span>
-                                Celebrity NFTs
-                            </NavLink>
-                        </li> */}
+						<li className="Sidebar_item__rJc2e">
+							<NavLink
+								className="Sidebar_link__3B0JM"
+								to="/dashboard/celebrity-nfts"
+								activeClassName="Sidebar_link__3B0JM_active"
+								onClick={() => props.getToggleStatus(false)}
+							>
+								<span className="Sidebar_icon__2uqhU">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 23.55 23.66"
+									>
+										<path d="M18.82,3.05l-.89.13a12.64,12.64,0,0,0-7.19,3.59l-.58.58S7.22,6,3.24,8.53a.55.55,0,0,0,.1,1l3.42,1.24-.3.3a1,1,0,0,0,0,1.42l4.68,4.68a1,1,0,0,0,1.41,0l.31-.3,1.24,3.42a.55.55,0,0,0,1,.1c2.52-4,1.18-6.93,1.18-6.93l.58-.57a12.76,12.76,0,0,0,3.59-7.2l.13-.89A1.53,1.53,0,0,0,18.82,3.05Zm-2.71,6.5a1.46,1.46,0,0,1-2,0,1.45,1.45,0,1,1,2,0Z" />
+										<path
+											className="cls-1"
+											d="M8,15.59H8a1.86,1.86,0,0,1-.62,3L3.35,20.26,5,16.21A1.86,1.86,0,0,1,8,15.59Z"
+										/>
+									</svg>
+								</span>
+								Celebrity NFTs
+							</NavLink>
+						</li>
 						<li className="Sidebar_item__rJc2e Sidebar_itemActive__11Rxt">
 							<NavLink
 								className="Sidebar_link__3B0JM"
