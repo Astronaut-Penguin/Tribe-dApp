@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./StackingCard.css";
 import smallMepad from "../../images/tribe_pool.png";
+import smallBusd from "../../images/busd.png";
 import * as RiIcons from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
 import { IoMdClose } from "react-icons/io";
@@ -151,8 +152,10 @@ function StackingCard(props) {
             </div>
           </div>
         </div>
+        {APR !== 0 &&(
         <div className="staking-card-second-div">
           <div className="staking-text-2">
+            
             <div>APY:</div>
 
             <div
@@ -163,10 +166,12 @@ function StackingCard(props) {
                 <CountUp duration={1} end={APR} />%
               </span>
             </div>
+            
           </div>
         </div>
+        )}
 
-        {connected ? (
+        {connected === true && stakeDetails.symbol !== "TRIBEX-BUSD LP" &&(
           <div className="staking-card-third-div">
             <div className="staking-text-3">
               <div>{stakeDetails.symbol} Earned</div>
@@ -196,17 +201,21 @@ function StackingCard(props) {
               {/* Cannot calculate price of a token on testnet because pancakeswap only recognizes tokens on mainnet */}
             </div>
           </div>
-        ) : (
+        ) }
+      {!connected && (
           <div className="staking-card-third-div">
             <div className="staking-text-3">
               <div>{stakeDetails.beforeUnlockBtnText}</div>
             </div>
           </div>
-        )}
+        ) }
+     
 
         {!stakeDetails.isCompleted && stakeDetails.enabled ? (
           <div className="staking-card-third-div">
             <div className="staking-text-3">
+            <div style={{
+            }}/>
               <div>{stakeDetails.symbol} Staked</div>
               <div className="staking-num-and-btns">
                 <div>
@@ -499,7 +508,7 @@ function StackingCard(props) {
           <>
             <div className="staking-card-sixth-div">
               <div className="staking-text-4">
-                <div>Total TRIBEX staked:</div>
+                <div>Total staked:</div>
                 <div
                   className={`staking-text-4-last-child ${stakeDetails.totalStakingTokens === 0 &&
                     "staking-text-4-last-child-non-valued"

@@ -1,14 +1,15 @@
 import memepad from "./memepad.json";
 // import smallElon from "../../../images/smallElon.png";
 import smallMepad from "../../../images/tribe_pool.png";
+import smallBusd from "../../../images/busd.png";
 
-export const stakeIds = ["mepad2"];
+export const stakeIds = ["mepad2","mepad3"];
 
 //Initial values of the stake, used when metamask is not connected.
 //When metamask is connected, these values will update based on the contract.
 
-const subTitle = <span>Stake TRIBEX, Earn TRIBEX. <br /> Earn your Allocation</span>
-const subTitleFixedTerm = <span>"Freeze your TRIBEX for 90 days <br /> & earn 2x Reward + allocation.</span>
+const subTitleLP = <span>Stake your TRIBEX BUSD LP, <br /> Lock 30 days & Receive an NFT</span>
+const subTitleFixedTerm = <span>Lock your TRIBEX for 90 days <br /> & Earn Reward + Double Allocation.</span>
 
 export const stakingState = {
   mepadTokenContract: null,
@@ -27,6 +28,21 @@ export const stakingState = {
     subTitle: subTitleFixedTerm, //Constant, not affected by metamask
     symbol: "TRIBEX", //Constant, not affected by metamask
     isCompleted: false, //This value got fetched from contract and became false eventually
-    beforeUnlockBtnText: 'Freeze 90 days = 2x Reward + Allocation',
+    beforeUnlockBtnText: 'Lock 90 days = Reward + Double Allocation',
+  },
+  mepad3: {
+    stakingContract: null,
+    enabled: false,
+    pendingReward: 0,
+    stakedAmount: 0,
+    rewardPerYear: 0,
+    totalStakingTokens: 0,
+    stakingUrl: memepad.prefix + memepad.mepad3.stakingAddress + "#code", //Constant, not affected by metamask
+    image: smallBusd, //Constant, not affected by metamask
+    title: "Liquidity Farming: NFT Airdrops", //Constant, not affected by metamask
+    subTitle: subTitleLP, //Constant, not affected by metamask
+    symbol: "TRIBEX-BUSD LP", //Constant, not affected by metamask
+    isCompleted: false, //This value got fetched from contract and became false eventually
+    beforeUnlockBtnText: 'Top 10 LP will receive a FREE NFT',
   },
 };
