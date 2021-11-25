@@ -46,9 +46,25 @@
 
 .celebrity-artist-data {
 	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 	width: 100%;
 	min-height: calc(100vh - 295px);
-	justify-content: center;
+	align-items: center;
+}
+
+/************************************/
+
+.celebrity-artist-info-container {
+	display: flex;
+	width: 100%;
+	max-width: 1200px;
+	height: 88px;
+
+	margin-bottom: 68px;
+
+	justify-content: left;
+	align-items: center;
 }
 
 .celebrity-image {
@@ -63,16 +79,6 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-}
-
-.celebrity-artist-info-container {
-	display: flex;
-	width: 100%;
-	max-width: 1200px;
-	height: 88px;
-
-	justify-content: left;
-	align-items: center;
 }
 
 .celebrity-name {
@@ -137,4 +143,17 @@
 	transition-property: color, border;
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in;
+}
+
+/************************************/
+
+.celebrity-nft-container {
+	display: flex;
+	width: 100%;
+	max-width: 1200px;
+	min-height: calc(100vh - 440px);
+
+	justify-content: left;
+	align-items: center;
+	background-color: red;
 }
