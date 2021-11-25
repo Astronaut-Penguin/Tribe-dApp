@@ -41,6 +41,7 @@ const CelebrityView = () => {
 						</div>
 					</div>
 				</div>
+				<div className="celebrity-nft-container"></div>
 			</div>
 		</section>
 	);
