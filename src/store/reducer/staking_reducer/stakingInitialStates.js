@@ -13,6 +13,7 @@ const subTitleFixedTerm = <span>Lock your TRIBEX for 90 days <br /> & Earn Rewar
 
 export const stakingState = {
   mepadTokenContract: null,
+  lpTokenContract: null,
   decimals: 18,
   mepadTokens: 0,
   mepad2: {
@@ -21,6 +22,7 @@ export const stakingState = {
     pendingReward: 0,
     stakedAmount: 0,
     rewardPerYear: 0,
+    lpTokens: false,
     totalStakingTokens: 0,
     stakingUrl: memepad.prefix + memepad.mepad2.stakingAddress + "#code", //Constant, not affected by metamask
     image: smallMepad, //Constant, not affected by metamask
@@ -36,6 +38,7 @@ export const stakingState = {
     pendingReward: 0,
     stakedAmount: 0,
     rewardPerYear: 0,
+    lpTokens: false,
     totalStakingTokens: 0,
     stakingUrl: memepad.prefix + memepad.mepad3.stakingAddress + "#code", //Constant, not affected by metamask
     image: smallBusd, //Constant, not affected by metamask

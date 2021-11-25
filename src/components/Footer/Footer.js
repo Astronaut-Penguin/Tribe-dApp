@@ -7,7 +7,7 @@ function Footer() {
             <div className='footer-div-1'>
             </div>
             <div className='footer-div-2'>
-                <a href="https://www.saleheennoor.com" target="_blank" rel="noreferrer">2021 Developed by Saleheen Noor.</a>
+                <a href="https://www.saleheennoor.com" target="_blank" rel="noreferrer">2021 Developed with love by Tribe Devs.</a>
             </div>
         </footer>
     )

@@ -94,7 +94,7 @@ function SidebarNew(props) {
                     </ul>
                 </nav>
                 <div className="Sidebar_bottom__3eeR3">
-                    <a href="https://pancakeswap.finance/swap#/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af" target='_blank' rel='noreferrer'>
+                    <a href="https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af" target='_blank' rel='noreferrer'>
                         <div className="pancakse-swap">
                             <div>
                                 <img src={PancakeSwap} alt="Pancake Swap" />
@@ -187,7 +187,7 @@ function SidebarNew(props) {
                         </li>
                         <li>
                             <a
-                                href="https://pancakeswap.finance/swap#/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af"
+                                href="https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af"
                                 target="_blank"
                                 rel="noreferrer"
                             >

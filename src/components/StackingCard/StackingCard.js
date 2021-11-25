@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./StackingCard.css";
 import smallMepad from "../../images/tribe_pool.png";
-import smallBusd from "../../images/busd.png";
 import * as RiIcons from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
 import { IoMdClose } from "react-icons/io";
@@ -13,11 +12,13 @@ import Fade from "@material-ui/core/Fade";
 import Slider from "@material-ui/core/Slider";
 import CountUp from "react-countup";
 import {
+  approveLpTokens,
   approveMepadTokens,
   stakeMepad,
   withdrawAndCollectReward,
 } from "../../store/reducer/staking_reducer";
 import { useSnackbar } from "notistack";
+
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -128,9 +129,12 @@ function StackingCard(props) {
     2
   );
 
-  const modalValues =
+  let modalValues =
     showStakingModal === "Stake" ? mepadTokens : stakeDetails.stakedAmount;
 
+    if(showStakingModal === "Stake" && mepadTokens < 0 ) modalValues = 0; // if the user has less than 0.01 tokens in fetching will be 0
+
+    console.log(stakeDetails.lpTokens)
 
   return (
     <div className="staking-card-main">
@@ -211,7 +215,7 @@ function StackingCard(props) {
         ) }
      
 
-        {!stakeDetails.isCompleted && stakeDetails.enabled ? (
+        {!stakeDetails.isCompleted && (stakeDetails.enabled | stakeDetails.lpTokens) ? (
           <div className="staking-card-third-div">
             <div className="staking-text-3">
             <div style={{
@@ -257,6 +261,7 @@ function StackingCard(props) {
                 onClick={
                   connected
                     ? () => {
+                      stakeDetails.symbol === "TRIBEX-BUSD LP" ?  dispatch(approveLpTokens(props.stakeId)) :
                       dispatch(approveMepadTokens(props.stakeId));
                     }
                     : () => {
@@ -407,7 +412,7 @@ function StackingCard(props) {
                             value={rangeValue}
                             onChange={(e) => {
                               let val = e.target.value;
-                              if (Number(val) > modalValues)
+                              if (Number(val) > modalValues && stakeDetails.symbol !== "TRIBEX-BUSD LP")
                                 val = modalValues
                               else if (Number(val) < 0) val = 0;
                               setRangeValue(Number(val));
@@ -415,9 +420,11 @@ function StackingCard(props) {
                           />
                         </div>
                       </div>
+                      {stakeDetails.symbol!=="TRIBEX-BUSD LP" &&(
                       <div className="unstake-modal-content-div-3">
                         <div className="umc5">Balance: {fixDecimals(modalValues, 3)}</div>
-                      </div>
+                      </div>)}
+                      {stakeDetails.symbol!=="TRIBEX-BUSD LP"&&(
                       <div className="unstake-modal-content-div-4">
                         <div className="umc6">
                           <div>{fixDecimals(rangeValue, 3)}</div>
@@ -429,7 +436,8 @@ function StackingCard(props) {
                             max={modalValues}
                           />
                         </div>
-                      </div>
+                      </div>)}
+                      {stakeDetails.symbol!=="TRIBEX-BUSD LP"&&(
                       <div className="unstake-modal-content-div-5">
                         <button
                           onClick={() => setRangeValue(0.25 * modalValues)}
@@ -450,6 +458,7 @@ function StackingCard(props) {
                           MAX
                         </button>
                       </div>
+                      )}
                       <div className="unstake-modal-content-div-6">
                         <button
                           disabled={rangeValue === 0 ? true : false}
