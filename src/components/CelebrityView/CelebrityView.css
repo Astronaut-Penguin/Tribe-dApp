@@ -1,0 +1,159 @@
+/*Container*/
+.celebrity-container {
+	display: inline-block;
+	width: 100%;
+	min-height: calc(100vh - 121px);
+
+	padding: 35px;
+	text-align: center;
+}
+
+/************************************/
+
+/*Nav History section*/
+.celebrity-story {
+	display: inline-block;
+	width: 100%;
+	max-width: 1200px;
+	height: 50px;
+
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: -0.017em;
+	text-align: left;
+
+	margin-bottom: 40px;
+}
+
+.celebrity-story a {
+	color: #868686;
+}
+
+.celebrity-story a:hover {
+	color: #13cfff;
+}
+
+.celebrity-story p {
+	display: inline-block;
+	margin: 0px 6px 0px 6px;
+}
+
+.celebrity-story p:hover {
+	cursor: default;
+}
+
+/************************************/
+
+.celebrity-artist-data {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	min-height: calc(100vh - 295px);
+	align-items: center;
+}
+
+/************************************/
+
+.celebrity-artist-info-container {
+	display: flex;
+	width: 100%;
+	max-width: 1200px;
+	height: 88px;
+
+	margin-bottom: 68px;
+
+	justify-content: left;
+	align-items: center;
+}
+
+.celebrity-image {
+	display: inline-block;
+	width: 88px;
+	height: 88px;
+
+	margin-right: 11px;
+
+	border-radius: 9px;
+	background-image: url(./assets/facha.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.celebrity-name {
+	display: inline-block;
+	text-align: left;
+}
+
+.celebrity-name h2 {
+	display: inline-block;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 24px;
+	margin-right: 10px;
+}
+
+.celebrity-name h3 {
+	display: inline-block;
+	color: #868686;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 18px;
+}
+
+.celebrity-social {
+	display: inline-block;
+	width: 73px;
+	height: 25px;
+	text-align: center;
+	margin-right: 7px;
+
+	color: #868686;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 16px;
+	padding-top: 4px;
+
+	border: 1px solid #868686;
+	box-sizing: border-box;
+	border-radius: 6px;
+
+	transition-property: color, border;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in;
+}
+
+.celebrity-social:hover {
+	color: white;
+	background-image: linear-gradient(
+		to right,
+		rgb(255, 1, 126),
+		rgb(169, 1, 250),
+		rgb(3, 238, 254)
+	);
+	border: 1px solid white;
+
+	transition-property: color, border;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in;
+}
+
+/************************************/
+
+.celebrity-nft-container {
+	display: flex;
+	width: 100%;
+	max-width: 1200px;
+	min-height: calc(100vh - 440px);
+
+	justify-content: left;
+	align-items: center;
+	background-color: red;
+}

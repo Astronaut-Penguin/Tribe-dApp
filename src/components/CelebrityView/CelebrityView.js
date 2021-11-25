@@ -6,25 +6,44 @@ import threeCharacters from '../../images/three_characters.png';
 import { Col, Container, Row } from 'react-bootstrap';
 
 //- Style Imports
-import styles from './CelebrityView';
+import './CelebrityView.css';
 
-const CelebrityView = (props) => {
+const CelebrityView = () => {
 	return (
-		<div className="staking-wrapper">
-			<div className="project-banner-container">
-				<div className="banner-container-content">
-					<div>
-						<h2>TRIBE Staking Pools</h2>
-						<p>Get rewarded by staking (or freezing) your $TRIBEX</p>
-					</div>
-					<div className="banner-img">
-						<img src={threeCharacters} alt=" Three Characters" />
-					</div>
-				</div>
+		<section className="celebrity-container">
+			<div className="celebrity-story">
+				{/*<a href="">Celebrity NFTs</a>*/}
+				<p style={{ color: '#868686' }}>Celebrity NFTs</p>
+				<p>&gt;</p>
+				<p>Alejo Viola</p>
 			</div>
 
-			<div className="staking-cards-container"></div>
-		</div>
+			<div className="celebrity-artist-data">
+				<div className="celebrity-artist-info-container">
+					<div className="celebrity-image"></div>
+					<div className="celebrity-name">
+						<h2>Alejo Viola</h2>
+						<h3>@AlejoViola</h3>
+
+						<div>
+							<a href="" className="celebrity-social">
+								Twitter
+							</a>
+							<a href="" className="celebrity-social">
+								Instagram
+							</a>
+							<a href="" className="celebrity-social">
+								Youtube
+							</a>
+							<a href="" className="celebrity-social">
+								TikTok
+							</a>
+						</div>
+					</div>
+				</div>
+				<div className="celebrity-nft-container"></div>
+			</div>
+		</section>
 	);
 };
 
