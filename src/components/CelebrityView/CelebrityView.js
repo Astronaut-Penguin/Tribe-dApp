@@ -41,7 +41,112 @@ const CelebrityView = () => {
 						</div>
 					</div>
 				</div>
-				<div className="celebrity-nft-container"></div>
+				<div className="celebrity-nft-container">
+					<div className="celebrity-nft-card">
+						<div className="celebrity-nft-image" src="" alt="" />
+						<div className="celebrity-nft-data-container">
+							<div className="celebrity-nft-data">
+								<h3>Alejo Viola T-1 #0001</h3>
+								<h2>Alejo Aldeano NFT</h2>
+							</div>
+							<div className="celebrity-nft-price">
+								<h4>Price</h4>
+								<h5>0,50 BNB</h5>
+							</div>
+						</div>
+					</div>
+					<div className="celebrity-nft-card">
+						<div className="celebrity-nft-image" src="" alt="" />
+						<div className="celebrity-nft-data-container">
+							<div className="celebrity-nft-data">
+								<h3>Alejo Viola T-1 #0001</h3>
+								<h2>Alejo Aldeano NFT</h2>
+							</div>
+							<div className="celebrity-nft-price">
+								<h4>Price</h4>
+								<h5>0,50 BNB</h5>
+							</div>
+						</div>
+					</div>
+					<div className="celebrity-nft-card">
+						<div className="celebrity-nft-image" src="" alt="" />
+						<div className="celebrity-nft-data-container">
+							<div className="celebrity-nft-data">
+								<h3>Alejo Viola T-1 #0001</h3>
+								<h2>Alejo Aldeano NFT</h2>
+							</div>
+							<div className="celebrity-nft-price">
+								<h4>Price</h4>
+								<h5>0,50 BNB</h5>
+							</div>
+						</div>
+					</div>
+					<div className="celebrity-nft-card">
+						<div className="celebrity-nft-image" src="" alt="" />
+						<div className="celebrity-nft-data-container">
+							<div className="celebrity-nft-data">
+								<h3>Alejo Viola T-1 #0001</h3>
+								<h2>Alejo Aldeano NFT</h2>
+							</div>
+							<div className="celebrity-nft-price">
+								<h4>Price</h4>
+								<h5>0,50 BNB</h5>
+							</div>
+						</div>
+					</div>
+					<div className="celebrity-nft-card">
+						<div className="celebrity-nft-image" src="" alt="" />
+						<div className="celebrity-nft-data-container">
+							<div className="celebrity-nft-data">
+								<h3>Alejo Viola T-1 #0001</h3>
+								<h2>Alejo Aldeano NFT</h2>
+							</div>
+							<div className="celebrity-nft-price">
+								<h4>Price</h4>
+								<h5>0,50 BNB</h5>
+							</div>
+						</div>
+					</div>
+					<div className="celebrity-nft-card">
+						<div className="celebrity-nft-image" src="" alt="" />
+						<div className="celebrity-nft-data-container">
+							<div className="celebrity-nft-data">
+								<h3>Alejo Viola T-1 #0001</h3>
+								<h2>Alejo Aldeano NFT</h2>
+							</div>
+							<div className="celebrity-nft-price">
+								<h4>Price</h4>
+								<h5>0,50 BNB</h5>
+							</div>
+						</div>
+					</div>
+					<div className="celebrity-nft-card">
+						<div className="celebrity-nft-image" src="" alt="" />
+						<div className="celebrity-nft-data-container">
+							<div className="celebrity-nft-data">
+								<h3>Alejo Viola T-1 #0001</h3>
+								<h2>Alejo Aldeano NFT</h2>
+							</div>
+							<div className="celebrity-nft-price">
+								<h4>Price</h4>
+								<h5>0,50 BNB</h5>
+							</div>
+						</div>
+					</div>
+					<div className="celebrity-nft-card">
+						<div className="celebrity-nft-image" src="" alt="" />
+						<div className="celebrity-nft-data-container">
+							<div className="celebrity-nft-data">
+								<h3>Alejo Viola T-1 #0001</h3>
+								<h2>Alejo Aldeano NFT</h2>
+							</div>
+							<div className="celebrity-nft-price">
+								<h4>Price</h4>
+								<h5>0,50 BNB</h5>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 	);
