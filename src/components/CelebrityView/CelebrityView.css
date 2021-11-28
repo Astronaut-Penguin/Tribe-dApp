@@ -1,3 +1,7 @@
+/****************/
+/* MOBILE FIRST */
+/****************/
+
 /*Container*/
 .celebrity-container {
 	display: inline-block;
@@ -61,7 +65,7 @@
 	max-width: 1000px;
 	height: 88px;
 
-	margin-bottom: 42px;
+	margin: 0px 0px 42px 0px;
 
 	justify-content: left;
 	align-items: center;
@@ -108,10 +112,12 @@
 
 .celebrity-social {
 	display: inline-block;
-	width: 73px;
-	height: 25px;
+	width: 30px;
+	height: 30px;
 	text-align: center;
-	margin-right: 7px;
+	margin-right: 12px;
+
+	text-indent: -9999px;
 
 	color: #868686;
 	font-family: Lato;
@@ -121,7 +127,11 @@
 	line-height: 16px;
 	padding-top: 4px;
 
-	border: 1px solid #868686;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	border: none;
 	box-sizing: border-box;
 	border-radius: 6px;
 
@@ -130,22 +140,25 @@
 	transition-timing-function: ease-in;
 }
 
-.celebrity-social:hover {
-	color: white;
-	background-image: linear-gradient(
-		to right,
-		rgb(255, 1, 126),
-		rgb(169, 1, 250),
-		rgb(3, 238, 254)
-	);
-	border: 1px solid white;
+.social-twitter {
+	background-image: url(./assets/Twitter.png);
+}
 
-	transition-property: color, border;
-	transition-duration: 0.2s;
-	transition-timing-function: ease-in;
+.social-instagram {
+	background-image: url(./assets/Instagram.png);
+}
+
+.social-youtube {
+	background-image: url(./assets/YouTube.png);
+}
+
+.social-tiktok {
+	background-image: url(./assets/Tiktok.png);
 }
 
 /************************************/
+
+/* CARDS */
 
 .celebrity-nft-container {
 	display: inline-block;
@@ -153,15 +166,16 @@
 	max-width: 1026px;
 	min-height: calc(100vh - 440px);
 
-	text-align: left;
+	text-align: center;
 }
 
 .celebrity-nft-card {
 	display: inline-block;
-	width: calc(25% - 26px);
+	width: 100%;
 	height: 370px;
 
-	margin: 13px;
+	margin: 13px 0px 13px 0px;
+
 	box-sizing: border-box;
 
 	overflow: hidden;
@@ -169,12 +183,12 @@
 	background-color: white;
 	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
 
-	transition: transform 0.3s ease-in;
+	transition: transform 0.2s ease-in;
 }
 
 .celebrity-nft-card:hover {
 	transform: scale(1.05);
-	transition: transform 0.1s ease-in;
+	transition: transform 0.3s ease-in;
 }
 
 .celebrity-nft-image {
@@ -186,9 +200,9 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
 
-/************************************/
+	position: relative;
+}
 
 .celebrity-nft-data-container {
 	display: flex;
@@ -199,8 +213,11 @@
 
 .celebrity-nft-data {
 	display: flex;
+	width: 65%;
 	flex-direction: column;
 	justify-content: center;
+
+	text-align: left;
 }
 
 .celebrity-nft-data h3 {
@@ -226,6 +243,7 @@
 
 .celebrity-nft-price {
 	display: flex;
+	width: 35%;
 	flex-direction: column;
 	justify-content: center;
 }
@@ -248,4 +266,174 @@
 	font-size: 15px;
 	line-height: 18px;
 	text-align: right;
+
+	background: linear-gradient(
+		to right,
+		rgb(255, 1, 126),
+		rgb(169, 1, 250),
+		rgb(3, 238, 254)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.celebrity-nft-buy {
+	width: 126px;
+	height: 35px;
+
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+
+	padding: 0px;
+
+	justify-content: center;
+
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 14px;
+	line-height: 17px;
+
+	border-radius: 4px;
+	color: white;
+	background-image: linear-gradient(
+		to right,
+		rgb(255, 1, 126),
+		rgb(169, 1, 250),
+		rgb(3, 238, 254)
+	);
+	border: none;
+
+	transition: transform 0.2s ease-in;
+}
+
+.celebrity-nft-buy p {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.celebrity-nft-buy p:hover {
+	background: linear-gradient(
+		to right,
+		rgb(255, 1, 126),
+		rgb(169, 1, 250),
+		rgb(3, 238, 254)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.celebrity-nft-buy:hover {
+	transform: scale(1.1);
+	background: none;
+	border: none;
+	background-image: url(./assets/Asset\ 22-8\ 1.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/***************/
+/* TABLET MODE */
+/***************/
+
+/* TABLET */
+
+@media only screen and (min-width: 480px) and (max-width: 899px) {
+	.celebrity-artist-info-container {
+		margin: 0px 0px 42px 30px;
+	}
+
+	/* CARDS */
+	.celebrity-nft-container {
+		text-align: left;
+	}
+
+	.celebrity-nft-card {
+		width: calc(50% - 26px);
+		margin: 13px;
+	}
+}
+
+/********/
+/* 	PC  */
+/********/
+
+/* PC SMALL */
+
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+	.celebrity-artist-info-container {
+		margin: 0px 0px 42px 30px;
+	}
+
+	/* CARDS */
+	.celebrity-nft-container {
+		text-align: left;
+	}
+
+	.celebrity-nft-card {
+		width: calc(33% - 26px);
+		margin: 13px;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	/* SOCIAL */
+	.celebrity-social {
+		width: 73px;
+		height: 25px;
+		margin-right: 7px;
+		text-indent: 0px;
+		background-image: none;
+
+		border: 1px solid #868686;
+	}
+
+	.celebrity-social:hover {
+		color: white;
+		background-image: linear-gradient(
+			to right,
+			rgb(255, 1, 126),
+			rgb(169, 1, 250),
+			rgb(3, 238, 254)
+		);
+		border: 1px solid white;
+
+		transition-property: color, border;
+		transition-duration: 0.2s;
+		transition-timing-function: ease-in;
+	}
+
+	/*******************************************/
+
+	/* CARD */
+	/* BUY BUTTON */
+	.celebrity-nft-buy {
+		width: 70px;
+		height: 22px;
+	}
+}
+
+/* PC */
+
+@media only screen and (min-width: 1200px) {
+	.celebrity-artist-info-container {
+		margin: 0px 0px 42px 0px;
+	}
+
+	/* CARDS */
+	.celebrity-nft-container {
+		text-align: left;
+	}
+
+	.celebrity-nft-card {
+		width: calc(25% - 26px);
+		margin: 13px;
+	}
 }
