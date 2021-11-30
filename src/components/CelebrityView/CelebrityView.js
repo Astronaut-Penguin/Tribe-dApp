@@ -1,60 +1,111 @@
 //- React Imports
-import React from 'react';
-import threeCharacters from '../../images/three_characters.png';
-
-//- Bootstrap
-import { Col, Container, Row } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
 
 //- Style Imports
 import './CelebrityView.css';
 
+//- Components Imports
+import CardNFT from '../Cards/CardNFT/CardNFT';
+import BuyModal from '../BuyModal/BuyModal';
+
+//8888888888888888888888888888888888888888888888888888888//
+
+//- DATOS DEL ARTISTA
+const artist = {
+	//Nombre del Artista
+	name: 'Alejo Viola',
+	//Usuario del Artista
+	user: '@AlejoViola',
+	//URL redes sociales
+	twitter: '',
+	instagram: '',
+	youtube: '',
+	tiktok: '',
+};
+
+//- DATOS DE NFTS
+const nfts = [
+	{
+		name: 'Alejo Aldeano NFT',
+		colection: 'Alejo T-0 #0001',
+		image: './assets/nft/nft1.png',
+		price: '0.5',
+	},
+	{
+		name: 'Alejo Aldeano 2 NFT',
+		colection: 'Alejo T-0 #0001',
+		image: './assets/nft/nft1.png',
+		price: '1',
+	},
+	{
+		name: 'Alejo Aldeano 3 NFT',
+		colection: 'Alejo T-0 #0001',
+		image: './assets/nft/nft1.png',
+		price: '34',
+	},
+];
+
+//8888888888888888888888888888888888888888888888888888888//
+
 const CelebrityView = () => {
+	//- Variable que define si el Modal de Purchase se muestra o no.
+	const [modal, showModal] = useState(false);
+
+	//- Variable que define cual NFT se muestra en el modal de Purchase.
+	const [selectedArtist, selectArtist] = useState({
+		name: 'name',
+		colection: 'colection',
+		price: 'price',
+		image: 'image',
+	});
+
+	//8888888888888888888888888888888888888888888888888888888//
+
+	const cards = nfts.map(function (value, i, a) {
+		return (
+			<CardNFT
+				//Nombre del NFT
+				name={value.name}
+				//Nombre coleccion
+				colection={value.colection}
+				//URL de la imagen
+				image={value.image}
+				//Precio
+				price={value.price}
+				// La funcion que activa el boton BUY
+				onClick={() => {
+					selectedArtist.name = value.name;
+					selectedArtist.colection = value.colection;
+					selectedArtist.image = value.image;
+					selectedArtist.price = value.price;
+
+					showModal(true);
+				}}
+			/>
+		);
+	});
+
+	//////////////
+	//  RENDER  //
+	//////////////
+
 	return (
 		<>
 			{/* BUY MODAL */}
-			<section className="celebrity-buy-modal">
-				<div className="celebrity-modal-container-border">
-					<div className="celebrity-modal-container">
-						<div className="celebrity-modal-nft-image" />
-
-						<div className="celebrity-modal-nft-container">
-							<div className="celebrity-modal-nft-subcontainer-artist">
-								<h2>Alejo Viola</h2>
-								<h3>@AlejoViola</h3>
-							</div>
-							<div className="celebrity-modal-nft-subcontainer-name">
-								<h2>Alejo Viola T-1 #0001</h2>
-								<h3>(TIER) Allocation</h3>
-							</div>
-						</div>
-						<div className="celebrity-modal-nft-container-info">
-							<p>Sale starts 11.20.2021 at 12:00 UTC </p>
-							<div className="celebrity-modal-timer-container">
-								<div className="celebrity-modal-timer">
-									<p className="celebrity-modal-number">00</p>
-									<p className="celebrity-modal-time">Days</p>
-								</div>
-								<div className="celebrity-modal-timer">
-									<p className="celebrity-modal-number">00</p>
-									<p className="celebrity-modal-time">Hours</p>
-								</div>
-								<div className="celebrity-modal-timer">
-									<p className="celebrity-modal-number">00</p>
-									<p className="celebrity-modal-time">Minutes</p>
-								</div>
-							</div>
-							<div className="celebrity-modal-price-container">
-								<div className="celebrity-modal-bnb"></div>
-								<p>1.5001 BNB</p>
-								<div className="celebrity-modal-bnb"></div>
-							</div>
-							<button className="celebrity-modal-purchase">
-								<p>Purchase NFT</p>
-							</button>
-						</div>
-					</div>
-				</div>
-			</section>
+			{modal && (
+				<BuyModal
+					artist={artist.name}
+					user={artist.user}
+					name={selectedArtist.name}
+					colection={selectedArtist.colection}
+					price={selectedArtist.price}
+					image={selectedArtist.image}
+					onClose={() => {
+						showModal(false);
+					}}
+					onClick={() => {}}
+				/>
+			)}
 
 			{/******************************/}
 
@@ -66,102 +117,47 @@ const CelebrityView = () => {
 					{/*<a href="">Celebrity NFTs</a>*/}
 					<p style={{ color: '#868686' }}>Celebrity NFTs</p>
 					<p>&gt;</p>
-					<p>Alejo Viola</p>
+					<p>{artist.name}</p>
 				</div>
 
 				<div className="celebrity-artist-data">
 					<div className="celebrity-artist-info-container">
 						<div className="celebrity-image"></div>
 						<div className="celebrity-name">
-							<h2>Alejo Viola</h2>
-							<h3>@AlejoViola</h3>
+							<h2>{artist.name}</h2>
+							<h3>{artist.user}</h3>
 
 							<div>
-								<a href="" className="celebrity-social social-twitter">
+								<a
+									href={artist.twitter}
+									className="celebrity-social social-twitter"
+								>
 									Twitter
 								</a>
-								<a href="" className="celebrity-social social-instagram">
+								<a
+									href={artist.instagram}
+									className="celebrity-social social-instagram"
+								>
 									Instagram
 								</a>
-								<a href="" className="celebrity-social social-youtube">
+								<a
+									href={artist.youtube}
+									className="celebrity-social social-youtube"
+								>
 									Youtube
 								</a>
-								<a href="" className="celebrity-social social-tiktok">
+								<a
+									href={artist.tiktok}
+									className="celebrity-social social-tiktok"
+								>
 									TikTok
 								</a>
 							</div>
 						</div>
 					</div>
-					<div className="celebrity-nft-container">
-						<div className="celebrity-nft-card">
-							<div className="celebrity-nft-image">
-								<button className="celebrity-nft-buy">
-									<p>Buy</p>
-								</button>
-							</div>
-							<div className="celebrity-nft-data-container">
-								<div className="celebrity-nft-data">
-									<h3>Alejo Viola T-1 #0001</h3>
-									<h2>Alejo Aldeano NFT</h2>
-								</div>
-								<div className="celebrity-nft-price">
-									<h4>Price</h4>
-									<h5>0,50 BNB</h5>
-								</div>
-							</div>
-						</div>
-						<div className="celebrity-nft-card">
-							<div className="celebrity-nft-image">
-								<img src="./assets/alejo-nft.png" alt="" />
-								<button className="celebrity-nft-buy">
-									<p>Buy</p>
-								</button>
-							</div>
-							<div className="celebrity-nft-data-container">
-								<div className="celebrity-nft-data">
-									<h3>Alejo Viola T-1 #0001</h3>
-									<h2>Alejo Aldeano NFT</h2>
-								</div>
-								<div className="celebrity-nft-price">
-									<h4>Price</h4>
-									<h5>0,50 BNB</h5>
-								</div>
-							</div>
-						</div>
-						<div className="celebrity-nft-card">
-							<div className="celebrity-nft-image">
-								<button className="celebrity-nft-buy">
-									<p>Buy</p>
-								</button>
-							</div>
-							<div className="celebrity-nft-data-container">
-								<div className="celebrity-nft-data">
-									<h3>Alejo Viola T-1 #0001</h3>
-									<h2>Alejo Aldeano NFT</h2>
-								</div>
-								<div className="celebrity-nft-price">
-									<h4>Price</h4>
-									<h5>0,50 BNB</h5>
-								</div>
-							</div>
-						</div>
-						<div className="celebrity-nft-card">
-							<div className="celebrity-nft-image">
-								<button className="celebrity-nft-buy">
-									<p>Buy</p>
-								</button>
-							</div>
-							<div className="celebrity-nft-data-container">
-								<div className="celebrity-nft-data">
-									<h3>Alejo Viola T-1 #0001</h3>
-									<h2>Alejo Aldeano NFT</h2>
-								</div>
-								<div className="celebrity-nft-price">
-									<h4>Price</h4>
-									<h5>0,50 BNB</h5>
-								</div>
-							</div>
-						</div>
+
+					<div id="card-container" className="celebrity-nft-container">
+						{cards}
 					</div>
 				</div>
 			</section>
