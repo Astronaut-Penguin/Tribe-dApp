@@ -11,9 +11,13 @@ export const initializeStaking = createAsyncThunk(
       memepad.mepadTokenAbi,
       memepad.mepadTokenAddress
     );
+    const lpTokenContract = new web3.eth.Contract(
+      memepad.lpTokenAbi,
+      memepad.lpTokenAddress
+    );
     const decimals = Number(await mepadTokenContract.methods.decimals().call());
     thunkAPI.dispatch(
-      stakingSlice.actions.setMepadToken({ mepadTokenContract, decimals })
+      stakingSlice.actions.setMepadToken({ mepadTokenContract, decimals ,lpTokenContract})
     );
     for (let i = 0; i < stakeIds.length; ++i) {
       thunkAPI.dispatch(initStake(stakeIds[i]));
@@ -86,10 +90,10 @@ export const loadStakingInfo = createAsyncThunk(
   async (action, thunkAPI) => {
     try {
       const { web3, address } = thunkAPI.getState().web3;
-      const { mepadTokenContract, decimals } = thunkAPI.getState().staking;
+      const { lpTokenContract, mepadTokenContract, decimals } = thunkAPI.getState().staking;
       const { stakingContract } = thunkAPI.getState().staking[action];
       const removeDecimals = (val) => {
-        return Number(val) / 10 ** decimals;
+        return (Number(val) / 10 ** decimals) - 0.01; //security minus
       };
       const responses = await Promise.all([
         mepadTokenContract.methods.balanceOf(address).call(),
@@ -101,6 +105,10 @@ export const loadStakingInfo = createAsyncThunk(
           .call(),
         stakingContract.methods.bonusEndBlock().call(),
         web3.eth.getBlockNumber(),
+        lpTokenContract.methods
+        .allowance(address, memepad[action].stakingAddress)
+        .call(),
+        lpTokenContract.methods.balanceOf(address).call(),
       ]);
       return {
         pendingReward: removeDecimals(responses[2]),
@@ -110,6 +118,8 @@ export const loadStakingInfo = createAsyncThunk(
         enabled: Boolean(Number(responses[4]) > Number(responses[0])),
         isCompleted: Number(responses[5]) < Number(responses[6]),
         stakeId: action,
+        lpAllowance: Boolean(Number(responses[7]) > Number(responses[0])),
+        lpBalance: Number(responses[8])
       };
     } catch (error) {
       console.log("Error in loading info:", error);
@@ -183,6 +193,27 @@ export const approveMepadTokens = createAsyncThunk(
   }
 );
 
+export const approveLpTokens = createAsyncThunk(
+  "ApproveLpTokens",
+  async (action, thunkAPI) => {
+    try {
+      const { address } = thunkAPI.getState().web3;
+      const { lpTokenContract } = thunkAPI.getState().staking;
+      const maxUint = Web3.utils
+        .toBN(2)
+        .pow(Web3.utils.toBN(256))
+        .sub(Web3.utils.toBN(1));
+      await lpTokenContract.methods
+        .approve(memepad[action].stakingAddress, maxUint)
+        .send({ from: address });
+      thunkAPI.dispatch(loadStakingInfo(action));
+    } catch (error) {
+      console.log("Error in loading info:", error);
+      throw error;
+    }
+  }
+);
+
 const stakingSlice = createSlice({
   name: "StakingReducer",
   initialState: stakingState,
@@ -190,6 +221,7 @@ const stakingSlice = createSlice({
     setMepadToken: (state, action) => {
       state.mepadTokenContract = action.payload.mepadTokenContract;
       state.decimals = action.payload.decimals;
+      state.lpTokenContract = action.payload.lpTokenContract;
     },
   },
   extraReducers: {
@@ -208,6 +240,8 @@ const stakingSlice = createSlice({
       state[stakeId].pendingReward = action.payload.pendingReward;
       state[stakeId].totalStakingTokens = action.payload.totalStakingTokens;
       state.mepadTokens = action.payload.mepadTokens;
+      state[stakeId].lpAllowance = action.payload.lpAllowance;
+      state[stakeId].lpBalance = action.payload.lpBalance;
       state[stakeId].enabled = action.payload.enabled;
       state[stakeId].stakedAmount = action.payload.stakedAmount;
       state[stakeId].isCompleted = action.payload.isCompleted;
