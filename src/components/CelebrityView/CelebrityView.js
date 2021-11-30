@@ -26,20 +26,26 @@ const artist = {
 //- DATOS DE NFTS
 const nfts = [
 	{
-		name: 'Alejo Aldeano NFT',
-		colection: 'Alejo T-0 #0001',
+		name: 'The Black MEPAD',
+		colection: 'MemePad #0001',
 		image: './assets/nft/nft1.png',
 		price: '0.5',
 	},
 	{
-		name: 'Alejo Aldeano 2 NFT',
-		colection: 'Alejo T-0 #0001',
-		image: './assets/nft/nft1.png',
+		name: 'Caveman NFT',
+		colection: 'MemePad #0001',
+		image: './assets/nft/CavemanMepad.jpg',
 		price: '1',
 	},
 	{
-		name: 'Alejo Aldeano 3 NFT',
-		colection: 'Alejo T-0 #0001',
+		name: 'Gladiator NFT',
+		colection: 'MemePad #0001',
+		image: './assets/nft/GladiatorMepad.jpg',
+		price: '2',
+	},
+	{
+		name: 'CryptoKingNFT',
+		colection: 'MemePad #0001',
 		image: './assets/nft/nft1.png',
 		price: '34',
 	},

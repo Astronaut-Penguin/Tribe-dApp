@@ -28,7 +28,7 @@ const BuyModal = ({ artist, user, name, colection, price, image, onClose }) => {
 
 					<div
 						className={styles.CelebrityModalNftImage}
-						style={{ backgroundImage: image }}
+						style={{ backgroundImage: 'url(' + image + ')'}}
 					/>
 
 					<div className={styles.CelebrityModalNftContainer}>
