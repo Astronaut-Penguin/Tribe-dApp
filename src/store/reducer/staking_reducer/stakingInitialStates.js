@@ -22,7 +22,6 @@ export const stakingState = {
     pendingReward: 0,
     stakedAmount: 0,
     rewardPerYear: 0,
-    lpTokens: false,
     totalStakingTokens: 0,
     stakingUrl: memepad.prefix + memepad.mepad2.stakingAddress + "#code", //Constant, not affected by metamask
     image: smallMepad, //Constant, not affected by metamask
@@ -34,11 +33,11 @@ export const stakingState = {
   },
   mepad3: {
     stakingContract: null,
-    enabled: false,
     pendingReward: 0,
     stakedAmount: 0,
     rewardPerYear: 0,
-    lpTokens: false,
+    lpAllowance: false,
+    lpBalance: 0,
     totalStakingTokens: 0,
     stakingUrl: memepad.prefix + memepad.mepad3.stakingAddress + "#code", //Constant, not affected by metamask
     image: smallBusd, //Constant, not affected by metamask

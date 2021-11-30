@@ -130,11 +130,9 @@ function StackingCard(props) {
   );
 
   let modalValues =
-    showStakingModal === "Stake" ? mepadTokens : stakeDetails.stakedAmount;
+    showStakingModal === "Stake" ? (stakeDetails.symbol === "TRIBEX-BUSD LP" ? stakeDetails.lpBalance : mepadTokens) : stakeDetails.stakedAmount;
 
     if(showStakingModal === "Stake" && mepadTokens < 0 ) modalValues = 0; // if the user has less than 0.01 tokens in fetching will be 0
-
-    console.log(stakeDetails.lpTokens)
 
   return (
     <div className="staking-card-main">
@@ -215,7 +213,7 @@ function StackingCard(props) {
         ) }
      
 
-        {!stakeDetails.isCompleted && (stakeDetails.enabled | stakeDetails.lpTokens) ? (
+        {!stakeDetails.isCompleted && (stakeDetails.enabled | stakeDetails.lpAllowance) ? (
           <div className="staking-card-third-div">
             <div className="staking-text-3">
             <div style={{
@@ -420,11 +418,11 @@ function StackingCard(props) {
                           />
                         </div>
                       </div>
-                      {stakeDetails.symbol!=="TRIBEX-BUSD LP" &&(
+                      
                       <div className="unstake-modal-content-div-3">
                         <div className="umc5">Balance: {fixDecimals(modalValues, 3)}</div>
-                      </div>)}
-                      {stakeDetails.symbol!=="TRIBEX-BUSD LP"&&(
+                      </div>
+                      
                       <div className="unstake-modal-content-div-4">
                         <div className="umc6">
                           <div>{fixDecimals(rangeValue, 3)}</div>
@@ -436,8 +434,8 @@ function StackingCard(props) {
                             max={modalValues}
                           />
                         </div>
-                      </div>)}
-                      {stakeDetails.symbol!=="TRIBEX-BUSD LP"&&(
+                      </div>
+                      
                       <div className="unstake-modal-content-div-5">
                         <button
                           onClick={() => setRangeValue(0.25 * modalValues)}
@@ -458,7 +456,7 @@ function StackingCard(props) {
                           MAX
                         </button>
                       </div>
-                      )}
+                     
                       <div className="unstake-modal-content-div-6">
                         <button
                           disabled={rangeValue === 0 ? true : false}

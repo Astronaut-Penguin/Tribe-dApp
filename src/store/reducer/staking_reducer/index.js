@@ -108,6 +108,7 @@ export const loadStakingInfo = createAsyncThunk(
         lpTokenContract.methods
         .allowance(address, memepad[action].stakingAddress)
         .call(),
+        lpTokenContract.methods.balanceOf(address).call(),
       ]);
       return {
         pendingReward: removeDecimals(responses[2]),
@@ -117,7 +118,8 @@ export const loadStakingInfo = createAsyncThunk(
         enabled: Boolean(Number(responses[4]) > Number(responses[0])),
         isCompleted: Number(responses[5]) < Number(responses[6]),
         stakeId: action,
-        lpTokens: Boolean(Number(responses[7]) > Number(responses[0])),
+        lpAllowance: Boolean(Number(responses[7]) > Number(responses[0])),
+        lpBalance: Number(responses[8])
       };
     } catch (error) {
       console.log("Error in loading info:", error);
@@ -238,7 +240,8 @@ const stakingSlice = createSlice({
       state[stakeId].pendingReward = action.payload.pendingReward;
       state[stakeId].totalStakingTokens = action.payload.totalStakingTokens;
       state.mepadTokens = action.payload.mepadTokens;
-      state[stakeId].lpTokens = action.payload.lpTokens;
+      state[stakeId].lpAllowance = action.payload.lpAllowance;
+      state[stakeId].lpBalance = action.payload.lpBalance;
       state[stakeId].enabled = action.payload.enabled;
       state[stakeId].stakedAmount = action.payload.stakedAmount;
       state[stakeId].isCompleted = action.payload.isCompleted;
