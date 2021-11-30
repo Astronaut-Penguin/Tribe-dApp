@@ -19,7 +19,9 @@ import styles from './BuyModal.module.css';
 // price: STRING - El Precio del NFT
 // image: STRING URL - Url de la imagen
 
-const BuyModal = ({ artist, user, name, colection, price, image, onClose }) => {
+const BuyModal = ({ artist, user, name, colection, price, image, onClose , address}) => {
+	//aca va a ir la logica que llama al mint function del contrato
+	//agregar la promesa de onclick a los dos purchase button, uno es el mobile el otro el web
 	return (
 		<section className={styles.CelebrityBuyModal}>
 			<div className={styles.CelebrityModalContainerBorder}>
@@ -28,7 +30,7 @@ const BuyModal = ({ artist, user, name, colection, price, image, onClose }) => {
 
 					<div
 						className={styles.CelebrityModalNftImage}
-						style={{ backgroundImage: image }}
+						style={{ backgroundImage: 'url(' + image + ')'}}
 					/>
 
 					<div className={styles.CelebrityModalNftContainer}>

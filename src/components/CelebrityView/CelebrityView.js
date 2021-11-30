@@ -13,9 +13,9 @@ import BuyModal from '../BuyModal/BuyModal';
 //- DATOS DEL ARTISTA
 const artist = {
 	//Nombre del Artista
-	name: 'Alejo Viola',
+	name: 'Memepad',
 	//Usuario del Artista
-	user: '@AlejoViola',
+	user: '@Memepad',
 	//URL redes sociales
 	twitter: '',
 	instagram: '',
@@ -26,22 +26,32 @@ const artist = {
 //- DATOS DE NFTS
 const nfts = [
 	{
-		name: 'Alejo Aldeano NFT',
-		colection: 'Alejo T-0 #0001',
+		name: 'The Black MEPAD',
+		colection: 'MemePad #0001',
 		image: './assets/nft/nft1.png',
 		price: '0.5',
+		address: "0x0",
 	},
 	{
-		name: 'Alejo Aldeano 2 NFT',
-		colection: 'Alejo T-0 #0001',
-		image: './assets/nft/nft1.png',
+		name: 'Caveman NFT',
+		colection: 'MemePad #0001',
+		image: './assets/nft/CavemanMepad.jpg',
 		price: '1',
+		address: "0x1",
 	},
 	{
-		name: 'Alejo Aldeano 3 NFT',
-		colection: 'Alejo T-0 #0001',
+		name: 'Gladiator NFT',
+		colection: 'MemePad #0001',
+		image: './assets/nft/GladiatorMepad.jpg',
+		price: '2',
+		address: "0x2",
+	},
+	{
+		name: 'CryptoKingNFT',
+		colection: 'MemePad #0001',
 		image: './assets/nft/nft1.png',
 		price: '34',
+		address: "0x3",
 	},
 ];
 
@@ -72,12 +82,14 @@ const CelebrityView = () => {
 				image={value.image}
 				//Precio
 				price={value.price}
+				
 				// La funcion que activa el boton BUY
 				onClick={() => {
 					selectedArtist.name = value.name;
 					selectedArtist.colection = value.colection;
 					selectedArtist.image = value.image;
 					selectedArtist.price = value.price;
+					selectedArtist.address = value.address;
 
 					showModal(true);
 				}}
@@ -100,6 +112,7 @@ const CelebrityView = () => {
 					colection={selectedArtist.colection}
 					price={selectedArtist.price}
 					image={selectedArtist.image}
+					address={selectedArtist.address}
 					onClose={() => {
 						showModal(false);
 					}}

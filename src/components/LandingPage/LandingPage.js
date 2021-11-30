@@ -69,7 +69,7 @@ function LandingPage() {
                   <section className="button-container">
                     <button className="dashboard-buy-btn"
                       onClick={() => {
-                        window.open('https://pancakeswap.finance/swap#/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af', '_blank').focus()
+                        window.open('https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af', '_blank').focus()
                       }}>
                       <img
                         src={pancake}
@@ -466,7 +466,7 @@ function LandingPage() {
                         </g>
                       </svg>
                     </a>
-                    <a href="https://pancakeswap.finance/swap#/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af" target="_blank" rel="noreferrer">
+                    <a href="https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af" target="_blank" rel="noreferrer">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="footer-social-icons">
                         <g id="_1" data-name={1}>
                           <path
@@ -485,7 +485,7 @@ function LandingPage() {
                 <div>
                   <div className="copyright-text ">
                     <span>Copyright © 2021. All Rights Reserved.</span>
-                    <span>Developed by<a href="https://www.saleheennoor.com" target='_blank' rel='noreferrer'> Saleheen Noor.</a></span>
+                    <span>Developed by<a href="https://www.saleheennoor.com" target='_blank' rel='noreferrer'> Tribe Dev Team.</a></span>
                   </div>
                 </div>
               </div>
