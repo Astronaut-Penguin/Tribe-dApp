@@ -1,9 +1,10 @@
 //- React Imports
 import React from 'react';
-
+import { useDispatch, useSelector } from 'react-redux';
 //- Style Imports
 import styles from './BuyModal.module.css';
-
+import { nftIds } from '../../store/reducer/purchaseNFT_reducer/purchaseNFTInitialStates';
+import { buyNFT } from '../../store/reducer/purchaseNFT_reducer/indexNFT';
 // CARD COMPONENT
 // onClick: La funcion que manda la transaccion
 // onClose: La funcion que cierra el modal
@@ -19,8 +20,25 @@ import styles from './BuyModal.module.css';
 // price: STRING - El Precio del NFT
 // image: STRING URL - Url de la imagen
 
-const BuyModal = ({ artist, user, name, colection, price, image, onClose , address}) => {
+const BuyModal = ({
+	artist,
+	user,
+	name,
+	colection,
+	price,
+	image,
+	onClose,
+	address,
+	connected,
+	nftId,
+}) => {
 	//aca va a ir la logica que llama al mint function del contrato
+	const dispatch = useDispatch();
+	const nftDetails = useSelector((state) => state.nft[nftId]);
+
+	console.log(nftDetails);
+	const enabled = nftDetails ? nftDetails.enabled : false;
+	console.log(enabled);
 	//agregar la promesa de onclick a los dos purchase button, uno es el mobile el otro el web
 	return (
 		<section className={styles.CelebrityBuyModal}>
@@ -30,7 +48,7 @@ const BuyModal = ({ artist, user, name, colection, price, image, onClose , addre
 
 					<div
 						className={styles.CelebrityModalNftImage}
-						style={{ backgroundImage: 'url(' + image + ')'}}
+						style={{ backgroundImage: 'url(' + image + ')' }}
 					/>
 
 					<div className={styles.CelebrityModalNftContainer}>
@@ -67,9 +85,20 @@ const BuyModal = ({ artist, user, name, colection, price, image, onClose , addre
 								<p>{price} BNB</p>
 								<div className={styles.CelebrityModalBnb}></div>
 							</div>
-							<button className={styles.CelebrityModalPurchase}>
-								<p>Purchase NFT</p>
-							</button>
+							{enabled && (
+								<button
+									onClick={async () => {
+										console.log("trying to buy");
+										dispatch(buyNFT({amount: price,id:nftId}));
+									}}
+									className={styles.CelebrityModalPurchase}
+								>
+									<p>Purchase NFT</p>
+								</button>
+							)}
+							{!enabled && (
+								<button className={styles.CelebrityModalPurchase}></button>
+							)}
 						</div>
 					</div>
 					<div className={styles.CelebrityModalNftContainerInfo}>
@@ -96,9 +125,20 @@ const BuyModal = ({ artist, user, name, colection, price, image, onClose , addre
 							<p>1.5 BNB</p>
 							<div className={styles.CelebrityModalBnb}></div>
 						</div>
-						<button className={styles.CelebrityModalPurchase}>
-							<p>Purchase NFT</p>
-						</button>
+						{enabled && (
+							<button
+								onClick={() => {
+									console.log("trying to buy");
+									dispatch(buyNFT({amount: price,id:nftId}));
+								}}
+								className={styles.CelebrityModalPurchase}
+							>
+								<p>Purchase NFT</p>
+							</button>
+						)}
+						{!enabled && (
+							<button className={styles.CelebrityModalPurchase}></button>
+						)}
 					</div>
 				</div>
 			</div>

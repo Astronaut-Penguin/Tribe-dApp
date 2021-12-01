@@ -13,8 +13,23 @@ export const initializeNFT = createAsyncThunk(
 	},
 );
 
+export const initializeNFTInfo = createAsyncThunk(
+	'Initialize nfts INFO',
+	async (action, thunkAPI) => {
+		thunkAPI.dispatch(nftSlice.actions.setContract({}));
+		for (let i = 0; i < nftIds.length; ++i) {
+			thunkAPI.dispatch(initNFTInfoLoading(nftIds[i]));
+		}
+	},
+);
+
 export const initNFT = createAsyncThunk('initNFT', async (action, thunkAPI) => {
 	await thunkAPI.dispatch(initNFTContract(action));
+	await thunkAPI.dispatch(initNFTInfo(action));
+	await thunkAPI.dispatch(loadNFTInfo(action));
+});
+
+export const initNFTInfoLoading = createAsyncThunk('initNFTInfo', async (action, thunkAPI) => {
 	await thunkAPI.dispatch(initNFTInfo(action));
 	await thunkAPI.dispatch(loadNFTInfo(action));
 });
@@ -75,10 +90,12 @@ export const loadNFTInfo = createAsyncThunk(
 				nftContract.methods.whitelisted(address).call(),
 				nftContract.methods.whitelistedAmount(address).call(),
 			]);
+			const enabledBoolean = Boolean(
+				Number(responses[0] == true && Number(responses[1]) > 0),
+			);
 			return {
-				enabled: Boolean(
-					Number(responses[1] > 0) && Number(responses[0] == true),
-				),
+				enabledBoolean,
+				nftId: action
 			};
 		} catch (error) {
 			console.log('Error in loading info for nft:', error);
@@ -89,9 +106,10 @@ export const loadNFTInfo = createAsyncThunk(
 
 export const buyNFT = createAsyncThunk('Buy NFT', async (action, thunkAPI) => {
 	try {
+		console.log("buying " + action.amount)
 		const { address } = thunkAPI.getState().web3;
 		const { nftContract } = thunkAPI.getState().nft[action.id];
-		await nftContract.methods.mint().send({ from: address });
+		await nftContract.methods.mint().send({ value: action.amount * (10 **18) , from: address });
 		thunkAPI.dispatch(loadNFTInfo(action.id));
 	} catch (error) {
 		console.log('Cant Buy NFT: ', error);
@@ -118,7 +136,7 @@ const nftSlice = createSlice({
 		[loadNFTInfo.fulfilled]: (state, action) => {
 			console.log('loadInfo fulfilled for nft');
 			const nftId = action.payload.nftId;
-			state[nftId].enabled = action.payload.enable;
+			state[nftId].enabled = action.payload.enabledBoolean;
 		},
 	},
 });
