@@ -4,10 +4,10 @@ import tribeNFT from './tribeNFT.json';
 import { nftIds, nftState } from './purchaseNFTInitialStates';
 
 export const initializeNFT = createAsyncThunk(
-	'InitializeLaunches',
+	'Initialize nfts',
 	async (action, thunkAPI) => {
     thunkAPI.dispatch(
-      nftSlice.actions.setMepadToken({})
+      nftSlice.actions.setContract({})
     );
 		for (let i = 0; i < nftIds.length; ++i) {
 			thunkAPI.dispatch(initNFT(nftIds[i]));
@@ -25,7 +25,7 @@ export const initNFT = createAsyncThunk(
 );
 
 export const initNFTContract = createAsyncThunk(
-	'InitContract',
+	'InitContract nft',
 	async (action, thunkAPI) => {
 		try {
 			const { web3 } = thunkAPI.getState().web3;
@@ -35,12 +35,12 @@ export const initNFTContract = createAsyncThunk(
 				// eslint-disable-next-line
 				throw 'Please Connect to Binance Smart Chain';
 			const nftContract = new web3.eth.Contract(
-				tribeNFT[action].stakingAbi,
+				tribeNFT[action].nftAbi,
 				tribeNFT[action].nftAddress,
 			);
 			return {
 				nftContract,
-				stakeId: action,
+				nftId: action,
 			};
 		} catch (error) {
 			console.log('Error initializing contract for nft: ', error);
@@ -50,16 +50,16 @@ export const initNFTContract = createAsyncThunk(
 );
 
 export const initNFTInfo = createAsyncThunk(
-	'InitInfo',
+	'InitInfo NFT',
 	async (action, thunkAPI) => {
 		try {
-			const { nftContract } = thunkAPI.getState().staking[action];
+			const { nftContract } = thunkAPI.getState().nft[action]; //error destructure contract as its undefined
 
 			const totalSupply = await nftContract.methods.totalSupply().call();
 
 			return {
 				totalSupply,
-				stakeId: action,
+				nftId: action,
 			};
 		} catch (error) {
 			console.log('Error initializing info for nft:', error);
@@ -69,12 +69,12 @@ export const initNFTInfo = createAsyncThunk(
 );
 
 export const loadNFTInfo = createAsyncThunk(
-	'LoadInfo',
+	'LoadInfo NFT',
 	async (action, thunkAPI) => {
 		try {
 			const { address } = thunkAPI.getState().web3;
 
-			const { nftContract } = thunkAPI.getState().staking[action];
+			const { nftContract } = thunkAPI.getState().nft[action]; //error destructure contract as its undefined
 
 			const responses = await Promise.all([
 				nftContract.methods.whitelisted(address).call(),
@@ -93,11 +93,11 @@ export const loadNFTInfo = createAsyncThunk(
 );
 
 export const buyNFT = createAsyncThunk(
-	'StakeMEPAD',
+	'Buy NFT',
 	async (action, thunkAPI) => {
 		try {
 			const { address } = thunkAPI.getState().web3;
-			const { nftContract } = thunkAPI.getState().staking[action.id];
+			const { nftContract } = thunkAPI.getState().nft[action.id];
 			await nftContract.methods.mint().send({ from: address });
 			thunkAPI.dispatch(loadNFTInfo(action.id));
 		} catch (error) {
@@ -107,25 +107,25 @@ export const buyNFT = createAsyncThunk(
 );
 
 const nftSlice = createSlice({
-	name: 'StakingReducer',
+	name: 'NFTReducer',
 	initialState: nftState,
   reducers: {
-    setMepadToken: (state, action) => {},
+    setContract: (state, action) => {},
   },
   extraReducers: {
 		[initNFTInfo.fulfilled]: (state, action) => {
 			console.log('initInfo fulfilled for nft');
-			const stakeId = action.payload.stakeId;
-      state[stakeId].nftContract = action.payload.nftContract;
-			state[stakeId].totalSupply = action.payload.totalSupply;
+			const nftId = action.payload.nftId;
+      state[nftId].nftContract = action.payload.nftContract;
+			state[nftId].totalSupply = action.payload.totalSupply;
 		},
 		[loadNFTInfo.fulfilled]: (state, action) => {
 			console.log('loadInfo fulfilled for nft');
-			const stakeId = action.payload.stakeId;
-			state[stakeId].enabled = action.payload.enable;
+			const nftId = action.payload.nftId;
+			state[nftId].enabled = action.payload.enable;
 		},
   },
 });
 
-export const stakingReducer = nftSlice.reducer;
-export const { setMepadToken } = nftSlice.actions;
+export const nftReducer = nftSlice.reducer;
+export const { setContract } = nftSlice.actions;

@@ -1,6 +1,6 @@
 {
   "nft1": {
-    "stakingAbi": [
+    "nftAbi": [
       {
         "inputs": [
           {
@@ -734,7 +734,7 @@
     "nftAddress": "0x4258D796D51f667df85b8Fc27728E4F33B0d24cc"
   },
   "nft2": {
-    "stakingAbi": [
+    "nftAbi": [
       {
         "inputs": [
           {
@@ -1468,7 +1468,7 @@
     "nftAddress": "0x4258D796D51f667df85b8Fc27728E4F33B0d24cc"
   },
   "nft3": {
-    "stakingAbi": [
+    "nftAbi": [
       {
         "inputs": [
           {
@@ -2202,7 +2202,7 @@
     "nftAddress": "0x4258D796D51f667df85b8Fc27728E4F33B0d24cc"
   },
   "nft4": {
-    "stakingAbi": [
+    "nftAbi": [
       {
         "inputs": [
           {
