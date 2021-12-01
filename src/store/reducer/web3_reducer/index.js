@@ -4,6 +4,7 @@ import Web3 from 'web3';
 import Web3Modal from 'web3modal';
 import { initializeLaunches } from '../launch_reducer';
 import { initializeStaking } from '../staking_reducer';
+import { initializeNFT } from '../purchaseNFT_reducer/indexNFT';
 import memepad from '../launch_reducer/memepad.json';
 
 export const connectWallet = createAsyncThunk(
@@ -13,6 +14,7 @@ export const connectWallet = createAsyncThunk(
 		await thunkAPI.dispatch(fetchAccount());
 		thunkAPI.dispatch(initializeLaunches());
 		thunkAPI.dispatch(initializeStaking());
+		thunkAPI.dispatch(initializeNFT());
 	},
 );
 
@@ -91,6 +93,7 @@ export const initWeb3 = createAsyncThunk(
 				await thunkAPI.dispatch(fetchAccount());
 				thunkAPI.dispatch(initializeStaking());
 				thunkAPI.dispatch(initializeLaunches());
+				thunkAPI.dispatch(initializeNFT());
 			});
 
 			// Subscribe to chainId change
@@ -99,6 +102,7 @@ export const initWeb3 = createAsyncThunk(
 				else {
 					thunkAPI.dispatch(initializeStaking());
 					thunkAPI.dispatch(initializeLaunches());
+					thunkAPI.dispatch(initializeNFT());
 				}
 			});
 			return {
