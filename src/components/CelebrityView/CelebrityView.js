@@ -9,11 +9,14 @@ import { initializeNFTInfo } from '../../store/reducer/purchaseNFT_reducer/index
 import CardNFT from '../Cards/CardNFT/CardNFT';
 import BuyModal from '../BuyModal/BuyModal';
 import { nftIds } from '../../store/reducer/purchaseNFT_reducer/purchaseNFTInitialStates';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
+
 //8888888888888888888888888888888888888888888888888888888//
 
 //- DATOS DEL ARTISTA
 const artist = {
+	//Imagen del Artista
+	image: './assets/artist.jpg',
 	//Nombre del Artista
 	name: 'Memepad',
 	//Usuario del Artista
@@ -32,28 +35,28 @@ const nfts = [
 		colection: 'MemePad #0001',
 		image: './assets/nft/nft1.png',
 		price: '0.5',
-		address: "0x0",
+		address: '0x0',
 	},
 	{
 		name: 'The Pleb',
 		colection: 'MemePad #0001',
 		image: './assets/nft/CavemanMepad.jpg',
 		price: '1',
-		address: "0x1",
+		address: '0x1',
 	},
 	{
 		name: 'The Chad',
 		colection: 'MemePad #0001',
 		image: './assets/nft/GladiatorMepad.jpg',
 		price: '2',
-		address: "0x2",
+		address: '0x2',
 	},
 	{
 		name: 'The Elon',
 		colection: 'MemePad #0001',
 		image: './assets/nft/nft1.png',
 		price: '34',
-		address: "0x3",
+		address: '0x3',
 	},
 ];
 
@@ -70,8 +73,8 @@ const CelebrityView = () => {
 		price: 'price',
 		image: 'image',
 		connected: false,
-		address: "address",
-		poolNumber: 0 ,
+		address: 'address',
+		poolNumber: 0,
 	});
 
 	const { connected } = useSelector((state) => state.web3);
@@ -79,16 +82,16 @@ const CelebrityView = () => {
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-		  if (connected) {
-			  if(nftIds){
-				dispatch(initializeNFTInfo());
-			  }
-		  }
+			if (connected) {
+				if (nftIds) {
+					dispatch(initializeNFTInfo());
+				}
+			}
 		}, 10000);
 		return () => {
-		  clearInterval(interval);
+			clearInterval(interval);
 		};
-	  });
+	});
 
 	//8888888888888888888888888888888888888888888888888888888//
 
@@ -103,7 +106,6 @@ const CelebrityView = () => {
 				image={value.image}
 				//Precio
 				price={value.price}
-				
 				// La funcion que activa el boton BUY
 				onClick={() => {
 					selectedArtist.name = value.name;
@@ -113,7 +115,7 @@ const CelebrityView = () => {
 					selectedArtist.address = value.address;
 					selectedArtist.connected = connected;
 					selectedArtist.poolNumber = i;
-					
+
 					showModal(true);
 				}}
 			/>
@@ -160,7 +162,10 @@ const CelebrityView = () => {
 
 				<div className="celebrity-artist-data">
 					<div className="celebrity-artist-info-container">
-						<div className="celebrity-image"></div>
+						<div
+							className="celebrity-image"
+							style={{ backgroundImage: 'url(' + artist.image + ')' }}
+						></div>
 						<div className="celebrity-name">
 							<h2>{artist.name}</h2>
 							<h3>{artist.user}</h3>
