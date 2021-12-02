@@ -216,6 +216,7 @@
 	margin: 0px 0px 10px 0px;
 
 	justify-content: center;
+	position: relative;
 
 	font-family: Lato;
 	font-style: normal;
@@ -236,6 +237,43 @@
 	transition: transform 0.2s ease-in-out;
 }
 
+.CelebrityModalDisable {
+	display: inline-block;
+	width: 196px;
+	height: 46px;
+
+	padding: 0px;
+	margin: 0px 0px 10px 0px;
+
+	position: relative;
+
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 14px;
+	line-height: 17px;
+
+	border-radius: 9px !important;
+	color: rgba(134, 134, 134, 1);
+	border: rgba(134, 134, 134, 1) solid 5px;
+}
+
+.CelebrityModalDisable p {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	border-radius: 9px !important;
+
+	font-style: normal;
+	font-weight: 800;
+	font-size: 14px;
+	line-height: 34px;
+
+	justify-content: center;
+	align-items: center;
+}
+
 .CelebrityModalPurchase p {
 	display: flex;
 	width: 100%;
@@ -252,6 +290,26 @@
 	align-items: center;
 }
 
+.CelebrityModalPurchase p::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 4px;
+	padding: 5px;
+	background: linear-gradient(
+		to right,
+		rgb(255, 1, 126),
+		rgb(169, 1, 250),
+		rgb(3, 238, 254)
+	);
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: destination-out;
+	mask-composite: exclude;
+}
+
 .CelebrityModalPurchase p:hover {
 	background: linear-gradient(
 		to right,
@@ -266,14 +324,6 @@
 .CelebrityModalPurchase:hover {
 	transform: scale(1.1);
 	background: none;
-	border: 5px solid;
-	border-image: linear-gradient(
-			to right,
-			rgb(255, 1, 126),
-			rgb(169, 1, 250),
-			rgb(3, 238, 254)
-		)
-		1;
 }
 
 .CelebrityModalTimerContainer {

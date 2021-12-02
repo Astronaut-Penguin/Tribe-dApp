@@ -88,8 +88,8 @@ const BuyModal = ({
 							{enabled && (
 								<button
 									onClick={async () => {
-										console.log("trying to buy");
-										dispatch(buyNFT({amount: price,id:nftId}));
+										console.log('trying to buy');
+										dispatch(buyNFT({ amount: price, id: nftId }));
 									}}
 									className={styles.CelebrityModalPurchase}
 								>
@@ -97,7 +97,9 @@ const BuyModal = ({
 								</button>
 							)}
 							{!enabled && (
-								<button className={styles.CelebrityModalPurchase}></button>
+								<div className={styles.CelebrityModalDisable}>
+									<p>Without Permission</p>
+								</div>
 							)}
 						</div>
 					</div>
@@ -122,23 +124,21 @@ const BuyModal = ({
 						</div>
 						<div className={styles.CelebrityModalPriceContainer}>
 							<div className={styles.CelebrityModalBnb}></div>
-							<p>1.5 BNB</p>
+							<p>{price} BNB</p>
 							<div className={styles.CelebrityModalBnb}></div>
 						</div>
 						{enabled && (
 							<button
 								onClick={() => {
-									console.log("trying to buy");
-									dispatch(buyNFT({amount: price,id:nftId}));
+									console.log('trying to buy');
+									dispatch(buyNFT({ amount: price, id: nftId }));
 								}}
 								className={styles.CelebrityModalPurchase}
 							>
 								<p>Purchase NFT</p>
 							</button>
 						)}
-						{!enabled && (
-							<button className={styles.CelebrityModalPurchase}></button>
-						)}
+						{!enabled && <div className={styles.CelebrityModalDisable}></div>}
 					</div>
 				</div>
 			</div>
