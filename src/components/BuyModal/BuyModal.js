@@ -88,17 +88,14 @@ const BuyModal = ({
 		}
 	});
 
-	console.log(hoursRemaining);
-
 	//8888888888888888888888888888888888888888888888888888888888888888888//
 
 	//aca va a ir la logica que llama al mint function del contrato
 	const dispatch = useDispatch();
 	const nftDetails = useSelector((state) => state.nft[nftId]);
 
-	//console.log(nftDetails);
 	const enabled = nftDetails ? nftDetails.enabled : false;
-	//console.log(enabled);
+	const balance = nftDetails ? nftDetails.balance : 0;
 	//agregar la promesa de onclick a los dos purchase button, uno es el mobile el otro el web
 	return (
 		<section className={styles.CelebrityBuyModal}>
@@ -116,12 +113,14 @@ const BuyModal = ({
 							<h2>{artist}</h2>
 							<h3>{user}</h3>
 						</div>
-						<div className={styles.CelebrityModalNftSubcontainerName}>
-							<h2>{name}</h2>
-							<h3>{colection}</h3>
+						{connected && (
+							<div className={styles.CelebrityModalNftSubcontainerName}>
+								<h2>{name}</h2>
+								<h3>{colection}</h3>
 
-							<p className={styles.OwnText}> You own: x </p>
-						</div>
+								<p className={styles.OwnText}> You own: {balance} </p>
+							</div>
+						)}
 
 						<div className={styles.CelebrityModalNftContainerInfoPc}>
 							<p className={styles.CelebrityModalTimerStart}>
@@ -173,7 +172,6 @@ const BuyModal = ({
 							{enabled && (
 								<button
 									onClick={async () => {
-										console.log('trying to buy');
 										dispatch(buyNFT({ amount: price, id: nftId }));
 									}}
 									className={styles.CelebrityModalPurchase}
@@ -238,7 +236,6 @@ const BuyModal = ({
 						{enabled && (
 							<button
 								onClick={() => {
-									console.log('trying to buy');
 									dispatch(buyNFT({ amount: price, id: nftId }));
 								}}
 								className={styles.CelebrityModalPurchase}

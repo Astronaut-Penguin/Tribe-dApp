@@ -17,13 +17,13 @@ import { useDispatch, useSelector } from 'react-redux';
 //- DATOS DEL ARTISTA
 const artist = {
 	//Imagen del Artista
-	image: './assets/artist.jpg',
+	image: './assets/Memepad.png',
 	//Nombre del Artista
 	name: 'Memepad',
 	//Usuario del Artista
 	user: '@Memepad',
 	//URL redes sociales
-	twitter: '',
+	twitter: 'https://twitter.com/MemePadLaunch',
 	instagram: '',
 	youtube: '',
 	tiktok: '',
@@ -32,36 +32,20 @@ const artist = {
 //- DATOS DE NFTS
 const nfts = [
 	{
-		name: 'The Black MEPAD',
-		colection: 'MemePad #0001',
-		image: './assets/nft/nft1.png',
-		price: '0.5',
-		address: '0x0',
-		cutoffDate: 'April 15, 2022 22:35:32',
-	},
-	{
 		name: 'The Pleb',
 		colection: 'MemePad #0001',
 		image: './assets/nft/CavemanMepad.jpg',
-		price: '1',
+		price: '0.15',
 		address: '0x1',
-		cutoffDate: 'April 25, 2022 22:35:32',
+		cutoffDate: 'December 15, 2021 22:35:32',
 	},
 	{
 		name: 'The Chad',
 		colection: 'MemePad #0001',
 		image: './assets/nft/GladiatorMepad.jpg',
-		price: '2',
+		price: '0.5',
 		address: '0x2',
-		cutoffDate: 'April 26, 2022 22:35:32',
-	},
-	{
-		name: 'The Elon',
-		colection: 'MemePad #0001',
-		image: './assets/nft/nft1.png',
-		price: '34',
-		address: '0x3',
-		cutoffDate: 'April 29, 2022 22:36:32',
+		cutoffDate: 'December 15, 2021 22:35:32',
 	},
 ];
 
@@ -185,24 +169,6 @@ const CelebrityView = () => {
 									className="celebrity-social social-twitter"
 								>
 									Twitter
-								</a>
-								<a
-									href={artist.instagram}
-									className="celebrity-social social-instagram"
-								>
-									Instagram
-								</a>
-								<a
-									href={artist.youtube}
-									className="celebrity-social social-youtube"
-								>
-									Youtube
-								</a>
-								<a
-									href={artist.tiktok}
-									className="celebrity-social social-tiktok"
-								>
-									TikTok
 								</a>
 							</div>
 						</div>

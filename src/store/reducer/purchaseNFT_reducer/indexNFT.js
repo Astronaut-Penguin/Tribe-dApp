@@ -29,10 +29,13 @@ export const initNFT = createAsyncThunk('initNFT', async (action, thunkAPI) => {
 	await thunkAPI.dispatch(loadNFTInfo(action));
 });
 
-export const initNFTInfoLoading = createAsyncThunk('initNFTInfo', async (action, thunkAPI) => {
-	await thunkAPI.dispatch(initNFTInfo(action));
-	await thunkAPI.dispatch(loadNFTInfo(action));
-});
+export const initNFTInfoLoading = createAsyncThunk(
+	'initNFTInfo',
+	async (action, thunkAPI) => {
+		await thunkAPI.dispatch(initNFTInfo(action));
+		await thunkAPI.dispatch(loadNFTInfo(action));
+	},
+);
 
 export const initNFTContract = createAsyncThunk(
 	'InitContract nft',
@@ -89,13 +92,16 @@ export const loadNFTInfo = createAsyncThunk(
 			const responses = await Promise.all([
 				nftContract.methods.whitelisted(address).call(),
 				nftContract.methods.whitelistedAmount(address).call(),
+				nftContract.methods.balanceOf(address).call(),
 			]);
 			const enabledBoolean = Boolean(
 				Number(responses[0] == true && Number(responses[1]) > 0),
 			);
+			const balance = Number(responses[2]);
 			return {
+				balance,
 				enabledBoolean,
-				nftId: action
+				nftId: action,
 			};
 		} catch (error) {
 			console.log('Error in loading info for nft:', error);
@@ -106,10 +112,11 @@ export const loadNFTInfo = createAsyncThunk(
 
 export const buyNFT = createAsyncThunk('Buy NFT', async (action, thunkAPI) => {
 	try {
-		console.log("buying " + action.amount)
 		const { address } = thunkAPI.getState().web3;
 		const { nftContract } = thunkAPI.getState().nft[action.id];
-		await nftContract.methods.mint().send({ value: action.amount * (10 **18) , from: address });
+		await nftContract.methods
+			.mint()
+			.send({ value: action.amount * 10 ** 18, from: address });
 		thunkAPI.dispatch(loadNFTInfo(action.id));
 	} catch (error) {
 		console.log('Cant Buy NFT: ', error);
@@ -137,6 +144,7 @@ const nftSlice = createSlice({
 			console.log('loadInfo fulfilled for nft');
 			const nftId = action.payload.nftId;
 			state[nftId].enabled = action.payload.enabledBoolean;
+			state[nftId].balance = action.payload.balance;
 		},
 	},
 });
