@@ -8,6 +8,7 @@ import './CelebrityView.css';
 import { initializeNFTInfo } from '../../store/reducer/purchaseNFT_reducer/indexNFT';
 import CardNFT from '../Cards/CardNFT/CardNFT';
 import BuyModal from '../BuyModal/BuyModal';
+import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
 import { nftIds } from '../../store/reducer/purchaseNFT_reducer/purchaseNFTInitialStates';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -36,6 +37,7 @@ const nfts = [
 		image: './assets/nft/nft1.png',
 		price: '0.5',
 		address: '0x0',
+		cutoffDate: 'April 15, 2022 22:35:32',
 	},
 	{
 		name: 'The Pleb',
@@ -43,6 +45,7 @@ const nfts = [
 		image: './assets/nft/CavemanMepad.jpg',
 		price: '1',
 		address: '0x1',
+		cutoffDate: 'April 25, 2022 22:35:32',
 	},
 	{
 		name: 'The Chad',
@@ -50,6 +53,7 @@ const nfts = [
 		image: './assets/nft/GladiatorMepad.jpg',
 		price: '2',
 		address: '0x2',
+		cutoffDate: 'April 26, 2022 22:35:32',
 	},
 	{
 		name: 'The Elon',
@@ -57,6 +61,7 @@ const nfts = [
 		image: './assets/nft/nft1.png',
 		price: '34',
 		address: '0x3',
+		cutoffDate: 'April 29, 2022 22:36:32',
 	},
 ];
 
@@ -75,6 +80,7 @@ const CelebrityView = () => {
 		connected: false,
 		address: 'address',
 		poolNumber: 0,
+		cutoffDate: '1652983200',
 	});
 
 	const { connected } = useSelector((state) => state.web3);
@@ -115,6 +121,7 @@ const CelebrityView = () => {
 					selectedArtist.address = value.address;
 					selectedArtist.connected = connected;
 					selectedArtist.poolNumber = i;
+					selectedArtist.cutoffDate = value.cutoffDate;
 
 					showModal(true);
 				}}
@@ -144,15 +151,17 @@ const CelebrityView = () => {
 						showModal(false);
 					}}
 					onClick={() => {}}
+					cutoffDate={selectedArtist.cutoffDate}
 				/>
 			)}
 
 			{/******************************/}
 
+			<AnimatedBackground />
+
+			{/******************************/}
+
 			<section className="celebrity-container">
-				<p style={{ backgroundColor: 'red', color: 'white' }}>
-					Work in Progress
-				</p>
 				<div className="celebrity-story">
 					{/*<a href="">Celebrity NFTs</a>*/}
 					<p style={{ color: '#868686' }}>Celebrity NFTs</p>

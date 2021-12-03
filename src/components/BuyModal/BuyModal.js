@@ -1,5 +1,5 @@
 //- React Imports
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 //- Style Imports
 import styles from './BuyModal.module.css';
@@ -15,7 +15,7 @@ import { buyNFT } from '../../store/reducer/purchaseNFT_reducer/indexNFT';
 // name: STRING - Nombre del NFT
 // colection: STRING - Nombre de la coleccion
 
-// fecha:
+// cutoffDate: La fecha deadline en UNIX
 
 // price: STRING - El Precio del NFT
 // image: STRING URL - Url de la imagen
@@ -31,14 +31,74 @@ const BuyModal = ({
 	address,
 	connected,
 	nftId,
+	cutoffDate,
 }) => {
+	//888888888888888888888888888888888888888888888888888888888888888888//
+
+	///////////////////
+	//- DATE CUTOFF -//
+	///////////////////
+
+	//Logica para el deadline
+	const update = true;
+	const dateCutOff = new Date(cutoffDate);
+	const [dateNow, setDateNow] = useState(Date.now());
+	const [dateRemaining, setDateRemaining] = useState(0);
+
+	//- Remaining States
+	const [daysRemaining, setDaysRemaining] = useState(0);
+	const [hoursRemaining, setHoursRemaining] = useState(0);
+	const [minutesRemaining, setMinutesRemaining] = useState(0);
+	const [secondsRemaining, setSecondsRemaining] = useState(0);
+
+	//- Done
+	const [done, setDone] = useState(false);
+
+	//Get Date Cutoff
+	const cutoffTime = dateCutOff.getTime();
+	const cutoffYear = dateCutOff.getFullYear();
+	const cutoffMonth = dateCutOff.getMonth() + 1;
+	const cutoffDay = dateCutOff.getDate();
+	const cutoffHour = dateCutOff.getHours();
+	const cutoffMinutes = dateCutOff.getMinutes();
+	const cutoffSeconds = dateCutOff.getSeconds();
+
+	//- Get Date Now
+	useEffect(() => {
+		setInterval(() => {
+			setDateNow(Date.now());
+		}, 1000);
+	}, [update]);
+
+	//- Set Time Remaining
+	useEffect(() => {
+		if (dateNow === cutoffTime || dateNow > cutoffTime) {
+			setDone(true);
+		}
+		if (!done) {
+			setDateRemaining(cutoffTime - dateNow);
+			setDaysRemaining(Math.floor(dateRemaining / (1000 * 60 * 60 * 24)));
+			setHoursRemaining(
+				Math.floor((dateRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+			);
+			setMinutesRemaining(
+				Math.floor((dateRemaining % (1000 * 60 * 60)) / (1000 * 60)),
+			);
+			setSecondsRemaining(Math.floor((dateRemaining % (1000 * 60)) / 1000));
+		}
+	});
+
+	console.log(hoursRemaining);
+
+	//8888888888888888888888888888888888888888888888888888888888888888888//
+
 	//aca va a ir la logica que llama al mint function del contrato
 	const dispatch = useDispatch();
 	const nftDetails = useSelector((state) => state.nft[nftId]);
 
-	console.log(nftDetails);
+	//console.log(nftDetails);
 	const enabled = nftDetails ? nftDetails.enabled : false;
-	console.log(enabled);
+	//console.log(enabled);
 	//agregar la promesa de onclick a los dos purchase button, uno es el mobile el otro el web
 	return (
 		<section className={styles.CelebrityBuyModal}>
@@ -63,20 +123,41 @@ const BuyModal = ({
 
 						<div className={styles.CelebrityModalNftContainerInfoPc}>
 							<p className={styles.CelebrityModalTimerStart}>
-								{' '}
-								Sale starts 11.20.2021 at 12:00 UTC{' '}
+								{!done
+									? 'Sale starts ' +
+									  (cutoffMonth < 10 ? '0' : '') +
+									  cutoffMonth +
+									  '.' +
+									  (cutoffDay < 10 ? '0' : '') +
+									  cutoffDay +
+									  '.' +
+									  cutoffYear +
+									  ' at ' +
+									  ' ' +
+									  (cutoffHour < 10 ? '0' : '') +
+									  cutoffHour +
+									  ':' +
+									  (cutoffMinutes < 10 ? '0' : '') +
+									  cutoffMinutes +
+									  (cutoffHour < 12 ? ' AM' : ' PM') +
+									  ' UTC'
+									: 'SALE OPEN!'}
 							</p>
 							<div className={styles.CelebrityModalTimerContainer}>
 								<div className={styles.CelebrityModalTimer}>
-									<p className={styles.CelebrityModalNumber}>00</p>
+									<p className={styles.CelebrityModalNumber}>{daysRemaining}</p>
 									<p className={styles.CelebrityModalTime}>Days</p>
 								</div>
 								<div className={styles.CelebrityModalTimer}>
-									<p className={styles.CelebrityModalNumber}>00</p>
+									<p className={styles.CelebrityModalNumber}>
+										{hoursRemaining}
+									</p>
 									<p className={styles.CelebrityModalTime}>Hours</p>
 								</div>
 								<div className={styles.CelebrityModalTimer}>
-									<p className={styles.CelebrityModalNumber}>00</p>
+									<p className={styles.CelebrityModalNumber}>
+										{minutesRemaining < 10 ? '0' : '' + minutesRemaining}
+									</p>
 									<p className={styles.CelebrityModalTime}>Minutes</p>
 								</div>
 							</div>
@@ -105,20 +186,39 @@ const BuyModal = ({
 					</div>
 					<div className={styles.CelebrityModalNftContainerInfo}>
 						<p className={styles.CelebrityModalTimerStart}>
-							{' '}
-							Sale starts 11.20.2021 at 12:00 UTC{' '}
+							{!done
+								? 'Sale starts ' +
+								  (cutoffMonth < 10 ? '0' : '') +
+								  cutoffMonth +
+								  '.' +
+								  (cutoffDay < 10 ? '0' : '') +
+								  cutoffDay +
+								  '.' +
+								  cutoffYear +
+								  ' at ' +
+								  ' ' +
+								  (cutoffHour < 10 ? '0' : '') +
+								  cutoffHour +
+								  ':' +
+								  (cutoffMinutes < 10 ? '0' : '') +
+								  cutoffMinutes +
+								  (cutoffHour < 12 ? ' AM' : ' PM') +
+								  ' UTC'
+								: 'SALE OPEN!'}
 						</p>
 						<div className={styles.CelebrityModalTimerContainer}>
 							<div className={styles.CelebrityModalTimer}>
-								<p className={styles.CelebrityModalNumber}>00</p>
+								<p className={styles.CelebrityModalNumber}>{daysRemaining}</p>
 								<p className={styles.CelebrityModalTime}>Days</p>
 							</div>
 							<div className={styles.CelebrityModalTimer}>
-								<p className={styles.CelebrityModalNumber}>00</p>
+								<p className={styles.CelebrityModalNumber}>{hoursRemaining}</p>
 								<p className={styles.CelebrityModalTime}>Hours</p>
 							</div>
 							<div className={styles.CelebrityModalTimer}>
-								<p className={styles.CelebrityModalNumber}>00</p>
+								<p className={styles.CelebrityModalNumber}>
+									{minutesRemaining < 10 ? '0' : '' + minutesRemaining}
+								</p>
 								<p className={styles.CelebrityModalTime}>Minutes</p>
 							</div>
 						</div>
@@ -138,7 +238,11 @@ const BuyModal = ({
 								<p>Purchase NFT</p>
 							</button>
 						)}
-						{!enabled && <div className={styles.CelebrityModalDisable}></div>}
+						{!enabled && (
+							<div className={styles.CelebrityModalDisable}>
+								<p>Without Permission</p>
+							</div>
+						)}
 					</div>
 				</div>
 			</div>
