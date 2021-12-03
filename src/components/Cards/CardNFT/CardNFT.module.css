@@ -147,25 +147,33 @@
 	align-items: center;
 }
 
-.CelebrityNftBuy p:hover {
+.CelebrityNftBuy:hover {
+	transform: scale(1.1);
+	background: none;
+	border: none;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.CelebrityNftBuy p::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 4px;
+	padding: 3px;
 	background: linear-gradient(
 		to right,
 		rgb(255, 1, 126),
 		rgb(169, 1, 250),
 		rgb(3, 238, 254)
 	);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.CelebrityNftBuy:hover {
-	transform: scale(1.1);
-	background: none;
-	border: none;
-	background-image: url(./assets/Asset\ 22-8\ 1.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: destination-out;
+	mask-composite: exclude;
 }
 
 /***************/

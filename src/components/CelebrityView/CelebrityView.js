@@ -8,12 +8,16 @@ import './CelebrityView.css';
 import { initializeNFTInfo } from '../../store/reducer/purchaseNFT_reducer/indexNFT';
 import CardNFT from '../Cards/CardNFT/CardNFT';
 import BuyModal from '../BuyModal/BuyModal';
+import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
 import { nftIds } from '../../store/reducer/purchaseNFT_reducer/purchaseNFTInitialStates';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
+
 //8888888888888888888888888888888888888888888888888888888//
 
 //- DATOS DEL ARTISTA
 const artist = {
+	//Imagen del Artista
+	image: './assets/artist.jpg',
 	//Nombre del Artista
 	name: 'Memepad',
 	//Usuario del Artista
@@ -32,28 +36,32 @@ const nfts = [
 		colection: 'MemePad #0001',
 		image: './assets/nft/nft1.png',
 		price: '0.5',
-		address: "0x0",
+		address: '0x0',
+		cutoffDate: 'April 15, 2022 22:35:32',
 	},
 	{
 		name: 'The Pleb',
 		colection: 'MemePad #0001',
 		image: './assets/nft/CavemanMepad.jpg',
 		price: '1',
-		address: "0x1",
+		address: '0x1',
+		cutoffDate: 'April 25, 2022 22:35:32',
 	},
 	{
 		name: 'The Chad',
 		colection: 'MemePad #0001',
 		image: './assets/nft/GladiatorMepad.jpg',
 		price: '2',
-		address: "0x2",
+		address: '0x2',
+		cutoffDate: 'April 26, 2022 22:35:32',
 	},
 	{
 		name: 'The Elon',
 		colection: 'MemePad #0001',
 		image: './assets/nft/nft1.png',
 		price: '34',
-		address: "0x3",
+		address: '0x3',
+		cutoffDate: 'April 29, 2022 22:36:32',
 	},
 ];
 
@@ -70,8 +78,9 @@ const CelebrityView = () => {
 		price: 'price',
 		image: 'image',
 		connected: false,
-		address: "address",
-		poolNumber: 0 ,
+		address: 'address',
+		poolNumber: 0,
+		cutoffDate: '1652983200',
 	});
 
 	const { connected } = useSelector((state) => state.web3);
@@ -79,16 +88,16 @@ const CelebrityView = () => {
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-		  if (connected) {
-			  if(nftIds){
-				dispatch(initializeNFTInfo());
-			  }
-		  }
+			if (connected) {
+				if (nftIds) {
+					dispatch(initializeNFTInfo());
+				}
+			}
 		}, 10000);
 		return () => {
-		  clearInterval(interval);
+			clearInterval(interval);
 		};
-	  });
+	});
 
 	//8888888888888888888888888888888888888888888888888888888//
 
@@ -103,7 +112,6 @@ const CelebrityView = () => {
 				image={value.image}
 				//Precio
 				price={value.price}
-				
 				// La funcion que activa el boton BUY
 				onClick={() => {
 					selectedArtist.name = value.name;
@@ -113,7 +121,8 @@ const CelebrityView = () => {
 					selectedArtist.address = value.address;
 					selectedArtist.connected = connected;
 					selectedArtist.poolNumber = i;
-					
+					selectedArtist.cutoffDate = value.cutoffDate;
+
 					showModal(true);
 				}}
 			/>
@@ -142,15 +151,17 @@ const CelebrityView = () => {
 						showModal(false);
 					}}
 					onClick={() => {}}
+					cutoffDate={selectedArtist.cutoffDate}
 				/>
 			)}
 
 			{/******************************/}
 
+			<AnimatedBackground />
+
+			{/******************************/}
+
 			<section className="celebrity-container">
-				<p style={{ backgroundColor: 'red', color: 'white' }}>
-					Work in Progress
-				</p>
 				<div className="celebrity-story">
 					{/*<a href="">Celebrity NFTs</a>*/}
 					<p style={{ color: '#868686' }}>Celebrity NFTs</p>
@@ -160,7 +171,10 @@ const CelebrityView = () => {
 
 				<div className="celebrity-artist-data">
 					<div className="celebrity-artist-info-container">
-						<div className="celebrity-image"></div>
+						<div
+							className="celebrity-image"
+							style={{ backgroundImage: 'url(' + artist.image + ')' }}
+						></div>
 						<div className="celebrity-name">
 							<h2>{artist.name}</h2>
 							<h3>{artist.user}</h3>

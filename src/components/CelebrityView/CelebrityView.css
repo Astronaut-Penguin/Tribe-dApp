@@ -10,6 +10,8 @@
 
 	padding: 35px;
 	text-align: center;
+
+	position: relative;
 }
 
 /************************************/
@@ -79,7 +81,6 @@
 	margin-right: 11px;
 
 	border-radius: 9px;
-	background-image: url(./assets/facha.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
