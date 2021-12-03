@@ -119,6 +119,8 @@ const BuyModal = ({
 						<div className={styles.CelebrityModalNftSubcontainerName}>
 							<h2>{name}</h2>
 							<h3>{colection}</h3>
+
+							<p className={styles.OwnText}> You own: x </p>
 						</div>
 
 						<div className={styles.CelebrityModalNftContainerInfoPc}>
@@ -145,18 +147,20 @@ const BuyModal = ({
 							</p>
 							<div className={styles.CelebrityModalTimerContainer}>
 								<div className={styles.CelebrityModalTimer}>
-									<p className={styles.CelebrityModalNumber}>{daysRemaining}</p>
+									<p className={styles.CelebrityModalNumber}>
+										{(daysRemaining < 10 ? '0' : '') + daysRemaining}
+									</p>
 									<p className={styles.CelebrityModalTime}>Days</p>
 								</div>
 								<div className={styles.CelebrityModalTimer}>
 									<p className={styles.CelebrityModalNumber}>
-										{hoursRemaining}
+										{(hoursRemaining < 10 ? '0' : '') + hoursRemaining}
 									</p>
 									<p className={styles.CelebrityModalTime}>Hours</p>
 								</div>
 								<div className={styles.CelebrityModalTimer}>
 									<p className={styles.CelebrityModalNumber}>
-										{minutesRemaining < 10 ? '0' : '' + minutesRemaining}
+										{(minutesRemaining < 10 ? '0' : '') + minutesRemaining}
 									</p>
 									<p className={styles.CelebrityModalTime}>Minutes</p>
 								</div>
@@ -208,16 +212,20 @@ const BuyModal = ({
 						</p>
 						<div className={styles.CelebrityModalTimerContainer}>
 							<div className={styles.CelebrityModalTimer}>
-								<p className={styles.CelebrityModalNumber}>{daysRemaining}</p>
+								<p className={styles.CelebrityModalNumber}>
+									{(daysRemaining < 10 ? '0' : '') + daysRemaining}
+								</p>
 								<p className={styles.CelebrityModalTime}>Days</p>
 							</div>
 							<div className={styles.CelebrityModalTimer}>
-								<p className={styles.CelebrityModalNumber}>{hoursRemaining}</p>
+								<p className={styles.CelebrityModalNumber}>
+									{(hoursRemaining < 10 ? '0' : '') + hoursRemaining}
+								</p>
 								<p className={styles.CelebrityModalTime}>Hours</p>
 							</div>
 							<div className={styles.CelebrityModalTimer}>
 								<p className={styles.CelebrityModalNumber}>
-									{minutesRemaining < 10 ? '0' : '' + minutesRemaining}
+									{(minutesRemaining < 10 ? '0' : '') + minutesRemaining}
 								</p>
 								<p className={styles.CelebrityModalTime}>Minutes</p>
 							</div>
