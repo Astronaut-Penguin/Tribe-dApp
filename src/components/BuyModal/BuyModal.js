@@ -181,7 +181,7 @@ const BuyModal = ({
 							)}
 							{!enabled && (
 								<div className={styles.CelebrityModalDisable}>
-									<p>Without Permission</p>
+									<p>You need more allocation</p>
 								</div>
 							)}
 						</div>
