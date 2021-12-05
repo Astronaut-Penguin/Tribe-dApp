@@ -59,7 +59,7 @@ export const initWeb3 = createAsyncThunk(
 			},
 			blockExplorerUrls: ['https://bscscan.com/'],
 		};
-		const networkData = bscTestnet;
+		const networkData = bscMainnet;
 		const web3Modal = new Web3Modal({
 			cacheProvider: false, // optional
 			providerOptions, // required

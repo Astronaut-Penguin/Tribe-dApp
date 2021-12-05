@@ -35,17 +35,17 @@ const nfts = [
 		name: 'The Pleb',
 		colection: 'MemePad #0001',
 		image: './assets/nft/CavemanMepad.jpg',
-		price: '0.15',
+		price: '0.09',
 		address: '0x1',
-		cutoffDate: 'December 15, 2021 22:35:32',
+		cutoffDate: 'December 15, 2021 18:00:00 UTC',
 	},
 	{
 		name: 'The Chad',
 		colection: 'MemePad #0001',
 		image: './assets/nft/GladiatorMepad.jpg',
-		price: '0.5',
+		price: '0.28',
 		address: '0x2',
-		cutoffDate: 'December 15, 2021 22:35:32',
+		cutoffDate: 'December 15, 2021 18:00:00 UTC',
 	},
 ];
 
