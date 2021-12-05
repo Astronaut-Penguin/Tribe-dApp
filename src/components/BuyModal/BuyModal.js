@@ -179,9 +179,14 @@ const BuyModal = ({
 									<p>Purchase NFT</p>
 								</button>
 							)}
-							{!enabled && (
+							{!enabled && done === true &&(
 								<div className={styles.CelebrityModalDisable}>
 									<p>You need more allocation</p>
+								</div>
+							)}
+							{!enabled && done === false &&(
+								<div className={styles.CelebrityModalDisable}>
+									<p>Wait until sale start</p>
 								</div>
 							)}
 						</div>
@@ -204,8 +209,7 @@ const BuyModal = ({
 								  ':' +
 								  (cutoffMinutes < 10 ? '0' : '') +
 								  cutoffMinutes +
-								  (cutoffHour < 12 ? ' AM' : ' PM') +
-								  ' UTC'
+								  (cutoffHour < 12 ? ' AM' : ' PM') 
 								: 'SALE OPEN!'}
 						</p>
 						<div className={styles.CelebrityModalTimerContainer}>
