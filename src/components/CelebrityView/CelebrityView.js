@@ -36,6 +36,7 @@ const nfts = [
 		name: 'The BlackMepad',
 		colection: 'Open Edition NFT',
 		image: './assets/nft/soon.png',
+		modal: './assets/nft/soon.png',
 		price: '0.2',
 		address: '0x2',
 		cutoffDate: 'December 15, 2021 18:00:00 UTC',
@@ -44,6 +45,7 @@ const nfts = [
 		name: 'The Pleb',
 		colection: 'Caveman NFT',
 		image: './assets/nft/soon.png',
+		modal: './assets/nft/soon.png',
 		price: '0.09',
 		address: '0x1',
 		cutoffDate: 'December 15, 2021 18:00:00 UTC',
@@ -52,6 +54,7 @@ const nfts = [
 		name: 'The Chad',
 		colection: 'Gladiator NFT',
 		image: './assets/nft/soon.png',
+		modal: './assets/nft/soon.png',
 		price: '0.28',
 		address: '0x2',
 		cutoffDate: 'December 15, 2021 18:00:00 UTC',
@@ -60,6 +63,7 @@ const nfts = [
 		name: 'The Elon',
 		colection: 'CryptoKing NFT',
 		image: './assets/nft/soon.png',
+		modal: './assets/nft/soon.png',
 		price: '0.45',
 		address: '0x2',
 		cutoffDate: 'December 15, 2021 18:00:00 UTC',
@@ -78,6 +82,7 @@ const CelebrityView = () => {
 		colection: 'colection',
 		price: 'price',
 		image: 'image',
+		modal: 'modal',
 		connected: false,
 		address: 'address',
 		poolNumber: 0,
@@ -118,6 +123,7 @@ const CelebrityView = () => {
 					selectedArtist.name = value.name;
 					selectedArtist.colection = value.colection;
 					selectedArtist.image = value.image;
+					selectedArtist.modal = value.modal;
 					selectedArtist.price = value.price;
 					selectedArtist.address = value.address;
 					selectedArtist.connected = connected;
@@ -145,6 +151,7 @@ const CelebrityView = () => {
 					colection={selectedArtist.colection}
 					price={selectedArtist.price}
 					image={selectedArtist.image}
+					modal={selectedArtist.modal}
 					address={selectedArtist.address}
 					connected={connected}
 					nftId={nftIds[selectedArtist.poolNumber]}
