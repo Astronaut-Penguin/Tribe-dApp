@@ -19,6 +19,7 @@ import { buyNFT } from '../../store/reducer/purchaseNFT_reducer/indexNFT';
 
 // price: STRING - El Precio del NFT
 // image: STRING URL - Url de la imagen
+// modal: STRING URL - Url de la imagen que va en el modal
 
 const BuyModal = ({
 	artist,
@@ -27,6 +28,7 @@ const BuyModal = ({
 	colection,
 	price,
 	image,
+	modal,
 	onClose,
 	address,
 	connected,
@@ -105,7 +107,7 @@ const BuyModal = ({
 
 					<div
 						className={styles.CelebrityModalNftImage}
-						style={{ backgroundImage: 'url(' + image + ')' }}
+						style={{ backgroundImage: 'url(' + modal + ')' }}
 					/>
 
 					<div className={styles.CelebrityModalNftContainer}>
@@ -140,7 +142,7 @@ const BuyModal = ({
 									  ':' +
 									  (cutoffMinutes < 10 ? '0' : '') +
 									  cutoffMinutes +
-									  (cutoffHour < 12 ? ' AM' : ' PM') 
+									  (cutoffHour < 12 ? ' AM' : ' PM')
 									: 'SALE OPEN!'}
 							</p>
 							<div className={styles.CelebrityModalTimerContainer}>
@@ -178,12 +180,12 @@ const BuyModal = ({
 									<p>Purchase NFT</p>
 								</button>
 							)}
-							{!enabled && done === true &&(
+							{!enabled && done === true && (
 								<div className={styles.CelebrityModalDisable}>
 									<p>You need more allocation</p>
 								</div>
 							)}
-							{!enabled && done === false &&(
+							{!enabled && done === false && (
 								<div className={styles.CelebrityModalDisable}>
 									<p>Wait until sale start</p>
 								</div>
@@ -208,7 +210,7 @@ const BuyModal = ({
 								  ':' +
 								  (cutoffMinutes < 10 ? '0' : '') +
 								  cutoffMinutes +
-								  (cutoffHour < 12 ? ' AM' : ' PM') 
+								  (cutoffHour < 12 ? ' AM' : ' PM')
 								: 'SALE OPEN!'}
 						</p>
 						<div className={styles.CelebrityModalTimerContainer}>
@@ -246,16 +248,16 @@ const BuyModal = ({
 								<p>Purchase NFT</p>
 							</button>
 						)}
-							{!enabled && done === true &&(
-								<div className={styles.CelebrityModalDisable}>
-									<p>You need more allocation</p>
-								</div>
-							)}
-							{!enabled && done === false &&(
-								<div className={styles.CelebrityModalDisable}>
-									<p>Wait until sale start</p>
-								</div>
-							)}
+						{!enabled && done === true && (
+							<div className={styles.CelebrityModalDisable}>
+								<p>You need more allocation</p>
+							</div>
+						)}
+						{!enabled && done === false && (
+							<div className={styles.CelebrityModalDisable}>
+								<p>Wait until sale start</p>
+							</div>
+						)}
 					</div>
 				</div>
 			</div>
