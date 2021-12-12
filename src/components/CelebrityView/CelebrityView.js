@@ -21,8 +21,9 @@ const artist = {
 	//Nombre del Artista
 	name: 'Memepad',
 	//Usuario del Artista
-	user: '@Memepad',
+	user: 'Memepad.co',
 	//URL redes sociales
+	telegram: 'https://t.me/memepadofficial/',
 	twitter: 'https://twitter.com/MemePadLaunch',
 	instagram: '',
 	youtube: '',
@@ -32,18 +33,34 @@ const artist = {
 //- DATOS DE NFTS
 const nfts = [
 	{
+		name: 'The BlackMepad',
+		colection: 'Open Edition NFT',
+		image: './assets/nft/soon.png',
+		price: '0.2',
+		address: '0x2',
+		cutoffDate: 'December 15, 2021 18:00:00 UTC',
+	},
+	{
 		name: 'The Pleb',
-		colection: 'MemePad #0001',
-		image: './assets/nft/CavemanMepad.jpg',
+		colection: 'Caveman NFT',
+		image: './assets/nft/soon.png',
 		price: '0.09',
 		address: '0x1',
 		cutoffDate: 'December 15, 2021 18:00:00 UTC',
 	},
 	{
 		name: 'The Chad',
-		colection: 'MemePad #0001',
-		image: './assets/nft/GladiatorMepad.jpg',
+		colection: 'Gladiator NFT',
+		image: './assets/nft/soon.png',
 		price: '0.28',
+		address: '0x2',
+		cutoffDate: 'December 15, 2021 18:00:00 UTC',
+	},
+	{
+		name: 'The Elon',
+		colection: 'CryptoKing NFT',
+		image: './assets/nft/soon.png',
+		price: '0.45',
 		address: '0x2',
 		cutoffDate: 'December 15, 2021 18:00:00 UTC',
 	},
@@ -169,6 +186,12 @@ const CelebrityView = () => {
 									className="celebrity-social social-twitter"
 								>
 									Twitter
+								</a>
+								<a
+									href={artist.telegram}
+									className="celebrity-social social-telegram"
+								>
+									Telegram
 								</a>
 							</div>
 						</div>
