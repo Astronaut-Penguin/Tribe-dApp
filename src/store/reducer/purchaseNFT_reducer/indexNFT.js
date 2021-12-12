@@ -90,12 +90,12 @@ export const loadNFTInfo = createAsyncThunk(
 
 			const { nftContract } = thunkAPI.getState().nft[action]; //error destructure contract as its undefined
 			const responses = await Promise.all([
-				nftContract.methods.whitelisted(address).call(),
+				nftContract.methods.whiteListedContract().call(),
 				nftContract.methods.whitelistedAmount(address).call(),
 				nftContract.methods.balanceOf(address).call(),
 			]);
 			const enabledBoolean = Boolean(
-				Number(responses[0] == true && Number(responses[1]) > 0),
+				Number(responses[0] == false || Number(responses[1]) > 0),
 			);
 			const balance = Number(responses[2]);
 			return {

@@ -17,6 +17,16 @@
             "internalType": "string",
             "name": "_initBaseURI",
             "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_startBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_cost",
+            "type": "uint256"
           }
         ],
         "stateMutability": "nonpayable",
@@ -168,6 +178,13 @@
       },
       {
         "inputs": [],
+        "name": "closeContract",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
         "name": "cost",
         "outputs": [
           {
@@ -224,15 +241,22 @@
       },
       {
         "inputs": [],
-        "name": "maxSupply",
+        "name": "lock",
         "outputs": [
           {
-            "internalType": "uint256",
+            "internalType": "bool",
             "name": "",
-            "type": "uint256"
+            "type": "bool"
           }
         ],
         "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "lockContractMinting",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -253,6 +277,13 @@
           }
         ],
         "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "openContract",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -315,19 +346,6 @@
             "type": "address"
           }
         ],
-        "name": "removeWhitelistUser",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "_user",
-            "type": "address"
-          }
-        ],
         "name": "removeWhitelistUserAmount",
         "outputs": [],
         "stateMutability": "nonpayable",
@@ -342,19 +360,6 @@
           }
         ],
         "name": "removeWhitelistUserAmountByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "removeWhitelistUserByList",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -459,6 +464,32 @@
         "name": "setCost",
         "outputs": [],
         "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_newStart",
+            "type": "uint256"
+          }
+        ],
+        "name": "setStart",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "startBlock",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
         "type": "function"
       },
       {
@@ -631,16 +662,16 @@
         "type": "function"
       },
       {
-        "inputs": [
+        "inputs": [],
+        "name": "whiteListedContract",
+        "outputs": [
           {
-            "internalType": "address",
-            "name": "_user",
-            "type": "address"
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
           }
         ],
-        "name": "whitelistUser",
-        "outputs": [],
-        "stateMutability": "nonpayable",
+        "stateMutability": "view",
         "type": "function"
       },
       {
@@ -682,38 +713,6 @@
       {
         "inputs": [
           {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "whitelistUserByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "name": "whitelisted",
-        "outputs": [
-          {
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
             "internalType": "address",
             "name": "",
             "type": "address"
@@ -738,7 +737,7 @@
         "type": "function"
       }
     ],
-    "nftAddress": "0xb831CEAfBb818de2d34F194AfD327F974bdFDbCd"
+    "nftAddress": "0x808Ae3E77459adcc09515521D09611f7114DF0C0"
   },
   "nft2": {
     "nftAbi": [
@@ -758,6 +757,16 @@
             "internalType": "string",
             "name": "_initBaseURI",
             "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_startBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_cost",
+            "type": "uint256"
           }
         ],
         "stateMutability": "nonpayable",
@@ -909,6 +918,13 @@
       },
       {
         "inputs": [],
+        "name": "closeContract",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
         "name": "cost",
         "outputs": [
           {
@@ -965,15 +981,22 @@
       },
       {
         "inputs": [],
-        "name": "maxSupply",
+        "name": "lock",
         "outputs": [
           {
-            "internalType": "uint256",
+            "internalType": "bool",
             "name": "",
-            "type": "uint256"
+            "type": "bool"
           }
         ],
         "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "lockContractMinting",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -994,6 +1017,13 @@
           }
         ],
         "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "openContract",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -1056,19 +1086,6 @@
             "type": "address"
           }
         ],
-        "name": "removeWhitelistUser",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "_user",
-            "type": "address"
-          }
-        ],
         "name": "removeWhitelistUserAmount",
         "outputs": [],
         "stateMutability": "nonpayable",
@@ -1083,19 +1100,6 @@
           }
         ],
         "name": "removeWhitelistUserAmountByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "removeWhitelistUserByList",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -1200,6 +1204,32 @@
         "name": "setCost",
         "outputs": [],
         "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_newStart",
+            "type": "uint256"
+          }
+        ],
+        "name": "setStart",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "startBlock",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
         "type": "function"
       },
       {
@@ -1372,16 +1402,16 @@
         "type": "function"
       },
       {
-        "inputs": [
+        "inputs": [],
+        "name": "whiteListedContract",
+        "outputs": [
           {
-            "internalType": "address",
-            "name": "_user",
-            "type": "address"
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
           }
         ],
-        "name": "whitelistUser",
-        "outputs": [],
-        "stateMutability": "nonpayable",
+        "stateMutability": "view",
         "type": "function"
       },
       {
@@ -1423,38 +1453,6 @@
       {
         "inputs": [
           {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "whitelistUserByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "name": "whitelisted",
-        "outputs": [
-          {
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
             "internalType": "address",
             "name": "",
             "type": "address"
@@ -1479,7 +1477,7 @@
         "type": "function"
       }
     ],
-    "nftAddress": "0xe69DdB31662542329728b3365B5DE890d921f915"
+    "nftAddress": "0x38880127b1E7e82bF5417e629b2f7170193A72Cd"
   },
   "nft3": {
     "nftAbi": [
@@ -1499,6 +1497,16 @@
             "internalType": "string",
             "name": "_initBaseURI",
             "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_startBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_cost",
+            "type": "uint256"
           }
         ],
         "stateMutability": "nonpayable",
@@ -1650,6 +1658,13 @@
       },
       {
         "inputs": [],
+        "name": "closeContract",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
         "name": "cost",
         "outputs": [
           {
@@ -1706,15 +1721,22 @@
       },
       {
         "inputs": [],
-        "name": "maxSupply",
+        "name": "lock",
         "outputs": [
           {
-            "internalType": "uint256",
+            "internalType": "bool",
             "name": "",
-            "type": "uint256"
+            "type": "bool"
           }
         ],
         "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "lockContractMinting",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -1735,6 +1757,13 @@
           }
         ],
         "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "openContract",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -1797,19 +1826,6 @@
             "type": "address"
           }
         ],
-        "name": "removeWhitelistUser",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "_user",
-            "type": "address"
-          }
-        ],
         "name": "removeWhitelistUserAmount",
         "outputs": [],
         "stateMutability": "nonpayable",
@@ -1824,19 +1840,6 @@
           }
         ],
         "name": "removeWhitelistUserAmountByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "removeWhitelistUserByList",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -1941,6 +1944,32 @@
         "name": "setCost",
         "outputs": [],
         "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_newStart",
+            "type": "uint256"
+          }
+        ],
+        "name": "setStart",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "startBlock",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
         "type": "function"
       },
       {
@@ -2113,16 +2142,16 @@
         "type": "function"
       },
       {
-        "inputs": [
+        "inputs": [],
+        "name": "whiteListedContract",
+        "outputs": [
           {
-            "internalType": "address",
-            "name": "_user",
-            "type": "address"
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
           }
         ],
-        "name": "whitelistUser",
-        "outputs": [],
-        "stateMutability": "nonpayable",
+        "stateMutability": "view",
         "type": "function"
       },
       {
@@ -2164,38 +2193,6 @@
       {
         "inputs": [
           {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "whitelistUserByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "name": "whitelisted",
-        "outputs": [
-          {
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
             "internalType": "address",
             "name": "",
             "type": "address"
@@ -2220,7 +2217,7 @@
         "type": "function"
       }
     ],
-    "nftAddress": "0xe69DdB31662542329728b3365B5DE890d921f915"
+    "nftAddress": "0xF54d726d87B99e0db5FABf01A332130D35987c4A"
   },
   "nft4": {
     "nftAbi": [
@@ -2240,6 +2237,16 @@
             "internalType": "string",
             "name": "_initBaseURI",
             "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_startBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_cost",
+            "type": "uint256"
           }
         ],
         "stateMutability": "nonpayable",
@@ -2391,6 +2398,13 @@
       },
       {
         "inputs": [],
+        "name": "closeContract",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
         "name": "cost",
         "outputs": [
           {
@@ -2447,15 +2461,22 @@
       },
       {
         "inputs": [],
-        "name": "maxSupply",
+        "name": "lock",
         "outputs": [
           {
-            "internalType": "uint256",
+            "internalType": "bool",
             "name": "",
-            "type": "uint256"
+            "type": "bool"
           }
         ],
         "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "lockContractMinting",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -2476,6 +2497,13 @@
           }
         ],
         "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "openContract",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -2538,19 +2566,6 @@
             "type": "address"
           }
         ],
-        "name": "removeWhitelistUser",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "_user",
-            "type": "address"
-          }
-        ],
         "name": "removeWhitelistUserAmount",
         "outputs": [],
         "stateMutability": "nonpayable",
@@ -2565,19 +2580,6 @@
           }
         ],
         "name": "removeWhitelistUserAmountByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "removeWhitelistUserByList",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -2682,6 +2684,32 @@
         "name": "setCost",
         "outputs": [],
         "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_newStart",
+            "type": "uint256"
+          }
+        ],
+        "name": "setStart",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "startBlock",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
         "type": "function"
       },
       {
@@ -2854,16 +2882,16 @@
         "type": "function"
       },
       {
-        "inputs": [
+        "inputs": [],
+        "name": "whiteListedContract",
+        "outputs": [
           {
-            "internalType": "address",
-            "name": "_user",
-            "type": "address"
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
           }
         ],
-        "name": "whitelistUser",
-        "outputs": [],
-        "stateMutability": "nonpayable",
+        "stateMutability": "view",
         "type": "function"
       },
       {
@@ -2905,38 +2933,6 @@
       {
         "inputs": [
           {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "whitelistUserByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "name": "whitelisted",
-        "outputs": [
-          {
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
             "internalType": "address",
             "name": "",
             "type": "address"
@@ -2961,7 +2957,7 @@
         "type": "function"
       }
     ],
-    "nftAddress": "0xe69DdB31662542329728b3365B5DE890d921f915"
+    "nftAddress": "0xfa1cD430F0522A7454D3b42e96c8c25EA98344c4"
   },
     "prefix": "https://bscscan.com/address/",
     "network": 56

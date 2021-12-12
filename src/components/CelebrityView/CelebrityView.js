@@ -35,8 +35,8 @@ const nfts = [
 	{
 		name: 'The BlackMepad',
 		colection: 'Open Edition NFT',
-		image: './assets/nft/soon.png',
-		modal: './assets/nft/soon.png',
+		image: './assets/nft/Blackmepad.mp4',
+		modal: './assets/nft/Blackmepad.mp4',
 		price: '0.2',
 		address: '0x2',
 		cutoffDate: 'December 15, 2021 18:00:00 UTC',
@@ -44,8 +44,8 @@ const nfts = [
 	{
 		name: 'The Pleb',
 		colection: 'Caveman NFT',
-		image: './assets/nft/soon.png',
-		modal: './assets/nft/soon.png',
+		image: './assets/nft/Pleb.png',
+		modal: './assets/nft/Pleb.png',
 		price: '0.09',
 		address: '0x1',
 		cutoffDate: 'December 15, 2021 18:00:00 UTC',
@@ -53,8 +53,8 @@ const nfts = [
 	{
 		name: 'The Chad',
 		colection: 'Gladiator NFT',
-		image: './assets/nft/soon.png',
-		modal: './assets/nft/soon.png',
+		image: './assets/nft/Chad.mp4',
+		modal: './assets/nft/Chad.mp4',
 		price: '0.28',
 		address: '0x2',
 		cutoffDate: 'December 15, 2021 18:00:00 UTC',
@@ -62,8 +62,8 @@ const nfts = [
 	{
 		name: 'The Elon',
 		colection: 'CryptoKing NFT',
-		image: './assets/nft/soon.png',
-		modal: './assets/nft/soon.png',
+		image: './assets/nft/Elon.mp4',
+		modal: './assets/nft/Elon.mp4',
 		price: '0.45',
 		address: '0x2',
 		cutoffDate: 'December 15, 2021 18:00:00 UTC',
