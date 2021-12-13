@@ -28,7 +28,7 @@ const BuyModal = ({
 	colection,
 	price,
 	image,
-	modal,
+	video,
 	onClose,
 	address,
 	connected,
@@ -105,10 +105,24 @@ const BuyModal = ({
 				<div className={styles.CelebrityModalContainer}>
 					<button className={styles.Cross} onClick={onClose}></button>
 
-					<div
-						className={styles.CelebrityModalNftImage}
-						style={{ backgroundImage: 'url(' + modal + ')' }}
-					/>
+					{video && (
+						<video
+							className={styles.BackgroundVideo}
+							autoPlay
+							loop
+							muted
+							preload="auto"
+						>
+							<source src={video} type="video/mp4" />
+						</video>
+					)}
+
+					{image && (
+						<div
+							className={styles.CelebrityModalNftImage}
+							style={{ backgroundImage: 'url(' + image + ')' }}
+						/>
+					)}
 
 					<div className={styles.CelebrityModalNftContainer}>
 						<div className={styles.CelebrityModalNftSubcontainerArtist}>

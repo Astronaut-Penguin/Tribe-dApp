@@ -81,6 +81,7 @@
 	background-image: url(./assets/cross-hover.png);
 }
 
+/* Image */
 .CelebrityModalNftImage {
 	display: inline-block;
 	width: 162px;
@@ -91,6 +92,15 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+/* Video */
+.BackgroundVideo {
+	display: inline-block;
+	width: 162px;
+	height: 162px;
+	border-radius: 34px;
+	object-fit: cover;
 }
 
 /* Modal Name Container */
@@ -419,6 +429,12 @@
 		height: 100%;
 
 		border-radius: 34px;
+	}
+
+	/* Video */
+	.BackgroundVideo {
+		width: 50%;
+		height: 100%;
 	}
 
 	.CelebrityModalNftContainer {
