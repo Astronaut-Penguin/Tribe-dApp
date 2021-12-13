@@ -31,12 +31,13 @@ const artist = {
 };
 
 //- DATOS DE NFTS
+//- IMAGE / VIDEO setear como 'UNDEFINED' si no va contenido
 const nfts = [
 	{
 		name: 'The BlackMepad',
 		colection: 'Open Edition NFT',
-		image: './assets/nft/Blackmepad.mp4',
-		modal: './assets/nft/Blackmepad.mp4',
+		image: undefined,
+		video: './assets/nft/Blackmepad.mp4',
 		price: '0.2',
 		address: '0x2',
 		cutoffDate: 'December 15, 2021 18:00:00 UTC',
@@ -45,7 +46,7 @@ const nfts = [
 		name: 'The Pleb',
 		colection: 'Caveman NFT',
 		image: './assets/nft/Pleb.png',
-		modal: './assets/nft/Pleb.png',
+		video: undefined,
 		price: '0.09',
 		address: '0x1',
 		cutoffDate: 'December 15, 2021 18:00:00 UTC',
@@ -53,8 +54,8 @@ const nfts = [
 	{
 		name: 'The Chad',
 		colection: 'Gladiator NFT',
-		image: './assets/nft/Chad.mp4',
-		modal: './assets/nft/Chad.mp4',
+		image: undefined,
+		video: './assets/nft/Chad.mp4',
 		price: '0.28',
 		address: '0x2',
 		cutoffDate: 'December 15, 2021 18:00:00 UTC',
@@ -62,8 +63,8 @@ const nfts = [
 	{
 		name: 'The Elon',
 		colection: 'CryptoKing NFT',
-		image: './assets/nft/Elon.mp4',
-		modal: './assets/nft/Elon.mp4',
+		image: undefined,
+		video: './assets/nft/Elon.mp4',
 		price: '0.45',
 		address: '0x2',
 		cutoffDate: 'December 15, 2021 18:00:00 UTC',
@@ -81,8 +82,8 @@ const CelebrityView = () => {
 		name: 'name',
 		colection: 'colection',
 		price: 'price',
-		image: 'image',
-		modal: 'modal',
+		image: '',
+		video: '',
 		connected: false,
 		address: 'address',
 		poolNumber: 0,
@@ -116,6 +117,8 @@ const CelebrityView = () => {
 				colection={value.colection}
 				//URL de la imagen
 				image={value.image}
+				//URL del video
+				video={value.video}
 				//Precio
 				price={value.price}
 				// La funcion que activa el boton BUY
@@ -123,7 +126,7 @@ const CelebrityView = () => {
 					selectedArtist.name = value.name;
 					selectedArtist.colection = value.colection;
 					selectedArtist.image = value.image;
-					selectedArtist.modal = value.modal;
+					selectedArtist.video = value.video;
 					selectedArtist.price = value.price;
 					selectedArtist.address = value.address;
 					selectedArtist.connected = connected;
@@ -151,7 +154,7 @@ const CelebrityView = () => {
 					colection={selectedArtist.colection}
 					price={selectedArtist.price}
 					image={selectedArtist.image}
-					modal={selectedArtist.modal}
+					video={selectedArtist.video}
 					address={selectedArtist.address}
 					connected={connected}
 					nftId={nftIds[selectedArtist.poolNumber]}
