@@ -20,7 +20,7 @@
 .celebrity-story {
 	display: inline-block;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1000px;
 	height: 50px;
 
 	font-size: 18px;
@@ -175,6 +175,20 @@
 }
 
 /*********************************************/
+
+.nft-banner-container {
+	min-height: 80px;
+	position: relative;
+	background-image: linear-gradient(
+		to right,
+		rgb(255, 1, 126),
+		rgb(169, 1, 250),
+		rgb(3, 238, 254)
+	);
+	padding: 30px 70px;
+	color: #ffffff;
+	z-index: 1000;
+}
 
 /***************/
 /* TABLET MODE */
