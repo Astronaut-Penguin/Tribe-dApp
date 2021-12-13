@@ -184,7 +184,7 @@ const BuyModal = ({
 								<p>{price} BNB</p>
 								<div className={styles.CelebrityModalBnb}></div>
 							</div>
-							{enabled && (
+							{enabled && done === true &&(
 								<button
 									onClick={async () => {
 										dispatch(buyNFT({ amount: price, id: nftId }));
@@ -252,7 +252,7 @@ const BuyModal = ({
 							<p>{price} BNB</p>
 							<div className={styles.CelebrityModalBnb}></div>
 						</div>
-						{enabled && (
+						{enabled && done === true &&(
 							<button
 								onClick={() => {
 									dispatch(buyNFT({ amount: price, id: nftId }));

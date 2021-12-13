@@ -737,7 +737,7 @@
         "type": "function"
       }
     ],
-    "nftAddress": "0x808Ae3E77459adcc09515521D09611f7114DF0C0"
+    "nftAddress": "0x62B873870C9d40995C57Bb0cF222ED5A901D943A"
   },
   "nft2": {
     "nftAbi": [
@@ -1477,7 +1477,7 @@
         "type": "function"
       }
     ],
-    "nftAddress": "0x38880127b1E7e82bF5417e629b2f7170193A72Cd"
+    "nftAddress": "0x2657B54d5782654bD78F0DF5E73Ac0BBe8dD1c97"
   },
   "nft3": {
     "nftAbi": [
@@ -2217,7 +2217,7 @@
         "type": "function"
       }
     ],
-    "nftAddress": "0xF54d726d87B99e0db5FABf01A332130D35987c4A"
+    "nftAddress": "0x4eFF34D8913c0D92b041652aa983373ebA8a0545"
   },
   "nft4": {
     "nftAbi": [
@@ -2957,7 +2957,7 @@
         "type": "function"
       }
     ],
-    "nftAddress": "0xfa1cD430F0522A7454D3b42e96c8c25EA98344c4"
+    "nftAddress": "0x7632C127F32678daa599dE7cC635ED99A242dbaf"
   },
     "prefix": "https://bscscan.com/address/",
     "network": 56
