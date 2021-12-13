@@ -199,7 +199,7 @@ const BuyModal = ({
 									<p>You need more allocation</p>
 								</div>
 							)}
-							{!enabled && done === false && (
+							{done === false && (
 								<div className={styles.CelebrityModalDisable}>
 									<p>Wait until sale start</p>
 								</div>
@@ -267,7 +267,7 @@ const BuyModal = ({
 								<p>You need more allocation</p>
 							</div>
 						)}
-						{!enabled && done === false && (
+						{done === false && (
 							<div className={styles.CelebrityModalDisable}>
 								<p>Wait until sale start</p>
 							</div>
