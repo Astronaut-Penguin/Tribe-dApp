@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { loadStakingInfo } from "../../store/reducer/staking_reducer";
 import "./Staking.css";
 import { stakeIds } from "../../store/reducer/staking_reducer/stakingInitialStates";
+import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
 
 function Staking() {
   const [switchBtnToggle, setSwitchBtnToggle] = useState(true);
@@ -50,6 +51,8 @@ function Staking() {
           </div>
         </div>
       </div>
+
+      <AnimatedBackground />
 
       <div className="staking-cards-container">
         <Container fluid>
