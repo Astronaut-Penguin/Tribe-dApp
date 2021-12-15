@@ -141,7 +141,7 @@ const BuyModal = ({
 						<div className={styles.CelebrityModalNftContainerInfoPc}>
 							<p className={styles.CelebrityModalTimerStart}>
 								{!done
-									? 'Sale starts ' +
+									? 'This sale will end: ' +
 									  (cutoffMonth < 10 ? '0' : '') +
 									  cutoffMonth +
 									  '.' +
@@ -157,7 +157,7 @@ const BuyModal = ({
 									  (cutoffMinutes < 10 ? '0' : '') +
 									  cutoffMinutes +
 									  (cutoffHour < 12 ? ' AM' : ' PM')
-									: 'SALE OPEN!'}
+									: 'SALE CLOSE!'}
 							</p>
 							<div className={styles.CelebrityModalTimerContainer}>
 								<div className={styles.CelebrityModalTimer}>
@@ -209,7 +209,7 @@ const BuyModal = ({
 					<div className={styles.CelebrityModalNftContainerInfo}>
 						<p className={styles.CelebrityModalTimerStart}>
 							{!done
-								? 'Sale starts ' +
+								? 'This sale will end: ' +
 								  (cutoffMonth < 10 ? '0' : '') +
 								  cutoffMonth +
 								  '.' +
@@ -225,7 +225,7 @@ const BuyModal = ({
 								  (cutoffMinutes < 10 ? '0' : '') +
 								  cutoffMinutes +
 								  (cutoffHour < 12 ? ' AM' : ' PM')
-								: 'SALE OPEN!'}
+								: 'SALE CLOSE!'}
 						</p>
 						<div className={styles.CelebrityModalTimerContainer}>
 							<div className={styles.CelebrityModalTimer}>
