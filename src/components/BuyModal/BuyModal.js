@@ -157,7 +157,7 @@ const BuyModal = ({
 									  (cutoffMinutes < 10 ? '0' : '') +
 									  cutoffMinutes +
 									  (cutoffHour < 12 ? ' AM' : ' PM')
-									: 'SALE CLOSE!'}
+									: 'SALE CLOSED!'}
 							</p>
 							<div className={styles.CelebrityModalTimerContainer}>
 								<div className={styles.CelebrityModalTimer}>
@@ -225,7 +225,7 @@ const BuyModal = ({
 								  (cutoffMinutes < 10 ? '0' : '') +
 								  cutoffMinutes +
 								  (cutoffHour < 12 ? ' AM' : ' PM')
-								: 'SALE CLOSE!'}
+								: 'SALE CLOSED!'}
 						</p>
 						<div className={styles.CelebrityModalTimerContainer}>
 							<div className={styles.CelebrityModalTimer}>

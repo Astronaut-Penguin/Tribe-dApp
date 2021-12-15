@@ -40,7 +40,7 @@ const nfts = [
 		video: './assets/nft/Blackmepad.mp4',
 		price: '0.2',
 		address: '0x2',
-		cutoffDate: 'December 15, 2021 18:00:00 UTC',
+		cutoffDate: 'December 20, 2021 00:00:00 UTC',
 	},
 	{
 		name: 'The Pleb',
@@ -49,7 +49,7 @@ const nfts = [
 		video: undefined,
 		price: '0.09',
 		address: '0x1',
-		cutoffDate: 'December 15, 2021 18:00:00 UTC',
+		cutoffDate: 'December 20, 2021 00:00:00 UTC',
 	},
 	{
 		name: 'The Chad',
@@ -58,7 +58,7 @@ const nfts = [
 		video: './assets/nft/Chad.mp4',
 		price: '0.28',
 		address: '0x2',
-		cutoffDate: 'December 15, 2021 18:00:00 UTC',
+		cutoffDate: 'December 20, 2021 00:00:00 UTC',
 	},
 	{
 		name: 'The Elon',
@@ -67,7 +67,7 @@ const nfts = [
 		video: './assets/nft/Elon.mp4',
 		price: '0.45',
 		address: '0x2',
-		cutoffDate: 'December 15, 2021 18:00:00 UTC',
+		cutoffDate: 'December 20, 2021 00:00:00 UTC',
 	},
 ];
 
