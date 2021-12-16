@@ -2,7 +2,7 @@
 import React from 'react';
 
 //Import Styles
-import styles from './BuyButton.module.css';
+import styles from './Button.module.css';
 
 // BUY BUTTON COMPONENT
 // text: STRING - Texto que va en el boton.
