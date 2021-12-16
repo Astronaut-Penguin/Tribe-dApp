@@ -5,7 +5,7 @@ import React from 'react';
 import styles from './CardNFT.module.css';
 
 //- Button Imports
-import BuyButton from '../BuyButton/BuyButton';
+import BuyButton from '../../BuyButton/BuyButton';
 
 // CARD COMPONENT
 // onClick: La funcion que activa el boton BUY
@@ -34,7 +34,7 @@ const CardNFT = ({ onClick, name, colection, price, image, video }) => {
 					className={styles.CelebrityNftImage}
 					style={{ backgroundImage: 'url(' + image + ')' }}
 				>
-					<BuyButton text='Buy' onClick={onClick}/>
+					<BuyButton text="Buy" onClick={onClick} />
 					{/*<button className={styles.CelebrityNftBuy} onClick={onClick}>
 						<p>Buy</p>
 					</button>*/}
