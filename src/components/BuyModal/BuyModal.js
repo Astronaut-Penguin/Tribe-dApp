@@ -184,7 +184,7 @@ const BuyModal = ({
 								<p>{price} BNB</p>
 								<div className={styles.CelebrityModalBnb}></div>
 							</div>
-							{!enabled && done === false &&(
+							{enabled && done === false && (
 								<button
 									onClick={async () => {
 										dispatch(buyNFT({ amount: price, id: nftId }));
@@ -194,14 +194,14 @@ const BuyModal = ({
 									<p>Purchase NFT</p>
 								</button>
 							)}
-							{enabled && done === false && (
+							{!enabled && done === false && (
 								<div className={styles.CelebrityModalDisable}>
 									<p>You need more allocation</p>
 								</div>
 							)}
 							{done === true && (
 								<div className={styles.CelebrityModalDisable}>
-									<p>Wait until sale start</p>
+									<p>Finished</p>
 								</div>
 							)}
 						</div>
@@ -252,7 +252,7 @@ const BuyModal = ({
 							<p>{price} BNB</p>
 							<div className={styles.CelebrityModalBnb}></div>
 						</div>
-						{enabled && done === true &&(
+						{enabled && done === false && (
 							<button
 								onClick={() => {
 									dispatch(buyNFT({ amount: price, id: nftId }));
@@ -262,14 +262,14 @@ const BuyModal = ({
 								<p>Purchase NFT</p>
 							</button>
 						)}
-						{!enabled && done === true && (
+						{!enabled && done === false && (
 							<div className={styles.CelebrityModalDisable}>
 								<p>You need more allocation</p>
 							</div>
 						)}
-						{done === false && (
+						{done === true && (
 							<div className={styles.CelebrityModalDisable}>
-								<p>Wait until sale start</p>
+								<p>Finished</p>
 							</div>
 						)}
 					</div>
