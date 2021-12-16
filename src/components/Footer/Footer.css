@@ -8,7 +8,7 @@
 	border-top: 1px solid #e2e6e7;
 	margin-top: auto !important;
 
-	z-index: 100;
+	z-index: 100 !important;
 }
 
 .footer-div-1 ul {
