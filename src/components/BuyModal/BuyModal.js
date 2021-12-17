@@ -141,7 +141,7 @@ const BuyModal = ({
 						<div className={styles.CelebrityModalNftContainerInfoPc}>
 							<p className={styles.CelebrityModalTimerStart}>
 								{!done
-									? 'Sale starts ' +
+									? 'This sale will end: ' +
 									  (cutoffMonth < 10 ? '0' : '') +
 									  cutoffMonth +
 									  '.' +
@@ -157,7 +157,7 @@ const BuyModal = ({
 									  (cutoffMinutes < 10 ? '0' : '') +
 									  cutoffMinutes +
 									  (cutoffHour < 12 ? ' AM' : ' PM')
-									: 'SALE OPEN!'}
+									: 'SALE CLOSED!'}
 							</p>
 							<div className={styles.CelebrityModalTimerContainer}>
 								<div className={styles.CelebrityModalTimer}>
@@ -184,7 +184,7 @@ const BuyModal = ({
 								<p>{price} BNB</p>
 								<div className={styles.CelebrityModalBnb}></div>
 							</div>
-							{enabled && done === true &&(
+							{enabled && done === false && (
 								<button
 									onClick={async () => {
 										dispatch(buyNFT({ amount: price, id: nftId }));
@@ -194,14 +194,14 @@ const BuyModal = ({
 									<p>Purchase NFT</p>
 								</button>
 							)}
-							{!enabled && done === true && (
+							{!enabled && done === false && (
 								<div className={styles.CelebrityModalDisable}>
 									<p>You need more allocation</p>
 								</div>
 							)}
-							{done === false && (
+							{done === true && (
 								<div className={styles.CelebrityModalDisable}>
-									<p>Wait until sale start</p>
+									<p>Finished</p>
 								</div>
 							)}
 						</div>
@@ -209,7 +209,7 @@ const BuyModal = ({
 					<div className={styles.CelebrityModalNftContainerInfo}>
 						<p className={styles.CelebrityModalTimerStart}>
 							{!done
-								? 'Sale starts ' +
+								? 'This sale will end: ' +
 								  (cutoffMonth < 10 ? '0' : '') +
 								  cutoffMonth +
 								  '.' +
@@ -225,7 +225,7 @@ const BuyModal = ({
 								  (cutoffMinutes < 10 ? '0' : '') +
 								  cutoffMinutes +
 								  (cutoffHour < 12 ? ' AM' : ' PM')
-								: 'SALE OPEN!'}
+								: 'SALE CLOSED!'}
 						</p>
 						<div className={styles.CelebrityModalTimerContainer}>
 							<div className={styles.CelebrityModalTimer}>
@@ -252,7 +252,7 @@ const BuyModal = ({
 							<p>{price} BNB</p>
 							<div className={styles.CelebrityModalBnb}></div>
 						</div>
-						{enabled && done === true &&(
+						{enabled && done === false && (
 							<button
 								onClick={() => {
 									dispatch(buyNFT({ amount: price, id: nftId }));
@@ -262,14 +262,14 @@ const BuyModal = ({
 								<p>Purchase NFT</p>
 							</button>
 						)}
-						{!enabled && done === true && (
+						{!enabled && done === false && (
 							<div className={styles.CelebrityModalDisable}>
 								<p>You need more allocation</p>
 							</div>
 						)}
-						{done === false && (
+						{done === true && (
 							<div className={styles.CelebrityModalDisable}>
-								<p>Wait until sale start</p>
+								<p>Finished</p>
 							</div>
 						)}
 					</div>
