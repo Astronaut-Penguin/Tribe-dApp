@@ -122,7 +122,7 @@
 	-webkit-text-fill-color: transparent;
 }
 
-.CelebrityNftBuy {
+/*.CelebrityNftBuy {
 	width: 126px;
 	height: 35px;
 
@@ -190,7 +190,7 @@
 	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
 	-webkit-mask-composite: destination-out;
 	mask-composite: exclude;
-}
+} */
 
 /***************/
 /* TABLET MODE */
