@@ -69,3 +69,33 @@
 	-webkit-mask-composite: destination-out;
 	mask-composite: exclude;
 }
+
+/***************/
+/* TABLET MODE */
+/***************/
+
+/* TABLET */
+
+@media only screen and (min-width: 900px) {
+	/* CARD */
+	/* BUY BUTTON */
+	.CelebrityNftBuy {
+		width: 70px;
+		height: 22px;
+	}
+}
+
+/********/
+/* 	PC  */
+/********/
+
+/* PC */
+
+@media only screen and (min-width: 900px) {
+	/* CARD */
+	/* BUY BUTTON */
+	.CelebrityNftBuy {
+		width: 70px;
+		height: 22px;
+	}
+}
