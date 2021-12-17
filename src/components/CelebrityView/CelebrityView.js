@@ -41,7 +41,7 @@ const nfts = [
 		price: '0.2',
 		address: '0x2',
 		cutoffDate: 'December 20, 2021 00:00:00 UTC',
-		viewcontract: '',
+		viewcontract: 'https://bscscan.com/address/0x62B873870C9d40995C57Bb0cF222ED5A901D943A',
 	},
 	{
 		name: 'The Pleb',
@@ -51,7 +51,7 @@ const nfts = [
 		price: '0.09',
 		address: '0x1',
 		cutoffDate: 'December 20, 2021 00:00:00 UTC',
-		viewcontract: '',
+		viewcontract: 'https://bscscan.com/address/0x2657b54d5782654bd78f0df5e73ac0bbe8dd1c97',
 	},
 	{
 		name: 'The Chad',
@@ -61,7 +61,7 @@ const nfts = [
 		price: '0.28',
 		address: '0x2',
 		cutoffDate: 'December 20, 2021 00:00:00 UTC',
-		viewcontract: '',
+		viewcontract: 'https://bscscan.com/address/0x4eff34d8913c0d92b041652aa983373eba8a0545',
 	},
 	{
 		name: 'The Elon',
@@ -71,7 +71,7 @@ const nfts = [
 		price: '0.45',
 		address: '0x2',
 		cutoffDate: 'December 20, 2021 00:00:00 UTC',
-		viewcontract: '',
+		viewcontract: 'https://bscscan.com/address/0x7632c127f32678daa599de7cc635ed99a242dbaf',
 	},
 ];
 
