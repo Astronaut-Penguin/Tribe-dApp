@@ -6,6 +6,7 @@ import styles from './CardNFT.module.css';
 
 //- Button Imports
 import BuyButton from '../../Button/Button';
+import ViewContract from '../../ViewContract/ViewContract';
 
 // CARD COMPONENT
 // onClick: La funcion que activa el boton BUY
@@ -33,11 +34,9 @@ const CardNFT = ({ onClick, name, colection, price, image, video }) => {
 					style={{ backgroundImage: 'url(' + image + ')' }}
 				>
 					<BuyButton text="Buy" onClick={onClick} />
-					{/*<button className={styles.CelebrityNftBuy} onClick={onClick}>
-						<p>Buy</p>
-					</button>*/}
 				</div>
 			)}
+
 			<div className={styles.CelebrityNftDataContainer}>
 				<div className={styles.CelebrityNftData}>
 					<h3>{colection}</h3>
@@ -48,6 +47,7 @@ const CardNFT = ({ onClick, name, colection, price, image, video }) => {
 					<h5>{price} BNB</h5>
 				</div>
 			</div>
+			<ViewContract href="/"/>
 		</div>
 	);
 };
