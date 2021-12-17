@@ -16,7 +16,7 @@ import ViewContract from '../../ViewContract/ViewContract';
 // image: STRING - Url de la imagen
 // video: STRING - Url del video
 
-const CardNFT = ({ onClick, name, colection, price, image, video }) => {
+const CardNFT = ({ onClick, name, colection, price, image, video, href }) => {
 	return (
 		<div className={styles.CelebrityNftCard}>
 			{video && (
@@ -47,7 +47,7 @@ const CardNFT = ({ onClick, name, colection, price, image, video }) => {
 					<h5>{price} BNB</h5>
 				</div>
 			</div>
-			<ViewContract href="/"/>
+			<ViewContract href={href} />
 		</div>
 	);
 };

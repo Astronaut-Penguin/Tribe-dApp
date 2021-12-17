@@ -41,6 +41,7 @@ const nfts = [
 		price: '0.2',
 		address: '0x2',
 		cutoffDate: 'December 20, 2021 00:00:00 UTC',
+		viewcontract: '',
 	},
 	{
 		name: 'The Pleb',
@@ -50,6 +51,7 @@ const nfts = [
 		price: '0.09',
 		address: '0x1',
 		cutoffDate: 'December 20, 2021 00:00:00 UTC',
+		viewcontract: '',
 	},
 	{
 		name: 'The Chad',
@@ -59,6 +61,7 @@ const nfts = [
 		price: '0.28',
 		address: '0x2',
 		cutoffDate: 'December 20, 2021 00:00:00 UTC',
+		viewcontract: '',
 	},
 	{
 		name: 'The Elon',
@@ -68,6 +71,7 @@ const nfts = [
 		price: '0.45',
 		address: '0x2',
 		cutoffDate: 'December 20, 2021 00:00:00 UTC',
+		viewcontract: '',
 	},
 ];
 
@@ -135,6 +139,7 @@ const CelebrityView = () => {
 
 					showModal(true);
 				}}
+				href={value.viewcontract}
 			/>
 		);
 	});
