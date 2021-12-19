@@ -6,6 +6,7 @@ import PancakeSwap from '../../images/pancakeswap.png';
 import { NavLink } from 'react-router-dom';
 import { SiReddit, SiGithub } from 'react-icons/si';
 import { AiFillInstagram } from 'react-icons/ai';
+import ChristmasLogo from '../ChristmasComponents/Logo/ChristmasLogo'
 
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';

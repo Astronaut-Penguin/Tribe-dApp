@@ -1,0 +1,17 @@
+.TribeLogo {
+	width: 98px;
+	display: block;
+	margin: 0 auto;
+}
+
+@media (min-width: 1441px) {
+	.TribeLogo {
+		width: 120px;
+	}
+}
+
+@media (max-width: 767px) {
+	.TribeLogo {
+		display: none;
+	}
+}
