@@ -11,6 +11,7 @@ import BuyModal from '../BuyModal/BuyModal';
 import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
 import { nftIds } from '../../store/reducer/purchaseNFT_reducer/purchaseNFTInitialStates';
 import { useDispatch, useSelector } from 'react-redux';
+import CelebrityCard from '../Cards/CelebrityCard/CelebrityCard';
 
 //8888888888888888888888888888888888888888888888888888888//
 
@@ -233,6 +234,9 @@ const CelebrityView = () => {
 						{cards}
 					</div>
 				</div>
+				<CelebrityCard />
+				<CelebrityCard />
+				<CelebrityCard />
 			</section>
 		</>
 	);
