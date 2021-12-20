@@ -7,6 +7,7 @@ import { loadStakingInfo } from '../../store/reducer/staking_reducer';
 import './Staking.css';
 import { stakeIds } from '../../store/reducer/staking_reducer/stakingInitialStates';
 import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
+import ChristmasAnimatedBackground from '../ChristmasComponents/ChristmasAnimatedBackground/ChristmasAnimatedBackground';
 import ChristmasBanner from '../ChristmasComponents/Banners/ChristmasBanner';
 
 function Staking() {
@@ -41,7 +42,8 @@ function Staking() {
 
 	return (
 		<div className="staking-wrapper">
-			<AnimatedBackground />
+			<ChristmasAnimatedBackground />
+			{/* <AnimatedBackground /> */}
 			<ChristmasBanner
 				title={'TRIBE  Exclusive Celebrity NFTs'}
 				text={'Stake your TRIBEs and participate in the next NFT launch.'}
