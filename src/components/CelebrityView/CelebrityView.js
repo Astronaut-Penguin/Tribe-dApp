@@ -9,6 +9,7 @@ import { initializeNFTInfo } from '../../store/reducer/purchaseNFT_reducer/index
 import CardNFT from '../Cards/CardNFT/CardNFT';
 import BuyModal from '../BuyModal/BuyModal';
 import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
+import ChristmasAnimatedBackground from '../ChristmasComponents/ChristmasAnimatedBackground/ChristmasAnimatedBackground';
 import { nftIds } from '../../store/reducer/purchaseNFT_reducer/purchaseNFTInitialStates';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -179,7 +180,8 @@ const CelebrityView = () => {
 
 			{/******************************/}
 
-			<AnimatedBackground />
+			<ChristmasAnimatedBackground />
+			{/* <AnimatedBackground /> */}
 
 			{/******************************/}
 
