@@ -19,6 +19,11 @@ const ChristmasAnimatedBackground = () => {
 					<div className="copo"></div>
 					<div className="copo"></div>
 					<div className="copo"></div>
+					<div className="copo"></div>
+					<div className="copo"></div>
+					<div className="copo"></div>
+					<div className="copo"></div>
+					<div className="copo"></div>
 				</div>
 			</div>
 		</section>
