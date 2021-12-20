@@ -29,7 +29,7 @@ function Sidebar(props) {
 						</a>
 					*/}
 
-					<ChristmasLogo />
+					<ChristmasLogo sidebar />
 					<div className="Sidebar_wallet__eXx60">
 						<button
 							className=" Sidebar_buttonConnect__small Button_button__17x3e Sidebar_buttonConnect__3toNv Button_buttonSmall__3-WQV Button_buttonBlue__3LvNm"
