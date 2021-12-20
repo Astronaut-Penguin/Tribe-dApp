@@ -9,8 +9,11 @@ import { initializeNFTInfo } from '../../store/reducer/purchaseNFT_reducer/index
 import CardNFT from '../Cards/CardNFT/CardNFT';
 import BuyModal from '../BuyModal/BuyModal';
 import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
+import ChristmasAnimatedBackground from '../ChristmasComponents/ChristmasAnimatedBackground/ChristmasAnimatedBackground';
 import { nftIds } from '../../store/reducer/purchaseNFT_reducer/purchaseNFTInitialStates';
 import { useDispatch, useSelector } from 'react-redux';
+
+import ChristmasBanner from '../ChristmasComponents/Banners/ChristmasBanner';
 
 //8888888888888888888888888888888888888888888888888888888//
 
@@ -41,7 +44,8 @@ const nfts = [
 		price: '0.2',
 		address: '0x2',
 		cutoffDate: 'December 20, 2021 00:00:00 UTC',
-		viewcontract: 'https://bscscan.com/address/0x62B873870C9d40995C57Bb0cF222ED5A901D943A',
+		viewcontract:
+			'https://bscscan.com/address/0x62B873870C9d40995C57Bb0cF222ED5A901D943A',
 	},
 	{
 		name: 'The Pleb',
@@ -51,7 +55,8 @@ const nfts = [
 		price: '0.09',
 		address: '0x1',
 		cutoffDate: 'December 20, 2021 00:00:00 UTC',
-		viewcontract: 'https://bscscan.com/address/0x2657b54d5782654bd78f0df5e73ac0bbe8dd1c97',
+		viewcontract:
+			'https://bscscan.com/address/0x2657b54d5782654bd78f0df5e73ac0bbe8dd1c97',
 	},
 	{
 		name: 'The Chad',
@@ -61,7 +66,8 @@ const nfts = [
 		price: '0.28',
 		address: '0x2',
 		cutoffDate: 'December 20, 2021 00:00:00 UTC',
-		viewcontract: 'https://bscscan.com/address/0x4eff34d8913c0d92b041652aa983373eba8a0545',
+		viewcontract:
+			'https://bscscan.com/address/0x4eff34d8913c0d92b041652aa983373eba8a0545',
 	},
 	{
 		name: 'The Elon',
@@ -71,7 +77,8 @@ const nfts = [
 		price: '0.45',
 		address: '0x2',
 		cutoffDate: 'December 20, 2021 00:00:00 UTC',
-		viewcontract: 'https://bscscan.com/address/0x7632c127f32678daa599de7cc635ed99a242dbaf',
+		viewcontract:
+			'https://bscscan.com/address/0x7632c127f32678daa599de7cc635ed99a242dbaf',
 	},
 ];
 
@@ -173,11 +180,12 @@ const CelebrityView = () => {
 
 			{/******************************/}
 
-			<AnimatedBackground />
+			<ChristmasAnimatedBackground />
+			{/* <AnimatedBackground /> */}
 
 			{/******************************/}
 
-			<div className="nft-banner-container">
+			{/*<div className="nft-banner-container">
 				<div className="banner-container-content">
 					<div>
 						<h2>Celebrity & Brands TRIBEPOP NFTs</h2>
@@ -192,7 +200,16 @@ const CelebrityView = () => {
 						</p>
 					</div>
 				</div>
-			</div>
+				</div>*/}
+			<ChristmasBanner
+				title={'Celebrity & Brands TRIBEPOP NFTs'}
+				text={
+					'Each TRIBEPOP is a re-creation of a celebrity or brand and these will be characters ready to use in our next role-playing game in our metaverse!'
+				}
+				text2={
+					'You can only buy them at this value in this unique opportunity, then you can only get one if someone wants to sell'
+				}
+			/>
 
 			<section className="celebrity-container">
 				<div className="celebrity-story">

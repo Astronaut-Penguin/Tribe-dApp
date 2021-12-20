@@ -20,12 +20,13 @@
 
 	border-radius: 4px;
 	color: white;
-	background-image: linear-gradient(
+	background-color: #ce3d3d;
+	/*background-image: linear-gradient(
 		to right,
 		rgb(255, 1, 126),
 		rgb(169, 1, 250),
 		rgb(3, 238, 254)
-	);
+	);*/
 	border: none;
 
 	transition: transform 0.2s ease-in;
@@ -59,12 +60,13 @@
 	bottom: 0;
 	border-radius: 4px;
 	padding: 3px;
-	background: linear-gradient(
+	background-color: #ce3d3d;
+	/*background: linear-gradient(
 		to right,
 		rgb(255, 1, 126),
 		rgb(169, 1, 250),
 		rgb(3, 238, 254)
-	);
+	);*/
 	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
 	-webkit-mask-composite: destination-out;
 	mask-composite: exclude;

@@ -112,12 +112,13 @@
 	line-height: 18px;
 	text-align: right;
 
-	background: linear-gradient(
+	background-color: #ce3d3d;
+	/*background: linear-gradient(
 		to right,
 		rgb(255, 1, 126),
 		rgb(169, 1, 250),
 		rgb(3, 238, 254)
-	);
+	);*/
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
