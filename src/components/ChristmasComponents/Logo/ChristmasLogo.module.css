@@ -1,3 +1,7 @@
+.Mobile {
+	display: none;
+}
+
 .TribeLogo {
 	width: 98px;
 	display: block;
@@ -11,7 +15,21 @@
 }
 
 @media (max-width: 767px) {
-	.TribeLogo {
+	.SideBar {
 		display: none;
+	}
+
+	.Mobile {
+		display: inline-block;
+	}
+
+	.Container {
+		width: 60px;
+	}
+
+	.TribeLogo {
+		display: inline-block;
+		max-width: 100%;
+		max-height: 100%;
 	}
 }
