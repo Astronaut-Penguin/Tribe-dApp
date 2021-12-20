@@ -234,9 +234,6 @@ const CelebrityView = () => {
 						{cards}
 					</div>
 				</div>
-				<CelebrityCard />
-				<CelebrityCard />
-				<CelebrityCard />
 			</section>
 		</>
 	);

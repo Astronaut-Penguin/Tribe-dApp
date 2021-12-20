@@ -5,7 +5,7 @@ import React from 'react';
 import styles from './CelebrityCard.module.css';
 
 //- Button Imports
-import BuyButton from '../../Button/Button';
+import LiveButton from '../../Button/Button';
 
 const CelebrityCard = () => {
     
@@ -18,16 +18,16 @@ const CelebrityCard = () => {
 					className={styles.CelebrityNftImage}
 					style={{ backgroundImage: 'url(' + image + ')' }}
 				>   
-					{/*<BuyButton text="Buy" onClick={} />*/}
+                    <LiveButton text="Live" onClick='/' />
 				</div>
 			)}
 
 			<div className={styles.CelebrityNftDataContainer}>
-                {/*<div 
+                <div 
                     className={styles.CelebrityPicture}
                     style={{ backgroundImage: 'url(' + image + ')' }}
                 >
-                </div>*/}
+                </div>
 				<div className={styles.CelebrityNftData}>
 					<h2>Nombre Apellido</h2>
 					<h3>@RedSocial</h3>

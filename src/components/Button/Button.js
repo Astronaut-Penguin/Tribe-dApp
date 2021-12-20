@@ -10,7 +10,7 @@ import styles from './Button.module.css';
 // style: CSSProperties - En la etiqueta <button> se debe poner en la propiedad Style una variable 
 //                          para enviarle CSS desde fuera cuando es llamado en otro componente.
 
-const BuyButton = ({ onClick, text }) => {
+const BuyButton = ({ onClick, text, green }) => {
     return (
         <button className={styles.CelebrityNftBuy} onClick={onClick}>
 			<p>{ text }</p>
