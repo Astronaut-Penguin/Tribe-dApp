@@ -73,7 +73,7 @@ function Staking() {
 												onClick={() => setSwitchBtnToggle(!switchBtnToggle)}
 												className={`${
 													switchBtnToggle
-														? 'switch-btn-toggle'
+														? 'switch-btn-toggle-christmas' /*'switch-btn-toggle'*/
 														: 'switch-btn-toggle-disable'
 												}`}
 											>
@@ -86,7 +86,7 @@ function Staking() {
 												className={`${
 													switchBtnToggle
 														? 'switch-btn-toggle-disable'
-														: 'switch-btn-toggle'
+														:  'switch-btn-toggle-christmas' /*'switch-btn-toggle'*/
 												}`}
 											>
 												<span>Completed</span>

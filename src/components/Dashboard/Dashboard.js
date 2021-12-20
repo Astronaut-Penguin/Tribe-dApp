@@ -112,7 +112,7 @@ function Dashboard(props) {
 								${fixDecimals(balance, 4)}BNB
 							</span>
 						) : null}
-						<button
+						<button 
 							onClick={
 								connected
 									? () => {

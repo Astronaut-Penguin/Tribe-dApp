@@ -85,6 +85,40 @@
 	transition: all 0.15s ease-in;
 }
 
+.switch-btn nav ul li {
+	width: auto;
+	list-style-type: none;
+}
+
+.switch-btn-toggle-christmas {
+	opacity: 1;
+	background-color: #ce3d3d;
+	color: #ffffff;
+	box-shadow: 0 6px 12px rgb(134 140 150 / 20%);
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	font-family: Rubik, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: normal;
+	text-align: left;
+	text-transform: capitalize;
+	height: 35px;
+	min-width: 100px;
+	padding: 0 20px;
+	border: none;
+	cursor: pointer;
+	border-radius: 17px !important;
+	transition: all 0.15s ease-in;
+}
+
 .switch-btn-toggle-disable {
 	background: transparent;
 	color: #80869e;

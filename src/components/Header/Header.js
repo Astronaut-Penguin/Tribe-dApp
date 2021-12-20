@@ -18,7 +18,6 @@ function Header(props) {
                     <button className="user-btn">
                         Connect Wallet
                     </button>
-
                 </div>
             </nav>
         </div>
