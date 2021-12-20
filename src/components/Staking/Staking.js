@@ -9,7 +9,6 @@ import { stakeIds } from '../../store/reducer/staking_reducer/stakingInitialStat
 import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
 import ChristmasBanner from '../ChristmasComponents/Banners/ChristmasBanner';
 
-
 function Staking() {
 	const [switchBtnToggle, setSwitchBtnToggle] = useState(true);
 	const { connected } = useSelector((state) => state.web3);
@@ -43,7 +42,11 @@ function Staking() {
 	return (
 		<div className="staking-wrapper">
 			<AnimatedBackground />
-			//<ChristmasBanner title={"TRIBE  Exclusive Celebrity NFTs"} text={"Stake your TRIBEs and participate in the next NFT launch."} />
+			<ChristmasBanner
+				title={'TRIBE  Exclusive Celebrity NFTs'}
+				text={'Stake your TRIBEs and participate in the next NFT launch.'}
+				characters
+			/>
 			{/*<div className="project-banner-container">
 				//<div className="banner-container-content">
 					//<div>
