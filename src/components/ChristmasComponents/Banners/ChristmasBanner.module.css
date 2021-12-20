@@ -24,10 +24,15 @@
 
 .Fondo {
 	position: absolute;
-	width: 1237px;
-	min-height: 513px;
-	/*left: 310px;
-	top: 106px;*/
+	width: 100%;
+	min-height: 100%;
+	top: 0;
+	left: 0;
+
+	background-image: url(../../../images/background_snow.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 /*background: url(Recurso 1espa.png);*/

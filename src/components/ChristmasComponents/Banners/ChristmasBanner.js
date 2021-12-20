@@ -3,7 +3,6 @@ import React from 'react';
 
 // Import src
 import threeCharacters from '../../../images/three_characters.png';
-import background_snow from '../../../images/background_snow.png';
 
 // Import styles
 import styles from './ChristmasBanner.module.css';
@@ -14,20 +13,20 @@ import styles from './ChristmasBanner.module.css';
 // style: CSSProperties - En la etiqueta <button> se debe poner en la propiedad Style una variable
 //                          para enviarle CSS desde fuera cuando es llamado en otro componente.
 
-const ChristmasBanner = ({ title, text /*characters*/ }) => {
+const ChristmasBanner = ({ title, text, characters }) => {
 	return (
 		<div className={styles.Container}>
-			<div className={styles.Fondo}>
-				<img src={background_snow} alt="Background-Snow" />
-			</div>
+			<div className={styles.Fondo}></div>
 			<div className={styles.Content}>
 				<div>
 					<h2>{title}</h2>
 					<p>{text}</p>
 				</div>
-				<div className="banner-img">
-					<img src={threeCharacters} alt=" Three Characters" />
-				</div>
+				{characters && (
+					<div className="banner-img">
+						<img src={threeCharacters} alt=" Three Characters" />
+					</div>
+				)}
 			</div>
 		</div>
 	);
