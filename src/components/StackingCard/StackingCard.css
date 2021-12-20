@@ -428,7 +428,7 @@
 }
 
 .staking-num-and-btns-top div:last-child button {
-	background-image: linear-gradient(0deg, #0078ff, #4ca4f3);
+	/*background-image: linear-gradient(0deg, #0078ff, #4ca4f3);*/
 	color: #fff;
 	transition: opacity 0.15s ease-in;
 	font-size: 12px;
@@ -926,12 +926,13 @@ input[type='submit'][disabled]:hover {
 }
 
 .staking-collect-btn button {
-	background-image: linear-gradient(
+	background-color: #ce3d3d !important;
+	/*background-image: linear-gradient(
 		to right,
 		rgb(255, 1, 126),
 		rgb(169, 1, 250),
 		rgb(3, 238, 254)
-	) !important;
+	) !important;*/
 }
 
 .staking-collect-btn button[disabled]:active,
