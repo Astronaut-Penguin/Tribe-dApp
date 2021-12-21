@@ -9,12 +9,13 @@ import LiveButton from '../../Button/Button';
 
 const CelebrityCard = ({ completed }) => {
 	const image = './assets/nft/soon.png';
+	const verificated = '../../images/VerificatedLogo.png';
 
 	return (
-		<div className={styles.CelebrityNftCard}>
+		<div className={styles.CelebrityCard}>
 			{image && (
 				<div
-					className={styles.CelebrityNftImage}
+					className={styles.CelebrityImage}
 					style={{ backgroundImage: 'url(' + image + ')' }}
 				>
 					<LiveButton
@@ -26,12 +27,14 @@ const CelebrityCard = ({ completed }) => {
 				</div>
 			)}
 
-			<div className={styles.CelebrityNftDataContainer}>
-				<div
-					className={styles.CelebrityPicture}
-					style={{ backgroundImage: 'url(' + image + ')' }}
-				></div>
-				<div className={styles.CelebrityNftData}>
+			<div className={styles.CelebrityDataContainer}>
+				<div className={styles.PictureContainer}>
+					<div
+						className={styles.CelebrityPicture}
+						style={{ backgroundImage: 'url(' + image + ')' }}
+					></div>	
+				</div>
+				<div className={styles.CelebrityData}>
 					<h2>Nombre Apellido</h2>
 					<h3>@RedSocial</h3>
 				</div>
