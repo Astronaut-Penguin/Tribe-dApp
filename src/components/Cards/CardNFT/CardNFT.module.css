@@ -2,7 +2,7 @@
 .CelebrityNftCard {
 	display: inline-block;
 	width: 100%;
-	height: 370px;
+	height: 403px;
 
 	margin: 13px 0px 13px 0px;
 
@@ -112,17 +112,18 @@
 	line-height: 18px;
 	text-align: right;
 
-	background: linear-gradient(
+	background-color: #ce3d3d;
+	/*background: linear-gradient(
 		to right,
 		rgb(255, 1, 126),
 		rgb(169, 1, 250),
 		rgb(3, 238, 254)
-	);
+	);*/
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
-.CelebrityNftBuy {
+/*.CelebrityNftBuy {
 	width: 126px;
 	height: 35px;
 
@@ -190,7 +191,7 @@
 	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
 	-webkit-mask-composite: destination-out;
 	mask-composite: exclude;
-}
+} */
 
 /***************/
 /* TABLET MODE */

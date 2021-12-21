@@ -4,6 +4,10 @@ import React from 'react';
 //- Style Imports
 import styles from './CardNFT.module.css';
 
+//- Button Imports
+import BuyButton from '../../Button/Button';
+import ViewContract from '../../ViewContract/ViewContract';
+
 // CARD COMPONENT
 // onClick: La funcion que activa el boton BUY
 // name: STRING - Nombre del NFT
@@ -12,7 +16,7 @@ import styles from './CardNFT.module.css';
 // image: STRING - Url de la imagen
 // video: STRING - Url del video
 
-const CardNFT = ({ onClick, name, colection, price, image, video }) => {
+const CardNFT = ({ onClick, name, colection, price, image, video, href }) => {
 	return (
 		<div className={styles.CelebrityNftCard}>
 			{video && (
@@ -20,9 +24,7 @@ const CardNFT = ({ onClick, name, colection, price, image, video }) => {
 					<video className={styles.BackgroundVideo} muted>
 						<source src={video} type="video/mp4" />
 					</video>
-					<button className={styles.CelebrityNftBuy} onClick={onClick}>
-						<p>Buy</p>
-					</button>
+					<BuyButton text="Buy" onClick={onClick} />
 				</div>
 			)}
 
@@ -31,11 +33,10 @@ const CardNFT = ({ onClick, name, colection, price, image, video }) => {
 					className={styles.CelebrityNftImage}
 					style={{ backgroundImage: 'url(' + image + ')' }}
 				>
-					<button className={styles.CelebrityNftBuy} onClick={onClick}>
-						<p>Buy</p>
-					</button>
+					<BuyButton text="Buy" onClick={onClick} />
 				</div>
 			)}
+
 			<div className={styles.CelebrityNftDataContainer}>
 				<div className={styles.CelebrityNftData}>
 					<h3>{colection}</h3>
@@ -46,6 +47,7 @@ const CardNFT = ({ onClick, name, colection, price, image, video }) => {
 					<h5>{price} BNB</h5>
 				</div>
 			</div>
+			<ViewContract href={href} />
 		</div>
 	);
 };
