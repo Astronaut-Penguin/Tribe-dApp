@@ -9,7 +9,7 @@ import LiveButton from '../../Button/Button';
 
 const CelebrityCard = ({ completed }) => {
 	const image = './assets/nft/soon.png';
-	const verificated = '../../images/VerificatedLogo.png';
+	const verificated = '../images/VerificatedLogo.png';
 
 	return (
 		<div className={styles.CelebrityCard}>
@@ -33,6 +33,7 @@ const CelebrityCard = ({ completed }) => {
 						className={styles.CelebrityPicture}
 						style={{ backgroundImage: 'url(' + image + ')' }}
 					></div>	
+					<div className={styles.verify}></div>
 				</div>
 				<div className={styles.CelebrityData}>
 					<h2>Nombre Apellido</h2>

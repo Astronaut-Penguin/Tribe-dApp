@@ -63,6 +63,20 @@
 	margin: auto;
 }
 
+.verify{
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50px;
+    left: 50px;
+	background-image:url(../../../images/VerificatedLogo.png);
+	background-position: center;
+	background-size: cover;
+    border-radius: 30px;
+    z-index: 5;
+}
+
 .CelebrityData {
 	display: flex;
 	justify-content: center;
