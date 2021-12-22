@@ -251,7 +251,7 @@ const CelebrityView = () => {
 						{cards}
 					</div>
 
-					<CelebrityCard uncompleted />
+					<CelebrityCard text='Completed' disabled />
 				</div>
 			</section>
 		</>

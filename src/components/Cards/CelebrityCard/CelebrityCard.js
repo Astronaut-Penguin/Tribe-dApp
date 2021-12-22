@@ -7,7 +7,7 @@ import styles from './CelebrityCard.module.css';
 //- Button Imports
 import LiveButton from '../../Button/Button';
 
-const CelebrityCard = ({ completed }) => {
+const CelebrityCard = ({ disabled, text }) => {
 	const image = './assets/nft/soon.png';
 	const verificated = '../images/VerificatedLogo.png';
 
@@ -19,10 +19,10 @@ const CelebrityCard = ({ completed }) => {
 					style={{ backgroundImage: 'url(' + image + ')' }}
 				>
 					<LiveButton
-						text="Live"
+						text={text}
 						onClick="/"
-						grey={completed ? true : false}
-						green={!completed ? true : false}
+						grey={disabled ? true : false}
+						green={!disabled ? true : false}
 					/>
 				</div>
 			)}
