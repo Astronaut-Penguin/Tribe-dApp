@@ -60,6 +60,8 @@
 	bottom: 0;
 	border-radius: 4px;
 	padding: 3px;
+	/*
+	background: linear-gradient(
 	background-color: #ce3d3d;
 	/*background: linear-gradient(
 		to right,
@@ -71,6 +73,47 @@
 	-webkit-mask-composite: destination-out;
 	mask-composite: exclude;
 }
+
+/**********************************************/
+/* CLASS STYLES */
+.Gradient {
+	background: linear-gradient(
+		to right,
+		rgb(255, 1, 126),
+		rgb(169, 1, 250),
+		rgb(3, 238, 254)
+	);
+}
+
+.Gradient p::before {
+	background: linear-gradient(
+		to right,
+		rgb(255, 1, 126),
+		rgb(169, 1, 250),
+		rgb(3, 238, 254)
+	);
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+}
+
+.Green {
+	background: #00c12c;
+}
+
+.Green p::before {
+	background: #00c12c;
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+}
+
+.Grey {
+	background: #c4c4c4;
+}
+
+.Grey p::before {
+	background: #c4c4c4;
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+}
+
+/**********************************************/
 
 /***************/
 /* TABLET MODE */

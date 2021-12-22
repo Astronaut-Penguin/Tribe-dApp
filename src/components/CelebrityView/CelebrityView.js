@@ -12,6 +12,7 @@ import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
 import ChristmasAnimatedBackground from '../ChristmasComponents/ChristmasAnimatedBackground/ChristmasAnimatedBackground';
 import { nftIds } from '../../store/reducer/purchaseNFT_reducer/purchaseNFTInitialStates';
 import { useDispatch, useSelector } from 'react-redux';
+import CelebrityCard from '../Cards/CelebrityCard/CelebrityCard';
 
 import ChristmasBanner from '../ChristmasComponents/Banners/ChristmasBanner';
 
@@ -249,6 +250,8 @@ const CelebrityView = () => {
 					<div id="card-container" className="celebrity-nft-container">
 						{cards}
 					</div>
+
+					<CelebrityCard uncompleted />
 				</div>
 			</section>
 		</>
