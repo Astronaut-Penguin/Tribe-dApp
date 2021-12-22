@@ -9,9 +9,12 @@ import { initializeNFTInfo } from '../../store/reducer/purchaseNFT_reducer/index
 import CardNFT from '../Cards/CardNFT/CardNFT';
 import BuyModal from '../BuyModal/BuyModal';
 import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
+import ChristmasAnimatedBackground from '../ChristmasComponents/ChristmasAnimatedBackground/ChristmasAnimatedBackground';
 import { nftIds } from '../../store/reducer/purchaseNFT_reducer/purchaseNFTInitialStates';
 import { useDispatch, useSelector } from 'react-redux';
 import CelebrityCard from '../Cards/CelebrityCard/CelebrityCard';
+
+import ChristmasBanner from '../ChristmasComponents/Banners/ChristmasBanner';
 
 //8888888888888888888888888888888888888888888888888888888//
 
@@ -178,11 +181,12 @@ const CelebrityView = () => {
 
 			{/******************************/}
 
-			<AnimatedBackground />
+			<ChristmasAnimatedBackground />
+			{/* <AnimatedBackground /> */}
 
 			{/******************************/}
 
-			<div className="nft-banner-container">
+			{/*<div className="nft-banner-container">
 				<div className="banner-container-content">
 					<div>
 						<h2>Celebrity & Brands TRIBEPOP NFTs</h2>
@@ -197,7 +201,16 @@ const CelebrityView = () => {
 						</p>
 					</div>
 				</div>
-			</div>
+				</div>*/}
+			<ChristmasBanner
+				title={'Celebrity & Brands TRIBEPOP NFTs'}
+				text={
+					'Each TRIBEPOP is a re-creation of a celebrity or brand and these will be characters ready to use in our next role-playing game in our metaverse!'
+				}
+				text2={
+					'You can only buy them at this value in this unique opportunity, then you can only get one if someone wants to sell'
+				}
+			/>
 
 			<section className="celebrity-container">
 				<div className="celebrity-story">

@@ -20,6 +20,7 @@
 
 	border-radius: 4px;
 	color: white;
+	background-color: #ce3d3d;
 	/*background-image: linear-gradient(
 		to right,
 		rgb(255, 1, 126),
@@ -61,6 +62,8 @@
 	padding: 3px;
 	/*
 	background: linear-gradient(
+	background-color: #ce3d3d;
+	/*background: linear-gradient(
 		to right,
 		rgb(255, 1, 126),
 		rgb(169, 1, 250),

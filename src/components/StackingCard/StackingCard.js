@@ -254,7 +254,7 @@ function StackingCard(props) {
         ) : (
           <div className="staking-card-fourth-div">
             <div className="staking-btn">
-              <button
+              <button 
                 disabled={stakeDetails.isCompleted}
                 onClick={
                   connected

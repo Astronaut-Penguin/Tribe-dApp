@@ -22,6 +22,8 @@ import { projIds } from '../../store/reducer/launch_reducer/projectInitialStates
 import { loadLaunchInfo } from '../../store/reducer/launch_reducer';
 import connectLogo from '../../images/connect-logo.svg';
 
+import ChristmasLogo from '../ChristmasComponents/Logo/ChristmasLogo';
+
 //- View Imports
 import CelebrityView from '../CelebrityView/CelebrityView';
 
@@ -101,9 +103,7 @@ function Dashboard(props) {
 						></span>
 					</button>
 					<div className="header-logo-container">
-						<a href="/">
-							<img src={logo} className="Header_logo__3_D65" alt="logo" />
-						</a>
+						<ChristmasLogo mobile />
 					</div>
 					<strong className="Header_title__2eSkT">{title}</strong>
 					<div className="Header_wallet__1DOlJ">
@@ -112,7 +112,7 @@ function Dashboard(props) {
 								${fixDecimals(balance, 4)}BNB
 							</span>
 						) : null}
-						<button
+						<button 
 							onClick={
 								connected
 									? () => {
