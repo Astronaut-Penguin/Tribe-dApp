@@ -20,8 +20,9 @@ const ChristmasBanner = ({ title, text, text2, characters }) => {
 			<div className={styles.Content}>
 				<div>
 					<h2>{title}</h2>
+					<br/>
 					<p>{text}</p>
-
+					<br/>
 					{text2 && <p>{text2}</p>}
 				</div>
 				{characters && (
