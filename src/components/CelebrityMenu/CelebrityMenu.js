@@ -10,8 +10,9 @@ import styles from './CelebrityMenu.module.css';
 
 //- Components
 import ChristmasBanner from '../ChristmasComponents/Banners/ChristmasBanner';
+import CelebrityCard from '../Cards/CelebrityCard/CelebrityCard';
 
-const CelebrityMenu = () => {
+const CelebrityMenu = ({ cards }) => {
 	return (
 		<>
 			<ChristmasBanner
@@ -28,6 +29,7 @@ const CelebrityMenu = () => {
 			<section className={styles.Container}>
 				<div className={styles.Section}>
 					<h2 className={styles.Title}>Live Sales</h2>
+					<div className={styles.CardContainer}>{cards}</div>
 				</div>
 			</section>
 		</>
