@@ -31,12 +31,15 @@
 	margin-bottom: 40px;
 }
 
-.celebrity-story a {
+.celebrity-story button {
 	color: #868686;
+	border: none;
+	background: none;
 }
 
-.celebrity-story a:hover {
-	color: #13cfff;
+.celebrity-story button:hover {
+	/* color: #13cfff; */
+	color: #ce3d3d;
 }
 
 .celebrity-story p {

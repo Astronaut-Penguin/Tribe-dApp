@@ -7,8 +7,17 @@ import styles from './CelebrityCard.module.css';
 //- Button Imports
 import LiveButton from '../../Button/Button';
 
-const CelebrityCard = ({ disabled, text }) => {
-	const image = './assets/nft/soon.png';
+const CelebrityCard = ({
+	name,
+	user,
+	image,
+	banner,
+	disabled,
+	text,
+	state,
+	onClick,
+}) => {
+	// const image = './assets/nft/soon.png';
 	const verificated = '../images/VerificatedLogo.png';
 
 	return (
@@ -16,13 +25,20 @@ const CelebrityCard = ({ disabled, text }) => {
 			{image && (
 				<div
 					className={styles.CelebrityImage}
-					style={{ backgroundImage: 'url(' + image + ')' }}
+					style={{ backgroundImage: 'url(' + banner + ')' }}
 				>
 					<LiveButton
-						text={text}
+						text={
+							(state == 'live' ? 'Live' : '') +
+							(state == 'upcoming' ? 'Upcoming' : '') +
+							(state == 'completed' ? 'Completed' : '')
+						}
 						onClick="/"
 						grey={disabled ? true : false}
 						green={!disabled ? true : false}
+						onClick={() => {
+							onClick();
+						}}
 					/>
 				</div>
 			)}
@@ -32,12 +48,12 @@ const CelebrityCard = ({ disabled, text }) => {
 					<div
 						className={styles.CelebrityPicture}
 						style={{ backgroundImage: 'url(' + image + ')' }}
-					></div>	
+					></div>
 					<div className={styles.verify}></div>
 				</div>
 				<div className={styles.CelebrityData}>
-					<h2>Nombre Apellido</h2>
-					<h3>@RedSocial</h3>
+					<h2>{name}</h2>
+					<h3>{user}</h3>
 				</div>
 			</div>
 		</div>

@@ -1,5 +1,5 @@
 //- React Imports
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 //- Style Imports
 import './CelebrityView.css';
@@ -16,76 +16,44 @@ import CelebrityCard from '../Cards/CelebrityCard/CelebrityCard';
 
 import ChristmasBanner from '../ChristmasComponents/Banners/ChristmasBanner';
 
-//8888888888888888888888888888888888888888888888888888888//
+const CelebrityView = ({
+	name,
+	image,
+	user,
+	telegram,
+	twitter,
+	instagram,
+	youtube,
+	tiktok,
+	nft,
+	back,
+}) => {
+	//8888888888888888888888888888888888888888888888888888888//
 
-//- DATOS DEL ARTISTA
-const artist = {
-	//Imagen del Artista
-	image: './assets/Memepad.png',
-	//Nombre del Artista
-	name: 'Memepad',
-	//Usuario del Artista
-	user: 'Memepad.co',
-	//URL redes sociales
-	telegram: 'https://t.me/memepadofficial/',
-	twitter: 'https://twitter.com/MemePadLaunch',
-	instagram: '',
-	youtube: '',
-	tiktok: '',
-};
+	//- DATOS DEL ARTISTA
+	const artist = {
+		//Imagen del Artista
+		image: image,
+		//Nombre del Artista
+		name: name,
+		//Usuario del Artista
+		user: user,
+		//URL redes sociales
+		telegram: telegram,
+		twitter: twitter,
+		instagram: instagram,
+		youtube: youtube,
+		tiktok: tiktok,
+	};
 
-//- DATOS DE NFTS
-//- IMAGE / VIDEO setear como 'UNDEFINED' si no va contenido
-const nfts = [
-	{
-		name: 'The BlackMepad',
-		colection: 'Open Edition NFT',
-		image: undefined,
-		video: './assets/nft/Blackmepad.mp4',
-		price: '0.2',
-		address: '0x2',
-		cutoffDate: 'December 20, 2021 00:00:00 UTC',
-		viewcontract:
-			'https://bscscan.com/address/0x62B873870C9d40995C57Bb0cF222ED5A901D943A',
-	},
-	{
-		name: 'The Pleb',
-		colection: 'Caveman NFT',
-		image: './assets/nft/Pleb.png',
-		video: undefined,
-		price: '0.09',
-		address: '0x1',
-		cutoffDate: 'December 20, 2021 00:00:00 UTC',
-		viewcontract:
-			'https://bscscan.com/address/0x2657b54d5782654bd78f0df5e73ac0bbe8dd1c97',
-	},
-	{
-		name: 'The Chad',
-		colection: 'Gladiator NFT',
-		image: undefined,
-		video: './assets/nft/Chad.mp4',
-		price: '0.28',
-		address: '0x2',
-		cutoffDate: 'December 20, 2021 00:00:00 UTC',
-		viewcontract:
-			'https://bscscan.com/address/0x4eff34d8913c0d92b041652aa983373eba8a0545',
-	},
-	{
-		name: 'The Elon',
-		colection: 'CryptoKing NFT',
-		image: undefined,
-		video: './assets/nft/Elon.mp4',
-		price: '0.45',
-		address: '0x2',
-		cutoffDate: 'December 20, 2021 00:00:00 UTC',
-		viewcontract:
-			'https://bscscan.com/address/0x7632c127f32678daa599de7cc635ed99a242dbaf',
-	},
-];
+	//8888888888888888888888888888888888888888888888888888888//
 
-//8888888888888888888888888888888888888888888888888888888//
+	//- DATOS DE NFTS
+	//- IMAGE / VIDEO setear como 'UNDEFINED' si no va contenido
+	const nfts = nft;
 
-const CelebrityView = () => {
+	//8888888888888888888888888888888888888888888888888888888//
+
 	//- Variable que define si el Modal de Purchase se muestra o no.
 	const [modal, showModal] = useState(false);
 
@@ -120,7 +88,7 @@ const CelebrityView = () => {
 
 	//8888888888888888888888888888888888888888888888888888888//
 
-	const cards = nfts.map(function (value, i, a) {
+	const cards = nft.map(function (value, i) {
 		return (
 			<CardNFT
 				//Nombre del NFT
@@ -214,8 +182,14 @@ const CelebrityView = () => {
 
 			<section className="celebrity-container">
 				<div className="celebrity-story">
-					{/*<a href="">Celebrity NFTs</a>*/}
-					<p style={{ color: '#868686' }}>Celebrity NFTs</p>
+					<button
+						onClick={() => {
+							back();
+						}}
+					>
+						Celebrity NFTs
+					</button>
+					{/* <p style={{ color: '#868686' }}>Celebrity NFTs</p> */}
 					<p>&gt;</p>
 					<p>{artist.name}</p>
 				</div>
@@ -250,8 +224,6 @@ const CelebrityView = () => {
 					<div id="card-container" className="celebrity-nft-container">
 						{cards}
 					</div>
-
-					<CelebrityCard text='Completed' disabled />
 				</div>
 			</section>
 		</>

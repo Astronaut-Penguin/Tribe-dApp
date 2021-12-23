@@ -19,7 +19,7 @@ import ViewContract from '../../ViewContract/ViewContract';
 const CardNFT = ({ onClick, name, colection, price, image, video, href }) => {
 	return (
 		<div className={styles.CelebrityNftCard}>
-			{video && (
+			{video !== 'undefined' && (
 				<div className={styles.VideoContainer}>
 					<video className={styles.BackgroundVideo} muted>
 						<source src={video} type="video/mp4" />
@@ -28,7 +28,7 @@ const CardNFT = ({ onClick, name, colection, price, image, video, href }) => {
 				</div>
 			)}
 
-			{image && (
+			{image !== 'undefined' && (
 				<div
 					className={styles.CelebrityNftImage}
 					style={{ backgroundImage: 'url(' + image + ')' }}
