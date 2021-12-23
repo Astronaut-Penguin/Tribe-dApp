@@ -25,7 +25,7 @@ import connectLogo from '../../images/connect-logo.svg';
 import ChristmasLogo from '../ChristmasComponents/Logo/ChristmasLogo';
 
 //- View Imports
-import CelebrityView from '../CelebrityView/CelebrityView';
+import Celebrity from '../Celebrity/Celebrity';
 
 function Dashboard(props) {
 	const [modalShow, setModalShow] = useState(false);
@@ -112,7 +112,7 @@ function Dashboard(props) {
 								${fixDecimals(balance, 4)}BNB
 							</span>
 						) : null}
-						<button 
+						<button
 							onClick={
 								connected
 									? () => {
@@ -149,7 +149,7 @@ function Dashboard(props) {
 						<Route
 							path="/dashboard/celebrity-nfts"
 							exact
-							component={CelebrityView}
+							component={Celebrity}
 						/>
 						<Route
 							path="/dashboard/celebrity-nfts/:projId"
