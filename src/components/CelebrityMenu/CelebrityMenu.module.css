@@ -20,6 +20,7 @@
 	display: inline-block;
 	width: 100%;
 	max-width: 1000px;
+	max-width: 1026px;
 	text-align: left;
 }
 
@@ -29,4 +30,5 @@
 	font-weight: 800;
 	font-size: 36px;
 	line-height: 43px;
+	padding-left: 13px;
 }
