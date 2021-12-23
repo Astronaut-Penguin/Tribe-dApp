@@ -203,20 +203,24 @@ const CelebrityView = ({
 						<div className="celebrity-name">
 							<h2>{artist.name}</h2>
 							<h3>{artist.user}</h3>
-
 							<div>
-								<a
-									href={artist.twitter}
-									className="celebrity-social social-twitter"
-								>
-									Twitter
-								</a>
-								<a
-									href={artist.telegram}
-									className="celebrity-social social-telegram"
-								>
-									Telegram
-								</a>
+								{artist.twitter && (
+									<a
+										href={artist.twitter}
+										className="celebrity-social social-twitter"
+									>
+										Twitter
+									</a>
+								)}
+
+								{artist.telegram && (
+									<a
+										href={artist.telegram}
+										className="celebrity-social social-telegram"
+									>
+										Telegram
+									</a>
+								)}
 							</div>
 						</div>
 					</div>

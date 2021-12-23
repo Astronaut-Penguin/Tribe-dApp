@@ -110,7 +110,8 @@
 	font-weight: 700;
 	font-size: 15px;
 	line-height: 18px;
-	text-align: right;
+	text-align: left;
+	width: 85px;
 
 	background-color: #ce3d3d;
 	/*background: linear-gradient(

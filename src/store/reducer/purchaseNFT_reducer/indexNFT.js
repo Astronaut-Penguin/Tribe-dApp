@@ -1,12 +1,17 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import tribeNFT from './tribeNFT.json';
-
+import Web3 from "web3";
 import { nftIds, nftState } from './purchaseNFTInitialStates';
 
 export const initializeNFT = createAsyncThunk(
 	'Initialize nfts',
 	async (action, thunkAPI) => {
-		thunkAPI.dispatch(nftSlice.actions.setContract({}));
+		const { web3 } = thunkAPI.getState().web3;
+		const tribexTokenContract = new web3.eth.Contract(
+			tribeNFT.tribexTokenAbi,
+			tribeNFT.tribexTokenAddress
+		  );
+		thunkAPI.dispatch(nftSlice.actions.setContract({tribexTokenContract}));
 		for (let i = 0; i < nftIds.length; ++i) {
 			thunkAPI.dispatch(initNFT(nftIds[i]));
 		}
@@ -87,21 +92,31 @@ export const loadNFTInfo = createAsyncThunk(
 	async (action, thunkAPI) => {
 		try {
 			const { address } = thunkAPI.getState().web3;
-
-			const { nftContract } = thunkAPI.getState().nft[action]; //error destructure contract as its undefined
+			const { tribexTokenContract } = thunkAPI.getState().nft;
+			const { nftContract } = thunkAPI.getState().nft[action]; 
 			const responses = await Promise.all([
 				nftContract.methods.whiteListedContract().call(),
 				nftContract.methods.whitelistedAmount(address).call(),
 				nftContract.methods.balanceOf(address).call(),
+				tribexTokenContract.methods
+                .allowance(address, tribeNFT[action].nftAddress)
+                .call(),
+		        tribexTokenContract.methods.balanceOf(address).call(),
 			]);
 			const enabledBoolean = Boolean(
 				Number(responses[0] == false || Number(responses[1]) > 0),
 			);
 			const balance = Number(responses[2]);
+			const allowance = Number(responses[3]);
+			const balanceTribex = Number(responses[4]);
+			console.log(allowance);
+			console.log(balanceTribex);
 			return {
 				balance,
 				enabledBoolean,
 				nftId: action,
+				allowance,
+				balanceTribex
 			};
 		} catch (error) {
 			console.log('Error in loading info for nft:', error);
@@ -115,19 +130,43 @@ export const buyNFT = createAsyncThunk('Buy NFT', async (action, thunkAPI) => {
 		const { address } = thunkAPI.getState().web3;
 		const { nftContract } = thunkAPI.getState().nft[action.id];
 		await nftContract.methods
-			.mint()
-			.send({ value: action.amount * 10 ** 18, from: address });
+			.mint(String(action.amount * 10 ** 18))
+			.send({ value: 0, from: address });
 		thunkAPI.dispatch(loadNFTInfo(action.id));
 	} catch (error) {
 		console.log('Cant Buy NFT: ', error);
 	}
 });
 
+export const approveTokens = createAsyncThunk(
+	"ApproveTokens",
+	async (action, thunkAPI) => {
+	  try {
+		const { address } = thunkAPI.getState().web3;
+		const { tribexTokenContract } = thunkAPI.getState().nft;
+		console.log(tribeNFT[action.id].nftAddress)
+		const maxUint = Web3.utils
+		  .toBN(2)
+		  .pow(Web3.utils.toBN(256))
+		  .sub(Web3.utils.toBN(1));
+		await tribexTokenContract.methods
+		  .approve(tribeNFT[action.id].nftAddress, maxUint)
+		  .send({ from: address });
+		thunkAPI.dispatch(loadNFTInfo(action));
+	  } catch (error) {
+		console.log("Error in loading info:", error);
+		throw error;
+	  }
+	}
+  );
+
 const nftSlice = createSlice({
 	name: 'NFTReducer',
 	initialState: nftState,
 	reducers: {
-		setContract: (state, action) => {},
+		setContract: (state, action) => {      
+			state.tribexTokenContract = action.payload.tribexTokenContract;
+		},
 	},
 	extraReducers: {
 		[initNFTContract.fulfilled]: (state, action) => {
@@ -145,6 +184,8 @@ const nftSlice = createSlice({
 			const nftId = action.payload.nftId;
 			state[nftId].enabled = action.payload.enabledBoolean;
 			state[nftId].balance = action.payload.balance;
+			state[nftId].allowance = action.payload.allowance;
+			state[nftId].balanceTribex = action.payload.balanceTribex;
 		},
 	},
 });

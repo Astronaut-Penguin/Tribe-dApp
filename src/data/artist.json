@@ -1,7 +1,7 @@
 {
 	"data": [
 		{
-			"state": "live",
+			"state": "completed",
 			"name": "Memepad",
 			"user": "Memepad.co",
 			"telegram": "https://t.me/memepadofficial/",
@@ -50,6 +50,60 @@
 					"price": "0.45",
 					"address": "0x2",
 					"cutoffDate": "December 20, 2021 00:00:00 UTC",
+					"viewcontract": "https://bscscan.com/address/0x7632c127f32678daa599de7cc635ed99a242dbaf"
+				}
+            ]
+		},
+		{
+			"state": "live",
+			"name": "Christmas",
+			"user": "Santa Claus Team",
+			"telegram": "",
+			"twitter": "",
+			"instagram": "",
+			"youtube": "",
+			"tiktok": "",
+			"image": "./assets/memepad/bannerNavidad.jpg",
+            "banner": "./assets/memepad/bannerNavidad.jpg",
+			"nfts": [
+				{
+					"name": "?????",
+					"colection": "Open Edition NFT",
+					"image": "./assets/memepad/nft/soon.png",
+					"video": "undefined",
+					"price": "250",
+					"address": "",
+					"cutoffDate": "December 24, 2021 00:00:00 UTC",
+					"viewcontract": "https://bscscan.com/address/0x62B873870C9d40995C57Bb0cF222ED5A901D943A"
+				},
+				{
+					"name": "?????",
+					"colection": "Caveman NFT",
+					"image": "./assets/memepad/nft/soon.png",
+					"video": "undefined",
+					"price": "200",
+					"address": "",
+					"cutoffDate": "December 24, 2021 00:00:00 UTC",
+					"viewcontract": "https://bscscan.com/address/0x2657b54d5782654bd78f0df5e73ac0bbe8dd1c97"
+				},
+				{
+					"name": "?????",
+					"colection": "Gladiator NFT",
+					"image": "./assets/memepad/nft/soon.png",
+					"video": "undefined",
+					"price": "350",
+					"address": "",
+					"cutoffDate": "December 24, 2021 00:00:00 UTC",
+					"viewcontract": "https://bscscan.com/address/0x4eff34d8913c0d92b041652aa983373eba8a0545"
+				},
+				{
+					"name": "?????",
+					"colection": "CryptoKing NFT",
+					"image": "./assets/memepad/nft/soon.png",
+					"video": "undefined",
+					"price": "500",
+					"address": "",
+					"cutoffDate": "December 24, 2021 00:00:00 UTC",
 					"viewcontract": "https://bscscan.com/address/0x7632c127f32678daa599de7cc635ed99a242dbaf"
 				}
             ]

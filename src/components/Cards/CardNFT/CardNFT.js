@@ -44,7 +44,7 @@ const CardNFT = ({ onClick, name, colection, price, image, video, href }) => {
 				</div>
 				<div className={styles.CelebrityNftPrice}>
 					<h4>Price</h4>
-					<h5>{price} BNB</h5>
+					<h5>{price} TRIBEX</h5>
 				</div>
 			</div>
 			<ViewContract href={href} />
