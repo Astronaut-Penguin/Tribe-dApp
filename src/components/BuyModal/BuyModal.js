@@ -105,7 +105,7 @@ const BuyModal = ({
 				<div className={styles.CelebrityModalContainer}>
 					<button className={styles.Cross} onClick={onClose}></button>
 
-					{video && (
+					{video !== 'undefined' && (
 						<video
 							className={styles.BackgroundVideo}
 							autoPlay
@@ -117,7 +117,7 @@ const BuyModal = ({
 						</video>
 					)}
 
-					{image && (
+					{image !== 'undefined' && (
 						<div
 							className={styles.CelebrityModalNftImage}
 							style={{ backgroundImage: 'url(' + image + ')' }}
