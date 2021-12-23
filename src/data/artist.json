@@ -1,59 +1,57 @@
 {
-    "1": {
-        "state": "live",
-        "name": "Memepad",
-        "user": "Memepad.co",
-        "telegram": "https://t.me/memepadofficial/",
-        "twitter": "https://twitter.com/MemePadLaunch",
-        "instagram": "",
-        "youtube": "",
-        "tiktok": "",
-        "image": "./assets/Memepad.png",
-        "nfts": {
-            "1": {
-                "name": "The BlackMepad",
-                "colection": "Open Edition NFT",
-                "image": "undefined",
-                "video": "./assets/nft/Blackmepad.mp4",
-                "price": "0.2",
-                "address": "0x2",
-                "cutoffDate": "December 20, 2021 00:00:00 UTC",
-                "viewcontract":
-                    "https://bscscan.com/address/0x62B873870C9d40995C57Bb0cF222ED5A901D943A"
-            },
-            "2":{
-                "name": "The Pleb",
-                "colection": "Caveman NFT",
-                "image": "./assets/nft/Pleb.png",
-                "video": "undefined",
-                "price": "0.09",
-                "address": "0x1",
-                "cutoffDate": "December 20, 2021 00:00:00 UTC",
-                "viewcontract":
-                    "https://bscscan.com/address/0x2657b54d5782654bd78f0df5e73ac0bbe8dd1c97"
-            },
-            "3":{
-                "name": "The Chad",
-                "colection": "Gladiator NFT",
-                "image": "undefined",
-                "video": "./assets/nft/Chad.mp4",
-                "price": "0.28",
-                "address": "0x2",
-                "cutoffDate": "December 20, 2021 00:00:00 UTC",
-                "viewcontract":
-                    "https://bscscan.com/address/0x4eff34d8913c0d92b041652aa983373eba8a0545"
-            },
-            "4":{
-                "name": "The Elon",
-                "colection": "CryptoKing NFT",
-                "image": "undefined",
-                "video": "./assets/nft/Elon.mp4",
-                "price": "0.45",
-                "address": "0x2",
-                "cutoffDate": "December 20, 2021 00:00:00 UTC",
-                "viewcontract":
-                    "https://bscscan.com/address/0x7632c127f32678daa599de7cc635ed99a242dbaf"
-            }
-        }
-    }
+	"data": [
+		{
+			"state": "live",
+			"name": "Memepad",
+			"user": "Memepad.co",
+			"telegram": "https://t.me/memepadofficial/",
+			"twitter": "https://twitter.com/MemePadLaunch",
+			"instagram": "",
+			"youtube": "",
+			"tiktok": "",
+			"image": "./assets/Memepad.png",
+			"nfts": {
+				"1": {
+					"name": "The BlackMepad",
+					"colection": "Open Edition NFT",
+					"image": "undefined",
+					"video": "./assets/nft/Blackmepad.mp4",
+					"price": "0.2",
+					"address": "0x2",
+					"cutoffDate": "December 20, 2021 00:00:00 UTC",
+					"viewcontract": "https://bscscan.com/address/0x62B873870C9d40995C57Bb0cF222ED5A901D943A"
+				},
+				"2": {
+					"name": "The Pleb",
+					"colection": "Caveman NFT",
+					"image": "./assets/nft/Pleb.png",
+					"video": "undefined",
+					"price": "0.09",
+					"address": "0x1",
+					"cutoffDate": "December 20, 2021 00:00:00 UTC",
+					"viewcontract": "https://bscscan.com/address/0x2657b54d5782654bd78f0df5e73ac0bbe8dd1c97"
+				},
+				"3": {
+					"name": "The Chad",
+					"colection": "Gladiator NFT",
+					"image": "undefined",
+					"video": "./assets/nft/Chad.mp4",
+					"price": "0.28",
+					"address": "0x2",
+					"cutoffDate": "December 20, 2021 00:00:00 UTC",
+					"viewcontract": "https://bscscan.com/address/0x4eff34d8913c0d92b041652aa983373eba8a0545"
+				},
+				"4": {
+					"name": "The Elon",
+					"colection": "CryptoKing NFT",
+					"image": "undefined",
+					"video": "./assets/nft/Elon.mp4",
+					"price": "0.45",
+					"address": "0x2",
+					"cutoffDate": "December 20, 2021 00:00:00 UTC",
+					"viewcontract": "https://bscscan.com/address/0x7632c127f32678daa599de7cc635ed99a242dbaf"
+				}
+			}
+		}
+	]
 }
