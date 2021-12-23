@@ -17,8 +17,6 @@ const CelebrityCard = ({
 	state,
 	onClick,
 }) => {
-	// const image = './assets/nft/soon.png';
-	const verificated = '../images/VerificatedLogo.png';
 
 	return (
 		<div className={styles.CelebrityCard}>
