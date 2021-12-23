@@ -28,7 +28,7 @@ const CelebrityMenu = ({ cards }) => {
 
 			<section className={styles.Container}>
 				<div className={styles.Section}>
-					<h2 className={styles.Title}>Live Sales</h2>
+					<h2 className={styles.Title}>Sales</h2>
 					<div className={styles.CardContainer}>{cards}</div>
 				</div>
 			</section>
