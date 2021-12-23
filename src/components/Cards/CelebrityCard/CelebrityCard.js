@@ -53,7 +53,6 @@ const CelebrityCard = ({
 				</div>
 				<div className={styles.CelebrityData}>
 					<h2>{name}</h2>
-					<h2>{}</h2>
 					<h3>{user}</h3>
 				</div>
 			</div>
