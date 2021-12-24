@@ -95,20 +95,16 @@ export const loadNFTInfo = createAsyncThunk(
 			const { tribexTokenContract } = thunkAPI.getState().nft;
 			const { nftContract } = thunkAPI.getState().nft[action]; 
 			const responses = await Promise.all([
-				nftContract.methods.whiteListedContract().call(),
-				nftContract.methods.whitelistedAmount(address).call(),
 				nftContract.methods.balanceOf(address).call(),
 				tribexTokenContract.methods
                 .allowance(address, tribeNFT[action].nftAddress)
                 .call(),
 		        tribexTokenContract.methods.balanceOf(address).call(),
 			]);
-			const enabledBoolean = Boolean(
-				Number(responses[0] == false || Number(responses[1]) > 0),
-			);
-			const balance = Number(responses[2]);
-			const allowance = Number(responses[3]);
-			const balanceTribex = Number(responses[4]);
+			const enabledBoolean = true;
+			const balance = Number(responses[0]);
+			const allowance = Number(responses[1]);
+			const balanceTribex = Number(responses[2]);
 			console.log(allowance);
 			console.log(balanceTribex);
 			return {

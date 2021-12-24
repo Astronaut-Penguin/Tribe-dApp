@@ -67,44 +67,44 @@
             "banner": "./assets/memepad/bannerNavidad.jpg",
 			"nfts": [
 				{
-					"name": "?????",
+					"name": "Elf on the Shelf",
 					"colection": "Open Edition NFT",
-					"image": "./assets/memepad/nft/soon.png",
-					"video": "undefined",
+					"image": "undefined",
+					"video": "./assets/memepad/nft/Elf.mp4",
 					"price": "250",
 					"address": "",
-					"cutoffDate": "December 24, 2021 00:00:00 UTC",
-					"viewcontract": "https://bscscan.com/address/0x62B873870C9d40995C57Bb0cF222ED5A901D943A"
+					"cutoffDate": "December 24, 2021 01:00:00 UTC",
+					"viewcontract": "https://bscscan.com/address/0x9eFDea4019346a0F96392D28E90bEEA77F5360a9"
 				},
 				{
-					"name": "?????",
+					"name": "Rich Santa",
 					"colection": "Caveman NFT",
-					"image": "./assets/memepad/nft/soon.png",
+					"image": "./assets/memepad/nft/RichSanta.png",
 					"video": "undefined",
 					"price": "200",
 					"address": "",
-					"cutoffDate": "December 24, 2021 00:00:00 UTC",
-					"viewcontract": "https://bscscan.com/address/0x2657b54d5782654bd78f0df5e73ac0bbe8dd1c97"
+					"cutoffDate": "December 24, 2021 01:00:00 UTC",
+					"viewcontract": "https://bscscan.com/address/0x6CA6047e7C953565461209906124fDce4EFF4Ac9"
 				},
 				{
-					"name": "?????",
+					"name": "Holy Lights",
 					"colection": "Gladiator NFT",
-					"image": "./assets/memepad/nft/soon.png",
-					"video": "undefined",
+					"image": "undefined",
+					"video": "./assets/memepad/nft/HolyLights.mp4",
 					"price": "350",
 					"address": "",
-					"cutoffDate": "December 24, 2021 00:00:00 UTC",
-					"viewcontract": "https://bscscan.com/address/0x4eff34d8913c0d92b041652aa983373eba8a0545"
+					"cutoffDate": "December 24, 2021 01:00:00 UTC",
+					"viewcontract": "https://bscscan.com/address/0x349C5D0Bc0a701957dc4d328F12532e64eb81c3a"
 				},
 				{
-					"name": "?????",
+					"name": "HO-HO-HODL",
 					"colection": "CryptoKing NFT",
-					"image": "./assets/memepad/nft/soon.png",
-					"video": "undefined",
+					"image": "undefined",
+					"video": "./assets/memepad/nft/Hoho.mp4",
 					"price": "500",
 					"address": "",
-					"cutoffDate": "December 24, 2021 00:00:00 UTC",
-					"viewcontract": "https://bscscan.com/address/0x7632c127f32678daa599de7cc635ed99a242dbaf"
+					"cutoffDate": "December 24, 2021 01:00:00 UTC",
+					"viewcontract": "https://bscscan.com/address/0x9cCC1757175F49288d89314b429e966936CD8116"
 				}
             ]
 		}
