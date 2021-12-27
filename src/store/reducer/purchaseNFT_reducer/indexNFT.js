@@ -21,7 +21,6 @@ export const initializeNFT = createAsyncThunk(
 export const initializeNFTInfo = createAsyncThunk(
 	'Initialize nfts INFO',
 	async (action, thunkAPI) => {
-		thunkAPI.dispatch(nftSlice.actions.setContract({}));
 		for (let i = 0; i < nftIds.length; ++i) {
 			thunkAPI.dispatch(initNFTInfoLoading(nftIds[i]));
 		}
@@ -105,8 +104,6 @@ export const loadNFTInfo = createAsyncThunk(
 			const balance = Number(responses[0]);
 			const allowance = Number(responses[1]);
 			const balanceTribex = Number(responses[2]);
-			console.log(allowance);
-			console.log(balanceTribex);
 			return {
 				balance,
 				enabledBoolean,
@@ -140,7 +137,6 @@ export const approveTokens = createAsyncThunk(
 	  try {
 		const { address } = thunkAPI.getState().web3;
 		const { tribexTokenContract } = thunkAPI.getState().nft;
-		console.log(tribeNFT[action.id].nftAddress)
 		const maxUint = Web3.utils
 		  .toBN(2)
 		  .pow(Web3.utils.toBN(256))

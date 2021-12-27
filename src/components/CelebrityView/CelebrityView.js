@@ -13,6 +13,7 @@ import ChristmasAnimatedBackground from '../ChristmasComponents/ChristmasAnimate
 import { nftIds } from '../../store/reducer/purchaseNFT_reducer/purchaseNFTInitialStates';
 import { useDispatch, useSelector } from 'react-redux';
 import CelebrityCard from '../Cards/CelebrityCard/CelebrityCard';
+import { loadNFTInfo } from '../../store/reducer/purchaseNFT_reducer/indexNFT';
 
 import ChristmasBanner from '../ChristmasComponents/Banners/ChristmasBanner';
 
@@ -69,22 +70,21 @@ const CelebrityView = ({
 		poolNumber: 0,
 		cutoffDate: '1652983200',
 	});
-
-	const { connected } = useSelector((state) => state.web3);
-	const dispatch = useDispatch();
-
-	useEffect(() => {
+	const interval = setInterval(() => {
 		const interval = setInterval(() => {
 			if (connected) {
-				if (nftIds) {
-					dispatch(initializeNFTInfo());
+				for (let i = 0; i < nftIds.length; ++i) {
+					dispatch(loadNFTInfo(nftIds[i]));
 				}
 			}
 		}, 10000);
 		return () => {
 			clearInterval(interval);
 		};
-	});
+	}, 5000);
+
+	const { connected } = useSelector((state) => state.web3);
+	const dispatch = useDispatch();
 
 	//8888888888888888888888888888888888888888888888888888888//
 
