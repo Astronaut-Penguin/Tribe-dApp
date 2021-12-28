@@ -93,7 +93,6 @@
 		rgb(169, 1, 250),
 		rgb(3, 238, 254)
 	);
-	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
 }
 
 .Green {
@@ -102,7 +101,6 @@
 
 .Green p::before {
 	background: #00c12c;
-	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
 }
 
 .Grey {
@@ -112,23 +110,8 @@
 	font-size: 12px;
 }
 
-.Grey:hover {
-	color: #868686;
-	transform: scale(1);
-	background: #c4c4c4;
-	border: none;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	pointer-events: none;
-	font-size: 12px;
-}
-
 .Grey p::before {
-	font-size: 12px;
-	color: #868686;
 	background: #c4c4c4;
-	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
 }
 
 /**********************************************/
