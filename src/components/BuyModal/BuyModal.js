@@ -190,7 +190,7 @@ const BuyModal = ({
 								<p>{price} TRIBEX</p>
 								<div className={styles.CelebrityModalBnb}></div>
 							</div>
-							{done === true && allowance > 0 &&(
+							{done === true && allowance > 0 && connected &&(
 								<button
 									onClick={async () => {
 										dispatch(buyNFT({ amount: price, id: nftId }));
@@ -200,7 +200,7 @@ const BuyModal = ({
 									<p>Purchase NFT</p>
 								</button>
 							)}
-							{done === true && (allowance <= 0 || !allowance) &&(
+							{done === true && (allowance <= 0 || !allowance) && connected &&(
 								<button
 									onClick={() => {
 										dispatch(approveTokens({ id: nftId }));
@@ -268,7 +268,7 @@ const BuyModal = ({
 							<p>{price} TRIBEX</p>
 							<div className={styles.CelebrityModalBnb}></div>
 						</div>
-						{done === true && allowance > 0 &&(
+						{done === true && allowance > 0 && connected &&(
 							<button
 								onClick={() => {
 									dispatch(buyNFT({ amount: price, id: nftId }));
@@ -278,7 +278,7 @@ const BuyModal = ({
 								<p>Purchase NFT</p>
 							</button>
 						)}
-						{done === true && (allowance <= 0 || !allowance) &&(
+						{done === true && (allowance <= 0 || !allowance) && connected &&(
 							<button
 								onClick={() => {
 									dispatch(approveTokens({ id: nftId }));
