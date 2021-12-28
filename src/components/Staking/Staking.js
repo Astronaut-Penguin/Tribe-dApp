@@ -42,7 +42,7 @@ function Staking() {
 
 	return (
 		<div className="staking-wrapper">
-			<ChristmasAnimatedBackground />
+			{/* <ChristmasAnimatedBackground /> */}
 			{/* <AnimatedBackground /> */}
 			<ChristmasBanner
 				title={'TRIBE  Exclusive Celebrity NFTs'}

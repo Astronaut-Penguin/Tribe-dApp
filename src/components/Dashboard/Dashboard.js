@@ -21,7 +21,7 @@ import Sidebar from '../../components/sidebar/Sidebar';
 import { projIds } from '../../store/reducer/launch_reducer/projectInitialStates';
 import { loadLaunchInfo } from '../../store/reducer/launch_reducer';
 import connectLogo from '../../images/connect-logo.svg';
-
+import ChristmasAnimatedBackground from '../ChristmasComponents/ChristmasAnimatedBackground/ChristmasAnimatedBackground';
 import ChristmasLogo from '../ChristmasComponents/Logo/ChristmasLogo';
 
 //- View Imports
@@ -75,6 +75,7 @@ function Dashboard(props) {
 
 	return (
 		<div className="main-layout">
+			<ChristmasAnimatedBackground />
 			<aside className={`sidebar-container ${showSidebar && 'sidebar-toggle'}`}>
 				<div className="sidebar-body">
 					<Sidebar getToggleStatus={getToggleStatus} />
