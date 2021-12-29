@@ -5,7 +5,11 @@ import React from 'react';
 import styles from './LandingV2.module.css';
 
 const LandingV2 = () => {
-	return <></>;
+	return (
+		<>
+			<div className={styles.Background} />
+		</>
+	);
 };
 
 export default LandingV2;
