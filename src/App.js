@@ -7,28 +7,26 @@ import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
 	return (
-		<div>
-			<HashRouter>
-				<Switch>
-					<Route exact path="/">
-						<LandingPage />
-					</Route>
-					<Route exact strict path="/dashboard" render={() => <Dashboard />} />
-					<Route
-						exact
-						strict
-						path="/dashboard/staking"
-						render={() => <Dashboard />}
-					/>
-					<Route
-						exact
-						strict
-						path="/dashboard/celebrity-nfts"
-						render={() => <Dashboard />}
-					/>
-				</Switch>
-			</HashRouter>
-		</div>
+		<HashRouter>
+			<Switch>
+				<Route exact path="/">
+					<LandingPage />
+				</Route>
+				<Route exact strict path="/dashboard" render={() => <Dashboard />} />
+				<Route
+					exact
+					strict
+					path="/dashboard/staking"
+					render={() => <Dashboard />}
+				/>
+				<Route
+					exact
+					strict
+					path="/dashboard/celebrity-nfts"
+					render={() => <Dashboard />}
+				/>
+			</Switch>
+		</HashRouter>
 	);
 }
 
