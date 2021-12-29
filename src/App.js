@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 import LandingPage from './components/LandingPage/LandingPage';
+import LandingV2 from './pages/LandingV2/LandingV2';
 import './UpdatedSidebar.css';
 import Dashboard from './components/Dashboard/Dashboard';
 
@@ -10,7 +11,7 @@ function App() {
 		<HashRouter>
 			<Switch>
 				<Route exact path="/">
-					<LandingPage />
+					<LandingV2 />
 				</Route>
 				<Route exact strict path="/dashboard" render={() => <Dashboard />} />
 				<Route
