@@ -21,6 +21,12 @@
 	transition: transform 0.3s ease-in;
 }
 
+.LoaderBackground {
+	background-color: white;
+	height: 275px;
+	width: 100%;
+}
+
 /* Image */
 .CelebrityNftImage {
 	display: inline-block;

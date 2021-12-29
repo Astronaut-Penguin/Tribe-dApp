@@ -1,5 +1,5 @@
 .loader {
-	position: relative;
+	/*position: relative;*/
 	margin: 0 auto;
 	width: 100px;
 }
@@ -16,8 +16,7 @@
 	transform-origin: center center;
 	width: 44px;
 	position: absolute;
-	top: 0;
-	bottom: 0;
+	top: calc(50% - 22px);
 	left: 0;
 	right: 0;
 	margin: auto;

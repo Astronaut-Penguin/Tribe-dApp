@@ -13,7 +13,7 @@ const ImageLoader = ({ image }) => {
 			<div>
 				<div className={styles.CelebrityNftImage}> 
 					{!loaded && (
-						<div className={styles.CelebrityNftCard}>
+						<div className={styles.LoaderBackground}>
 							<CircularSpinner />
 						</div>
 					)}
@@ -24,7 +24,7 @@ const ImageLoader = ({ image }) => {
 						onLoad={() => {
 							setLoaded(true);
 						}}
-					/>
+					/> 
 				</div>
 			</div>
 		</>
