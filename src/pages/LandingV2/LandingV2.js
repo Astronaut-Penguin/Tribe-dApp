@@ -10,7 +10,6 @@ import FeatureSection from '../../components/LandingV2-Components/Sections/Featu
 const LandingV2 = () => {
 	return (
 		<>
-			<div className={styles.Background} />
 			<FeatureSection />
 		</>
 	);
