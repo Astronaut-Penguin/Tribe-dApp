@@ -16,6 +16,7 @@ import CelebrityCard from '../Cards/CelebrityCard/CelebrityCard';
 import { loadNFTInfo } from '../../store/reducer/purchaseNFT_reducer/indexNFT';
 
 import ChristmasBanner from '../ChristmasComponents/Banners/ChristmasBanner';
+import ImageLoader from '../Loader/Loader';
 
 const CelebrityView = ({
 	name,
@@ -196,10 +197,9 @@ const CelebrityView = ({
 
 				<div className="celebrity-artist-data">
 					<div className="celebrity-artist-info-container">
-						<div
-							className="celebrity-image"
-							style={{ backgroundImage: 'url(' + artist.image + ')' }}
-						></div>
+						<div className="celebrity-image">
+							<ImageLoader image={artist.image} />
+						</div>
 						<div className="celebrity-name">
 							<h2>{artist.name}</h2>
 							<h3>{artist.user}</h3>

@@ -87,6 +87,9 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+
+	border-radius: 10px;
+	overflow: hidden;
 }
 
 .celebrity-name {

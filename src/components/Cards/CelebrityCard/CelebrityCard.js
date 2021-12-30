@@ -4,8 +4,9 @@ import React from 'react';
 //- Style Imports
 import styles from './CelebrityCard.module.css';
 
-//- Button Imports
+//- Components Imports
 import LiveButton from '../../Button/Button';
+import ImageLoader from '../../Loader/Loader';
 
 const CelebrityCard = ({
 	name,
@@ -17,14 +18,11 @@ const CelebrityCard = ({
 	state,
 	onClick,
 }) => {
-
 	return (
 		<div className={styles.CelebrityCard}>
 			{image && (
-				<div
-					className={styles.CelebrityImage}
-					style={{ backgroundImage: 'url(' + banner + ')' }}
-				>
+				<div className={styles.CelebrityImage}>
+					<ImageLoader image={banner} />
 					<LiveButton
 						text={
 							(state == 'live' ? 'Live' : '') +
@@ -43,10 +41,9 @@ const CelebrityCard = ({
 
 			<div className={styles.CelebrityDataContainer}>
 				<div className={styles.PictureContainer}>
-					<div
-						className={styles.CelebrityPicture}
-						style={{ backgroundImage: 'url(' + image + ')' }}
-					></div>
+					<div className={styles.CelebrityPicture}>
+						<ImageLoader image={image} />
+					</div>
 					<div className={styles.verify}></div>
 				</div>
 				<div className={styles.CelebrityData}>
