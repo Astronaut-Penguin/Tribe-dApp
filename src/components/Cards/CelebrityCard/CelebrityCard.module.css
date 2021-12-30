@@ -59,6 +59,8 @@
 	background-repeat: no-repeat;
 	border-radius: 200px;
 	margin: auto;
+
+	overflow: hidden;
 }
 
 .verify {

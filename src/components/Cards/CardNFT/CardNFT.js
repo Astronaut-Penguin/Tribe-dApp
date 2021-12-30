@@ -30,9 +30,7 @@ const CardNFT = ({ onClick, name, colection, price, image, video, href }) => {
 			)}
 
 			{image !== 'undefined' && (
-				<div
-					className={styles.CelebrityNftImage}
-				>
+				<div className={styles.CelebrityNftImage}>
 					<ImageLoader image={image} />
 					<BuyButton text="Buy" onClick={onClick} />
 				</div>

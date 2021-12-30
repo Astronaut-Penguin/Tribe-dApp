@@ -1,34 +1,53 @@
+//- React Imports
 import React, { useState, Fragment } from 'react';
+
+//- Components Imports
 import CircularSpinner from './Circular';
 
+//- Styles Imports
 import styles from './Loader.module.css';
 
+//- How it works
+// Siempre que se llama hay que ponerle un contenedor que limite el crecimiento del componente.
+// Asi lo podemos hacer reutilizable. El contenedor tiene ajustado para adaptarse siempre al 100% de su padre.
 
-const ImageLoader = ({ image }) => {
-	const [src, setSrc] = useState(image);
+const ImageLoader = ({ image, video }) => {
 	const [loaded, setLoaded] = useState(false);
+
+	////////////
+	// RENDER //
+	////////////
 
 	return (
 		<>
-			<div>
-				<div className={styles.CelebrityNftImage}> 
-					{!loaded && (
-						<div className={styles.LoaderBackground}>
-							<CircularSpinner />
-						</div>
-					)}
+			<div className={styles.Container}>
+				{!loaded && <CircularSpinner />}
 
-					<img
-                        className={styles.ImageLoader}
-						src={src}
+				{video && (
+					<video
+						className={styles.Video}
+						muted
 						onLoad={() => {
 							setLoaded(true);
 						}}
-					/> 
-				</div>
+					>
+						<source src={video} type="video/mp4" />
+					</video>
+				)}
+
+				{image && (
+					<img
+						className={styles.Image}
+						src={image}
+						onLoad={() => {
+							setLoaded(true);
+						}}
+					/>
+				)}
 			</div>
 		</>
 	);
 };
 
+//- Export
 export default ImageLoader;
