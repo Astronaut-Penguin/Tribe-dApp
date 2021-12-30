@@ -57,13 +57,16 @@ h2 {
 	color: #fffafa;
 }
 
+/***********************************/
+/* CARDS CONTAINER */
 .Cards {
-	max-width: 1200px;
+	max-width: 800px;
 	margin: 20px auto;
 	display: grid;
 	grid-gap: 1rem;
 }
 
+/* EACH CARD */
 .Card {
 	margin-top: 30px;
 
@@ -89,6 +92,11 @@ span {
 	margin-top: 10px;
 	display: block;
 }
+
+/***********************************/
+/*------------*/
+/* RESPONSIVE */
+/*------------*/
 
 @media (min-width: 200px) {
 	.Cards {
