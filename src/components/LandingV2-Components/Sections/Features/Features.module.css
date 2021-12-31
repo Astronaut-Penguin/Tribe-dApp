@@ -19,7 +19,6 @@
 .Container > h2 {
 	margin-top: 25px;
 	font-family: Lato;
-	background-color: red;
 }
 
 h2 {
@@ -59,7 +58,7 @@ h2 {
 /***********************************/
 /* CARDS CONTAINER */
 .Cards {
-	max-width: 800px;
+	max-width: 300px;
 	margin: 20px auto;
 	display: grid;
 	grid-gap: 1rem;
@@ -103,15 +102,19 @@ span {
 /* RESPONSIVE */
 /*------------*/
 
-@media (min-width: 200px) {
+@media screen and (max-width: 425px) {
 	.Cards {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
-@media (min-width: 425px) {
+@media screen and (min-width: 425px) {
 	.Card {
 		font-size: 16px;
+	}
+	.Cards {
+		grid-template-columns: repeat(3, 1fr);
+		max-width: 500px;
 	}
 }
 
@@ -136,6 +139,9 @@ span {
 	}
 	.Container > h3 {
 		font-size: 24px;
+	}
+	.Cards {
+		max-width: 800px;
 	}
 	.Card {
 		font-size: 18px;
