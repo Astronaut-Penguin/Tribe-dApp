@@ -20,27 +20,45 @@ const FeatureSection = () => {
 			<div className={styles.Cards}>
 				<div className={styles.Card}>
 					<img src={CelebrityValidated} />
-					<span>Celebrity Validated</span>
+					<span>
+						Celebrity <br className={styles.Br} />
+						Validated
+					</span>
 				</div>
 				<div className={styles.Card}>
 					<img src={ScheduledBurns} />
-					<span>Scheduled Burns</span>
+					<span>
+						Scheduled <br className={styles.Br} />
+						Burns
+					</span>
 				</div>
 				<div className={styles.Card}>
 					<img src={MetaverseSkinReady} />
-					<span>Metaverse Skin Ready</span>
+					<span>
+						Metaverse <br className={styles.Br} />
+						Skin Ready
+					</span>
 				</div>
 				<div className={styles.Card}>
 					<img src={StakingRewards} />
-					<span>Staking Rewards</span>
+					<span>
+						Staking <br className={styles.Br} />
+						Rewards
+					</span>
 				</div>
 				<div className={styles.Card}>
 					<img src={LaunchpadAllocations} />
-					<span>Launchpad Allocations</span>
+					<span>
+						Launchpad <br className={styles.Br} />
+						Allocations
+					</span>
 				</div>
 				<div className={styles.Card}>
 					<img src={GamificationRigging} />
-					<span>Gamification Rigging</span>
+					<span>
+						Gamification <br className={styles.Br} />
+						Rigging
+					</span>
 				</div>
 			</div>
 		</section>
