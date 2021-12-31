@@ -3,6 +3,7 @@ import React from 'react';
 
 //- Style Imports
 import styles from './CardNFT.module.css';
+import ImageLoader from '../../Loader/Loader';
 
 //- Button Imports
 import BuyButton from '../../Button/Button';
@@ -29,10 +30,8 @@ const CardNFT = ({ onClick, name, colection, price, image, video, href }) => {
 			)}
 
 			{image !== 'undefined' && (
-				<div
-					className={styles.CelebrityNftImage}
-					style={{ backgroundImage: 'url(' + image + ')' }}
-				>
+				<div className={styles.CelebrityNftImage}>
+					<ImageLoader image={image} />
 					<BuyButton text="Buy" onClick={onClick} />
 				</div>
 			)}
