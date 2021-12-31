@@ -1,0 +1,153 @@
+.Container {
+	display: inline-block;
+	width: 100%;
+	min-height: 100vh;
+
+	margin: 0;
+	padding: 0;
+
+	background: linear-gradient(
+		180deg,
+		#000000 0%,
+		#004c9b 39.57%,
+		#5b55c8 63.72%,
+		#d2219a 89.41%
+	);
+	text-align: center;
+}
+
+.Container > h2 {
+	margin-top: 25px;
+	font-family: Lato;
+	background-color: red;
+}
+
+h2 {
+	/*position: absolute;
+	width: 312px;
+	height: 138px;
+	top: 1148px;
+	left: 594px;*/
+
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 46px;
+	line-height: 100%;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0, 017em;
+
+	color: #fffafa;
+
+	text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.25);
+}
+
+.Container > h3 {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 80%;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0, 017em;
+
+	color: #fffafa;
+}
+
+/***********************************/
+/* CARDS CONTAINER */
+.Cards {
+	max-width: 800px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 1rem;
+}
+
+/* EACH CARD */
+.Card {
+	margin-top: 30px;
+
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 112.5%;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.017em;
+
+	color: #ffffff;
+}
+
+img {
+	display: inline-block;
+	width: 85px;
+	height: auto;
+	transition: transform 0.3s ease-in;
+}
+
+img:hover {
+	transform: scale(1.05);
+	transition: transform 0.3s ease-in;
+}
+
+span {
+	margin-top: 10px;
+	display: block;
+}
+
+/***********************************/
+/*------------*/
+/* RESPONSIVE */
+/*------------*/
+
+@media (min-width: 200px) {
+	.Cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 425px) {
+	.Card {
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.Cards {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.Container > h2 {
+		font-size: 58px;
+	}
+	.Container > h3 {
+		font-size: 20px;
+	}
+	.Br {
+		display: none;
+	}
+}
+
+@media (min-width: 900px) {
+	.Container > h2 {
+		font-size: 72px;
+	}
+	.Container > h3 {
+		font-size: 24px;
+	}
+	.Card {
+		font-size: 18px;
+	}
+	img {
+		width: 120px;
+		height: auto;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.Card {
+		font-size: 20px;
+	}
+}
