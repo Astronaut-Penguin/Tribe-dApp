@@ -21,8 +21,7 @@ const FeatureSection = () => {
 				<div className={styles.Card}>
 					<img src={CelebrityValidated} />
 					<span>
-						Celebrity <br className={styles.Br} />
-						Validated
+						Celebrity <br className={styles.Br} /> Validated
 					</span>
 				</div>
 				<div className={styles.Card}>
