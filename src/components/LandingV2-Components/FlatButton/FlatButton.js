@@ -29,7 +29,7 @@ const FlatButton = ({ onClick, text, style, small, mid }) => {
 			style={style}
 		>
 			<img src={PancakeLogo}/>
-            <p>{text}</p>
+            {text}
 		</button>
 	);
 };
