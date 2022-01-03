@@ -22,9 +22,7 @@ const CardNFT = ({ onClick, name, colection, price, image, video, href }) => {
 		<div className={styles.CelebrityNftCard}>
 			{video !== 'undefined' && (
 				<div className={styles.VideoContainer}>
-					<video className={styles.BackgroundVideo} muted>
-						<source src={video} type="video/mp4" />
-					</video>
+					<ImageLoader video={video} quite />
 					<BuyButton text="Buy" onClick={onClick} />
 				</div>
 			)}

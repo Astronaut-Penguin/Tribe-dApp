@@ -103,6 +103,8 @@
 	height: 162px;
 	border-radius: 34px;
 	object-fit: cover;
+
+	overflow: hidden;
 }
 
 /* Modal Name Container */
