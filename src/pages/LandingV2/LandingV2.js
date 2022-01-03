@@ -12,9 +12,9 @@ const LandingV2 = () => {
 	return (
 		<>
 			<FeatureSection />
-			<FlatButton onClick={'/'} text={'Este es el Big'}/>
-			<FlatButton onClick={'/'} text={'Este es el Mid'} mid/>
-			<FlatButton onClick={'/'} text={'Este es el Small'} small/>
+			<br /><FlatButton onClick={'/'} text={'PancakeSwap'}/>
+			<br /><FlatButton onClick={'/'} text={'Enter Application'} mid/>
+			<br /><FlatButton onClick={'/'} text={'PancakeSwap'} small/>
 		</>
 	);
 };
