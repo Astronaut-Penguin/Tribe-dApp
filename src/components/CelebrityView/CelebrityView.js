@@ -151,11 +151,11 @@ const CelebrityView = ({
 			{/******************************/}
 
 			{/* <ChristmasAnimatedBackground /> */}
-			{/* <AnimatedBackground /> */}
+			{ <AnimatedBackground /> }
 
 			{/******************************/}
 
-			{/*<div className="nft-banner-container">
+			{<div className="nft-banner-container">
 				<div className="banner-container-content">
 					<div>
 						<h2>Celebrity & Brands TRIBEPOP NFTs</h2>
@@ -170,16 +170,8 @@ const CelebrityView = ({
 						</p>
 					</div>
 				</div>
-				</div>*/}
-			<ChristmasBanner
-				title={'Celebrity & Brands TRIBEPOP NFTs'}
-				text={
-					'Each TRIBEPOP is a re-creation of a celebrity or brand and these will be characters ready to use in our next role-playing game in our metaverse!'
-				}
-				text2={
-					'You can only buy them at this value in this unique opportunity, then you can only get one if someone wants to sell'
-				}
-			/>
+				</div>}
+			
 
 			<section className="celebrity-container">
 				<div className="celebrity-story">
