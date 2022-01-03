@@ -204,11 +204,11 @@
 .staking-btn button {
 	width: 100%;
 	background-image: linear-gradient(
-    to right,
-    rgb(255, 1, 126),
-    rgb(169, 1, 250),
-    rgb(3, 238, 254)
-  );
+		to right,
+		rgb(255, 1, 126),
+		rgb(169, 1, 250),
+		rgb(3, 238, 254)
+	);
 	color: #fff;
 	transition: opacity 0.15s ease-in;
 	border: none;
@@ -930,13 +930,12 @@ input[type='submit'][disabled]:hover {
 }
 
 .staking-collect-btn button {
-	background-color: #ce3d3d !important;
-	/*background-image: linear-gradient(
+	background-image: linear-gradient(
 		to right,
 		rgb(255, 1, 126),
 		rgb(169, 1, 250),
 		rgb(3, 238, 254)
-	) !important;*/
+	) !important;
 }
 
 .staking-collect-btn button[disabled]:active,
