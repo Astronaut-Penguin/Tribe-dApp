@@ -7,6 +7,7 @@
 	display: inline-block;
 	width: 100%;
 	min-height: 100vh;
+	max-width: 1200px;
 
 	margin: 0;
 	padding: 0;
@@ -68,11 +69,24 @@ span {
 	color: #ffffff;
 }
 
-.Container > Button {
+.PancakeButton {
+	width: 208px;
+	height: 40px;
+	background: #a16bf8;
+	border: none;
+
 	align-items: center;
 	text-align: center;
+
+	color: #ffffff;
+	border-radius: 11px;
 }
 
+.PancakeButton:hover {
+	background: #b82edb;
+}
+
+/* IMAGES CONTAINER */
 .Container > .Images {
 	display: inline-block;
 	align-items: center;
@@ -80,5 +94,25 @@ span {
 }
 
 .Social {
-	margin: 10px;
+	margin: 13px;
+}
+
+/*/////////*/
+/* SCREENS */
+/*/////////*/
+
+/* MOBILE MEDIUM AND LARGE */
+@media only screen and (min-width: 358px) and (max-width: 767px) {
+	.Text {
+		width: calc(75% - 10px);
+	}
+}
+
+/* TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.Characters {
+		height: 270px;
+		width: auto;
+		align-items: left;
+	}
 }
