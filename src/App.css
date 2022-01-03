@@ -325,12 +325,12 @@
 
 .user-btn {
 	background-color: #ce3d3d;
-	/*background-image: linear-gradient(
+	background-image: linear-gradient(
     to right,
     rgb(255, 1, 126),
     rgb(169, 1, 250),
     rgb(3, 238, 254)
-  );*/
+  );
 	color: #fff;
 	transition: opacity 0.15s ease-in;
 	padding: 0px 15px;
