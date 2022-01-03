@@ -1,0 +1,80 @@
+/*////////*/
+/* STYLES */
+/*////////*/
+
+/* SECTION CONTAINER */
+.Container {
+	display: inline-block;
+	width: 100%;
+	min-height: 100vh;
+
+	margin: 0;
+	padding: 0;
+
+	background: linear-gradient(
+		180deg,
+		#000000 0%,
+		#004c9b 39.57%,
+		#5b55c8 63.72%,
+		#d2219a 89.41%
+	);
+	text-align: center;
+}
+
+.Container > .Celebrities {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 30px;
+	line-height: 30px;
+
+	max-width: 300px;
+	display: inline-block;
+	margin-top: 35px;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.017em;
+
+	color: #ffffff;
+}
+
+/* GRADIENT TEXT ('TribePop') */
+span {
+	font-weight: 800;
+	background: linear-gradient(
+		to right,
+		rgb(255, 1, 126),
+		rgb(169, 1, 250),
+		rgb(3, 238, 254)
+	);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
+p {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+
+	padding-top: 20px;
+	/*max-width: 128px;*/
+	display: inline-block;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.017em;
+
+	color: #ffffff;
+}
+
+.Container > Button {
+	align-items: center;
+	text-align: center;
+}
+
+.Container > .Images {
+	display: inline-block;
+	align-items: center;
+	text-align: center;
+}
