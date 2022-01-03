@@ -51,12 +51,12 @@ span {
 	-webkit-background-clip: text;
 }
 
-p {
+.Text {
 	font-family: Lato;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 14px;
-	line-height: 20px;
+	line-height: 18px;
 
 	padding-top: 20px;
 	/*max-width: 128px;*/
@@ -77,4 +77,8 @@ p {
 	display: inline-block;
 	align-items: center;
 	text-align: center;
+}
+
+.Social {
+	margin: 10px;
 }
