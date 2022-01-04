@@ -10,7 +10,9 @@ const LandingV2 = () => {
 	return (
 		<>
 			{/* <div className={styles.Background} /> */}
-			<MainSection />
+			<div className={styles.Container}>
+				<MainSection />
+			</div>
 		</>
 	);
 };
