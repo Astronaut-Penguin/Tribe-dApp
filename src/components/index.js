@@ -2,9 +2,9 @@
 // EXPORTS FILE //
 //////////////////
 
-//- LANDING V2 FILE -//
+//- LANDING V2 EXPORTS -//
 // Sections
-export { default as FeaturesSection } from './LandingV2-Components/Sections/Features/Features';
+export { default as FeatureSection } from './LandingV2-Components/Sections/Features/Features';
 
 // Buttons
 export { default as FlatButton } from './LandingV2-Components/Buttons/FlatButton/FlatButton';

@@ -13,7 +13,7 @@ import PancakeLogo from './assets/PanButton.png';
 
 // STYLES TAMAÑOS
 // NO PASAR ESTOS VALORES AL MISMO TIEMPO (SOLO ELEGIR UNO)
-// POR DEFECTO SE LLAMA AL BIG (SI NO SE PASA POR PARÁMETRO UN TAMAÑO LLAMA AL BIG 
+// POR DEFECTO SE LLAMA AL BIG (SI NO SE PASA POR PARÁMETRO UN TAMAÑO LLAMA AL BIG
 //////////////////////////        PARA NO TIRAR ERROR)
 // - small: true - Boton pequeño.
 // - mid: true - Boton mediano.
@@ -21,15 +21,15 @@ import PancakeLogo from './assets/PanButton.png';
 
 const FlatButton = ({ onClick, text, style, small, mid }) => {
 	return (
-        <button
+		<button
 			className={`${styles.PancakeButton} 
             ${small ? styles.Small : styles.Big}
             ${mid ? styles.Mid : styles.Big}`}
 			onClick={onClick}
 			style={style}
 		>
-			<img src={PancakeLogo}/>
-            {text}
+			<img src={PancakeLogo} />
+			{text}
 		</button>
 	);
 };
