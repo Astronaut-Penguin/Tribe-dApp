@@ -37,7 +37,7 @@ const MainSection = () => {
 			<br /> <p className={styles.Text}>
 				Exclusively on <img src={Binance} /> <b>Binance Smart Chain</b>
 			</p>
-			<br />
+			<br /> 
 
 			<div className={styles.Images}>
 				<a title="Telegram" href="/" className={styles.Social}>
