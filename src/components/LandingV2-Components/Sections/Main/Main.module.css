@@ -46,7 +46,7 @@
 }
 
 /* GRADIENT TEXT ('TribePop') */
-span {
+.GradientText {
 	font-weight: 800;
 	background: linear-gradient(
 		to right,
@@ -65,11 +65,27 @@ span {
 	font-size: 14px;
 	line-height: 18px;
 
-	/*max-width: 128px;*/
 	display: inline-block;
 	align-items: center;
 	text-align: center;
 	letter-spacing: -0.017em;
+
+	color: #ffffff;
+}
+
+.TribeText {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 18px;
+
+	display: inline-block;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.017em;
+	margin-top: 10px;
+	margin-bottom: 8px;
 
 	color: #ffffff;
 }
@@ -102,6 +118,11 @@ span {
 	margin: 13px;
 }
 
+/* LARGE IMAGE */
+.CharactersLarge {
+	display: none;
+}
+
 /*/////////*/
 /* SCREENS */
 /*/////////*/
@@ -111,17 +132,68 @@ span {
 	.Text {
 		width: calc(75% - 10px);
 	}
+	.TribeText {
+		width: calc(75% - 10px);
+	}
 }
 
 /* TABLET */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.Subcontainer {
+		max-width: 768px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	.Characters {
+		display: none;
+	}
+	.CharactersLarge {
+		display: flex;
 		float: left;
-		height: 250px;
+		height: 380px;
 		width: auto;
-		margin: 13px;
+		margin: 10px;
+	}
+	.TribeText {
+		margin-top: 75px;
+	}
+	.Images {
+		margin-top: 55px;
+	}
+}
+
+/* PC */
+@media only screen and (min-width: 1024px) {
+	.Subcontainer {
+		max-width: 950px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.Characters {
+		display: none;
+	}
+	.CharactersLarge {
+		display: flex;
+		float: left;
+		height: 420px;
+		width: auto;
+		margin: 10px;
+	}
+	.Celebrities {
+		font-size: 36px;
+		line-height: 38px;
+		max-width: 340px;
 	}
 	.Text {
-		position: relative;
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.TribeText {
+		font-size: 18px;
+		line-height: 22px;
+		margin-top: 75px;
+	}
+	.Images {
+		margin-top: 58px;
 	}
 }
