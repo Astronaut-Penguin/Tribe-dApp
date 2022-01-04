@@ -1,6 +1,7 @@
 /* BUTTON */
 
 .PancakeButton {
+	display: inline-block;
 	width: 208px;
 	height: 40px;
 
