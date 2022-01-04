@@ -1,3 +1,9 @@
+/* CONTAINER */
+.Container {
+	display: flex;
+	justify-content: center;
+}
+
 /* BACKGROUND */
 
 .Background {

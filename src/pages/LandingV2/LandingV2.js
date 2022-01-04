@@ -5,6 +5,7 @@ import React from 'react';
 import styles from './LandingV2.module.css';
 
 //- Sections Imports
+import MainSection from '../../components/LandingV2-Components/Sections/Main/Main';
 import { FeatureSection } from '../../components';
 
 //- Components Imports
@@ -13,10 +14,11 @@ import { FlatButton } from '../../components';
 const LandingV2 = () => {
 	return (
 		<>
-			<FeatureSection />
-			<FlatButton onClick={'/'} text={'PancakeSwap'} />
-			<FlatButton onClick={'/'} text={'Enter Application'} mid />
-			<FlatButton onClick={'/'} text={'PancakeSwap'} small />
+			{/* <div className={styles.Background} /> */}
+			<div className={styles.Container}>
+				<MainSection />
+        <FeatureSection />
+			</div>
 		</>
 	);
 };
