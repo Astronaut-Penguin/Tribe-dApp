@@ -1,0 +1,32 @@
+.Container {
+	display: flex;
+	width: 100%;
+	height: 200px;
+
+	line-height: 0 !important;
+
+	background: linear-gradient(
+		180deg,
+		#000000 0%,
+		rgba(0, 0, 0, 0.678832) 54.08%,
+		rgba(0, 0, 0, 0) 93.86%
+	);
+	padding: 20px;
+
+	position: fixed;
+}
+
+/****************************************/
+
+.Logo {
+	display: inline-block;
+	width: 110px;
+	height: 45px;
+
+	text-indent: -9999px;
+
+	background-image: url('./assets/logo.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
