@@ -17,11 +17,6 @@
 }
 
 .Container > h2 {
-	margin-top: 25px;
-	font-family: Lato;
-}
-
-h2 {
 	/*position: absolute;
 	width: 312px;
 	height: 138px;
@@ -36,6 +31,7 @@ h2 {
 	align-items: center;
 	text-align: center;
 	letter-spacing: -0, 017em;
+	margin-top: 25px;
 
 	color: #fffafa;
 
@@ -80,19 +76,19 @@ h2 {
 	color: #ffffff;
 }
 
-img {
+.Card > img {
 	display: inline-block;
 	width: 85px;
 	height: auto;
 	transition: transform 0.3s ease-in;
 }
 
-img:hover {
+.Card > img:hover {
 	transform: scale(1.05);
 	transition: transform 0.3s ease-in;
 }
 
-span {
+.Card > span {
 	margin-top: 10px;
 	display: block;
 }
@@ -146,7 +142,7 @@ span {
 	.Card {
 		font-size: 18px;
 	}
-	img {
+	.Card > img {
 		width: 120px;
 		height: auto;
 	}
