@@ -43,6 +43,12 @@
 	position: relative;
 }
 
+.ButtonPlayNFT{
+	position: absolute;
+	top: 4px;
+	left: 7px;
+}
+
 /* Video */
 .BackgroundVideo {
 	display: inline-block;
