@@ -15,6 +15,7 @@ import {
 const LandingV2 = () => {
 	return (
 		<>
+			<Header />
 			<div className={styles.Container}>
 				<MainSection />
 				<FeatureSection />
