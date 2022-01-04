@@ -1,7 +1,16 @@
 /* CONTAINER */
 .Container {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+	background: linear-gradient(
+		180deg,
+		#000000 0%,
+		#004c9b 39.57%,
+		#5b55c8 63.72%,
+		#d2219a 89.41%
+	);
 }
 
 /* BACKGROUND */

@@ -4,6 +4,9 @@ import React from 'react';
 //- Import Styles
 import styles from './Main.module.css';
 
+//- Components Imports
+import { FlatButton } from '../../../index';
+
 //- Import Images
 import PlebCharacter3 from './assets/PlebCharacter3.png';
 import LargePlebCharacter3 from './assets/LargePlebCharacter3.png';
@@ -21,11 +24,11 @@ const MainSection = () => {
 				<img className={styles.CharactersLarge} src={LargePlebCharacter3} />
 				<div className={styles.Content}>
 					<div className={styles.Celebrities}>
-						Celebrities  
-							<span className={styles.GradientText}> TribePop </span> 
-						 on the Metaverse
+						Celebrities
+						<span className={styles.GradientText}> TribePop </span>
+						on the Metaverse
 					</div>
-					<p className={styles.Text} style={{marginTop: '15px'}}>
+					<p className={styles.Text} style={{ marginTop: '15px' }}>
 						We launch NFTs. <br />
 						We build the future.
 					</p>
@@ -33,10 +36,8 @@ const MainSection = () => {
 					<p className={styles.TribeText}>
 						Buy <b>TRIBE Tokens</b> on
 					</p>
-					<button className={styles.PancakeButton}>
-						<img src={PanButton} /> <b>PancakeSwap</b>
-					</button>{' '}
-					<p className={styles.Text} style={{marginTop: '8px'}}>
+					<FlatButton text={'PancakeSwap'} big />
+					<p className={styles.Text} style={{ marginTop: '8px' }}>
 						Exclusively on <img src={Binance} /> <b>Binance Smart Chain</b>
 					</p>
 				</div>

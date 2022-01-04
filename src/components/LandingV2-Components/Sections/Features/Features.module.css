@@ -5,14 +5,6 @@
 
 	margin: 0;
 	padding: 0;
-
-	background: linear-gradient(
-		180deg,
-		#000000 0%,
-		#004c9b 39.57%,
-		#5b55c8 63.72%,
-		#d2219a 89.41%
-	);
 	text-align: center;
 }
 
