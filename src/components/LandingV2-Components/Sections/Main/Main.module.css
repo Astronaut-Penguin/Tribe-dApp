@@ -22,7 +22,13 @@
 	text-align: center;
 }
 
-.Container > .Celebrities {
+.Content {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.Celebrities {
 	font-family: Lato;
 	font-style: normal;
 	font-weight: 800;
@@ -59,7 +65,6 @@ span {
 	font-size: 14px;
 	line-height: 18px;
 
-	padding-top: 20px;
 	/*max-width: 128px;*/
 	display: inline-block;
 	align-items: center;
