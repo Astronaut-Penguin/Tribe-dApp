@@ -19,6 +19,7 @@
 
 	color: white;
 	border: none;
+	transition: background-color 200ms ease-in;
 }
 
 .PancakeButton img {
