@@ -22,7 +22,7 @@
 	transition: background-color 200ms ease-in;
 }
 
-.PancakeButton img {
+.PancakeButton > img {
 	display: inline-block;
 	width: 15%;
 	height: auto;
@@ -51,7 +51,7 @@
 	border-radius: 9px;
 }
 
-.Mid img {
+.Mid > img {
 	display: inline-block;
 	width: 0%;
 	height: 0%;
