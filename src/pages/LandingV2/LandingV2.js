@@ -5,12 +5,12 @@ import React from 'react';
 import styles from './LandingV2.module.css';
 
 //- Sections Imports
-
 import { MainSection, FeatureSection, TribepopSection } from '../../components';
 
 const LandingV2 = () => {
 	return (
 		<>
+			<Header />
 			<div className={styles.Container}>
 				<MainSection />
 				<FeatureSection />
