@@ -17,7 +17,7 @@ const Header = () => {
 				</a>
 				<div className={styles.Button}>
 					<Link to="/dashboard">
-						<FlatButton text={'Enter Application'} mid />
+						<FlatButton mid text={'Enter Application'} />
 					</Link>
 				</div>
 			</div>
