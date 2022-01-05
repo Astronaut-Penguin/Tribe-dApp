@@ -31,7 +31,7 @@ const ApplyButton = ({ onClick, text, style, paper, solid }) => {
 		>
 			<img className={styles.PaperLogo} src={WhitePaper} />
 			<img className={styles.SolidLogo} src={SolidProof} />
-			{text}
+			<p className={styles.Text}>{text}</p>
 		</button>
 	);
 };

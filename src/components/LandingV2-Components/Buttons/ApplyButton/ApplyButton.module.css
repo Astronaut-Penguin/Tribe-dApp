@@ -1,39 +1,60 @@
 /* BUTTON */
 
 .ApplyButton {
-	display: inline-block;
+	display: flex;
 	width: 216px;
 	height: 55px;
+	position: relative;
+	justify-content: center;
+	align-items: center;
 
 	font-family: Lato;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 18px;
 	line-height: 17px;
-
-
-	
-	border: 5px solid;
-	border-image-slice: 1;
-	border-width: 3px;
-	border-image-source: linear-gradient( to bottom,
-    rgb(169, 1, 250),
-    rgb(255, 1, 126));
+	padding: 2px;
+	border: none;
+	border-radius: 9px;
 	background: none;
-	
 
-	
-
-	align-items: center;
 	text-align: center;
 
 	color: white;
+
+	transition: background-color 200ms ease-in;
 }
 
 .ApplyButton:hover {
-	background: #b82edb;
-	border-radius: 10px;
+	background-color: #b82edb;
 }
+
+.Text {
+	display: inline-block;
+	margin-top: auto;
+}
+
+.Text::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 2px;
+	border-radius: 9px;
+
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: destination-out;
+	mask-composite: exclude;
+	background: linear-gradient(to bottom, rgb(169, 1, 250), rgb(255, 1, 126));
+}
+
+.Text:hover::before {
+	background: none;
+}
+
+/********************************/
 
 .PaperLogo {
 	display: inline-block;
