@@ -1,0 +1,86 @@
+/* BUTTON */
+
+.ApplyButton {
+	display: inline-block;
+	width: 216px;
+	height: 55px;
+
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 17px;
+
+	background: linear-gradient(to bottom, rgb(169, 1, 250), rgb(255, 1, 126));
+	border-radius: 9px;
+
+	align-items: center;
+	text-align: center;
+
+	color: white;
+	border: none;
+	transition: background-color 200ms ease-in;
+}
+
+.ApplyButton:hover {
+	background: #b82edb;
+}
+
+.PaperLogo {
+	display: inline-block;
+	width: 15%;
+	height: auto;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.SolidLogo {
+	display: inline-block;
+	width: 15%;
+	height: auto;
+
+	justify-content: center;
+	align-items: center;
+}
+
+/************************************************/
+/* CLASS BUTTONS (CLASES SEGUN CLASE DE BOTÓN) */
+
+.Apply > .PaperLogo {
+	display: none;
+}
+
+.Apply > .SolidLogo {
+	display: none;
+}
+
+.Paper {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.Paper > .PaperLogo {
+	display: inline-block;
+	width: 15%;
+	height: auto;
+
+	margin-right: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+.Solid {
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.Solid > .SolidLogo {
+	display: inline-block;
+	width: 12%;
+	height: auto;
+
+	margin-right: 10px;
+	justify-content: center;
+	align-items: center;
+}
