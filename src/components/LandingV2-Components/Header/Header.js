@@ -5,6 +5,7 @@ import React from 'react';
 import styles from './Header.module.css';
 
 //- Components Imports
+import { Link } from 'react-router-dom';
 import { FlatButton } from '../..';
 
 const Header = () => {
@@ -15,7 +16,9 @@ const Header = () => {
 					Tribe
 				</a>
 				<div className={styles.Button}>
-					<FlatButton text={'Enter Application'} mid />
+					<Link to="/dashboard">
+						<FlatButton text={'Enter Application'} mid />
+					</Link>
 				</div>
 			</div>
 		</header>
