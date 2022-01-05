@@ -16,12 +16,13 @@ import Twitter from './assets/Twitter.png';
 import Pancake from './assets/Pankake.png';
 import Bsc from './assets/bsc-8 2.png';
 import PanButton from './assets/PanButton.png';
+import Reyes from './assets/Group_23.png';
 
 const MainSection = () => {
 	return (
 		<section className={styles.Container}>
 			<div className={styles.Subcontainer}>
-				<img className={styles.CharactersLarge} src={LargePlebCharacter3} />
+				<img className={styles.CharactersLarge} src={Reyes} />
 				<div className={styles.Content}>
 					<div className={styles.Celebrities}>
 						Celebrities
