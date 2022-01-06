@@ -7,8 +7,8 @@ import { loadStakingInfo } from '../../store/reducer/staking_reducer';
 import './Staking.css';
 import { stakeIds } from '../../store/reducer/staking_reducer/stakingInitialStates';
 import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
-import ChristmasAnimatedBackground from '../ChristmasComponents/ChristmasAnimatedBackground/ChristmasAnimatedBackground';
-import ChristmasBanner from '../ChristmasComponents/Banners/ChristmasBanner';
+// import ChristmasAnimatedBackground from '../ChristmasComponents/ChristmasAnimatedBackground/ChristmasAnimatedBackground';
+// import ChristmasBanner from '../ChristmasComponents/Banners/ChristmasBanner';
 
 function Staking() {
 	const [switchBtnToggle, setSwitchBtnToggle] = useState(true);
@@ -43,23 +43,19 @@ function Staking() {
 	return (
 		<div className="staking-wrapper">
 			{/* <ChristmasAnimatedBackground /> */}
-			{/* <AnimatedBackground /> */}
-			<ChristmasBanner
-				title={'TRIBE  Exclusive Celebrity NFTs'}
-				text={'Stake your TRIBEs and participate in the next NFT launch.'}
-				characters
-			/>
-			{/*<div className="project-banner-container">
-				//<div className="banner-container-content">
-					//<div>
-					//	<h2>TRIBE Staking Pools</h2>
-					//	<p>Get rewarded by staking (or freezing) your $TRIBEX</p>
-					//</div>
-					//<div className="banner-img">
-					//	<img src={threeCharacters} alt=" Three Characters" />
-					//</div>
-				//</div>
-			//</div>*/}
+			{/* { <AnimatedBackground /> } */}
+			
+			{<div className="project-banner-container">
+				<div className="banner-container-content">
+					<div>
+						<h2>TRIBE Staking Pools</h2>
+						<p>Get rewarded by staking (or freezing) your $TRIBEX</p>
+					</div>
+					<div className="banner-img">
+						<img src={threeCharacters} alt=" Three Characters" />
+					</div>
+				</div>
+			</div> }
 
 			<div className="staking-cards-container">
 				<Container fluid>
@@ -73,7 +69,7 @@ function Staking() {
 												onClick={() => setSwitchBtnToggle(!switchBtnToggle)}
 												className={`${
 													switchBtnToggle
-														? 'switch-btn-toggle-christmas' /*'switch-btn-toggle'*/
+														?  'switch-btn-toggle'
 														: 'switch-btn-toggle-disable'
 												}`}
 											>
@@ -86,7 +82,7 @@ function Staking() {
 												className={`${
 													switchBtnToggle
 														? 'switch-btn-toggle-disable'
-														:  'switch-btn-toggle-christmas' /*'switch-btn-toggle'*/
+														: 'switch-btn-toggle'
 												}`}
 											>
 												<span>Completed</span>

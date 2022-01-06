@@ -21,8 +21,9 @@ import Sidebar from '../../components/sidebar/Sidebar';
 import { projIds } from '../../store/reducer/launch_reducer/projectInitialStates';
 import { loadLaunchInfo } from '../../store/reducer/launch_reducer';
 import connectLogo from '../../images/connect-logo.svg';
-import ChristmasAnimatedBackground from '../ChristmasComponents/ChristmasAnimatedBackground/ChristmasAnimatedBackground';
-import ChristmasLogo from '../ChristmasComponents/Logo/ChristmasLogo';
+// import ChristmasAnimatedBackground from '../ChristmasComponents/ChristmasAnimatedBackground/ChristmasAnimatedBackground';
+// import ChristmasLogo from '../ChristmasComponents/Logo/ChristmasLogo';
+import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
 
 //- View Imports
 import Celebrity from '../Celebrity/Celebrity';
@@ -75,7 +76,7 @@ function Dashboard(props) {
 
 	return (
 		<div className="main-layout">
-			<ChristmasAnimatedBackground />
+			{ <AnimatedBackground/> }
 			<aside className={`sidebar-container ${showSidebar && 'sidebar-toggle'}`}>
 				<div className="sidebar-body">
 					<Sidebar getToggleStatus={getToggleStatus} />
@@ -104,7 +105,7 @@ function Dashboard(props) {
 						></span>
 					</button>
 					<div className="header-logo-container">
-						<ChristmasLogo mobile />
+						{/* <ChristmasLogo mobile /> */}
 					</div>
 					<strong className="Header_title__2eSkT">{title}</strong>
 					<div className="Header_wallet__1DOlJ">

@@ -1,0 +1,191 @@
+/*////////*/
+/* STYLES */
+/*////////*/
+
+/* SECTION CONTAINER */
+.Container {
+	display: flex;
+	width: 100%;
+	max-width: 800px;
+
+	margin: 0;
+	padding: 0;
+
+	text-align: center;
+	justify-content: center;
+}
+
+.Content {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.TribePop {
+	display: none;
+}
+
+/* GRADIENT TEXT ('TribePop') */
+.GradientText {
+	font-weight: 800;
+	background: linear-gradient(
+		to right,
+		rgb(255, 1, 126),
+		rgb(169, 1, 250),
+		rgb(3, 238, 254)
+	);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
+.Text {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+
+	display: inline-block;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.017em;
+
+	color: #ffffff;
+}
+
+.Stroke {
+	margin-top: 8px;
+	border-radius: 8px;
+	align-items: center;
+}
+
+/* IMAGES CONTAINER */
+.Images {
+	align-items: center;
+	text-align: center;
+}
+
+.Logos {
+	align-items: center;
+	text-align: center;
+	margin: 0;
+}
+
+/* LARGE IMAGE */
+.LargeCharacters {
+	display: none;
+}
+
+/*/////////*/
+/* SCREENS */
+/*/////////*/
+
+/* MOBILE MEDIUM AND LARGE */
+@media only screen and (min-width: 358px) and (max-width: 767px) {
+	.Text {
+		width: calc(75% - 10px);
+	}
+}
+
+/* TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.Subcontainer {
+		max-width: 768px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0px 20px 0px 20px;
+	}
+	.TribePop {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 38px;
+		line-height: 30px;
+
+		max-width: 340px;
+		display: inline-block;
+		margin-top: 55px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+
+		color: #ffffff;
+		text-shadow: 1px 1px 2px black;
+	}
+	.Characters {
+		display: none;
+	}
+	.LargeCharacters {
+		display: flex;
+		float: left;
+		height: 420px;
+		width: auto;
+		margin: 10px;
+	}
+	.Text {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 22px;
+		margin-top: 35px;
+	}
+	.Stroke {
+		width: 35%;
+		height: auto;
+		margin-top: 10px;
+		margin-bottom: 15px;
+	}
+	.Images {
+		margin-top: 45px;
+	}
+}
+
+/* PC */
+@media only screen and (min-width: 1024px) {
+	.Subcontainer {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.TribePop {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 38px;
+		line-height: 30px;
+
+		max-width: 340px;
+		display: inline-block;
+		margin-top: 55px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+
+		color: #ffffff;
+		text-shadow: 1px 1px 2px black;
+	}
+	.Characters {
+		display: none;
+	}
+	.LargeCharacters {
+		display: flex;
+		float: left;
+		height: 420px;
+		width: auto;
+		margin: 10px;
+	}
+	.Text {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 22px;
+		margin-top: 35px;
+	}
+	.Stroke {
+		width: 25%;
+		height: auto;
+		margin-top: 10px;
+		margin-bottom: 15px;
+	}
+	.Images {
+		margin-top: 45px;
+	}
+}

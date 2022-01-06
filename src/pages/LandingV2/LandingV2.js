@@ -5,8 +5,7 @@ import React from 'react';
 import styles from './LandingV2.module.css';
 
 //- Sections Imports
-import MainSection from '../../components/LandingV2-Components/Sections/Main/Main';
-import { FeatureSection } from '../../components';
+import { MainSection, FeatureSection, TribepopSection } from '../../components';
 
 const LandingV2 = () => {
 	return (
@@ -14,6 +13,7 @@ const LandingV2 = () => {
 			<div className={styles.Container}>
 				<MainSection />
 				<FeatureSection />
+				<TribepopSection />
 			</div>
 		</>
 	);

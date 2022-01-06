@@ -33,13 +33,13 @@
 
 	padding: 10px;
 	border-radius: 53px;
-	background-color: #ce3d3d;
-	/*background-image: linear-gradient(
+	/* background-color: #ce3d3d; */
+	background-image: linear-gradient(
 		to right,
 		rgb(255, 1, 126),
 		rgb(169, 1, 250),
 		rgb(3, 238, 254)
-	);*/
+	);
 }
 
 .CelebrityModalContainer {
@@ -103,6 +103,8 @@
 	height: 162px;
 	border-radius: 34px;
 	object-fit: cover;
+
+	overflow: hidden;
 }
 
 /* Modal Name Container */
@@ -368,13 +370,13 @@
 
 	margin: 0px 10px 0px 10px;
 
-	background-color: #ce3d3d;
-	/*background: linear-gradient(
+	/* background-color: #ce3d3d; */
+	background: linear-gradient(
 		to right,
 		#ad15fa 33.39%,
 		#3880ff 57.93%,
 		#12d0ff 89.98%
-	);*/
+	);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }

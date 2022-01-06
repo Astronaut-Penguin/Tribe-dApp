@@ -113,15 +113,9 @@ const BuyModal = ({
 					<button className={styles.Cross} onClick={onClose}></button>
 
 					{video !== 'undefined' && (
-						<video
-							className={styles.BackgroundVideo}
-							autoPlay
-							loop
-							muted
-							preload="auto"
-						>
-							<source src={video} type="video/mp4" />
-						</video>
+						<div className={styles.BackgroundVideo}>
+							<ImageLoader video={video} />
+						</div>
 					)}
 
 					{image !== 'undefined' && (
