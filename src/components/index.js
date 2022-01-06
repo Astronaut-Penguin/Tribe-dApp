@@ -4,6 +4,7 @@
 
 //- LANDING V2 EXPORTS -//
 // Sections
+export { default as FeatureSection } from './LandingV2-Components/Sections/Features/Features';
 export { default as MainSection } from './LandingV2-Components/Sections/Main/Main';
 export { default as FeatureSection } from './LandingV2-Components/Sections/Features/Features';
 export { default as TribepopSection } from './LandingV2-Components/Sections/Tribepop/Tribepop';
