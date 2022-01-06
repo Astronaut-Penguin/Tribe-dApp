@@ -14,14 +14,12 @@ const ApplySection = () => {
 		<section className={styles.Container}>
 			<div className={styles.Subcontainer}>
 				<div className={styles.Content}>
-                    <div className={styles.CardContainer}>
-                        <CardNFT 
-                            name={'The Pleb'}
-                            colection={'Caveman NFT'}
-                            price={'0.09 BNB'}
-                            image={'./assets/memepad/nft/Pleb.png'}
-                        />
-                    </div>
+                    <CardNFT 
+                        name={'The Pleb'}
+                        colection={'Caveman NFT'}
+                        price={'0.09 BNB'}
+                        image={'./assets/memepad/nft/Pleb.png'}
+                    />
                     <div className={styles.TribePop}>
                         Apply for your<span className={styles.GradientText}> TribePop NFTs </span>
                     </div>
