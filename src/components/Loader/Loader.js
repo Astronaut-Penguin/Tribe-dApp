@@ -11,7 +11,7 @@ import styles from './Loader.module.css';
 // Siempre que se llama hay que ponerle un contenedor que limite el crecimiento del componente.
 // Asi lo podemos hacer reutilizable. El contenedor tiene ajustado para adaptarse siempre al 100% de su padre.
 
-const ImageLoader = ({ image, video }) => {
+const ImageLoader = ({ image, video, quite }) => {
 	const [loaded, setLoaded] = useState(false);
 
 	////////////
@@ -26,8 +26,10 @@ const ImageLoader = ({ image, video }) => {
 				{video && (
 					<video
 						className={styles.Video}
+						autoPlay={quite ? false : true}
+						loop={quite ? false : true}
 						muted
-						onLoad={() => {
+						onLoadedData={() => {
 							setLoaded(true);
 						}}
 					>

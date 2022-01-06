@@ -9,7 +9,7 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	z-index: 999 !important;
+	/* z-index: 999 !important; */
 }
 
 .project-banner-container {
@@ -22,7 +22,7 @@
 	);
 	padding: 30px 70px;
 	color: #ffffff;
-	z-index: 666;
+	/* z-index: 666; */
 
 	position: relative;
 }

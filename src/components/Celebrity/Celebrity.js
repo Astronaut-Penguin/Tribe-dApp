@@ -13,7 +13,7 @@ import CelebrityMenu from '../CelebrityMenu/CelebrityMenu';
 import CelebrityView from '../CelebrityView/CelebrityView';
 //- Components
 import CelebrityCard from '../Cards/CelebrityCard/CelebrityCard';
-import ChristmasAnimatedBackground from '../ChristmasComponents/ChristmasAnimatedBackground/ChristmasAnimatedBackground';
+// import ChristmasAnimatedBackground from '../ChristmasComponents/ChristmasAnimatedBackground/ChristmasAnimatedBackground';
 
 //-DATA
 import Artists from '../../data/artist.json';
@@ -69,7 +69,7 @@ const Celebrity = () => {
 	//////////////
 	return (
 		<>
-			<ChristmasAnimatedBackground />
+			{/* <ChristmasAnimatedBackground /> */}
 			{view == 0 && <CelebrityMenu cards={cards} />}
 			{view == 1 && (
 				<CelebrityView
