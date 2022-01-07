@@ -7,8 +7,9 @@ import styles from './Header.module.css';
 //- Components Imports
 import { Link } from 'react-router-dom';
 import { FlatButton } from '../..';
+import MobileNavBar from '../NavBar/MobileNavBar/MobileNavBar';
 
-const Header = () => {
+const Header = ({ selected }) => {
 	return (
 		<header className={styles.Container}>
 			<div className={styles.Subcontainer}>
@@ -21,6 +22,7 @@ const Header = () => {
 					</Link>
 				</div>
 			</div>
+			<MobileNavBar selected={selected} />
 		</header>
 	);
 };
