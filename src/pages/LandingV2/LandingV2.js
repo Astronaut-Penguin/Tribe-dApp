@@ -5,7 +5,12 @@ import React from 'react';
 import styles from './LandingV2.module.css';
 
 //- Sections Imports
-import { MainSection, FeatureSection, TribepopSection } from '../../components';
+import {
+	MainSection,
+	FeatureSection,
+	TribepopSection,
+	ApplySection,
+} from '../../components';
 
 const LandingV2 = () => {
 	return (
@@ -14,6 +19,7 @@ const LandingV2 = () => {
 				<MainSection />
 				<FeatureSection />
 				<TribepopSection />
+				<ApplySection />
 			</div>
 		</>
 	);
