@@ -11,8 +11,6 @@
 	margin: 0;
 	padding: 0;
 
-	background-color: rgb(81, 43, 100);
-
 	text-align: center;
 	justify-content: center;
 }
@@ -66,7 +64,7 @@
 /*/////////*/
 
 /* MOBILE MEDIUM AND LARGE */
-@media only screen and (min-width: 426px) and (max-width: 767px) {
+@media only screen and (min-width: 426px) {
 	.Text {
 		font-size: 18px;
 		line-height: 20px;
@@ -74,12 +72,19 @@
 }
 
 /* TABLET */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 600px) {
 	.Subcontainer {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+		align-items: center;
 		max-width: 768px;
 		margin-left: auto;
 		margin-right: auto;
 		padding: 0px 20px 0px 20px;
+	}
+	.Content {
+		margin-right: 30px;
 	}
 	.TribePop {
 		font-family: Lato;
@@ -107,18 +112,25 @@
 }
 
 /* PC */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 800px) {
 	.Subcontainer {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+		align-items: center;
 		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	.Content {
+		margin-right: 100px;
 	}
 	.TribePop {
 		font-family: Lato;
 		font-style: normal;
 		font-weight: 800;
 		font-size: 38px;
-		line-height: 30px;
+		line-height: 48px;
 
 		max-width: 340px;
 		display: inline-block;
