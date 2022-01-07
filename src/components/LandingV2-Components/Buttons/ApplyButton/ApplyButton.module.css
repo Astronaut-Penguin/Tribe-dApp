@@ -41,13 +41,13 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	padding: 2px;
+	padding: 3px;
 	border-radius: 9px;
 
 	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
 	-webkit-mask-composite: destination-out;
 	mask-composite: exclude;
-	background: linear-gradient(to bottom, rgb(169, 1, 250), rgb(255, 1, 126));
+	background: linear-gradient(to bottom, rgb(169, 1, 250), rgb(255, 28, 198));
 }
 
 .Text:hover::before {
