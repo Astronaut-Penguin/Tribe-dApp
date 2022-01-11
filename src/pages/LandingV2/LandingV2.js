@@ -6,7 +6,7 @@ import styles from './LandingV2.module.css';
 
 //- Sections Imports
 import { MainSection, FeatureSection, TribepopSection } from '../../components';
-
+import Footer from '../../components/LandingV2-Components/Sections/Footer/Footer';
 const LandingV2 = () => {
 	return (
 		<>
@@ -14,6 +14,7 @@ const LandingV2 = () => {
 				<MainSection />
 				<FeatureSection />
 				<TribepopSection />
+				<Footer/>
 			</div>
 		</>
 	);
