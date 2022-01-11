@@ -1,0 +1,44 @@
+/********/
+/* 	PC  */
+/********/
+
+/* PC */
+
+@media only screen and (min-width: 1024px) {
+	.CardContainer {
+		width: 960px;
+	}
+	.Card {
+		display: inline-block;
+		width: 240px;
+		margin-left: 60px;
+	}
+	.Tiers {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 48px;
+		line-height: 48px;
+
+		margin-top: 45px;
+		margin-bottom: 36px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+		color: #ffffff;
+		text-shadow: 1px 1px 2px black;
+	}
+	.Card > h3 {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 26px;
+
+		margin-top: 0px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+		color: #ffffff;
+	}
+}
