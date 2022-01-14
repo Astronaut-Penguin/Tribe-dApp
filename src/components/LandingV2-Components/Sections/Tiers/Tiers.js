@@ -22,66 +22,62 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 const TiersSection = () => {
 	const options = {
+		items: 3,
+		loop: true,
 		center: true,
-		margin: 10,
-		autoWidth: true,
+		pullDrag: false,
 
-		URLhashListener: true,
-		startPosition: 'URLHash',
+		margin: 10,
+		startPosition: 1,
+		autoWidth: true,
 	};
 
 	return (
 		<div className={styles.CardContainer}>
 			<h2 className={styles.Tiers}>Tiers</h2>
-			<div className={styles.Card}>
-				<CardTier
-					onClick={'/'}
-					price={'2,500'}
-					allocation={'5 out of 10'}
-					image={Caveman}
-					logo={CavemanLogo}
-				/>
-				<h3>
-					Access to Level 1 <br /> NFTs
-				</h3>
-			</div>
-			<div className={styles.Card}>
-				<CardTier
-					onClick={'/'}
-					price={'50,000'}
-					allocation={'Guaranteed Allocation'}
-					image={CryptoKing}
-					logo={CryptoKingLogo}
-				/>
-				<h3>
-					Access to Exclusive <br /> NFTs
-				</h3>
-			</div>
-			<div className={styles.Card}>
-				<CardTier
-					onClick={'/'}
-					price={'17,500'}
-					allocation={'7 out of 10'}
-					image={Gladiator}
-					logo={GladiatorLogo}
-				/>
-				<h3>
-					Access to Level 2 <br /> NFTs
-				</h3>
-			</div>
 			<OwlCarousel {...options} className={styles.NavContainer}>
-				<div>Faso</div>
-				<div>Faso</div>
-				<div>Faso</div>
-				<div>Faso</div>
-				<div>Faso</div>
-				<div>Faso</div>
-				<div>Faso</div>
-				<div>Faso</div>
-				<div>Faso</div>
-				<div>Faso</div>
-				<div>Faso</div>
-				<div>Faso</div>
+			<div className={'item'}>
+				<div className={styles.Card}>
+					<CardTier
+						onClick={'/'}
+						price={'2,500'}
+						allocation={'5 out of 10'}
+						image={Caveman}
+						logo={CavemanLogo}
+					/>
+					<h3>
+						Access to Level 1 <br /> NFTs
+					</h3>
+				</div>
+			</div>
+			<div className={'item'}>
+				<div className={styles.Card}>
+					<CardTier
+						onClick={'/'}
+						price={'50,000'}
+						allocation={'Guaranteed Allocation'}
+						image={CryptoKing}
+						logo={CryptoKingLogo}
+					/>
+					<h3>
+						Access to Exclusive <br /> NFTs
+					</h3>
+				</div>
+			</div>
+			<div className={'item'}>
+				<div className={styles.Card}>
+					<CardTier
+						onClick={'/'}
+						price={'17,500'}
+						allocation={'7 out of 10'}
+						image={Gladiator}
+						logo={GladiatorLogo}
+					/>
+					<h3>
+						Access to Level 2 <br /> NFTs
+					</h3>
+				</div>
+			</div>
 			</OwlCarousel>
 		</div>
 	);
