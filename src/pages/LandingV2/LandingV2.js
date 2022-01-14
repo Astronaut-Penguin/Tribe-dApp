@@ -13,6 +13,7 @@ import {
 	TribepopSection,
 	ApplySection,
 } from '../../components';
+import TiersSection from '../../components/LandingV2-Components/Sections/Tiers/Tiers';
 
 const LandingV2 = () => {
 	return (
@@ -23,6 +24,7 @@ const LandingV2 = () => {
 				<FeatureSection />
 				<TribepopSection />
 				<ApplySection />
+				<TiersSection />
 			</div>
 		</>
 	);
