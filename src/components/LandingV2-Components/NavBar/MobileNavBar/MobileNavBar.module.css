@@ -1,0 +1,39 @@
+.Container {
+	display: flex;
+	position: relative;
+}
+
+/*******************************/
+
+.NavContainer {
+	display: flex;
+	position: absolute;
+	margin-top: 15px;
+	padding: 0;
+}
+
+.NavContainer > li {
+	display: inline-block;
+	position: static;
+	margin: 0px 20px 0px 0px;
+}
+
+.NavContainer > li > a {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 26px;
+}
+
+/*******************************/
+
+.Selected {
+	color: white;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 26px;
+	line-height: 26px;
+}
