@@ -5,7 +5,6 @@
 .Card {
 	display: inline-block;
 	width: 240px;
-	margin-left: 59px;
 }
 
 .Tiers {
@@ -33,9 +32,12 @@
 
 /* PC */
 
-/* @media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
 	.CardContainer {
 		width: 960px;
+	}
+	.TiersContainer {
+		text-align: center;
 	}
 	.Card {
 		display: inline-block;
@@ -48,6 +50,7 @@
 		font-weight: 800;
 		font-size: 48px;
 		line-height: 48px;
+		display: inline-block;
 
 		margin-top: 45px;
 		margin-bottom: 36px;
@@ -62,4 +65,4 @@
 		font-size: 20px;
 		line-height: 26px;
 	}
-} */
+}
