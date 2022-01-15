@@ -56,13 +56,7 @@ const MobileNavBar = ({ sections }) => {
 							setS(i);
 						}}
 					>
-						<HashLink
-							to={'/#' + value}
-							data-hash={value}
-							className={styles.Link}
-						>
-							{value}
-						</HashLink>
+						<p className={styles.Link}>{value}</p>
 					</button>
 				))}
 			</Flicking>
