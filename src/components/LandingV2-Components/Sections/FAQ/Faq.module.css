@@ -1,0 +1,64 @@
+/*////////////*/
+/*/ //STYLES///*/
+/*////////////*/
+
+/*/ //MOBILE FIRST///*/
+
+.AccordionSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 300px;
+	height: 100vh;
+}
+
+.Container {
+	position: absolute;
+	top: 30%;
+}
+
+.Wrap {
+	color: white;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	text-align: left;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.Wrap > h1 {
+	font-family: Lato;
+	font-weight: 500;
+	font-size: 18px;
+	margin-left: 12px;
+}
+
+.Wrap > span {
+	margin-bottom: 10px;
+}
+
+.Img {
+	width: 20px;
+	height: auto;
+}
+
+.Dropdown {
+	color: white;
+	width: 100%;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+}
+
+.Dropdown > p {
+	font-size: 16px;
+	margin-left: 35px;
+}
+
+.Border {
+	border-bottom: 1px solid white;
+}

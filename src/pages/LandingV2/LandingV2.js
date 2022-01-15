@@ -13,16 +13,18 @@ import {
 	TribepopSection,
 	ApplySection,
 } from '../../components';
+import FaqSection from '../../components/LandingV2-Components/Sections/FAQ/Faq';
 
 const LandingV2 = () => {
 	return (
 		<>
 			<Header selected={0} />
 			<div className={styles.Container}>
-				<MainSection />
+				{/* <MainSection />
 				<FeatureSection />
 				<TribepopSection />
-				<ApplySection />
+				<ApplySection /> */}
+				<FaqSection />
 			</div>
 		</>
 	);
