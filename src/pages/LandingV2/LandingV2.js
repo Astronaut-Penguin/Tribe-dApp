@@ -14,8 +14,17 @@ import {
 	ApplySection,
 } from '../../components';
 
-const sections = [
+const mobile = [
 	'Home',
+	'Features',
+	'TribePop',
+	'Collections',
+	'Tiers',
+	'Team',
+	'Apply',
+];
+
+const sections = [
 	'Features',
 	'TribePop',
 	'Collections',
@@ -27,7 +36,7 @@ const sections = [
 const LandingV2 = () => {
 	return (
 		<>
-			<Header sections={sections} />
+			<Header mobile={mobile} sections={sections} />
 			<div className={styles.Container}>
 				<MainSection />
 				<FeatureSection />
