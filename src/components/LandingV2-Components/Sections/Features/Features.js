@@ -12,9 +12,9 @@ import StakingRewards from '../../../../images/StakingRewards.png';
 import LaunchpadAllocations from '../../../../images/LaunchpadAllocations.png';
 import GamificationRigging from '../../../../images/GamificationRigging.png';
 
-const FeatureSection = () => {
+const FeatureSection = ({ id }) => {
 	return (
-		<section className={styles.Container}>
+		<section className={styles.Container} id={id}>
 			<h2>Features</h2>
 			<h3>Our NTFs attributes</h3>
 			<div className={styles.Cards}>

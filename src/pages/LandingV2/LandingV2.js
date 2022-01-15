@@ -38,10 +38,10 @@ const LandingV2 = () => {
 		<>
 			<Header mobile={mobile} sections={sections} />
 			<div className={styles.Container}>
-				<MainSection />
-				<FeatureSection />
-				<TribepopSection />
-				<ApplySection />
+				<MainSection id={'Home'} />
+				<FeatureSection id={'Features'} />
+				<TribepopSection id={'TribePop'} />
+				<ApplySection id={'Apply'} />
 			</div>
 		</>
 	);

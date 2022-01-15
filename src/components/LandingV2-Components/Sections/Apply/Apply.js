@@ -8,9 +8,9 @@ import styles from './Apply.module.css';
 import CardNFT from '../../Cards/CardNFT/CardNFT';
 import ApplyButton from '../../Buttons/ApplyButton/ApplyButton';
 
-const ApplySection = () => {
+const ApplySection = ({ id }) => {
 	return (
-		<section className={styles.Container}>
+		<section className={styles.Container} id={id}>
 			<div className={styles.Subcontainer}>
 				<CardNFT
 					name={'The Pleb'}

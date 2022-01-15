@@ -11,9 +11,9 @@ import Stroke from './assets/Stroke.png';
 import Logos1 from './assets/Logos1.png';
 import Logos2 from './assets/Logos2.png';
 
-const TribepopSection = () => {
+const TribepopSection = ({ id }) => {
 	return (
-		<section className={styles.Container}>
+		<section className={styles.Container} id={id}>
 			<div className={styles.Subcontainer}>
 				<img className={styles.LargeCharacters} src={LargePlebCharacter} />
 				<div className={styles.Content}>
