@@ -1,21 +1,106 @@
 //- React Imports
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, createRef } from 'react';
+import { useSpring, animated } from '@react-spring/web';
+import { useDrag } from '@use-gesture/react';
+import clamp from 'lodash.clamp';
 
 //- Styles Imports
 import styles from './MobileNavBar.module.css';
 
-const MobileNavBar = ({ selected }) => {
+//- Flicking Imports
+import Flicking from '@egjs/react-flicking';
+
+// //- Owl Carousel Imports
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+
+//- React Router Hash Link Imports
+import { HashLink } from 'react-router-hash-link';
+
+const MobileNavBar = ({ sections }) => {
 	////////////
 	// STATES //
 	////////////
-	//- Items Width
-	const [width, setWidth] = useState('0px');
+	//- TEST STATES
+	const [s, setS] = useState(0);
 
-	//Hay que conseguir el tamaño de cada <a> para animarlo.
 	useEffect(() => {
-		const item = document.querySelector('#Nav0');
-		setWidth('' + item.offsetWidth + 'px');
-	}, []);
+		sections.map((value, i) => {
+			if (s == i) {
+				window.location = '#/#' + value;
+				document
+					.getElementById(value)
+					.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+		});
+	}, [s]);
+
+	//- Section Number
+	// const index = useRef(0);
+
+	//- Screen Width
+	// const width = window.innerWidth;
+
+	// //- Items Width
+	// const [lw, setLw] = useState([]);
+	// const [mid, setMid] = useState([]);
+	// const [move, setMove] = useState(0);
+
+	// const options = {
+	// 	center: true,
+	// 	margin: 10,
+	// 	autoWidth: true,
+
+	// 	URLhashListener: true,
+	// 	startPosition: 'URLHash',
+	// };
+
+	//////////
+	// DRAG //
+	//////////
+
+	// const [{ x, scale, left }, api] = useSpring(() => ({
+	// 	x: move,
+	// 	left: width / 2 - 20 - 122,
+	// 	scale: 1,
+	// }));
+
+	// const bind = useDrag(({ active, movement: [x], cancel }) => {
+	// 	setMove(x);
+	// 	console.log(x);
+
+	// 	api.start({
+	// 		x: move,
+	// 		scale: active ? 1.1 : 1,
+	// 		left: width / 2 - 25 - lw[s],
+	// 	});
+	// });
+
+	// const [props, api] = useSprings(sections.length, (i) => ({
+	// 	x: 66 / 2 + width / 4,
+	// 	scale: 1,
+	// }));
+
+	// const bind = useDrag(
+	// 	({ active, movement: [mx], direction: [xDir], cancel }) => {
+	// 		if (active && Math.abs(mx) > width / 2) {
+	// 			index.current = clamp(
+	// 				index.current + (xDir > 0 ? -1 : 1),
+	// 				0,
+	// 				sections.length - 1,
+	// 			);
+	// 			cancel();
+	// 		}
+	// 		api.start((i) => {
+	// 			const x =
+	// 				(i - index.current) * (lw / 2 + width / 4) +
+	// 				(active ? mx : lw / 2 + width / 4);
+	// 			const scale = active ? 1.1 : 1;
+	// 			return { x, scale };
+	// 		});
+	// 	},
+	// );
 
 	////////////
 	// RENDER //
@@ -23,51 +108,87 @@ const MobileNavBar = ({ selected }) => {
 
 	return (
 		<nav className={styles.Container}>
-			<ul
+			<Flicking
 				className={`${styles.NavContainer}`}
-				style={{ left: 'calc( 50% - (' + width + ' / 2))' }}
+				onChanged={(e) => {
+					setS(e.index);
+				}}
 			>
-				<li id="Nav0">
-					<a href="#faso" className={`${selected == 0 ? styles.Selected : ''}`}>
-						Home
-					</a>
-				</li>
-				<li>
-					<a href="#faso" className={`${selected == 1 ? styles.Selected : ''}`}>
-						Features
-					</a>
-				</li>
-				<li id="Nav2">
-					<a href="#faso" className={`${selected == 2 ? styles.Selected : ''}`}>
-						TribePop
-					</a>
-				</li>
-				<li>
-					<a href="#faso" className={`${selected == 3 ? styles.Selected : ''}`}>
-						Collections
-					</a>
-				</li>
-				<li>
-					<a href="#faso" className={`${selected == 4 ? styles.Selected : ''}`}>
-						Tiers
-					</a>
-				</li>
-				<li>
-					<a href="#faso" className={`${selected == 5 ? styles.Selected : ''}`}>
-						RoadMap
-					</a>
-				</li>
-				<li>
-					<a href="#faso" className={`${selected == 6 ? styles.Selected : ''}`}>
-						Team
-					</a>
-				</li>
-				<li>
-					<a href="#faso" className={`${selected == 7 ? styles.Selected : ''}`}>
-						Apply
-					</a>
-				</li>
-			</ul>
+				{sections.map((value, i) => (
+					<button
+						className={`${styles.Button} ${
+							s == i ? styles.Selected : styles.NotSelected
+						}`}
+						key={i}
+						onClick={() => {
+							setS(i);
+						}}
+					>
+						<HashLink
+							to={'/#' + value}
+							data-hash={value}
+							className={styles.Link}
+						>
+							{value}
+						</HashLink>
+					</button>
+				))}
+			</Flicking>
+			{/* <OwlCarousel {...options} className={`${styles.NavContainer}`}>
+				{sections.map((value, i) => (
+					<button
+					className={styles.Button}
+						key={i}
+						data-hash={'Nav' + i}
+						onClick={() => {
+							setS(i);
+							console.log('Faso ' + i);
+						}}
+					>
+						<HashLink
+							to={'/#Nav' + i}
+							className={`${s == i ? styles.sections : styles.Notsections}`}
+						>
+							{value}
+						</HashLink>
+					</button>
+				))}
+			</OwlCarousel> */}
+			{/* <animated.ul
+				className={`${styles.NavContainer}`}
+				style={{ x, left }}
+				{...bind()}
+			>
+				{sections.map((value, i) => (
+					<animated.li id={'Nav' + i} key={i}>
+						<a
+							href="#"
+							className={`${s == i ? styles.sections : styles.Notsections}`}
+							style={{ scale }}
+							onClick={() => {
+								setS(i);
+							}}
+						>
+							{value}
+						</a>
+					</animated.li>
+				))}
+			</animated.ul> */}
+			{/* <animated.ul className={`${styles.NavContainer}`}>
+				{props.map(({ x, scale }, i) => (
+					<animated.li id="Nav0" {...bind()} key={i} style={{ x, scale }}>
+						<a
+							href="#"
+							className={`${s == i ? styles.sections : styles.Notsections}`}
+							onClick={() => {
+								setS(i);
+							}}
+						>
+							{sections[i]}
+						</a>
+					</animated.li>
+				))}
+			</animated.ul> */}
 		</nav>
 	);
 };
