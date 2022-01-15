@@ -54,9 +54,13 @@
 /****************************************/
 
 @media screen and (min-width: 1024px) {
+	.Container {
+		height: 80px;
+	}
+
 	.Logo {
-		width: calc(284px / 1.5);
-		height: 177px;
+		width: calc(284px * 0.5);
+		height: calc(177px * 0.5);
 	}
 
 	.Button {
