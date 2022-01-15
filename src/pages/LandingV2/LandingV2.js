@@ -14,10 +14,20 @@ import {
 	ApplySection,
 } from '../../components';
 
+const sections = [
+	'Home',
+	'Features',
+	'TribePop',
+	'Collections',
+	'Tiers',
+	'Team',
+	'Apply',
+];
+
 const LandingV2 = () => {
 	return (
 		<>
-			<Header selected={0} />
+			<Header sections={sections} />
 			<div className={styles.Container}>
 				<MainSection />
 				<FeatureSection />
