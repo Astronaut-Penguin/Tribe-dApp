@@ -13,25 +13,20 @@ import {
 	TribepopSection,
 	ApplySection,
 } from '../../components';
+//- Footer Imports
+import { Footer } from '../../components';
 
-const mobile = [
-	'Home',
-	'Features',
-	'TribePop',
-	'Collections',
-	'Tiers',
-	'Team',
-	'Apply',
-];
+//  'Home',
+// 	'Features',
+// 	'TribePop',
+// 	'Collections',
+// 	'Tiers',
+// 	'Team',
+// 	'Apply',
 
-const sections = [
-	'Features',
-	'TribePop',
-	'Collections',
-	'Tiers',
-	'Team',
-	'Apply',
-];
+const mobile = ['Home', 'Features', 'TribePop', 'Apply'];
+
+const sections = ['Features', 'TribePop', 'Apply'];
 
 const LandingV2 = () => {
 	return (
@@ -42,6 +37,7 @@ const LandingV2 = () => {
 				<FeatureSection id={'Features'} />
 				<TribepopSection id={'TribePop'} />
 				<ApplySection id={'Apply'} />
+				<Footer />
 			</div>
 		</>
 	);
