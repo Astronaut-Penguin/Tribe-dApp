@@ -23,6 +23,7 @@ const FaqSection = () => {
 
   return (
     <IconContext.Provider value={{ color: '#00FFB9', size: '25px' }}>
+      <h2 className={styles.Faq}>Frequently Asked Questions</h2>
       <div className={styles.AccordionSection}>
         <div className={styles.Container}>
           {Data.map((item, index) => {

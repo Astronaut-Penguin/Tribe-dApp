@@ -2,7 +2,7 @@
 /*/ //STYLES///*/
 /*////////////*/
 
-/*/ //MOBILE FIRST///*/
+/* MOBILE FIRST */
 
 .AccordionSection {
 	display: flex;
@@ -12,11 +12,16 @@
 	position: relative;
 	width: 300px;
 	height: 100vh;
+	margin-top: 0;
 }
 
 .Container {
 	position: absolute;
 	top: 30%;
+}
+
+.Faq {
+	display: none;
 }
 
 .Wrap {
@@ -61,4 +66,109 @@
 
 .Border {
 	border-bottom: 1px solid white;
+}
+
+/*/////////*/
+/* SCREENS */
+/*/////////*/
+
+/* LARGE PHONES */
+@media only screen and (min-width: 540px) and (max-width: 767px) {
+	.AccordionSection {
+		width: 440px;
+	}
+	.Wrap {
+		margin-top: 11px;
+	}
+
+	.Wrap > h1 {
+		font-size: 20px;
+		margin-left: 12px;
+	}
+	.Img {
+		width: 22px;
+		height: auto;
+	}
+	.Dropdown > p {
+		font-size: 17px;
+		margin-left: 36px;
+	}
+}
+
+/* TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.AccordionSection {
+		width: 540px;
+	}
+	.Wrap {
+		margin-top: 12px;
+	}
+
+	.Wrap > h1 {
+		font-size: 22px;
+		margin-left: 12px;
+	}
+	.Img {
+		width: 24px;
+		height: auto;
+	}
+	.Dropdown > p {
+		font-size: 18px;
+		margin-left: 38px;
+	}
+	.Faq {
+		display: inline-block;
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 38px;
+		line-height: 38px;
+
+		margin-top: 45px;
+		margin-bottom: 36px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+		color: #ffffff;
+		text-shadow: 1px 1px 2px black;
+	}
+}
+
+/* PC */
+@media only screen and (min-width: 1024px) {
+	.AccordionSection {
+		width: 595px;
+	}
+	.Wrap {
+		margin-top: 12px;
+	}
+
+	.Wrap > h1 {
+		font-size: 24px;
+		margin-left: 12px;
+	}
+	.Img {
+		width: 26px;
+		height: auto;
+	}
+	.Dropdown > p {
+		font-size: 20px;
+		margin-left: 38px;
+	}
+	.Faq {
+		display: inline-block;
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 48px;
+		line-height: 48px;
+
+		margin-top: 45px;
+		/* margin-bottom: 36px; */
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+		color: #ffffff;
+		text-shadow: 1px 1px 2px black;
+	}
 }
