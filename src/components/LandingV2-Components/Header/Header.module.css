@@ -1,0 +1,69 @@
+.Container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 150px;
+	align-items: center;
+
+	line-height: 0 !important;
+
+	background: linear-gradient(
+		180deg,
+		#000000 0%,
+		rgba(0, 0, 0, 0.5) 50%,
+		rgba(0, 0, 0, 0) 100%
+	);
+	padding: 20px;
+
+	position: fixed;
+	z-index: 5;
+}
+
+/****************************************/
+
+.Subcontainer {
+	display: flex;
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	height: 40px;
+
+	align-items: center;
+}
+
+.Logo {
+	display: inline-block;
+	width: 110px;
+	height: 45px;
+
+	text-indent: -9999px;
+
+	background-image: url('./assets/logo.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/****************************************/
+
+.Button {
+	position: absolute;
+	right: 0px;
+}
+
+/****************************************/
+
+@media screen and (min-width: 1024px) {
+	.Container {
+		height: 80px;
+	}
+
+	.Logo {
+		width: calc(284px * 0.5);
+		height: calc(177px * 0.5);
+	}
+
+	.Button {
+		position: static;
+	}
+}

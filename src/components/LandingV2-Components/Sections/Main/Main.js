@@ -18,10 +18,9 @@ import Bsc from './assets/bsc-8 2.png';
 import PanButton from './assets/PanButton.png';
 import Kings from './assets/Group_23.png';
 
-
-const MainSection = () => {
+const MainSection = ({ id }) => {
 	return (
-		<section className={styles.Container}>
+		<section className={styles.Container} id={id}>
 			<div className={styles.Subcontainer}>
 				<img className={styles.CharactersLarge} src={Kings} />
 
