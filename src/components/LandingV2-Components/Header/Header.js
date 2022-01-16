@@ -12,7 +12,7 @@ import { FlatButton } from '../..';
 import MobileNavBar from '../NavBar/MobileNavBar/MobileNavBar';
 import NavBar from '../NavBar/DefaultNavBar/NavBar';
 
-const Header = ({ mobile, sections }) => {
+const Header = ({ sections }) => {
 	return (
 		<header className={styles.Container}>
 			<div className={styles.Subcontainer}>
@@ -26,7 +26,7 @@ const Header = ({ mobile, sections }) => {
 					</Link>
 				</div>
 			</div>
-			<MobileNavBar sections={mobile} />
+			<MobileNavBar sections={sections} />
 		</header>
 	);
 };
