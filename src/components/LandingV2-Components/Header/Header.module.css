@@ -59,8 +59,7 @@
 	}
 
 	.Logo {
-		width: calc(284px * 0.5);
-		height: calc(177px * 0.5);
+		display: none;
 	}
 
 	.Button {
