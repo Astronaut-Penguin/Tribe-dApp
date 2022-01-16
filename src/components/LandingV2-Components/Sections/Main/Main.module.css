@@ -126,10 +126,9 @@
 	.TribeText {
 		width: calc(75% - 10px);
 	}
-	.Characters{
+	.Characters {
 		width: 60%;
 	}
-
 }
 
 /* TABLET */
