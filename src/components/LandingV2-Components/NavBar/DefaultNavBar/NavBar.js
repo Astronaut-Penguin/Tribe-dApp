@@ -36,24 +36,37 @@ const NavBar = ({ sections }) => {
 	////////////
 
 	return (
-		<nav className={styles.Container}>
-			{sections.map((value, i) => (
-				<button
-					className={`${styles.Button} ${
-						s == i ? styles.Selected : styles.NotSelected
-					}`}
-					key={i}
-					onClick={() => {
-						setS(i);
-						document
-							.getElementById(value)
-							.scrollIntoView({ behavior: 'smooth', block: 'start' });
-					}}
-				>
-					<p className={styles.Link}>{value}</p>
-				</button>
-			))}
-		</nav>
+		<>
+			<button
+				className={styles.Logo}
+				onClick={() => {
+					setS(0);
+					document
+						.getElementById('Home')
+						.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				}}
+			>
+				Tribe
+			</button>
+			<nav className={styles.Container}>
+				{sections.map((value, i) => (
+					<button
+						className={`${styles.Button} ${
+							s == i ? styles.Selected : styles.NotSelected
+						}`}
+						key={i}
+						onClick={() => {
+							setS(i);
+							document
+								.getElementById(value)
+								.scrollIntoView({ behavior: 'smooth', block: 'start' });
+						}}
+					>
+						<p className={styles.Link}>{value}</p>
+					</button>
+				))}
+			</nav>
+		</>
 	);
 };
 
