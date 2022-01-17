@@ -132,7 +132,13 @@
 }
 
 .Social {
+	display: inline-block;
 	margin: 13px;
+	transition: transform 300ms ease-in-out;
+}
+
+.Social:hover {
+	transform: scale(1.2);
 }
 
 /* LARGE IMAGE */
