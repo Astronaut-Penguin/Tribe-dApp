@@ -1,9 +1,6 @@
 .Container {
 	display: inline-block;
 	width: 100%;
-
-	margin: 0;
-	padding-top: 130px !important;
 	text-align: center;
 }
 
@@ -16,7 +13,7 @@
 	align-items: center;
 	text-align: center;
 	letter-spacing: -0, 017em;
-	margin-top: 25px;
+	margin-top: 150px;
 
 	color: #fffafa;
 
@@ -134,8 +131,8 @@
 }
 
 @media screen and (min-width: 1024px) {
-	.Container {
-		padding-top: 80px !important;
+	.Container > h2 {
+		font-size: 90px;
 	}
 }
 
