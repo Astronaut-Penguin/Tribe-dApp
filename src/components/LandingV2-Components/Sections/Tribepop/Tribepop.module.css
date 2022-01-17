@@ -9,7 +9,7 @@
 	max-width: 800px;
 
 	margin: 0;
-	padding: 0;
+	padding: 130px 0px 100px 0px;
 
 	text-align: center;
 	justify-content: center;
@@ -141,6 +141,9 @@
 
 /* PC */
 @media only screen and (min-width: 1024px) {
+	.Container {
+		padding: 80px 0px 80px 0px;
+	}
 	.Subcontainer {
 		width: 100%;
 		margin-left: auto;
