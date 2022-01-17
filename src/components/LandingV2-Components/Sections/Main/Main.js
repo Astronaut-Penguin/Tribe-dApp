@@ -1,11 +1,15 @@
 //- Import React
-import React from 'react';
+import React, { useState } from 'react';
 
 //- Import Styles
 import styles from './Main.module.css';
 
 //- Components Imports
 import { FlatButton } from '../../../index';
+
+//- Flicking Imports
+import Flicking from '@egjs/react-flicking';
+import { AutoPlay } from '@egjs/flicking-plugins';
 
 //- Import Images
 import PlebCharacter3 from './assets/PlebCharacter3.png';
@@ -19,6 +23,8 @@ import PanButton from './assets/PanButton.png';
 import Kings from './assets/Group_23.png';
 
 const MainSection = ({ id }) => {
+	const [plugins, setPlugins] = useState([new AutoPlay()]);
+
 	return (
 		<section className={styles.Container} id={id}>
 			<div className={styles.Subcontainer}>
@@ -26,9 +32,21 @@ const MainSection = ({ id }) => {
 
 				<div className={styles.Content}>
 					<div className={styles.Celebrities}>
-						Celebrities
-						<span className={styles.GradientText}> TribePop </span>
-						on the Metaverse
+						<div className={styles.MainText}>
+							<Flicking
+								circular={true}
+								horizontal={false}
+								plugins={plugins}
+								className={styles.AnimatedText}
+							>
+								<p>Celebrities</p>
+								<p>Brands</p>
+								<p>Artists</p>
+								<p>Sports</p>
+							</Flicking>
+							<span className={styles.GradientText}> TribePop </span>
+						</div>
+						<p>on the Metaverse</p>
 					</div>
 					<p className={styles.Text} style={{ marginTop: '15px' }}>
 						We launch NFTs. <br />
