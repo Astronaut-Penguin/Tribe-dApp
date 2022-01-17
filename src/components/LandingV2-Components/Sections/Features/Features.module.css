@@ -5,16 +5,11 @@
 
 	margin: 0;
 	padding: 0;
+	padding-top: 130px;
 	text-align: center;
 }
 
 .Container > h2 {
-	/*position: absolute;
-	width: 312px;
-	height: 138px;
-	top: 1148px;
-	left: 594px;*/
-
 	font-family: Lato;
 	font-style: normal;
 	font-weight: 800;
@@ -137,6 +132,12 @@
 	.Card > img {
 		width: 120px;
 		height: auto;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.Container {
+		padding-top: 80px;
 	}
 }
 
