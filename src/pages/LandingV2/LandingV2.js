@@ -24,14 +24,12 @@ import { Footer } from '../../components';
 // 	'Team',
 // 	'Apply',
 
-const mobile = ['Home', 'Features', 'TribePop', 'Apply'];
-
-const sections = ['Features', 'TribePop', 'Apply'];
+const sections = ['Home', 'Features', 'TribePop', 'Apply'];
 
 const LandingV2 = () => {
 	return (
 		<>
-			<Header mobile={mobile} sections={sections} />
+			<Header sections={sections} />
 			<div className={styles.Container}>
 				<MainSection id={'Home'} />
 				<FeatureSection id={'Features'} />
