@@ -8,8 +8,9 @@ import styles from './Tribepop.module.css';
 import PlebCharacter from './assets/PlebCharacter.png';
 import LargePlebCharacter from './assets/LargePlebCharacter.png';
 import Stroke from './assets/Stroke.png';
-import Logos1 from './assets/Logos1.png';
-import Logos2 from './assets/Logos2.png';
+
+//- Page Images Imports
+import pancakeMOBILE from './assets/pancakeMOBILE.png';
 
 const TribepopSection = ({ id }) => {
 	return (
@@ -40,9 +41,22 @@ const TribepopSection = ({ id }) => {
 						</span>
 					</p>
 				</div>
-				<div className={styles.Images}>
-					<img className={styles.Logos} src={Logos1} alt="Logos1" />
-					<img className={styles.Logos} src={Logos2} alt="Logos2" />
+				<div className={styles.Social}>
+					<a href="" className={styles.Coin}>
+						CoinMarketCap
+					</a>
+					<a href="" className={styles.Pancake}>
+						Pancake
+					</a>
+					<a href="" className={styles.Meme}>
+						MemePad
+					</a>
+					<a href="" className={styles.Gecko}>
+						CoinGecko
+					</a>
+					<a href="" className={styles.Bsc}>
+						BscScan
+					</a>
 				</div>
 			</div>
 		</section>
