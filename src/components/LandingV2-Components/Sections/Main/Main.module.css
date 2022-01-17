@@ -59,6 +59,11 @@
 	overflow: hidden;
 }
 
+.AnimatedText > p {
+	display: inline-block;
+	line-height: auto;
+}
+
 /* GRADIENT TEXT ('TribePop') */
 .GradientText {
 	font-weight: 800;
