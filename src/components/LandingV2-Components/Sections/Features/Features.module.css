@@ -135,7 +135,7 @@
 
 @media screen and (min-width: 1024px) {
 	.Container {
-		padding-top: 80px;
+		padding-top: 80px !important;
 	}
 }
 
