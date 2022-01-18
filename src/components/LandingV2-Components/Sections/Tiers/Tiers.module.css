@@ -1,10 +1,14 @@
+/******************/
+/* 	MOBILE FIRST  */
+/******************/
+
 .CardContainer {
-	width: 320px;
+	width: 100%;
 }
 
 .Card {
 	display: inline-block;
-	width: 240px;
+	margin: 10px;
 }
 
 .Tiers {
@@ -19,41 +23,48 @@
 	line-height: 20px;
 
 	margin-top: 0px;
-	margin-right: 48px;
 	align-items: center;
 	text-align: center;
 	letter-spacing: -0.017em;
 	color: #ffffff;
 }
 
-/********/
-/* 	PC  */
-/********/
+.Standing {
+	display: none;
+}
 
-/* PC */
 
-@media only screen and (min-width: 1024px) {
+/***********/
+/* 	VIEWS  */
+/***********/
+
+/* TABLET */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 	.CardContainer {
-		width: 960px;
+		width: 768px;
 	}
 	.TiersContainer {
 		text-align: center;
 	}
+	.Standing {
+		display: inline-block;
+		margin-left: 43px;
+		width: 768px;
+	}
 	.Card {
 		display: inline-block;
-		width: 240px;
-		margin-left: 60px;
 	}
 	.Tiers {
 		font-family: Lato;
 		font-style: normal;
 		font-weight: 800;
-		font-size: 48px;
-		line-height: 48px;
+		font-size: 42px;
+		line-height: 42px;
 		display: inline-block;
 
-		margin-top: 45px;
-		margin-bottom: 36px;
+		margin-top: 35px;
+		margin-bottom: 20px;
 		align-items: center;
 		text-align: center;
 		letter-spacing: -0.017em;
@@ -64,5 +75,51 @@
 		font-weight: 700;
 		font-size: 20px;
 		line-height: 26px;
+	}
+	.Carousel {
+		display: none;
+	}
+}
+
+/* PC */
+
+@media only screen and (min-width: 1024px) {
+	.CardContainer {
+		width: 960px;
+	}
+	.TiersContainer {
+		text-align: center;
+	}
+	.Standing {
+		display: inline-block;
+		margin-left: 95px;
+		width: 780px;
+	}
+	.Card {
+		display: inline-block;
+	}
+	.Tiers {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 48px;
+		line-height: 48px;
+		display: inline-block;
+
+		margin-top: 45px;
+		margin-bottom: 20px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+		color: #ffffff;
+		text-shadow: 1px 1px 2px black;
+	}
+	.Card > h3 {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 26px;
+	} 
+	.Carousel {
+		display: none;
 	}
 }
