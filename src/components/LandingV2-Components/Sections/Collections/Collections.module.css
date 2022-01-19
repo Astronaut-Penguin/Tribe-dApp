@@ -10,7 +10,7 @@
 
 .Card {
 	display: inline-block;
-	margin: 14px;
+	/* margin: 14px; */
     align-items: center;
     text-align: center;
 }
@@ -24,7 +24,7 @@
     height: auto;
 }
 
-.Card > h3 {
+.BigContainer > h3 {
 	font-family: Lato;
 	font-style: normal;
 	font-weight: 600;
@@ -39,7 +39,7 @@
 	color: #ffffff;
 }
 
-.Card > h4 {
+.BigContainer > h4 {
 	font-family: Lato;
 	font-style: normal;
 	font-weight: 500;
@@ -61,7 +61,6 @@
 
 .DotsContainer {
 	display: inline-block;
-	color: blueviolet;
     align-items: center;
     text-align: center;
 }

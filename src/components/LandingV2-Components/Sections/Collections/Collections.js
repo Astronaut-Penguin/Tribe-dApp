@@ -1,11 +1,12 @@
 //- Import React
-import React from 'react';
+import React, { useEffect, useState, createRef } from 'react';
 
 //- Import Styles
 import styles from './Collections.module.css';
 
-//- Import Images
+//- Import Data
 import MemepadLogo from './assets/MemepadLogo.png';
+import CollectionData from './CollectionData';
 
 //- Import Button
 import ApplyButton from '../../Buttons/ApplyButton/ApplyButton';
@@ -15,7 +16,15 @@ import Flicking from '@egjs/react-flicking';
 import '@egjs/react-flicking/dist/flicking.css';
 import Dots from 'react-carousel-dots';
 
-const CollectionsSection = () => {
+const CollectionsSection = ({ CollectionData }) => {
+
+	//- SELECTED STATE
+	const [s, setS] = useState(0);
+
+	////////////
+	// RENDER //
+	////////////
+
 	return (
 		<div className={styles.BigContainer}>
 			<div className={styles.TitleContainer}>
@@ -23,43 +32,33 @@ const CollectionsSection = () => {
 			</div>
 			<Flicking
 				circular={true}
+				onChanged={(e) => {
+					setS(e.index);
+					console.log(e.index);
+				}}
 				defaultIndex={1}
 				className={styles.Carousel}
 			>
 				<div className={styles.Card}>
                     <img src={MemepadLogo} className={styles.Img} />
-                    <h3>Memepad</h3>
-					<h4>
-						Every brand, athlete, singer, model, actor, among <br />
-                        others, that works with TRIBE, has their own <br/>
-                        TribePop adapted to different situations in their <br/>
-                        career to create their NFTs.
-					</h4>
 				</div>
 				<div className={styles.Card}>
                     <img src={MemepadLogo} className={styles.Img} />
-                    <h3>Memepad</h3>
-					<h4>
-                        Every brand, athlete, singer, model, actor, among <br />
-                        others, that works with TRIBE, has their own <br/>
-                        TribePop adapted to different situations in their <br/>
-                        career to create their NFTs.
-					</h4>
 				</div>
 				<div className={styles.Card}>
 					<img src={MemepadLogo} className={styles.Img} />
-                    <h3>Memepad</h3>
-					<h4>
-                        Every brand, athlete, singer, model, actor, among <br />
-                        others, that works with TRIBE, has their own <br/>
-                        TribePop adapted to different situations in their <br/>
-                        career to create their NFTs.
-					</h4>
 				</div>
 			</Flicking>
-			{/* <div className={styles.DotsContainer}> */}
-				<Dots length={3} active={1} size={12} className={styles.DotsContainer}/>
-			{/* </div> */}
+			<h3>Memepad2</h3>
+			<h4>
+                Every brand, athlete, singer, model, actor, among <br />
+                others, that works with TRIBE, has their own <br/>
+                TribePop adapted to different situations in their <br/>
+                career to create their NFTs.
+			</h4>
+			<div className={styles.DotsContainer}>
+				<Dots length={3} active={2} size={12} />
+			</div>
             <br/><div className={styles.ButtonContainer}>
                 <ApplyButton text={'View All Collections'} />
             </div>
