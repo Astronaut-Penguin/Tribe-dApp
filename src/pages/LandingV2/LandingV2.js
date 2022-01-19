@@ -16,6 +16,8 @@ import {
 //- Footer Imports
 import { Footer } from '../../components';
 
+import CollectionsSection from '../../components/LandingV2-Components/Sections/Collections/Collections';
+
 //  'Home',
 // 	'Features',
 // 	'TribePop',
@@ -35,6 +37,7 @@ const LandingV2 = () => {
 				<FeatureSection id={'Features'} />
 				<TribepopSection id={'TribePop'} />
 				<ApplySection id={'Apply'} />
+				<CollectionsSection />
 				<Footer />
 			</div>
 		</>

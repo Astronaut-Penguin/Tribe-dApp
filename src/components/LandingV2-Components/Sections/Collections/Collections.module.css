@@ -1,0 +1,154 @@
+/******************/
+/* 	MOBILE FIRST  */
+/******************/
+
+.BigContainer {
+	width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.Card {
+	display: inline-block;
+	margin: 14px;
+    align-items: center;
+    text-align: center;
+}
+
+.Title {
+	display: none;
+}
+
+.Img {
+    width: 250px;
+    height: auto;
+}
+
+.Card > h3 {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 24px;
+
+	margin-top: 8px;
+    margin-bottom: 25px;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.017em;
+	color: #ffffff;
+}
+
+.Card > h4 {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 20px;
+
+	margin-bottom: 25px;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.017em;
+	color: #ffffff;
+}
+
+.ButtonContainer {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+}
+
+.DotsContainer {
+	display: inline-block;
+	color: blueviolet;
+    align-items: center;
+    text-align: center;
+}
+
+/***********/
+/* 	VIEWS  */
+/***********/
+
+/* TABLET */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.CardContainer {
+		width: 768px;
+	}
+	.TiersContainer {
+		text-align: center;
+	}
+	.Standing {
+		display: inline-block;
+		margin-left: 43px;
+		width: 768px;
+	}
+	.Card {
+		display: inline-block;
+	}
+	.Tiers {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 42px;
+		line-height: 42px;
+		display: inline-block;
+
+		margin-top: 35px;
+		margin-bottom: 20px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+		color: #ffffff;
+		text-shadow: 1px 1px 2px black;
+	}
+	.Card > h3 {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 26px;
+	}
+	.Carousel {
+		display: none;
+	}
+}
+
+/* PC */
+
+@media only screen and (min-width: 1024px) {
+	.CardContainer {
+		width: 960px;
+	}
+	.TitleContainer {
+		text-align: center;
+	}
+	.Standing {
+		display: inline-block;
+		margin-left: 95px;
+		width: 780px;
+	}
+	.Card {
+		display: inline-block;
+	}
+	.Title {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 48px;
+		line-height: 48px;
+		display: inline-block;
+
+		margin-top: 45px;
+		margin-bottom: 20px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+		color: #ffffff;
+		text-shadow: 1px 1px 2px black;
+	}
+	.Card > h3 {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 26px;
+	}
+}
