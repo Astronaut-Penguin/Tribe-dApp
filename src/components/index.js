@@ -16,4 +16,7 @@ export { default as Footer } from './LandingV2-Components/Sections/Footer/Footer
 // Buttons
 export { default as FlatButton } from './LandingV2-Components/Buttons/FlatButton/FlatButton';
 
+//Cards
+export { default as CardTeam } from './LandingV2-Components/Cards/CardTeam/CardTeam';
+
 //888888888888888888888888888888888888888888888888888//
