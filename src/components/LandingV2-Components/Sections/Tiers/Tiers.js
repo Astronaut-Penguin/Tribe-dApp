@@ -19,9 +19,9 @@ import GladiatorLogo from './assets/GladiatorLogo.png';
 import Flicking from '@egjs/react-flicking';
 import '@egjs/react-flicking/dist/flicking.css';
 
-const TiersSection = () => {
+const TiersSection = ({ id }) => {
 	return (
-		<section className={styles.CardContainer}>
+		<section className={styles.CardContainer} id={id}>
 			<div className={styles.TiersContainer}>
 				<h2 className={styles.Tiers}>Tiers</h2>
 			</div>
