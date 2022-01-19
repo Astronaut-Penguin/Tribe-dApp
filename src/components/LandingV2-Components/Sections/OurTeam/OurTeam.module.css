@@ -9,64 +9,44 @@
 	max-width: 400px;
 
 	margin: 0;
-	padding: 0;
+	padding: 150px 0px 50px 0px;
 
 	text-align: center;
 	justify-content: center;
 }
 
+.Subcontainer {
+	width: 100%;
+	max-width: 400px;
+}
+
 .Content {
+	width: 100%;
 	align-items: center;
 	flex-direction: column;
 }
 
-.MemberContainer {
-	position: relative;
+.Team {
 	display: inline-block;
-	margin: 7px;
-}
-
-.Picture {
-	position: relative;
-	width: 85px;
-	height: auto;
-	transition: transform 0.2s ease-in;
-}
-
-.Circulo {
-	position: absolute;
-	width: 85px;
-	height: auto;
-	top: 5px;
-}
-
-.Picture:hover {
-	transform: scale(1.05);
-	transition: transform 0.3s ease-in;
-}
-
-.TribePop {
-	display: none;
-}
-
-.Text {
+	color: white;
 	font-family: Lato;
 	font-style: normal;
-	font-weight: 500;
-	font-size: 12px;
-	line-height: 19px;
-
-	align-items: center;
-	text-align: center;
-	letter-spacing: -0.017em;
-	margin-top: 9px;
-
-	color: #ffffff;
+	font-weight: 800;
+	font-size: 46px;
+	line-height: 30px;
+	margin-bottom: 30px;
 }
 
-.Text b {
-	font-weight: 600;
-	font-size: 17px;
+/* 8888888888888888888888888888888 */
+.TeamContainer {
+	display: flex;
+	width: 100%;
+	position: relative;
+	justify-content: center;
+}
+
+.PcContent {
+	display: none;
 }
 
 /*/////////*/
@@ -74,55 +54,26 @@
 /*/////////*/
 
 /* TABLET */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-	.Subcontainer {
-		max-width: 768px;
-		margin-left: auto;
-		margin-right: auto;
-		padding: 0px 20px 0px 20px;
-	}
-	.TribePop {
-		font-family: Lato;
-		font-style: normal;
-		font-weight: 800;
-		font-size: 38px;
-		line-height: 30px;
-
-		max-width: 340px;
-		display: inline-block;
-		margin-top: 55px;
-		align-items: center;
-		text-align: center;
-		letter-spacing: -0.017em;
-
-		color: #ffffff;
-		text-shadow: 1px 1px 2px black;
-	}
-	.Text {
-		font-weight: 500;
-		font-size: 18px;
-		line-height: 22px;
-		margin-top: 35px;
-	}
-}
-
-/* PC */
-@media only screen and (min-width: 1024px) {
-	.Subcontainer {
+@media only screen and (min-width: 769px) {
+	.Container {
 		width: 100%;
+		max-width: none;
+	}
+	.Subcontainer {
+		width: 800px;
+		max-width: none;
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.TribePop {
+	.Team {
 		font-family: Lato;
 		font-style: normal;
 		font-weight: 800;
-		font-size: 38px;
+		font-size: 72px;
 		line-height: 30px;
 
-		max-width: 340px;
 		display: inline-block;
-		margin-top: 55px;
+		margin-bottom: 50px;
 		align-items: center;
 		text-align: center;
 		letter-spacing: -0.017em;
@@ -130,10 +81,11 @@
 		color: #ffffff;
 		text-shadow: 1px 1px 2px black;
 	}
-	.Text {
-		font-weight: 500;
-		font-size: 18px;
-		line-height: 22px;
-		margin-top: 35px;
+	.MobileContent {
+		display: none;
+	}
+	.PcContent {
+		display: inline-block;
+		width: 100%;
 	}
 }

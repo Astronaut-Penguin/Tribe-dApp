@@ -4,110 +4,147 @@ import React from 'react';
 //- Import Styles
 import styles from './OurTeam.module.css';
 
-//- Import Images
-import AgusCTO from './assets/AgusCTO.png';
-import AgusDesign from './assets/AgusDesign.png';
-import AleManager from './assets/AleManager.png';
-import DiegoUX from './assets/DiegoUX.png';
-import EliasCCO from './assets/EliasCCO.png';
-import FabrizioCMO from './assets/FabrizioCMO.png';
-import FacuDev from './assets/FacuDev.png';
-import FedeCEO from './assets/FedeCEO.png';
-import FedeDev from './assets/FedeDev.png';
-import FlorDesign from './assets/FlorDesign.png';
-import TomasCFO from './assets/TomasCFO.png';
-import Circulo from './assets/Circulo.png';
+//- Team Card Import
+import { CardTeam } from '../../..';
 
 const OurTeamSection = () => {
 	return (
 		<section className={styles.Container}>
 			<div className={styles.Subcontainer}>
 				<div className={styles.Content}>
-					<div className={styles.TribePop}>
-						Our Team
+					<div className={styles.Team}>Our Team</div>
+					<div className={styles.MobileContent}>
+						<div className={styles.TeamContainer}>
+							<CardTeam
+								character={5}
+								name={'Elias'}
+								rol={'CCO'}
+								style={{ position: 'absolute', left: '0px', top: '50px' }}
+							/>
+							<CardTeam character={8} name={'Fede'} rol={'CEO'} />
+							<CardTeam
+								character={6}
+								name={'Fabrizio'}
+								rol={'CMO'}
+								style={{ position: 'absolute', right: '0px', top: '50px' }}
+							/>
+						</div>
+						<div className={styles.TeamContainer}>
+							<CardTeam
+								character={2}
+								name={'Agus'}
+								rol={'Design Team Lead'}
+								style={{ position: 'absolute', left: '0px', top: '50px' }}
+							/>
+							<CardTeam character={11} name={'Tomas'} rol={'CFO'} />
+							<CardTeam
+								character={3}
+								name={'Astro'}
+								rol={'Project Manager'}
+								style={{ position: 'absolute', right: '0px', top: '50px' }}
+							/>
+						</div>
+						<div className={styles.TeamContainer}>
+							<CardTeam
+								character={4}
+								name={'Diego'}
+								rol={'UX/IX Specialist'}
+								style={{ position: 'absolute', left: '0px', top: '50px' }}
+							/>
+							<CardTeam character={1} name={'Penguin'} rol={'CTO'} />
+							<CardTeam
+								character={10}
+								name={'Flor'}
+								rol={'Graphic Design'}
+								style={{ position: 'absolute', right: '0px', top: '50px' }}
+							/>
+						</div>
+						<div style={{ marginTop: '40px' }}>
+							<CardTeam
+								character={9}
+								name={'Fede'}
+								rol={'Front-end Developer'}
+							/>
+							<CardTeam
+								character={7}
+								name={'Facu'}
+								rol={'Full Stack Developer'}
+							/>
+						</div>
 					</div>
-					<div>
-                        <div className={styles.MemberContainer}>
-                            <img className={styles.Circulo} src={Circulo}/>
-                            <img className={styles.Picture} src={EliasCCO}/>
-                            <p className={styles.Text}>
-                                <b>Elias</b> <br/>CCO
-                            </p>
-                        </div>
-                        <div className={styles.MemberContainer}>
-                            <img className={styles.Circulo} src={Circulo}/>
-                            <img className={styles.Picture} src={FedeCEO}/>
-                            <p className={styles.Text}>
-                                <b>Fede</b> <br/>CEO
-                            </p>
-                        </div>
-                        <div className={styles.MemberContainer}>
-                            <img className={styles.Circulo} src={Circulo}/>
-                            <img className={styles.Picture} src={FabrizioCMO}/>
-                            <p className={styles.Text}>
-                                <b>Fabrizio</b> <br/>CMO
-                            </p>
-                        </div>
 
-                        <div className={styles.MemberContainer}>
-                            <img className={styles.Circulo} src={Circulo}/>
-                            <img className={styles.Picture} src={AgusDesign}/>
-                            <p className={styles.Text}>
-                                <b>Agus</b> <br/>Design Team Lead
-                            </p>
-                        </div>
-                        <div className={styles.MemberContainer}>
-                            <img className={styles.Circulo} src={Circulo}/>
-                            <img className={styles.Picture} src={TomasCFO}/>
-                            <p className={styles.Text}>
-                                <b>Tomas</b> <br/>CFO
-                            </p>
-                        </div>
-                        <div className={styles.MemberContainer}>
-                            <img className={styles.Circulo} src={Circulo}/>
-                            <img className={styles.Picture} src={AleManager}/>
-                            <p className={styles.Text}>
-                                <b>Astro</b> <br/>Project Manager
-                            </p>
-                        </div>
-
-                        <div className={styles.MemberContainer}>
-                            <img className={styles.Circulo} src={Circulo}/>
-                            <img className={styles.Picture} src={DiegoUX}/>
-                            <p className={styles.Text}>
-                                <b>Diego</b> <br/>UX/IX Specialist
-                            </p>
-                        </div>
-                        <div className={styles.MemberContainer}>
-                            <img className={styles.Circulo} src={Circulo}/>
-                            <img className={styles.Picture} src={AgusCTO}/>
-                            <p className={styles.Text}>
-                                <b>Penguin</b> <br/>CTO
-                            </p>
-                        </div>
-                        <div className={styles.MemberContainer}>
-                            <img className={styles.Circulo} src={Circulo}/>
-                            <img className={styles.Picture} src={FlorDesign}/>
-                            <p className={styles.Text}>
-                                <b>Flor</b> <br/>Graphic Design
-                            </p>
-                        </div>
-
-                        <div className={styles.MemberContainer}>
-                            <img className={styles.Circulo} src={Circulo}/>
-                            <img className={styles.Picture} src={FedeDev}/>
-                            <p className={styles.Text}>
-                                <b>Fede</b> <br/>Front-end Developer
-                            </p>
-                        </div>
-                        <div className={styles.MemberContainer}>
-                            <img className={styles.Circulo} src={Circulo}/>
-                            <img className={styles.Picture} src={FacuDev}/>
-                            <p className={styles.Text}>
-                                <b>Facu</b> <br/>Full Stack Developer
-                            </p>
-                        </div>
-                    </div>
+					<div className={styles.PcContent}>
+						<div className={styles.TeamContainer}>
+							<CardTeam
+								character={5}
+								name={'Elias'}
+								rol={'CCO'}
+								style={{ position: 'absolute', left: '0px', top: '150px' }}
+							/>
+							<CardTeam
+								character={1}
+								name={'Penguin'}
+								rol={'CTO'}
+								style={{ position: 'absolute', left: '160px', top: '60px' }}
+							/>
+							<CardTeam character={8} name={'Fede'} rol={'CEO'} />
+							<CardTeam
+								character={6}
+								name={'Fabrizio'}
+								rol={'CMO'}
+								style={{ position: 'absolute', right: '160px', top: '60px' }}
+							/>
+							<CardTeam
+								character={11}
+								name={'Tomas'}
+								rol={'CFO'}
+								style={{ position: 'absolute', right: '0px', top: '150px' }}
+							/>
+						</div>
+						<div
+							className={styles.TeamContainer}
+							style={{ margin: '50px 0px 50px 0px' }}
+						>
+							<CardTeam
+								character={4}
+								name={'Diego'}
+								rol={'UX/IX Specialist'}
+								style={{ position: 'absolute', left: '80px', top: '80px' }}
+							/>
+							<CardTeam
+								character={3}
+								name={'Astro'}
+								rol={'Project Manager'}
+								style={{ margin: '0px 25px 0px 0px' }}
+							/>
+							<CardTeam
+								character={2}
+								name={'Agus'}
+								rol={'Design Team Lead'}
+								style={{ margin: '0px 0px 0px 25px' }}
+							/>
+							<CardTeam
+								character={7}
+								name={'Facu'}
+								rol={'Full Stack Developer'}
+								style={{ position: 'absolute', right: '80px', top: '80px' }}
+							/>
+						</div>
+						<div className={styles.TeamContainer}>
+							<CardTeam
+								character={10}
+								name={'Flor'}
+								rol={'Graphic Design'}
+								style={{ margin: '0px 25px 0px 0px' }}
+							/>
+							<CardTeam
+								character={9}
+								name={'Fede'}
+								rol={'Front-end Developer'}
+								style={{ margin: '0px 0px 0px 25px' }}
+							/>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
