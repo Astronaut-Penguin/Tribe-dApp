@@ -11,6 +11,7 @@ import {
 	MainSection,
 	FeatureSection,
 	TribepopSection,
+	OurTeamSection,
 	ApplySection,
 } from '../../components';
 //- Footer Imports
@@ -24,7 +25,7 @@ import { Footer } from '../../components';
 // 	'Team',
 // 	'Apply',
 
-const sections = ['Home', 'Features', 'TribePop', 'Apply'];
+const sections = ['Home', 'Features', 'TribePop', 'Team', 'Apply'];
 
 const LandingV2 = () => {
 	return (
@@ -34,6 +35,7 @@ const LandingV2 = () => {
 				<MainSection id={'Home'} />
 				<FeatureSection id={'Features'} />
 				<TribepopSection id={'TribePop'} />
+				<OurTeamSection id={'Team'} />
 				<ApplySection id={'Apply'} />
 				<Footer />
 			</div>

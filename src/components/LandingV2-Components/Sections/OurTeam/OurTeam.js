@@ -7,9 +7,9 @@ import styles from './OurTeam.module.css';
 //- Team Card Import
 import { CardTeam } from '../../..';
 
-const OurTeamSection = () => {
+const OurTeamSection = ({ id }) => {
 	return (
-		<section className={styles.Container}>
+		<section className={styles.Container} id={id}>
 			<div className={styles.Subcontainer}>
 				<div className={styles.Content}>
 					<div className={styles.Team}>Our Team</div>
