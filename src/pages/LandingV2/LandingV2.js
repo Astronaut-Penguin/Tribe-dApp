@@ -11,20 +11,33 @@ import {
 	MainSection,
 	FeatureSection,
 	TribepopSection,
+	OurTeamSection,
 	ApplySection,
 } from '../../components';
-import TiersSection from '../../components/LandingV2-Components/Sections/Tiers/Tiers';
+//- Footer Imports
+import { Footer } from '../../components';
+
+//  'Home',
+// 	'Features',
+// 	'TribePop',
+// 	'Collections',
+// 	'Tiers',
+// 	'Team',
+// 	'Apply',
+
+const sections = ['Home', 'Features', 'TribePop', 'Team', 'Apply'];
 
 const LandingV2 = () => {
 	return (
 		<>
-			<Header selected={0} />
+			<Header sections={sections} />
 			<div className={styles.Container}>
-				<MainSection />
-				<FeatureSection />
-				<TribepopSection />
-				<ApplySection />
-				<TiersSection />
+				<MainSection id={'Home'} />
+				<FeatureSection id={'Features'} />
+				<TribepopSection id={'TribePop'} />
+				<OurTeamSection id={'Team'} />
+				<ApplySection id={'Apply'} />
+				<Footer />
 			</div>
 		</>
 	);

@@ -1,21 +1,38 @@
+//- Last Updated by Alejo - 15/01/2022
+
 //- React Imports
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, createRef } from 'react';
 
 //- Styles Imports
 import styles from './MobileNavBar.module.css';
 
-const MobileNavBar = ({ selected }) => {
+//- Flicking Imports
+import Flicking from '@egjs/react-flicking';
+
+//- React Router Hash Link Imports
+import { HashLink } from 'react-router-hash-link';
+
+const MobileNavBar = ({ sections }) => {
 	////////////
 	// STATES //
 	////////////
-	//- Items Width
-	const [width, setWidth] = useState('0px');
+	//- SELECTED STATE
+	const [s, setS] = useState(0);
 
-	//Hay que conseguir el tamaño de cada <a> para animarlo.
+	///////////////
+	// FUNCTIONS //
+	///////////////
+
 	useEffect(() => {
-		const item = document.querySelector('#Nav0');
-		setWidth('' + item.offsetWidth + 'px');
-	}, []);
+		sections.map((value, i) => {
+			if (s == i) {
+				window.location = '#/#' + value;
+				document
+					.getElementById(value)
+					.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+		});
+	}, [s]);
 
 	////////////
 	// RENDER //
@@ -23,51 +40,26 @@ const MobileNavBar = ({ selected }) => {
 
 	return (
 		<nav className={styles.Container}>
-			<ul
+			<Flicking
 				className={`${styles.NavContainer}`}
-				style={{ left: 'calc( 50% - (' + width + ' / 2))' }}
+				onChanged={(e) => {
+					setS(e.index);
+				}}
 			>
-				<li id="Nav0">
-					<a href="#faso" className={`${selected == 0 ? styles.Selected : ''}`}>
-						Home
-					</a>
-				</li>
-				<li>
-					<a href="#faso" className={`${selected == 1 ? styles.Selected : ''}`}>
-						Features
-					</a>
-				</li>
-				<li id="Nav2">
-					<a href="#faso" className={`${selected == 2 ? styles.Selected : ''}`}>
-						TribePop
-					</a>
-				</li>
-				<li>
-					<a href="#faso" className={`${selected == 3 ? styles.Selected : ''}`}>
-						Collections
-					</a>
-				</li>
-				<li>
-					<a href="#faso" className={`${selected == 4 ? styles.Selected : ''}`}>
-						Tiers
-					</a>
-				</li>
-				<li>
-					<a href="#faso" className={`${selected == 5 ? styles.Selected : ''}`}>
-						RoadMap
-					</a>
-				</li>
-				<li>
-					<a href="#faso" className={`${selected == 6 ? styles.Selected : ''}`}>
-						Team
-					</a>
-				</li>
-				<li>
-					<a href="#faso" className={`${selected == 7 ? styles.Selected : ''}`}>
-						Apply
-					</a>
-				</li>
-			</ul>
+				{sections.map((value, i) => (
+					<button
+						className={`${styles.Button} ${
+							s == i ? styles.Selected : styles.NotSelected
+						}`}
+						key={i}
+						onClick={() => {
+							setS(i);
+						}}
+					>
+						<p className={styles.Link}>{value}</p>
+					</button>
+				))}
+			</Flicking>
 		</nav>
 	);
 };
