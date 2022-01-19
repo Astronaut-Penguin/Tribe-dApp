@@ -21,26 +21,22 @@ import '@egjs/react-flicking/dist/flicking.css';
 
 const TiersSection = () => {
 	return (
-		<div className={styles.CardContainer}>
+		<section className={styles.CardContainer}>
 			<div className={styles.TiersContainer}>
 				<h2 className={styles.Tiers}>Tiers</h2>
 			</div>
-			<Flicking
-				circular={false}
-				defaultIndex={1}
-				className={styles.Carousel}
-			>
+			<Flicking circular={false} defaultIndex={1} className={styles.Carousel}>
 				<div className={styles.Card}>
-						<CardTier
-							onClick={'/'}
-							price={'2,500'}
-							allocation={'5 out of 10'}
-							image={Caveman}
-							logo={CavemanLogo}
-						/>
-						<h3>
-							Access to Level 1 <br /> NFTs
-						</h3>
+					<CardTier
+						onClick={'/'}
+						price={'2,500'}
+						allocation={'5 out of 10'}
+						image={Caveman}
+						logo={CavemanLogo}
+					/>
+					<h3>
+						Access to Level 1 <br /> NFTs
+					</h3>
 				</div>
 				<div className={styles.Card}>
 					<CardTier
@@ -66,19 +62,19 @@ const TiersSection = () => {
 						Access to Level 2 <br /> NFTs
 					</h3>
 				</div>
-			</Flicking>	
+			</Flicking>
 			<div className={styles.Standing}>
 				<div className={styles.Card}>
-						<CardTier
-							onClick={'/'}
-							price={'2,500'}
-							allocation={'5 out of 10'}
-							image={Caveman}
-							logo={CavemanLogo}
-						/>
-						<h3>
-							Access to Level 1 <br /> NFTs
-						</h3>
+					<CardTier
+						onClick={'/'}
+						price={'2,500'}
+						allocation={'5 out of 10'}
+						image={Caveman}
+						logo={CavemanLogo}
+					/>
+					<h3>
+						Access to Level 1 <br /> NFTs
+					</h3>
 				</div>
 				<div className={styles.Card}>
 					<CardTier
@@ -104,8 +100,8 @@ const TiersSection = () => {
 						Access to Level 2 <br /> NFTs
 					</h3>
 				</div>
-			</div>		
-		</div>
+			</div>
+		</section>
 	);
 };
 

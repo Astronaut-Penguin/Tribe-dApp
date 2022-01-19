@@ -4,6 +4,7 @@
 
 .CardContainer {
 	width: 100%;
+	padding: 150px 0px 50px 0px;
 }
 
 .Card {
@@ -33,24 +34,24 @@
 	display: none;
 }
 
-
 /***********/
 /* 	VIEWS  */
 /***********/
 
 /* TABLET */
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 680px) and (max-width: 1023px) {
 	.CardContainer {
-		width: 768px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 	.TiersContainer {
 		text-align: center;
 	}
 	.Standing {
-		display: inline-block;
-		margin-left: 43px;
-		width: 768px;
+		display: flex;
+		justify-content: center;
 	}
 	.Card {
 		display: inline-block;
@@ -86,14 +87,15 @@
 @media only screen and (min-width: 1024px) {
 	.CardContainer {
 		width: 960px;
+		padding: 80px 0px 40px 0px;
 	}
 	.TiersContainer {
 		text-align: center;
 	}
 	.Standing {
-		display: inline-block;
-		margin-left: 95px;
-		width: 780px;
+		display: flex;
+		justify-content: center;
+		width: 100%;
 	}
 	.Card {
 		display: inline-block;
@@ -118,7 +120,7 @@
 		font-weight: 700;
 		font-size: 20px;
 		line-height: 26px;
-	} 
+	}
 	.Carousel {
 		display: none;
 	}
