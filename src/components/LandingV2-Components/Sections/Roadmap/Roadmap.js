@@ -22,7 +22,7 @@ const RoadmapSection = () => {
               <div className={styles.ContentLeft}>
                 <h1 className={`${styles.RoadTitle} ${styles.Right}`}>
                   Quarter 1 <br/> 
-                  2022
+                  2022!
                 </h1>
                 <p className={styles.RoadTextLeft}>
                   Take a look around, and join your fellow Kingz. <br />
@@ -44,7 +44,7 @@ const RoadmapSection = () => {
               <div className={styles.ContentRight}>
                 <h1 className={`${styles.RoadTitle} ${styles.Left}`}>
                   Quarter 2 <br/> 
-                  2022
+                  2022!
                 </h1>
                 <p className={styles.RoadTextRight}>
                   When Minting is 50% sold out the creation of our Meta Kingdom
@@ -63,7 +63,7 @@ const RoadmapSection = () => {
               <div className={styles.ContentLeft}>
                 <h1 className={`${styles.RoadTitle} ${styles.Right}`}>
                   Quarter 3 <br/> 
-                  2022
+                  2022!
                 </h1>
                 <p className={styles.RoadTextLeft}>
                   During and after mint we will be spending all our time
