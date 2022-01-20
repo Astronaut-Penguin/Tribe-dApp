@@ -13,6 +13,7 @@
 	/* margin: 14px; */
     align-items: center;
     text-align: center;
+	margin-bottom: 30px;
 }
 
 .Title {
@@ -22,6 +23,16 @@
 .Img {
     width: 250px;
     height: auto;
+}
+
+.DotsContainer {
+	display: inline-block;
+    align-items: center;
+    text-align: center;
+}
+
+.Dots {
+	/* color: red; */
 }
 
 .BigContainer > h3 {
@@ -59,19 +70,13 @@
     text-align: center;
 }
 
-.DotsContainer {
-	display: inline-block;
-    align-items: center;
-    text-align: center;
-}
-
 /***********/
 /* 	VIEWS  */
 /***********/
 
 /* TABLET */
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+/* @media only screen and (min-width: 768px) and (max-width: 1023px) {
 	.CardContainer {
 		width: 768px;
 	}
@@ -107,27 +112,18 @@
 		font-size: 20px;
 		line-height: 26px;
 	}
-	.Carousel {
-		display: none;
-	}
 }
 
 /* PC */
 
 @media only screen and (min-width: 1024px) {
-	.CardContainer {
-		width: 960px;
+	.BigContainer {
+		width: 1024px;
+		align-items: center;
+		text-align: center;
 	}
 	.TitleContainer {
 		text-align: center;
-	}
-	.Standing {
-		display: inline-block;
-		margin-left: 95px;
-		width: 780px;
-	}
-	.Card {
-		display: inline-block;
 	}
 	.Title {
 		font-family: Lato;
@@ -138,16 +134,30 @@
 		display: inline-block;
 
 		margin-top: 45px;
-		margin-bottom: 20px;
+		margin-bottom: 50px;
 		align-items: center;
 		text-align: center;
 		letter-spacing: -0.017em;
 		color: #ffffff;
 		text-shadow: 1px 1px 2px black;
 	}
-	.Card > h3 {
+	.Carousel {
+		width: 800px;
+		align-items: center;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.Card {
+		display: inline-block;
+		margin: 14px;
+		margin-bottom: 40px;
+	}
+	.BigContainer > h3 {
 		font-weight: 700;
-		font-size: 20px;
+		font-size: 26px;
 		line-height: 26px;
+	}
+	.Dots {
+		display: none;
 	}
 }
