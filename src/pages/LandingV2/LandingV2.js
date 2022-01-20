@@ -20,6 +20,8 @@ import {
 //- Footer Imports
 import { Footer } from '../../components';
 
+import RoadmapSection from '../../components/LandingV2-Components/Sections/Roadmap/Roadmap';
+
 //  'Home',
 // 	'Features',
 // 	'TribePop',
