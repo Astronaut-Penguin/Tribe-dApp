@@ -1,20 +1,10 @@
 .Container {
 	display: inline-block;
 	width: 100%;
-	min-height: 100vh;
-
-	margin: 0;
-	padding: 0;
 	text-align: center;
 }
 
 .Container > h2 {
-	/*position: absolute;
-	width: 312px;
-	height: 138px;
-	top: 1148px;
-	left: 594px;*/
-
 	font-family: Lato;
 	font-style: normal;
 	font-weight: 800;
@@ -23,7 +13,7 @@
 	align-items: center;
 	text-align: center;
 	letter-spacing: -0, 017em;
-	margin-top: 25px;
+	margin-top: 150px;
 
 	color: #fffafa;
 
@@ -137,6 +127,12 @@
 	.Card > img {
 		width: 120px;
 		height: auto;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.Container > h2 {
+		font-size: 64px;
 	}
 }
 

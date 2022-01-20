@@ -31,7 +31,7 @@
 
 .Text {
 	display: inline-block;
-	margin-top: auto;
+	margin: 0px;
 }
 
 .Text::before {
