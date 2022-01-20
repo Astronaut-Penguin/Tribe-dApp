@@ -15,6 +15,7 @@ export { default as TribepopSection } from './LandingV2-Components/Sections/Trib
 export { default as TiersSection } from './LandingV2-Components/Sections/Tiers/Tiers';
 export { default as FaqSection } from './LandingV2-Components/Sections/FAQ/Faq';
 export { default as OurTeamSection } from './LandingV2-Components/Sections/OurTeam/OurTeam';
+export { default as RoadmapSection } from './LandingV2-Components/Sections/Roadmap/Roadmap';
 export { default as ApplySection } from './LandingV2-Components/Sections/Apply/Apply';
 export { default as Footer } from './LandingV2-Components/Sections/Footer/Footer';
 
