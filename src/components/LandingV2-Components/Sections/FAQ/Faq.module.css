@@ -4,171 +4,56 @@
 
 /* MOBILE FIRST */
 
-.AccordionSection {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	width: 300px;
-	height: 100vh;
-	margin-top: 0;
-}
-
 .Container {
-	position: absolute;
-	top: 30%;
-}
-
-.Faq {
-	display: none;
-}
-
-.Wrap {
-	color: white;
-	display: flex;
-	align-items: center;
-	width: 100%;
-	text-align: left;
-	cursor: pointer;
-	margin-top: 10px;
-}
-
-.Wrap > h1 {
-	font-family: Lato;
-	font-weight: 500;
-	font-size: 18px;
-	margin-left: 12px;
-}
-
-.Wrap > span {
-	margin-bottom: 10px;
-}
-
-.Img {
-	width: 20px;
-	height: auto;
-}
-
-.Dropdown {
-	color: white;
-	width: 100%;
-	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
-	align-items: left;
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+
+	padding: 150px 30px 0px 30px;
 }
 
-.Dropdown > p {
-	font-size: 16px;
-	margin-left: 35px;
+.Title {
+	color: white;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 30px;
+	line-height: 36px;
+	text-align: center;
+	margin-bottom: 40px;
 }
 
-.Border {
-	border-bottom: 1px solid white;
+.Hr {
+	background: white;
+	width: 100%;
+	height: 2px;
+	padding: 0;
+	margin: 0px 0px 20px 0px;
 }
 
-/*/////////*/
-/* SCREENS */
-/*/////////*/
+/* 88888888888888888888888888888888 */
+/* //////////////////// */
+/* FIXING MOBILE HEIGHT */
+/* //////////////////// */
 
-/* LARGE PHONES */
-@media only screen and (min-width: 540px) and (max-width: 767px) {
-	.AccordionSection {
-		width: 440px;
-	}
-	.Wrap {
-		margin-top: 11px;
-	}
-
-	.Wrap > h1 {
-		font-size: 20px;
-		margin-left: 12px;
-	}
-	.Img {
-		width: 22px;
-		height: auto;
-	}
-	.Dropdown > p {
-		font-size: 17px;
-		margin-left: 36px;
+@media screen and (min-width: 426px) {
+	.Container {
+		min-height: 100px;
 	}
 }
 
-/* TABLET */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-	.AccordionSection {
-		width: 540px;
+/* 88888888888888888888888888888888 */
+@media screen and (min-width: 769px) {
+	.Container {
+		max-width: 800px;
 	}
-	.Wrap {
-		margin-top: 12px;
-	}
-
-	.Wrap > h1 {
-		font-size: 22px;
-		margin-left: 12px;
-	}
-	.Img {
-		width: 24px;
-		height: auto;
-	}
-	.Dropdown > p {
-		font-size: 18px;
-		margin-left: 38px;
-	}
-	.Faq {
-		display: inline-block;
+	.Title {
 		font-family: Lato;
 		font-style: normal;
 		font-weight: 800;
-		font-size: 38px;
-		line-height: 38px;
-
-		margin-top: 45px;
-		margin-bottom: 36px;
-		align-items: center;
-		text-align: center;
-		letter-spacing: -0.017em;
-		color: #ffffff;
-		text-shadow: 1px 1px 2px black;
-	}
-}
-
-/* PC */
-@media only screen and (min-width: 1024px) {
-	.AccordionSection {
-		width: 595px;
-	}
-	.Wrap {
-		margin-top: 12px;
-	}
-
-	.Wrap > h1 {
-		font-size: 24px;
-		margin-left: 12px;
-	}
-	.Img {
-		width: 26px;
-		height: auto;
-	}
-	.Dropdown > p {
-		font-size: 20px;
-		margin-left: 38px;
-	}
-	.Faq {
-		display: inline-block;
-		font-family: Lato;
-		font-style: normal;
-		font-weight: 800;
-		font-size: 48px;
-		line-height: 48px;
-
-		margin-top: 45px;
-		/* margin-bottom: 36px; */
-		align-items: center;
-		text-align: center;
-		letter-spacing: -0.017em;
-		color: #ffffff;
-		text-shadow: 1px 1px 2px black;
+		font-size: 56px;
+		line-height: 86px;
 	}
 }
