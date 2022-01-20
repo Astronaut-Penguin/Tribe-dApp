@@ -18,6 +18,8 @@ import {
 //- Footer Imports
 import { Footer } from '../../components';
 
+import RoadmapSection from '../../components/LandingV2-Components/Sections/Roadmap/Roadmap';
+
 //  'Home',
 // 	'Features',
 // 	'TribePop',
@@ -39,6 +41,7 @@ const LandingV2 = () => {
 				<TiersSection id={'Tiers'} />
 				<OurTeamSection id={'Team'} />
 				<ApplySection id={'Apply'} />
+				<RoadmapSection />
 				<Footer />
 			</div>
 		</>
