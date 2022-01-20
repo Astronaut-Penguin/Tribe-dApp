@@ -14,7 +14,9 @@ import {
 	TiersSection,
 	OurTeamSection,
 	ApplySection,
+	FaqSection,
 } from '../../components';
+
 //- Footer Imports
 import { Footer } from '../../components';
 
@@ -41,7 +43,7 @@ const LandingV2 = () => {
 				<TiersSection id={'Tiers'} />
 				<OurTeamSection id={'Team'} />
 				<ApplySection id={'Apply'} />
-				<RoadmapSection />
+				<FaqSection />
 				<Footer />
 			</div>
 		</>
