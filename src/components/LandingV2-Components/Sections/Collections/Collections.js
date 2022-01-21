@@ -7,6 +7,8 @@ import './FlickingStyles.module.css';
 
 //- Import Data
 import MemepadLogo from './assets/MemepadLogo.png';
+import RightArrow from './assets/RightArrow.png';
+import LeftArrow from './assets/LeftArrow.png';
 import CollectionData from './CollectionData';
 
 //- Import Button
@@ -28,8 +30,8 @@ const CollectionsSection = ({ CollectionData }) => {
 
 	const [plugins, setPlugins] = 
 		useState(
-			[new Pagination({ type: 'bullet' })], 
-			[new Arrow()],
+			[new Pagination({ type: 'bullet' })], 	
+			// [new Arrow()],
 	);
 
 	////////////
@@ -63,8 +65,10 @@ const CollectionsSection = ({ CollectionData }) => {
 					</div>
 					<ViewportSlot>
 						<div className={`flicking-pagination ${styles.Dots}`}></div>
-						<span className="flicking-arrow-prev"></span>
-        				<span className="flicking-arrow-next"></span>
+						<div className={styles.ArrowContainer}>
+							<span className="flicking-arrow-prev"><img className={styles.ArrowLeft} src={LeftArrow}/></span>
+							<span className="flicking-arrow-next"><img className={styles.ArrowRight} src={RightArrow}/></span>
+						</div>
 					</ViewportSlot>
 				</Flicking>
 				<h3>Memepad2</h3>

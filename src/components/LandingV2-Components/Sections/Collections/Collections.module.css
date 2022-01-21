@@ -25,16 +25,6 @@
     height: auto;
 }
 
-.DotsContainer {
-	display: inline-block;
-    align-items: center;
-    text-align: center;
-}
-
-.Dots {
-	/* color: red; */
-}
-
 .BigContainer > h3 {
 	font-family: Lato;
 	font-style: normal;
@@ -76,8 +66,12 @@
 
 /* TABLET */
 
-/* @media only screen and (min-width: 768px) and (max-width: 1023px) {
-	.CardContainer {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.ArrowContainer {
+		display: none;
+	}
+}
+	/*.CardContainer {
 		width: 768px;
 	}
 	.TiersContainer {
@@ -159,5 +153,22 @@
 	}
 	.Dots {
 		display: none;
+	}
+	.ArrowContainer {
+		display: inline-block;
+	}
+	.ArrowLeft {
+		display: inline-block;
+		width: 40px;
+		height: auto;
+		margin-top: -20px;
+		margin-left: -35px;
+	}
+	.ArrowRight {
+		display: inline-block;
+		width: 40px;
+		height: auto;
+		margin-top: -20px;
+		margin-right: -35px;
 	}
 }
