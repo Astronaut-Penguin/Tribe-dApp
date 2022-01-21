@@ -28,17 +28,20 @@
 }
 
 .Img {
-	transition: width 200ms ease-in-out;
+	transition: width 200ms ease-in;
 }
 
 .NotSelected {
 	width: 180px;
 	height: auto;
+	filter: blur(2px);
+	z-index: 0;
 }
 
 .Selected {
 	width: 250px;
 	height: auto;
+	z-index: 1;
 }
 
 .BigContainer > h3 {
