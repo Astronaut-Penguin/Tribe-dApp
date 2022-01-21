@@ -39,6 +39,7 @@ const RoadmapSection = ({ id }) => {
 								<img className={styles.Img} src={TribeLogo} />
 							</div>
 							<div className={styles.TitleLineTop}></div>
+							<div className={styles.PCTitleLineTop}></div>
 						</div>
 
 						<div className={styles.RoadRightContainer}>
@@ -59,6 +60,7 @@ const RoadmapSection = ({ id }) => {
 							</div>
 							<div className={styles.Percent}></div>
 							<div className={styles.TitleLine}></div>
+							<div className={styles.PCTitleLineRight}></div>
 						</div>
 
 						<div className={styles.RoadLeftContainer}>
@@ -84,6 +86,7 @@ const RoadmapSection = ({ id }) => {
 							<div className={styles.DashLeft}></div>
 							<div className={styles.Percent}></div>
 							<div className={styles.TitleLine}></div>
+							<div className={styles.PCTitleLineLeft}></div>
 						</div>
 
 						<div className={styles.RoadRightContainer}>
@@ -105,6 +108,7 @@ const RoadmapSection = ({ id }) => {
 							</div>
 							<div className={styles.Percent}></div>
 							<div className={styles.TitleLine}></div>
+							<div className={styles.PCTitleLineRight}></div>
 						</div>
 
 						<div className={styles.RoadLeftContainer}>
@@ -127,6 +131,7 @@ const RoadmapSection = ({ id }) => {
 							<div className={styles.DashLeft}></div>
 							<div className={styles.Percent}></div>
 							<div className={styles.TitleLine}></div>
+							<div className={styles.PCTitleLineLeft}></div>
 						</div>
 					</section>
 				</div>

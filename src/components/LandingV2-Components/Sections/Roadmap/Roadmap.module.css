@@ -196,6 +196,18 @@
   border-radius: 5px;
 }
 
+.PCTitleLineTop {
+  display: none;
+}
+
+.PCTitleLineLeft {
+  display: none;
+}
+
+.PCTitleLineRight {
+  display: none;
+}
+
 .TitleLine {
   display: inline-block;
   width: 20%;
@@ -459,6 +471,42 @@
   .TitleLineTop {
     display: none;
   }
+
+  .PCTitleLineTop {
+    display: inline-block;
+    width: 16%;
+    height: 4px;
+    background: #D70ABA;
+    z-index: 0;
+    right: calc(50% - 35px);
+    margin-top: 30px;
+    position: absolute;
+    border-radius: 5px;
+  }
+
+  .PCTitleLineLeft {
+    display: inline-block;
+    width: 15%;
+    height: 4px;
+    background: #D70ABA;
+    z-index: 0;
+    right: calc(50% - 25px);
+    margin-top: 30px;
+    position: absolute;
+    border-radius: 5px;
+  }
+
+  .PCTitleLineRight {
+    display: inline-block;
+    width: 14.5%;
+    height: 4px;
+    background: #D70ABA;
+    z-index: 0;
+    left: calc(50% - 25px);
+    margin-top: 30px;
+    position: absolute;
+    border-radius: 5px;
+  }
 }
 
 /********************************/
@@ -467,7 +515,7 @@
 /*   PC MODE   */
 /***************/
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
   .Central {
     position: absolute;
     left: calc(50% - 5px);
@@ -579,6 +627,42 @@
 
   .TitleLineTop {
     display: none;
+  }
+
+  .PCTitleLineTop {
+    display: inline-block;
+    width: 13%;
+    height: 4px;
+    background: #D70ABA;
+    z-index: 0;
+    right: calc(50% - 35px);
+    margin-top: 30px;
+    position: absolute;
+    border-radius: 5px;
+  }
+
+  .PCTitleLineLeft {
+    display: inline-block;
+    width: 11%;
+    height: 4px;
+    background: #D70ABA;
+    z-index: 0;
+    right: calc(50% - 25px);
+    margin-top: 30px;
+    position: absolute;
+    border-radius: 5px;
+  }
+
+  .PCTitleLineRight {
+    display: inline-block;
+    width: 10.5%;
+    height: 4px;
+    background: #D70ABA;
+    z-index: 0;
+    left: calc(50% - 25px);
+    margin-top: 30px;
+    position: absolute;
+    border-radius: 5px;
   }
 }
 
