@@ -1,0 +1,193 @@
+/******************/
+/* 	MOBILE FIRST  */
+/******************/
+
+.BigContainer {
+	width: 100%;
+	align-items: center;
+	text-align: center;
+	overflow: hidden;
+}
+
+.Card {
+	display: flex;
+	width: 150px;
+	/* margin: 14px; */
+	align-items: center;
+	text-align: center;
+	margin-bottom: 30px;
+	justify-content: center;
+}
+
+.Title {
+	display: none;
+}
+
+.Carousel {
+	height: 250px;
+}
+
+.Img {
+	transition: width 200ms ease-in;
+}
+
+.NotSelected {
+	width: 180px;
+	height: auto;
+	filter: blur(2px);
+	z-index: 0;
+}
+
+.Selected {
+	width: 250px;
+	height: auto;
+	z-index: 1;
+}
+
+.BigContainer > h3 {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 24px;
+
+	margin-top: 8px;
+	margin-bottom: 25px;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.017em;
+	color: #ffffff;
+}
+
+.BigContainer > h4 {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 20px;
+
+	margin-bottom: 25px;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.017em;
+	color: #ffffff;
+}
+
+.ButtonContainer {
+	display: inline-block;
+	align-items: center;
+	text-align: center;
+}
+
+/***********/
+/* 	VIEWS  */
+/***********/
+
+/* TABLET */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.ArrowContainer {
+		display: none;
+	}
+}
+/*.CardContainer {
+		width: 768px;
+	}
+	.TiersContainer {
+		text-align: center;
+	}
+	.Standing {
+		display: inline-block;
+		margin-left: 43px;
+		width: 768px;
+	}
+	.Card {
+		display: inline-block;
+	}
+	.Tiers {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 42px;
+		line-height: 42px;
+		display: inline-block;
+
+		margin-top: 35px;
+		margin-bottom: 20px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+		color: #ffffff;
+		text-shadow: 1px 1px 2px black;
+	}
+	.Card > h3 {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 26px;
+	}
+}
+
+/* PC */
+
+@media only screen and (min-width: 1024px) {
+	.BigContainer {
+		width: 1024px;
+		align-items: center;
+		text-align: center;
+	}
+	.TitleContainer {
+		text-align: center;
+	}
+	.Title {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 48px;
+		line-height: 48px;
+		display: inline-block;
+
+		margin-top: 45px;
+		margin-bottom: 50px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+		color: #ffffff;
+		text-shadow: 1px 1px 2px black;
+	}
+	.Carousel {
+		width: 800px;
+		align-items: center;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.Card {
+		display: inline-block;
+		margin: 14px;
+		margin-bottom: 40px;
+	}
+	.BigContainer > h3 {
+		font-weight: 700;
+		font-size: 26px;
+		line-height: 26px;
+	}
+	.Dots {
+		display: none;
+	}
+	.ArrowContainer {
+		display: inline-block;
+	}
+	.ArrowLeft {
+		display: inline-block;
+		width: 40px;
+		height: auto;
+		margin-top: -20px;
+		margin-left: -35px;
+	}
+	.ArrowRight {
+		display: inline-block;
+		width: 40px;
+		height: auto;
+		margin-top: -20px;
+		margin-right: -35px;
+	}
+}
