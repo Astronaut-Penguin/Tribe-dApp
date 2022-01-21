@@ -25,7 +25,7 @@ const TiersSection = ({ id }) => {
 			<div className={styles.TiersContainer}>
 				<h2 className={styles.Tiers}>Tiers</h2>
 			</div>
-			<Flicking circular={false} defaultIndex={1} className={styles.Carousel}>
+			<Flicking circular={true} defaultIndex={1} className={styles.Carousel}>
 				<div className={styles.Card}>
 					<CardTier
 						onClick={'/'}
@@ -63,7 +63,7 @@ const TiersSection = ({ id }) => {
 					</h3>
 				</div>
 			</Flicking>
-			<div className={styles.Standing}>
+			{/* <div className={styles.Standing}>
 				<div className={styles.Card}>
 					<CardTier
 						onClick={'/'}
@@ -100,7 +100,7 @@ const TiersSection = ({ id }) => {
 						Access to Level 2 <br /> NFTs
 					</h3>
 				</div>
-			</div>
+			</div> */}
 		</section>
 	);
 };
