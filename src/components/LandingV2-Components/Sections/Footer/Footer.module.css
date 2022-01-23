@@ -34,6 +34,14 @@
 	line-height: 55px;
 }
 
+.Social > img {
+	transition: transform 200ms ease-in-out;
+}
+
+.Social:hover > img {
+	transform: scale(1.1);
+}
+
 /* TEXT */
 .Text > a {
 	font-family: Lato;

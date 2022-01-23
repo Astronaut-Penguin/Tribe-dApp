@@ -19,6 +19,7 @@ const Header = ({ sections }) => {
 				<a className={styles.Logo} href="">
 					Tribe
 				</a>
+
 				<NavBar sections={sections} />
 				<div className={styles.Button}>
 					<Link to="/dashboard">
