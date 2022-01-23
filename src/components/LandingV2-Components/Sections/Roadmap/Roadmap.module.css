@@ -12,6 +12,7 @@
 	overflow: hidden;
 
 	margin: 0;
+	padding-top: 150px;
 }
 
 .SubContainer {
@@ -517,6 +518,7 @@
 @media only screen and (min-width: 768px) {
 	.Container {
 		width: 100%;
+		padding-top: 80px;
 	}
 	.Central {
 		position: absolute;

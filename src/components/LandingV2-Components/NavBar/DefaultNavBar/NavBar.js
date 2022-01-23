@@ -49,22 +49,26 @@ const NavBar = ({ sections }) => {
 				Tribe
 			</button>
 			<nav className={styles.Container}>
-				{sections.map((value, i) => (
-					<button
-						className={`${styles.Button} ${
-							s == i ? styles.Selected : styles.NotSelected
-						}`}
-						key={i}
-						onClick={() => {
-							setS(i);
-							document
-								.getElementById(value)
-								.scrollIntoView({ behavior: 'smooth', block: 'start' });
-						}}
-					>
-						<p className={styles.Link}>{value}</p>
-					</button>
-				))}
+				{sections.map((value, i) => {
+					if (i != 0) {
+						return (
+							<button
+								className={`${styles.Button} ${
+									s == i ? styles.Selected : styles.NotSelected
+								}`}
+								key={i}
+								onClick={() => {
+									setS(i);
+									document
+										.getElementById(value)
+										.scrollIntoView({ behavior: 'smooth', block: 'start' });
+								}}
+							>
+								<p className={styles.Link}>{value}</p>
+							</button>
+						);
+					}
+				})}
 			</nav>
 		</>
 	);
