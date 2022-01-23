@@ -52,7 +52,12 @@
 					"cutoffDate": "December 20, 2021 00:00:00 UTC",
 					"viewcontract": "https://bscscan.com/address/0x7632c127f32678daa599de7cc635ed99a242dbaf"
 				}
-            ]
+            ],
+			"collections":{
+				"logo": "./assets/memepad/MemepadLogo.png",
+				"description": "Every brand, athlete, singer, model, actor, among others, that works with TRIBE, has their own TribePop adapted to different situations in their career to create their NFTs."
+			}
+			
 		},
 		{
 			"state": "completed",
@@ -106,7 +111,11 @@
 					"cutoffDate": "December 24, 2021 01:00:00 UTC",
 					"viewcontract": "https://bscscan.com/address/0x9cCC1757175F49288d89314b429e966936CD8116"
 				}
-            ]
+            ],
+			"collections":{
+				"logo": "./assets/memepad/MemepadLogo.png",
+				"description": "Every brand, athlete, singer, model, actor, among others, that works with TRIBE, has their own TribePop adapted to different situations in their career to create their NFTs."
+			}
 		}
 	]
 }

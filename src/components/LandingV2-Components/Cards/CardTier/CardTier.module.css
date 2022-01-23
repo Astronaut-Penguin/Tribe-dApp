@@ -1,0 +1,178 @@
+/* CARDS */
+.NftCard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 190px;
+	height: 500px;
+
+	margin: 13px 0px 13px 0px;
+
+	overflow: hidden;
+	border-radius: 9px;
+	background-color: white;
+	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+
+	transition: transform 0.2s ease-in;
+}
+
+.NftCard:hover {
+	transform: scale(1.05);
+	transition: transform 0.3s ease-in;
+}
+
+/****************************************/
+
+/* Image */
+.NftImage {
+	display: inline-block;
+	width: 167px;
+	height: 50%;
+
+	margin-top: 11px;
+	border-radius: 7px;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	object-fit: cover;
+	object-position: center;
+}
+
+.NftLogo {
+	display: inline-block;
+	width: 73%;
+	height: auto;
+
+	margin-top: 4px;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.NftDataContainer {
+	display: inline-block;
+	align-items: center;
+	text-align: center;
+	/* background-color: red; */
+
+	margin-top: 7px;
+}
+
+.NftDataContainer > h5 {
+	color: #868686;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 18px;
+	text-align: center;
+
+	background: linear-gradient(
+		to right,
+		rgb(255, 1, 126),
+		rgb(169, 1, 250),
+		rgb(3, 238, 254)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.NftDataContainer > h4 {
+	/* display: flex; */
+	color: #000000;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 10px;
+	line-height: 7px;
+	text-align: center;
+}
+
+.NftDataContainer h2 {
+	font-style: normal;
+	font-weight: 800;
+	font-size: 15px;
+	line-height: 14px;
+
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.NftDataContainer > h3 {
+	color: #000000;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 9px;
+	line-height: 8px;
+	margin-top: 14px;
+}
+
+/***************/
+/* TABLET MODE */
+/***************/
+
+/* TABLET */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.NftCard {
+		width: 209px;
+		height: 500px;
+	}
+	.NftImage {
+		width: 181px;
+		height: 50%;
+	}
+	.NftDataContainer h3 {
+		font-size: 11px;
+		line-height: 10px;
+	}
+	.NftDataContainer h2 {
+		font-size: 17px;
+		line-height: 16px;
+	}
+	.NftDataContainer h4 {
+		font-size: 12px;
+		line-height: 10px;
+	}
+	.NftDataContainer h5 {
+		font-size: 20px;
+		line-height: 18px;
+	}
+}
+
+/********/
+/* 	PC  */
+/********/
+
+/* PC */
+
+@media only screen and (min-width: 1024px) {
+	/* CARDS */
+	.NftCard {
+		width: 237.5px;
+		height: 500px;
+	}
+	.NftImage {
+		margin-top: 13px;
+		width: 206.25px;
+		height: 50%;
+	}
+	.NftDataContainer h3 {
+		margin-top: 18px;
+		font-size: 12px;
+		line-height: 10px;
+	}
+	.NftDataContainer h2 {
+		font-size: 19px;
+		line-height: 17px;
+	}
+	.NftDataContainer h4 {
+		font-size: 13px;
+		line-height: 12px;
+	}
+	.NftDataContainer h5 {
+		font-size: 23px;
+		line-height: 21px;
+	}
+}

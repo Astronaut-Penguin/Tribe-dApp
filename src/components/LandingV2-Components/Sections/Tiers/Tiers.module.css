@@ -1,0 +1,127 @@
+/******************/
+/* 	MOBILE FIRST  */
+/******************/
+
+.CardContainer {
+	width: 100%;
+	padding: 150px 0px 50px 0px;
+}
+
+.Card {
+	display: inline-block;
+	margin: 10px;
+}
+
+.Tiers {
+	display: none;
+}
+
+.Card > h3 {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+
+	margin-top: 0px;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.017em;
+	color: #ffffff;
+}
+
+.Standing {
+	display: none;
+}
+
+/***********/
+/* 	VIEWS  */
+/***********/
+
+/* TABLET */
+
+@media only screen and (min-width: 680px) and (max-width: 1023px) {
+	.CardContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.TiersContainer {
+		text-align: center;
+	}
+	.Standing {
+		display: flex;
+		justify-content: center;
+	}
+	.Card {
+		display: inline-block;
+	}
+	.Tiers {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 42px;
+		line-height: 42px;
+		display: inline-block;
+
+		margin-top: 35px;
+		margin-bottom: 20px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+		color: #ffffff;
+		text-shadow: 1px 1px 2px black;
+	}
+	.Card > h3 {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 26px;
+	}
+	/* .Carousel {
+		display: none;
+	} */
+}
+
+/* PC */
+
+@media only screen and (min-width: 1024px) {
+	.CardContainer {
+		width: 960px;
+		padding: 80px 0px 40px 0px;
+	}
+	.TiersContainer {
+		text-align: center;
+	}
+	.Standing {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	.Card {
+		display: inline-block;
+	}
+	.Tiers {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 48px;
+		line-height: 48px;
+		display: inline-block;
+
+		margin-top: 48px;
+		margin-bottom: 20px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+		color: #ffffff;
+		text-shadow: 1px 1px 2px black;
+	}
+	.Card > h3 {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 26px;
+	}
+	/* .Carousel {
+		display: none;
+	} */
+}

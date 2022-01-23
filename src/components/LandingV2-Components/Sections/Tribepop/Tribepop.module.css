@@ -1,0 +1,316 @@
+/*////////*/
+/* STYLES */
+/*////////*/
+
+/* SECTION CONTAINER */
+.Container {
+	display: flex;
+	width: 100%;
+	max-width: 800px;
+
+	margin: 0;
+	padding: 130px 0px 100px 0px;
+
+	text-align: center;
+	justify-content: center;
+}
+
+.Content {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.TribePop {
+	display: none;
+}
+
+/* GRADIENT TEXT ('TribePop') */
+.GradientText {
+	font-weight: 800;
+	background: linear-gradient(
+		to right,
+		rgb(255, 1, 126),
+		rgb(169, 1, 250),
+		rgb(3, 238, 254)
+	);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
+.Text {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+
+	display: inline-block;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.017em;
+
+	color: #ffffff;
+}
+
+.Stroke {
+	margin-top: 8px;
+	border-radius: 8px;
+	align-items: center;
+}
+
+/* Social CONTAINER */
+.Social {
+	display: flex;
+	width: 300px;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.Social > a {
+	display: inline-block;
+	width: 84px;
+	height: 14px;
+	text-indent: -9999px;
+	align-items: center;
+	text-align: center;
+	margin: 5px;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+/* 8888888888888888888888888888888 */
+/* /////////////////////// */
+/* Page Images Mobile Size */
+/* /////////////////////// */
+
+.Coin {
+	background-image: url(./assets/coinmarketMOBILE.png);
+}
+
+.Coin:hover {
+	background-image: url(./assets/coinmarketMOBILEhover.png);
+}
+
+.Pancake {
+	background-image: url(./assets/pancakeMOBILE.png);
+}
+
+.Pancake:hover {
+	background-image: url(./assets/pancakeMOBILEhover.png);
+}
+
+.Solid {
+}
+
+.Meme {
+	background-image: url(./assets/memepadMOBILE.png);
+}
+
+.Meme:hover {
+	background-image: url(./assets/memepadMOBILEhover.png);
+}
+
+.Gecko {
+	width: 60px !important;
+	background-image: url(./assets/CoingekoMOBILE.png);
+}
+
+.Gecko:hover {
+	background-image: url(./assets/CoingekoMOBILEhover.png);
+}
+
+.Bsc {
+	width: 55px !important;
+	background-image: url(./assets/bscMOBILE.png);
+}
+
+.Bsc:hover {
+	background-image: url(./assets/bscMOBILEhover.png);
+}
+
+/* 8888888888888888888888888888888 */
+
+/* LARGE IMAGE */
+.LargeCharacters {
+	display: none;
+}
+
+/*/////////*/
+/* SCREENS */
+/*/////////*/
+
+/* MOBILE MEDIUM AND LARGE */
+@media only screen and (min-width: 358px) and (max-width: 767px) {
+	.Text {
+		width: calc(75% - 10px);
+	}
+}
+
+/* TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.Subcontainer {
+		max-width: 768px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0px 20px 0px 20px;
+	}
+	.TribePop {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 38px;
+		line-height: 30px;
+
+		max-width: 340px;
+		display: inline-block;
+		margin-top: 55px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+
+		color: #ffffff;
+		text-shadow: 1px 1px 2px black;
+	}
+	.Characters {
+		display: none;
+	}
+	.LargeCharacters {
+		display: flex;
+		float: left;
+		height: 420px;
+		width: auto;
+		margin: 10px;
+	}
+	.Text {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 22px;
+		margin-top: 35px;
+	}
+	.Stroke {
+		width: 35%;
+		height: auto;
+		margin-top: 10px;
+		margin-bottom: 15px;
+	}
+	.Social {
+		margin-top: 45px;
+	}
+}
+
+/* PC */
+@media only screen and (min-width: 1024px) {
+	.Container {
+		padding: 80px 0px 0px 0px;
+	}
+	.Subcontainer {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.TribePop {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 38px;
+		line-height: 30px;
+
+		max-width: 340px;
+		display: inline-block;
+		margin-top: 55px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+
+		color: #ffffff;
+		text-shadow: 1px 1px 2px black;
+	}
+	.Characters {
+		display: none;
+	}
+	.LargeCharacters {
+		display: flex;
+		float: left;
+		height: 420px;
+		width: auto;
+		margin: 10px;
+	}
+	.Text {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 22px;
+		margin-top: 35px;
+	}
+	.Stroke {
+		width: 25%;
+		height: auto;
+		margin-top: 10px;
+		margin-bottom: 15px;
+	}
+	.Social {
+		margin-top: 45px;
+	}
+
+	/* 8888888888888888888888888888888 */
+	/* /////////////////////// */
+	/* Page Images Mobile Size */
+	/* /////////////////////// */
+
+	.Social {
+		width: 100%;
+	}
+
+	.Social > a {
+		width: 200px !important;
+		height: 30px !important;
+	}
+
+	.Coin {
+		background-image: url(./assets/coinmarketPC.png);
+	}
+
+	.Coin:hover {
+		background-image: url(./assets/coinmarketPChover.png);
+	}
+
+	.Pancake {
+		background-image: url(./assets/pancakePC.png);
+	}
+
+	.Pancake:hover {
+		background-image: url(./assets/pancakePChover.png);
+	}
+
+	.Meme {
+		background-image: url(./assets/memepadPC.png);
+	}
+
+	.Meme:hover {
+		background-image: url(./assets/memepadPChover.png);
+	}
+
+	.Gecko {
+		width: 200px !important;
+		height: 30px !important;
+		background-image: url(./assets/CoingekoPC.png);
+	}
+
+	.Gecko:hover {
+		background-image: url(./assets/CoingekoPChover.png);
+	}
+
+	.Bsc {
+		width: 200px !important;
+		height: 30px !important;
+		background-image: url(./assets/bscPC.png);
+	}
+
+	.Bsc:hover {
+		background-image: url(./assets/bscPChover.png);
+	}
+}
