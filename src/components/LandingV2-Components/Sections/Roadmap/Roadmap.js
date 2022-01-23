@@ -21,17 +21,29 @@ const RoadmapSection = ({ id }) => {
 						<div className={styles.RoadLeftContainer}>
 							<div className={styles.ContentLeft}>
 								<h1 className={`${styles.RoadTitle} ${styles.Right}`}>
-									Quarter 1 <br />
-									2022!
+									Q1 2022
 								</h1>
 								<p className={styles.RoadTextLeft}>
-									Take a look around, and join your fellow Kingz. <br />
-									<br /> We will be giving away 10 Kingz once our discord hits
-									15,000 members.
-									<br />
-									<br />
-									This is the beginning of our Kingdom, where community is our
-									#1 focus.
+									Begin metaverse planning and gameplay We will begin the
+									ideation, structuring, planning and execution of our first
+									game in the metaverse which we will reveal visually and
+									completely in the Tribe v2.
+								</p>
+								<p className={styles.RoadTextLeft}>
+									Listing in a CEX of the Top 10 of CMC To open the 2022 labor
+									calendar, one of our first objectives will be to be listed in
+									one of the top 10 exchanges of CoinMarketCap.
+								</p>
+								<p className={styles.RoadTextLeft}>
+									Start parallel tests for our own NFT marketplace As a goal
+									within the creation of the game in the metaverse, we will need
+									to have our own NFT trading platform.
+								</p>
+								<p className={styles.RoadTextLeft}>
+									Update to Tribe v1.3 This update will mainly be related to
+									business model and image where we will include respective
+									concepts to the metaverse and gamification as well as our new
+									3D image
 								</p>
 							</div>
 							<div className={styles.DashLeft}></div>
@@ -46,16 +58,24 @@ const RoadmapSection = ({ id }) => {
 							<div className={styles.DashLeft}></div>
 							<div className={styles.ContentRight}>
 								<h1 className={`${styles.RoadTitle} ${styles.Left}`}>
-									Quarter 2 <br />
-									2022!
+									Q2 2022
 								</h1>
 								<p className={styles.RoadTextRight}>
-									When Minting is 50% sold out the creation of our Meta Kingdom
-									is started. <br />
-									<br />
-									This is a place where your Kingz can own land and rule over
-									all. Land pays dividends every month forever! <br />
-									<br /> The more land you own the more you earn! (in ETH).
+									Tribe v2 Release (Landing Page + Pitch Deck) Update of brand
+									image and business model in an integrated way inspired by the
+									game within the metaverse.
+								</p>
+								<p className={styles.RoadTextRight}>
+									Metaverse development and game (First tests) For Q2 we
+									anticipate that we will already have some first internal tests
+									of the metaverse which we will be able to make public with the
+									community.
+								</p>
+								<p className={styles.RoadTextRight}>
+									VR TribePop NFT Beta Testing By this time we expect all
+									TribePops to be ready to use in the metaverse which will have
+									rigging, animations, basic movements and, of course, motion
+									control.
 								</p>
 							</div>
 							<div className={styles.Percent}></div>
@@ -66,21 +86,17 @@ const RoadmapSection = ({ id }) => {
 						<div className={styles.RoadLeftContainer}>
 							<div className={styles.ContentLeft}>
 								<h1 className={`${styles.RoadTitle} ${styles.Right}`}>
-									Quarter 3 <br />
-									2022!
+									Q3 2022
 								</h1>
 								<p className={styles.RoadTextLeft}>
-									During and after mint we will be spending all our time
-									purchasing land for you( with no extra expense) and turning
-									them into NFTs that will be sent to your wallet that you
-									minted with. <br /> <br />
-									These Proclamations will be connected with your land in the
-									Meta Kingdom and will only work when you hold at least 1 King.
-									<br />
-									<br />
-									OH, they also are very special physical land located in
-									Scotland, which means you can legally change your title to
-									"Lord" in real life from owning a King!
+									First public tests of the game For Q3 2022, we expect that the
+									game will be able to be used by at least beta testers and with
+									the aim of getting feedback from the community.
+								</p>
+								<p className={styles.RoadTextLeft}>
+									Integration of Metaverse and VR to the game If the previous
+									tests were satisfactory, we would already be in a position to
+									integrate web3 into the gaming platform with VR included.
 								</p>
 							</div>
 							<div className={styles.DashLeft}></div>
@@ -93,45 +109,17 @@ const RoadmapSection = ({ id }) => {
 							<div className={styles.DashLeft}></div>
 							<div className={styles.ContentRight}>
 								<h1 className={`${styles.RoadTitle} ${styles.Left}`}>
-									Quarter 4 <br />
-									2022!
+									Q4 2022
 								</h1>
 								<p className={styles.RoadTextRight}>
-									A total of 8 Kingz will be auctioned off with 100% of the
-									proceeds going to the funding of Kingz who own land and the
-									future of the project.
-									<br />
-									<br /> 85% of secondary sales will also be put right back into
-									the Meta Kingdom economy and will help fund the future
-									additions of the Meta Kingdom.
+									Minimum viable product (MVP) By the end of 2022, we will have
+									an initial stable version (MVP) that can be used by users with
+									all its functions.
 								</p>
 							</div>
 							<div className={styles.Percent}></div>
 							<div className={styles.TitleLine}></div>
 							<div className={styles.PCTitleLineRight}></div>
-						</div>
-
-						<div className={styles.RoadLeftContainer}>
-							<div className={styles.ContentLeft}>
-								<h1 className={`${styles.RoadTitle} ${styles.Right}`}>
-									Coming <br />
-									Soon!
-								</h1>
-								<p className={styles.RoadTextLeft}>
-									We have 1 planned airdrop for all Kingz holders right after
-									public mint is over.
-									<br /> Art will be created and a small collection of 3,000
-									NFT's will be made.
-									<br />
-									<br /> They will be split among all holders of 2 or more
-									Kingz. All Airdrop NFTs that can't be evenly split among
-									holders will be burned!
-								</p>
-							</div>
-							<div className={styles.DashLeft}></div>
-							<div className={styles.Percent}></div>
-							<div className={styles.TitleLine}></div>
-							<div className={styles.PCTitleLineLeft}></div>
 						</div>
 					</section>
 				</div>
