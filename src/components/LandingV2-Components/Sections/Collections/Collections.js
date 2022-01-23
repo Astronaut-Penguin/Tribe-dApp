@@ -9,7 +9,6 @@ import './FlickingStyles.module.css';
 import MemepadLogo from './assets/MemepadLogo.png';
 import RightArrow from './assets/RightArrow.png';
 import LeftArrow from './assets/LeftArrow.png';
-import CollectionData from './CollectionData';
 
 //- Import Button
 import ApplyButton from '../../Buttons/ApplyButton/ApplyButton';
@@ -23,7 +22,7 @@ import '@egjs/flicking-plugins/dist/pagination.css';
 import { Arrow } from '@egjs/flicking-plugins';
 import '@egjs/flicking-plugins/dist/arrow.css';
 
-const CollectionsSection = ({ CollectionData }) => {
+const CollectionsSection = () => {
 	//- SELECTED STATE
 	const [s, setS] = useState(0);
 
@@ -48,7 +47,7 @@ const CollectionsSection = ({ CollectionData }) => {
 						setS(e.index);
 						console.log(e.index);
 					}}
-					defaultIndex={1}
+					defaultIndex={0}
 					plugins={plugins}
 					className={styles.Carousel}
 				>
@@ -87,25 +86,62 @@ const CollectionsSection = ({ CollectionData }) => {
 					<ViewportSlot>
 						<div className={`flicking-pagination ${styles.Dots}`}></div>
 						<div className={styles.ArrowContainer}>
-							<span className="flicking-arrow-prev">
-								<img className={styles.ArrowLeft} src={LeftArrow} />
+							<span className={`flicking-arrow-prev ${styles.ArrowLeft}`}>
+								<img src={LeftArrow} />
 							</span>
-							<span className="flicking-arrow-next">
-								<img className={styles.ArrowRight} src={RightArrow} />
+							<span className={`flicking-arrow-next ${styles.ArrowRight}`}>
+								<img src={RightArrow} />
 							</span>
 						</div>
 					</ViewportSlot>
 				</Flicking>
-				<h3>Memepad2</h3>
-				<h4>
-					Every brand, athlete, singer, model, actor, among <br />
-					others, that works with TRIBE, has their own <br />
-					TribePop adapted to different situations in their <br />
-					career to create their NFTs.
-				</h4>
+				<div className={`${styles.TextContainer} ${
+					s == 0 ? styles.TextSelected : styles.TextNotSelected
+				}`}>
+					<h3>Memepad0</h3>
+					<h4>
+						Every brand, athlete, singer, model, actor, among <br />
+						others, that works with TRIBE, has their own <br />
+						TribePop adapted to different situations in their <br />
+						career to create their NFTs.
+					</h4>
+				</div>
+				<div className={`${styles.TextContainer} ${
+					s == 1 ? styles.TextSelected : styles.TextNotSelected
+				}`}>
+					<h3>Memepad1</h3>
+					<h4>
+						Every brand, athlete, singer, model, actor, among <br />
+						others, that works with TRIBE, has their own <br />
+						TribePop adapted to different situations in their <br />
+						career to create their NFTs.
+					</h4>
+				</div>
+				<div className={`${styles.TextContainer} ${
+					s == 2 ? styles.TextSelected : styles.TextNotSelected
+				}`}>
+					<h3>Memepad2</h3>
+					<h4>
+						Every brand, athlete, singer, model, actor, among <br />
+						others, that works with TRIBE, has their own <br />
+						TribePop adapted to different situations in their <br />
+						career to create their NFTs.
+					</h4>
+				</div>
+				<div className={`${styles.TextContainer} ${
+					s == 3 ? styles.TextSelected : styles.TextNotSelected
+				}`}>
+					<h3>Memepad3</h3>
+					<h4>
+						Every brand, athlete, singer, model, actor, among <br />
+						others, that works with TRIBE, has their own <br />
+						TribePop adapted to different situations in their <br />
+						career to create their NFTs.
+					</h4>
+				</div>
 				<br />
 				<div className={styles.ButtonContainer}>
-					<ApplyButton text={'View All Collections'} />
+					<ApplyButton text={'View All Collections'} onClick={'/'}/>
 				</div>
 			</div>
 		</>
