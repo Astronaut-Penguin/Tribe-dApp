@@ -48,43 +48,50 @@ const Footer = () => {
 
 				<div>
 					<div className={styles.Images}>
-						<a title="Telegram" href="/" className={styles.Social}>
+						<a title="Telegram" href="https://t.me/tribebsc" className={styles.Social}>
 							<img src={Telegram} alt="Telegram" />
 						</a>
-						<a title="Twitter" href="/" className={styles.Social}>
+						<a title="Twitter" href="https://twitter.com/tribebsc" className={styles.Social}>
 							<img src={Twitter} alt="Twitter" />
 						</a>
-						<a title="Pancake" href="/" className={styles.Social}>
+						<a title="Pancake" href="https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af" className={styles.Social}>
 							<img src={Pankake} alt="Pancake" />
 						</a>
-						<a title="BSCScan" href="/" className={styles.Social}>
+						<a title="BSCScan" href="https://bscscan.com/token/0xc34c85a3d7a84212b6234146773f7939a931a8af" className={styles.Social}>
 							<img src={BSC} alt="BSCScan" />
 						</a>
-						<a title="Intagram" href="/" className={styles.Social}>
+						<a title="Intagram" href="https://instagram.com/tribebsc" className={styles.Social}>
 							<img src={Instagram} alt="Instagram" />
 						</a>
-						<a title="Github" href="/" className={styles.Social}>
+						<a title="Github" href="https://github.com/TribeBSC" className={styles.Social}>
 							<img src={Github} alt="Github" />
 						</a>
 						<a title="Team FInance" href="/" className={styles.Social}>
 							<img src={Finance} alt="Team FInance" />
 						</a>
-						<a title="SolidProof" href="/" className={styles.Social}>
+						<a title="SolidProof" href="https://github.com/solidproof/smart-contract-audits/blob/main/SmartContract_Audit_Solidproof_Tribe.pdf" className={styles.Social}>
 							<img src={Solidproof} alt="SolidProof" />
 						</a>
-						<a title="Medium" href="/" className={styles.Social}>
+						<a title="Medium" href="https://medium.com/@TribeBsc" className={styles.Social}>
 							<img src={LogoM} alt="Medium" />
 						</a>
-						<a title="CoinmarketCap" href="/" className={styles.Social}>
+						<a title="CoinmarketCap" href="https://coinmarketcap.com/es/currencies/tribex/" className={styles.Social}>
 							<img src={Asset30} alt="CoinmarketCap" />
 						</a>
-						<a title="Coingecko" href="/" className={styles.Social}>
+						<a title="Coingecko" href="https://www.coingecko.com/en/coins/tribe-token" className={styles.Social}>
 							<img src={Asset32} alt="Coingecko" />
 						</a>
-						<a title="Reddit" href="/" className={styles.Social}>
+						<a title="Reddit" href="https://reddit.com/r/tribebsc" className={styles.Social}>
 							<img src={Reddit} alt="Reddit" />
 						</a>
 					</div>
+
+					
+
+
+
+
+
 
 					<div className={styles.Text}>
 						<a title="Tokenomics" href="/">
