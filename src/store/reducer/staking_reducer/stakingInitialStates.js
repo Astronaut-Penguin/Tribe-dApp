@@ -3,7 +3,7 @@ import memepad from "./memepad.json";
 import smallMepad from "../../../images/tribe_pool.png";
 import smallBusd from "../../../images/busd.png";
 
-export const stakeIds = ["mepad2","mepad3"];
+export const stakeIds = ["mepad2"];
 
 //Initial values of the stake, used when metamask is not connected.
 //When metamask is connected, these values will update based on the contract.
@@ -30,21 +30,5 @@ export const stakingState = {
     symbol: "TRIBEX", //Constant, not affected by metamask
     isCompleted: false, //This value got fetched from contract and became false eventually
     beforeUnlockBtnText: 'Lock 90 days = Reward + Double Allocation',
-  },
-  mepad3: {
-    stakingContract: null,
-    pendingReward: 0,
-    stakedAmount: 0,
-    rewardPerYear: 0,
-    lpAllowance: false,
-    lpBalance: 0,
-    totalStakingTokens: 0,
-    stakingUrl: memepad.prefix + memepad.mepad3.stakingAddress + "#code", //Constant, not affected by metamask
-    image: smallBusd, //Constant, not affected by metamask
-    title: "Liquidity Farming: NFT Airdrops", //Constant, not affected by metamask
-    subTitle: subTitleLP, //Constant, not affected by metamask
-    symbol: "TRIBEX-BUSD LP", //Constant, not affected by metamask
-    isCompleted: false, //This value got fetched from contract and became false eventually
-    beforeUnlockBtnText: 'Top 10 LP will receive a FREE NFT',
   },
 };
