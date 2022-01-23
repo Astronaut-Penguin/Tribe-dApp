@@ -21,6 +21,7 @@ import {
 //- Footer Imports
 import { Footer } from '../../components';
 
+
 //  'Home',
 // 	'Features',
 // 	'TribePop',
@@ -52,6 +53,7 @@ const LandingV2 = () => {
 				<RoadmapSection id={'RoadMap'} />
 				<OurTeamSection id={'Team'} />
 				<ApplySection id={'Apply'} />
+
 				<FaqSection />
 				<Footer />
 			</div>
