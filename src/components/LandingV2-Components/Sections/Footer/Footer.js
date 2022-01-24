@@ -37,12 +37,28 @@ const Footer = () => {
 						text={'WhitePaper v3.1'}
 						paper
 						style={{ margin: '4px' }}
+						onClick={() => {
+							window
+								.open(
+									'					https://docs.tribetoken.app/',
+									'_blank',
+								)
+								.focus();
+						}}
 					/>
 					<div className={styles.Space}></div>
 					<ApplyButton
 						text={'SolidProof Audit Report'}
 						solid
 						style={{ margin: '4px' }}
+						onClick={() => {
+							window
+								.open(
+									'					https://github.com/solidproof/smart-contract-audits/blob/main/SmartContract_Audit_Solidproof_Tribe.pdf',
+									'_blank',
+								)
+								.focus();
+						}}
 					/>
 				</div>
 
@@ -94,10 +110,10 @@ const Footer = () => {
 
 
 					<div className={styles.Text}>
-						<a title="Tokenomics" href="/">
+						<a title="Tokenomics" href="https://drive.google.com/file/d/1XhvzDbpNC0dvCAIJC__4InzHEl07ohBh/view">
 							Tokenomics
 						</a>
-						<a title="Audit Report" href="/">
+						<a title="Audit Report" href="https://github.com/solidproof/smart-contract-audits/blob/main/SmartContract_Audit_Solidproof_Tribe.pdf">
 							Audit Report
 						</a>
 						<a title="Locks & Vestings" href="/">
@@ -106,7 +122,7 @@ const Footer = () => {
 						<a title="KYC Compliance" href="/">
 							KYC Compliance
 						</a>
-						<a title="Contact us" href="/">
+						<a title="Contact us" href="https://t.me/tribebsc">
 							Contact us
 						</a>
 					</div>
