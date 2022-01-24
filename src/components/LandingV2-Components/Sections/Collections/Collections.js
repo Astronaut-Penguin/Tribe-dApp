@@ -1,6 +1,6 @@
 //- Import React
 import React, { useEffect, useState, createRef } from 'react';
-
+import { Link } from 'react-router-dom';
 //- Import Styles
 import styles from './Collections.module.css';
 
@@ -95,9 +95,11 @@ const CollectionsSection = ({ id }) => {
 				})}
 
 				<br />
+				<Link to='dashboard/celebrity-nfts'>
 				<div className={styles.ButtonContainer}>
-					<ApplyButton text={'View All Collections'} onClick={'/'} />
+					<ApplyButton text={'View All Collections'} onClick={{}} />
 				</div>
+				</Link>
 			</div>
 		</>
 	);

@@ -28,7 +28,14 @@ const ApplySection = ({ id }) => {
 						share your creations and shape your future.
 					</p>
 					<div className={styles.ButtonContainer}>
-						<ApplyButton text={'Apply Now'} />
+						<ApplyButton text={'Apply Now'} onClick={() => {
+							window
+								.open(
+									'					https://docs.google.com/forms/d/e/1FAIpQLSd5-yZ3SW1vFCNzapMdUqkCIMtjh_dqOBdko9zlFV7e2uCq2g/viewform',
+									'_blank',
+								)
+								.focus();
+						}}/>
 					</div>
 				</div>
 			</div>
