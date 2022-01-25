@@ -149,6 +149,9 @@
 	.Text {
 		width: calc(75% - 10px);
 	}
+	.TextContainer {
+		width: 370px;
+	}
 }
 
 /* TABLET */

@@ -26,12 +26,14 @@ const TribepopSection = ({ id }) => {
 						All metaverse skin ready characters created <br />
 						by <b>TRIBE</b> are <b>TribePops</b>
 					</p>
-					<p className={styles.Text} style={{ marginTop: '10px' }}>
-						Every brand, athlete, singer, model, actor, <br />
-						among others, that works with TRIBE, has <br />
-						their own TribePop adapted to different <br />
-						situations in their career to create their NFTs.
-					</p>
+					<div className={styles.TextContainer}>
+						<p className={styles.Text} style={{ marginTop: '10px' }}>
+							Every brand, athlete, singer, model, actor, <br />
+							among others, that works with TRIBE, has <br />
+							their own TribePop adapted to different <br />
+							situations in their career to create their NFTs.
+						</p>
+					</div>
 
 					<img className={styles.Stroke} src={Stroke} />
 					<p className={styles.Text} style={{ marginTop: '16px' }}>
