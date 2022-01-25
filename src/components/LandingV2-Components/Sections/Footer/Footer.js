@@ -38,7 +38,9 @@ const Footer = () => {
 						paper
 						style={{ margin: '4px' }}
 						onClick={() => {
-							window.open('https://docs.tribetoken.app/', '_blank').focus();
+							window
+								.open('https://docs.tribetoken.app/pitch', '_blank')
+								.focus();
 						}}
 					/>
 					<div className={styles.Space}></div>
@@ -146,7 +148,7 @@ const Footer = () => {
 					</div>
 
 					<div className={styles.Text}>
-						<a title="Tokenomics" href="https://docs.tribetoken.app/">
+						<a title="Tokenomics" href="https://docs.tribetoken.app/pitch">
 							Tokenomics
 						</a>
 						<a
