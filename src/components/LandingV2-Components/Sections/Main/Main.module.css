@@ -197,6 +197,8 @@
 @media only screen and (min-width: 1024px) {
 	.Container {
 		padding-top: 80px;
+		min-height: 500px;
+		margin-top: 60px;
 	}
 	.Subcontainer {
 		max-width: 900px;
