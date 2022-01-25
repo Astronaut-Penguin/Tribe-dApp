@@ -16,12 +16,14 @@ import PancakeMobile from './assets/pancakeMOBILE.png';
 import MemeMobile from './assets/memepadMOBILE.png';
 import GeckoMobile from './assets/CoingekoMOBILE.png';
 import BscMobile from './assets/bscMOBILE.png';
+import RefinableMobile from './assets/refinableMOBILE.png';
 //PC
 import CoinPC from './assets/coinmarketPC.png';
 import PancakePC from './assets/pancakePC.png';
 import MemePC from './assets/memepadPC.png';
 import GeckoPC from './assets/CoingekoPC.png';
 import BscPC from './assets/bscPC.png';
+import RefinablePC from './assets/refinablePC.png';
 
 const TribepopSection = ({ id }) => {
 	return (
@@ -63,6 +65,11 @@ const TribepopSection = ({ id }) => {
 					<img className={styles.Mobile} src={MemeMobile} alt="Memepad" />
 					<img className={styles.Mobile} src={GeckoMobile} alt="CoinGecko" />
 					<img className={styles.Mobile} src={BscMobile} alt="BscScan" />
+					<img
+						className={styles.Mobile}
+						src={RefinableMobile}
+						alt="Refinable"
+					/>
 
 					{/* PC Logos */}
 					<img className={styles.Pc} src={CoinPC} alt="CoinMarket" />
@@ -70,6 +77,7 @@ const TribepopSection = ({ id }) => {
 					<img className={styles.Pc} src={MemePC} alt="Memepad" />
 					<img className={styles.Pc} src={GeckoPC} alt="CoinGecko" />
 					<img className={styles.Pc} src={BscPC} alt="BscScan" />
+					<img className={styles.Pc} src={RefinablePC} alt="Refinable" />
 				</div>
 			</div>
 		</section>
