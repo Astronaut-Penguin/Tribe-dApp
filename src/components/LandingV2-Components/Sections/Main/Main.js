@@ -63,13 +63,13 @@ const MainSection = ({ id }) => {
 					</p>
 				</div>
 				<div className={styles.Images}>
-					<a title="Telegram" href="/" className={styles.Social}>
+					<a title="Telegram" href="https://t.me/tribeen" className={styles.Social}>
 						<img src={Telegram} alt="Telegram" />
 					</a>
 					<a title="Twitter" href="/" className={styles.Social}>
 						<img src={Twitter} alt="Twitter" />
 					</a>
-					<a title="Pancake" href="/" className={styles.Social}>
+					<a title="Pancake" href="https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af" className={styles.Social}>
 						<img src={Pancake} alt="Pancake" />
 					</a>
 					<a title="BSCScan" href="/" className={styles.Social}>
