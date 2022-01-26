@@ -27,7 +27,6 @@
 .Carousel {
 	height: 250px;
 	overflow: visible !important;
-
 }
 
 .Img {
@@ -48,7 +47,6 @@
 }
 
 .TextContainer > h3 {
-
 	font-family: Lato;
 	font-style: normal;
 	font-weight: 600;
@@ -83,7 +81,6 @@
 .TextNotSelected {
 	display: none;
 }
-
 
 .ButtonContainer {
 	display: inline-block;
@@ -156,7 +153,6 @@
 		text-align: center;
 		margin: auto;
 		/* overflow: visible; */
-
 	}
 	.Card > h3 {
 		font-weight: 700;
@@ -173,7 +169,6 @@
 		align-items: center;
 		text-align: center;
 		padding-top: 80px;
-
 	}
 	.TitleContainer {
 		text-align: center;
@@ -202,13 +197,12 @@
 		margin: 0 auto;
 	}
 	.NotSelected {
-		width: 245px;
+		width: 200px;
 		height: auto;
 	}
 	.Selected {
-		width: 370px;
+		width: 250px;
 		height: auto;
-
 	}
 	.Dots {
 		display: none;
@@ -222,7 +216,6 @@
 		height: auto;
 		margin-top: -20px;
 		margin-left: -15px;
-
 	}
 	.ArrowRight {
 		display: inline-block;
@@ -230,6 +223,5 @@
 		height: auto;
 		margin-top: -20px;
 		margin-right: -15px;
-
 	}
 }
