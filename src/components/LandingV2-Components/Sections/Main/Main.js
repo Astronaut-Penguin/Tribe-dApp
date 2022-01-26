@@ -76,7 +76,7 @@ const MainSection = ({ id }) => {
 				<div className={styles.Images}>
 					<a
 						title="Telegram"
-						href="https://t.me/tribebsc"
+						href="https://t.me/tribeen"
 						className={styles.Social}
 					>
 						<img src={Telegram} alt="Telegram" />
