@@ -28,7 +28,14 @@ const TiersSection = ({ id }) => {
 			<Flicking circular={true} defaultIndex={1} className={styles.Carousel}>
 				<div className={styles.Card}>
 					<CardTier
-						onClick={'/'}
+						onClick={() => {
+							window
+								.open(
+									'https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af',
+									'_blank',
+								)
+								.focus();
+						}}
 						price={'2,500'}
 						allocation={'5 out of 10'}
 						image={Caveman}
@@ -40,7 +47,14 @@ const TiersSection = ({ id }) => {
 				</div>
 				<div className={styles.Card}>
 					<CardTier
-						onClick={'/'}
+						onClick={() => {
+							window
+								.open(
+									'https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af',
+									'_blank',
+								)
+								.focus();
+						}}
 						price={'50,000'}
 						allocation={'Guaranteed Allocation'}
 						image={CryptoKing}
@@ -52,7 +66,14 @@ const TiersSection = ({ id }) => {
 				</div>
 				<div className={styles.Card}>
 					<CardTier
-						onClick={'/'}
+						onClick={() => {
+							window
+								.open(
+									'https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af',
+									'_blank',
+								)
+								.focus();
+						}}
 						price={'17,500'}
 						allocation={'7 out of 10'}
 						image={Gladiator}

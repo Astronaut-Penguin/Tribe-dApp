@@ -81,7 +81,11 @@ const MainSection = ({ id }) => {
 					>
 						<img src={Telegram} alt="Telegram" />
 					</a>
-					<a title="Twitter" href="/" className={styles.Social}>
+					<a
+						title="Twitter"
+						href="https://twitter.com/tribebsc"
+						className={styles.Social}
+					>
 						<img src={Twitter} alt="Twitter" />
 					</a>
 					<a
@@ -91,7 +95,11 @@ const MainSection = ({ id }) => {
 					>
 						<img src={Pancake} alt="Pancake" />
 					</a>
-					<a title="BSCScan" href="/" className={styles.Social}>
+					<a
+						title="BSCScan"
+						href="https://bscscan.com/token/0xc34c85a3d7a84212b6234146773f7939a931a8af"
+						className={styles.Social}
+					>
 						<img src={Bsc} alt="BSCScan" />
 					</a>
 				</div>
