@@ -54,7 +54,7 @@
 }
 
 .Stroke {
-	margin-top: 8px;
+	margin-top: 25px;
 	border-radius: 8px;
 	align-items: center;
 }
@@ -62,7 +62,7 @@
 /* Social CONTAINER */
 .Social {
 	display: flex;
-	width: 300px;
+	width: 350px;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
@@ -93,6 +93,13 @@
 @media only screen and (min-width: 358px) and (max-width: 767px) {
 	.Text {
 		width: calc(75% - 10px);
+	}
+	.TextContainer {
+		width: 370px;
+	}
+	.Social {
+		align-items: center;
+		text-align: center;
 	}
 }
 
@@ -145,6 +152,54 @@
 	}
 	.Social {
 		margin-top: 45px;
+		width: 100%;
+	}
+	.Social > a {
+		width: 200px !important;
+		height: 30px !important;
+	}
+	.Coin {
+		background-image: url(./assets/coinmarketPC.png);
+	}
+
+	.Coin:hover {
+		background-image: url(./assets/coinmarketPChover.png);
+	}
+
+	.Pancake {
+		background-image: url(./assets/pancakePC.png);
+	}
+
+	.Pancake:hover {
+		background-image: url(./assets/pancakePChover.png);
+	}
+
+	.Meme {
+		background-image: url(./assets/memepadPC.png);
+	}
+
+	.Meme:hover {
+		background-image: url(./assets/memepadPChover.png);
+	}
+
+	.Gecko {
+		width: 200px !important;
+		height: 30px !important;
+		background-image: url(./assets/CoingekoPC.png);
+	}
+
+	.Gecko:hover {
+		background-image: url(./assets/CoingekoPChover.png);
+	}
+
+	.Bsc {
+		width: 200px !important;
+		height: 30px !important;
+		background-image: url(./assets/bscPC.png);
+	}
+
+	.Bsc:hover {
+		background-image: url(./assets/bscPChover.png);
 	}
 }
 
