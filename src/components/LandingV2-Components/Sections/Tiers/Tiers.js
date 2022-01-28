@@ -30,7 +30,7 @@ const TiersSection = ({ id }) => {
 			</div>
 
 			<Flicking 
-			circular={true}
+			circular={false}
 			onChanged={(e) => {
 				setLuminous(e.index);
 				console.log(e.index);
