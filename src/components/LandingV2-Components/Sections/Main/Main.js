@@ -43,6 +43,7 @@ const MainSection = ({ id }) => {
 								<p>Brands</p>
 								<p>Artists</p>
 								<p>Sports</p>
+								<p>We Launch</p>
 							</Flicking>
 							<span className={styles.GradientText}> TribePop </span>
 						</div>
