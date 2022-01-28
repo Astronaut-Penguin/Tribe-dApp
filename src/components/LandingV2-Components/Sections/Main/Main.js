@@ -57,22 +57,49 @@ const MainSection = ({ id }) => {
 					<p className={styles.TribeText}>
 						Buy <b>TRIBE Tokens</b> on
 					</p>
-					<FlatButton text={'PancakeSwap'} big />
+					<FlatButton
+						text={'PancakeSwap'}
+						big
+						onClick={() => {
+							window
+								.open(
+									'https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af',
+									'_blank',
+								)
+								.focus();
+						}}
+					/>
 					<p className={styles.Text} style={{ marginTop: '8px' }}>
 						Exclusively on <img src={Binance} /> <b>Binance Smart Chain</b>
 					</p>
 				</div>
 				<div className={styles.Images}>
-					<a title="Telegram" href="/" className={styles.Social}>
+					<a
+						title="Telegram"
+						href="https://t.me/tribeen"
+						className={styles.Social}
+					>
 						<img src={Telegram} alt="Telegram" />
 					</a>
-					<a title="Twitter" href="/" className={styles.Social}>
+					<a
+						title="Twitter"
+						href="https://twitter.com/tribebsc"
+						className={styles.Social}
+					>
 						<img src={Twitter} alt="Twitter" />
 					</a>
-					<a title="Pancake" href="/" className={styles.Social}>
+					<a
+						title="Pancake"
+						href="https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af"
+						className={styles.Social}
+					>
 						<img src={Pancake} alt="Pancake" />
 					</a>
-					<a title="BSCScan" href="/" className={styles.Social}>
+					<a
+						title="BSCScan"
+						href="https://bscscan.com/token/0xc34c85a3d7a84212b6234146773f7939a931a8af"
+						className={styles.Social}
+					>
 						<img src={Bsc} alt="BSCScan" />
 					</a>
 				</div>

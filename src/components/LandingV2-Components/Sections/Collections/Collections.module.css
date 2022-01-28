@@ -50,7 +50,6 @@
 }
 
 .TextContainer > h3 {
-
 	font-family: Lato;
 	font-style: normal;
 	font-weight: 600;
@@ -87,7 +86,6 @@
 .TextNotSelected {
 	display: none;
 }
-
 
 .ButtonContainer {
 	display: inline-block;
@@ -180,7 +178,6 @@
 		text-align: center;
 		margin: auto;
 		/* overflow: visible; */
-
 	}
 	.Card > h3 {
 		font-weight: 700;
@@ -197,7 +194,6 @@
 		align-items: center;
 		text-align: center;
 		padding-top: 80px;
-
 	}
 	.TitleContainer {
 		text-align: center;
@@ -232,7 +228,6 @@
 	.Selected {
 		width: 300px;
 		height: auto;
-
 	}
 	.TextContainer > p {
 		margin-bottom: 10px;
@@ -246,7 +241,6 @@
 		height: auto;
 		margin-top: -20px;
 		margin-left: -15px;
-
 	}
 	.ArrowRight {
 		display: inline-block;
