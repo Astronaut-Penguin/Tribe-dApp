@@ -10,7 +10,20 @@ import LargePlebCharacter from './assets/LargePlebCharacter.png';
 import Stroke from './assets/Stroke.png';
 
 //- Page Images Imports
-import pancakeMOBILE from './assets/pancakeMOBILE.png';
+//Mobile
+import CoinMobile from './assets/coinmarketMOBILE.png';
+import PancakeMobile from './assets/pancakeMOBILE.png';
+import MemeMobile from './assets/memepadMOBILE.png';
+import GeckoMobile from './assets/CoingekoMOBILE.png';
+import BscMobile from './assets/bscMOBILE.png';
+import RefinableMobile from './assets/refinableMOBILE.png';
+//PC
+import CoinPC from './assets/coinmarketPC.png';
+import PancakePC from './assets/pancakePC.png';
+import MemePC from './assets/memepadPC.png';
+import GeckoPC from './assets/CoingekoPC.png';
+import BscPC from './assets/bscPC.png';
+import RefinablePC from './assets/refinablePC.png';
 
 const TribepopSection = ({ id }) => {
 	return (
@@ -44,21 +57,29 @@ const TribepopSection = ({ id }) => {
 					</p>
 				</div>
 				<div className={styles.Social}>
-					<a href="" className={styles.Coin}>
-						CoinMarketCap
-					</a>
-					<a href="" className={styles.Pancake}>
-						Pancake
-					</a>
-					<a href="" className={styles.Meme}>
-						MemePad
-					</a>
-					<a href="" className={styles.Gecko}>
-						CoinGecko
-					</a>
-					<a href="" className={styles.Bsc}>
-						BscScan
-					</a>
+					{/* Mobile Logos */}
+					<img className={styles.Mobile} src={CoinMobile} alt="CoinMarket" />
+					<img
+						className={styles.Mobile}
+						src={PancakeMobile}
+						alt="PancakeSwap"
+					/>
+					<img className={styles.Mobile} src={MemeMobile} alt="Memepad" />
+					<img className={styles.Mobile} src={GeckoMobile} alt="CoinGecko" />
+					<img className={styles.Mobile} src={BscMobile} alt="BscScan" />
+					<img
+						className={styles.Mobile}
+						src={RefinableMobile}
+						alt="Refinable"
+					/>
+
+					{/* PC Logos */}
+					<img className={styles.Pc} src={CoinPC} alt="CoinMarket" />
+					<img className={styles.Pc} src={PancakePC} alt="PancakeSwap" />
+					<img className={styles.Pc} src={MemePC} alt="Memepad" />
+					<img className={styles.Pc} src={GeckoPC} alt="CoinGecko" />
+					<img className={styles.Pc} src={BscPC} alt="BscScan" />
+					<img className={styles.Pc} src={RefinablePC} alt="Refinable" />
 				</div>
 			</div>
 		</section>

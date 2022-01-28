@@ -52,11 +52,12 @@
 .AnimatedText {
 	display: inline-block;
 	width: auto;
-	height: 40px;
+	height: 35px;
 
 	text-align: right;
-
 	overflow: hidden;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .AnimatedText > p {
@@ -138,7 +139,7 @@
 
 .Social {
 	display: inline-block;
-	margin: 13px;
+	margin: 16px;
 	transition: transform 300ms ease-in-out;
 }
 
@@ -189,7 +190,7 @@
 		margin-top: 75px;
 	}
 	.Images {
-		margin-top: 55px;
+		margin-top: 85px;
 	}
 }
 
@@ -197,6 +198,8 @@
 @media only screen and (min-width: 1024px) {
 	.Container {
 		padding-top: 80px;
+		min-height: 500px;
+		margin-top: 60px;
 	}
 	.Subcontainer {
 		max-width: 900px;
@@ -228,6 +231,6 @@
 		margin-top: 75px;
 	}
 	.Images {
-		margin-top: 58px;
+		margin-top: 88px;
 	}
 }

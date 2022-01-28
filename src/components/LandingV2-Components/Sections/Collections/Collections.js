@@ -1,6 +1,6 @@
 //- Import React
 import React, { useEffect, useState, createRef } from 'react';
-
+import { Link } from 'react-router-dom';
 //- Import Styles
 import styles from './Collections.module.css';
 
@@ -30,10 +30,7 @@ const CollectionsSection = ({ id }) => {
 	//- SELECTED STATE
 	const [s, setS] = useState(0);
 
-	const [plugins, setPlugins] = useState([
-		new Pagination({ type: 'bullet' }),
-		new Arrow(),
-	]);
+	const [plugins, setPlugins] = useState([new Arrow({ parentEl: document.body })]);
 
 	////////////
 	// RENDER //
@@ -45,42 +42,51 @@ const CollectionsSection = ({ id }) => {
 				<div className={styles.TitleContainer}>
 					<h2 className={styles.Title}>Latest NFT Collections</h2>
 				</div>
-				<Flicking
-					circular={true}
-					onChanged={(e) => {
-						setS(e.index);
-						console.log(e.index);
-					}}
-					defaultIndex={0}
-					plugins={plugins}
-					className={styles.Carousel}
-					renderOnlyVisible={true}
-				>
-					{data.data.map((value, i) => {
-						return (
-							<div className={styles.Card}>
-								<img
-									src={value.collections.logo}
-									className={`${styles.Img} ${
-										s == i ? styles.Selected : styles.NotSelected
-									}`}
-								/>
-							</div>
-						);
-					})}
+				<div className={styles.CarouselContainer}>
+					<Flicking
+						circular={true}
+						onChanged={(e) => {
+							setS(e.index);
+							console.log(e.index);
+						}}
+						defaultIndex={0}
+						plugins={plugins}
+						className={styles.Carousel}
+						renderOnlyVisible={true}
+					>
+						{data.data.map((value, i) => {
+							return (
+								<div className={styles.Card}>
+									<img
+										src={value.collections.logo}
+										className={`${styles.Img} ${
+											s == i ? styles.Selected : styles.NotSelected
+										}`}
+									/>
+								</div>
+							);
+						})}
 
-					<ViewportSlot>
-						<div className={`flicking-pagination ${styles.Dots}`}></div>
-						<div className={styles.ArrowContainer}>
-							<span className={`flicking-arrow-prev ${styles.ArrowLeft}`}>
-								<img src={LeftArrow} />
-							</span>
-							<span className={`flicking-arrow-next ${styles.ArrowRight}`}>
-								<img src={RightArrow} />
-							</span>
-						</div>
-					</ViewportSlot>
-				</Flicking>
+						<ViewportSlot>
+							{/* <div className={styles.ArrowContainer}>
+								<span className={`flicking-arrow-prev ${styles.ArrowLeft}`}>
+									<img src={LeftArrow} />
+								</span>
+								<span className={`flicking-arrow-next ${styles.ArrowRight}`}>
+									<img src={RightArrow} />
+								</span>
+							</div> */}
+						</ViewportSlot>
+					</Flicking>
+					<div className={styles.ArroContainer}>
+						<span className="flicking-arrow-prev is-outside">
+							<img src={LeftArrow} />
+						</span>
+						<span className="flicking-arrow-next is-outside">
+							<img src={RightArrow} />
+						</span>
+					</div>
+				</div>
 				{data.data.map((value, i) => {
 					return (
 						<div
@@ -94,10 +100,23 @@ const CollectionsSection = ({ id }) => {
 					);
 				})}
 
-				<br />
-				<div className={styles.ButtonContainer}>
-					<ApplyButton text={'View All Collections'} onClick={'/'} />
+				<div className={styles.DotsContainer}>
+					<div className={`${styles.TextContainer} ${
+						s == 0 ? styles.DotSelected : styles.DotNotSelected}`}>
+					</div>
 				</div>
+				<div className={styles.DotsContainer}>
+					<div className={`${styles.TextContainer} ${
+						s == 1 ? styles.DotSelected : styles.DotNotSelected}`}>
+					</div>
+				</div>
+
+				<br />
+				<Link to='dashboard/celebrity-nfts'>
+				<div className={styles.ButtonContainer}>
+					<ApplyButton text={'View All Collections'} onClick={{}} />
+				</div>
+				</Link>
 			</div>
 		</>
 	);
