@@ -27,7 +27,7 @@ const Footer = () => {
 	return (
 		<section className={styles.Container}>
 			<div>
-				<img className={styles.logotribe} src={TribeLogo} />
+				<img className={styles.logotribe} src={TribeLogoPc} />
 				<img className={styles.LogoTribePc} src={TribeLogoPc} />
 			</div>
 

@@ -8,17 +8,25 @@
 	width: 100%;
 	max-width: 1200px;
 
-	padding: 150px 0px 150px 0px;
+	padding: 150px 0px 20px 0px;
 	text-align: center;
 }
 
 .Content {
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
 }
 
 .Space {
 	display: none;
+}
+
+/* BUTTONS */
+.Buttons {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 35px;
 }
 
 /* IMAGES */
@@ -26,7 +34,7 @@
 	display: inline-block;
 	align-items: center;
 	text-align: center;
-	margin: 30px;
+	margin: 0px 30px 20px 30px;
 }
 
 .Social {
@@ -58,18 +66,10 @@
 	color: #ffffff;
 }
 
-/* BUTTONS */
-.Buttons {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	padding: 35px;
-}
-
 /* LOGO TRIBE */
 .logotribe {
-	width: 110px;
-	height: 43px;
+	width: 185px;
+	height: auto;
 }
 
 .LogoTribePc {
@@ -107,8 +107,8 @@
 		margin: 20px 20px 15px;
 	}
 	.logotribe {
-		width: 146px;
-		height: 60px;
+		width: 259px;
+		height: auto;
 	}
 }
 
