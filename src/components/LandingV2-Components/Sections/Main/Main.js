@@ -43,14 +43,15 @@ const MainSection = ({ id }) => {
 								<p>Brands</p>
 								<p>Artists</p>
 								<p>Sports</p>
+								<p>We Launch</p>
 							</Flicking>
 							<span className={styles.GradientText}> TribePop </span>
 						</div>
 						<p>on the Metaverse</p>
 					</div>
 					<p className={styles.Text} style={{ marginTop: '15px' }}>
-						We launch NFTs. <br />
-						We build the future.
+						We launch NFTs <br />
+						We build the future
 					</p>
 					<img className={styles.Characters} src={Kings} />
 

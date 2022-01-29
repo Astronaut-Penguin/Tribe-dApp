@@ -15,7 +15,7 @@ import FlorDesign from './assets/FlorDesign.png';
 import TomasCFO from './assets/TomasCFO.png';
 import Circulo from './assets/Circulo.png';
 
-const TeamCard = ({ name, rol, character, style }) => {
+const TeamCard = ({ name, rol, rol2, character, style }) => {
 	return (
 		<div style={style} className={styles.Container}>
 			<img className={styles.Circulo} src={Circulo} />
@@ -39,6 +39,7 @@ const TeamCard = ({ name, rol, character, style }) => {
 				<b>{name}</b>
 			</p>
 			<p className={styles.Text}>{rol}</p>
+			<p className={styles.Text2}>{rol2}</p>
 		</div>
 	);
 };

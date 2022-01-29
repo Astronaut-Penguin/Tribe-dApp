@@ -16,16 +16,17 @@ const OurTeamSection = ({ id }) => {
 					<div className={styles.MobileContent}>
 						<div className={styles.TeamContainer}>
 							<CardTeam
-								character={5}
-								name={'Elias'}
-								rol={'CCO'}
+								character={1}
+								name={'Penguin'}
+								rol={'CTO'}
 								style={{ position: 'absolute', left: '0px', top: '50px' }}
 							/>
-							<CardTeam character={8} name={'Fede'} rol={'CEO'} />
+							<CardTeam character={8} name={'Fede'} rol={'CEO'} rol2={'Co-Founder'} />
 							<CardTeam
 								character={6}
 								name={'Fabrizio'}
 								rol={'CMO'}
+								rol2={'Co-Founder'}
 								style={{ position: 'absolute', right: '0px', top: '50px' }}
 							/>
 						</div>
@@ -51,7 +52,7 @@ const OurTeamSection = ({ id }) => {
 								rol={'UX/IX Specialist'}
 								style={{ position: 'absolute', left: '0px', top: '50px' }}
 							/>
-							<CardTeam character={1} name={'Penguin'} rol={'CTO'} />
+							<CardTeam character={5} name={'Elias'} rol={'CCO'} />
 							<CardTeam
 								character={10}
 								name={'Flor'}
@@ -87,11 +88,12 @@ const OurTeamSection = ({ id }) => {
 								rol={'CTO'}
 								style={{ position: 'absolute', left: '160px', top: '60px' }}
 							/>
-							<CardTeam character={8} name={'Fede'} rol={'CEO'} />
+							<CardTeam character={8} name={'Fede'} rol={'CEO'} rol2={'Co-Founder'} />
 							<CardTeam
 								character={6}
 								name={'Fabrizio'}
 								rol={'CMO'}
+								rol2={'Co-Founder'}
 								style={{ position: 'absolute', right: '160px', top: '60px' }}
 							/>
 							<CardTeam

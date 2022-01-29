@@ -7,10 +7,10 @@
 	display: flex;
 	width: 100%;
 	max-width: 1200px;
-	min-height: 100vh;
+	height: 500px;
 
 	margin: 0;
-	padding: 100px 0px 0px 0px;
+	padding: 400px 0px 190px 0px;
 	text-align: center;
 
 	box-sizing: border-box;
@@ -174,7 +174,8 @@
 	.Subcontainer {
 		max-width: 768px;
 		margin-left: auto;
-		margin-right: auto;
+		margin-right: 20px;
+		padding: 0px 0px 20px 0px;
 	}
 	.Characters {
 		display: none;
@@ -190,16 +191,15 @@
 		margin-top: 75px;
 	}
 	.Images {
-		margin-top: 85px;
+		margin-top: 40px;
 	}
 }
 
 /* PC */
 @media only screen and (min-width: 1024px) {
 	.Container {
-		padding-top: 80px;
 		min-height: 500px;
-		margin-top: 60px;
+		padding: 370px 0px 190px 0px;
 	}
 	.Subcontainer {
 		max-width: 900px;
@@ -231,6 +231,6 @@
 		margin-top: 75px;
 	}
 	.Images {
-		margin-top: 88px;
+		margin-top: 50px;
 	}
 }
