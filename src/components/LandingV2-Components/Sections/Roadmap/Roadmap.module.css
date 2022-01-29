@@ -77,12 +77,14 @@
 
 .RoadLeftContainer {
 	display: flex;
+	flex-direction: row-reverse;
 	margin-top: 30px;
 	justify-content: right;
 }
 
 .RoadRightContainer {
 	display: flex;
+	flex-direction: row-reverse;
 	margin-top: 30px;
 	justify-content: right;
 }
@@ -386,6 +388,7 @@
 
 	.RoadLeftContainer {
 		display: flex;
+		flex-direction: row;
 		margin-top: 30px;
 		justify-content: left;
 	}
@@ -547,6 +550,7 @@
 
 	.RoadLeftContainer {
 		display: flex;
+		flex-direction: row;
 		margin-top: 30px;
 		justify-content: left;
 	}
