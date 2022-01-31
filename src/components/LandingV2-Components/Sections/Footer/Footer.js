@@ -64,6 +64,7 @@ const Footer = () => {
 						<a
 							title="Telegram"
 							href="https://t.me/tribeen"
+							target="_blank"
 							className={styles.Social}
 						>
 							<img src={Telegram} alt="Telegram" />
@@ -71,6 +72,7 @@ const Footer = () => {
 						<a
 							title="Twitter"
 							href="https://twitter.com/tribebsc"
+							target="_blank"
 							className={styles.Social}
 						>
 							<img src={Twitter} alt="Twitter" />
@@ -78,6 +80,7 @@ const Footer = () => {
 						<a
 							title="Pancake"
 							href="https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af"
+							target="_blank"
 							className={styles.Social}
 						>
 							<img src={Pankake} alt="Pancake" />
@@ -85,6 +88,7 @@ const Footer = () => {
 						<a
 							title="BSCScan"
 							href="https://bscscan.com/token/0xc34c85a3d7a84212b6234146773f7939a931a8af"
+							target="_blank"
 							className={styles.Social}
 						>
 							<img src={BSC} alt="BSCScan" />
@@ -92,6 +96,7 @@ const Footer = () => {
 						<a
 							title="Intagram"
 							href="https://instagram.com/tribebsc"
+							target="_blank"
 							className={styles.Social}
 						>
 							<img src={Instagram} alt="Instagram" />
@@ -99,6 +104,7 @@ const Footer = () => {
 						<a
 							title="Github"
 							href="https://github.com/TribeBSC"
+							target="_blank"
 							className={styles.Social}
 						>
 							<img src={Github} alt="Github" />
@@ -106,6 +112,7 @@ const Footer = () => {
 						<a
 							title="Team FInance"
 							href="https://www.team.finance/view-coin/0xC34c85a3D7a84212b6234146773f7939a931a8AF?name=Tribe&symbol=TRIBEX"
+							target="_blank"
 							className={styles.Social}
 						>
 							<img src={Finance} alt="Team FInance" />
@@ -113,6 +120,7 @@ const Footer = () => {
 						<a
 							title="SolidProof"
 							href="https://github.com/solidproof/smart-contract-audits/blob/main/SmartContract_Audit_Solidproof_Tribe.pdf"
+							target="_blank"
 							className={styles.Social}
 						>
 							<img src={Solidproof} alt="SolidProof" />
@@ -120,6 +128,7 @@ const Footer = () => {
 						<a
 							title="Medium"
 							href="https://medium.com/@TribeBsc"
+							target="_blank"
 							className={styles.Social}
 						>
 							<img src={LogoM} alt="Medium" />
@@ -127,6 +136,7 @@ const Footer = () => {
 						<a
 							title="CoinmarketCap"
 							href="https://coinmarketcap.com/es/currencies/tribex/"
+							target="_blank"
 							className={styles.Social}
 						>
 							<img src={Asset30} alt="CoinmarketCap" />
@@ -134,6 +144,7 @@ const Footer = () => {
 						<a
 							title="Coingecko"
 							href="https://www.coingecko.com/en/coins/tribe-token"
+							target="_blank"
 							className={styles.Social}
 						>
 							<img src={Asset32} alt="Coingecko" />
@@ -141,6 +152,7 @@ const Footer = () => {
 						<a
 							title="Reddit"
 							href="https://reddit.com/r/tribebsc"
+							target="_blank"
 							className={styles.Social}
 						>
 							<img src={Reddit} alt="Reddit" />
@@ -148,25 +160,27 @@ const Footer = () => {
 					</div>
 
 					<div className={styles.Text}>
-						<a title="Tokenomics" href="https://docs.tribetoken.app/pitch">
+						<a title="Tokenomics" href="https://docs.tribetoken.app/pitch" target="_blank">
 							Tokenomics
 						</a>
 						<a
 							title="Audit Report"
 							href="https://github.com/solidproof/smart-contract-audits/blob/main/SmartContract_Audit_Solidproof_Tribe.pdf"
+							target="_blank"
 						>
 							Audit Report
 						</a>
 						<a
 							title="Locks & Vestings"
 							href="https://www.team.finance/view-coin/0xC34c85a3D7a84212b6234146773f7939a931a8AF?name=Tribe&symbol=TRIBEX"
+							target="_blank"
 						>
 							Locks & Vestings
 						</a>
 						{/* <a title="KYC Compliance" href="/">
 							KYC Compliance
 						</a> */}
-						<a title="Contact us" href="https://t.me/tribeen">
+						<a title="Contact us" href="https://t.me/tribeen" target="_blank">
 							Contact us
 						</a>
 					</div>

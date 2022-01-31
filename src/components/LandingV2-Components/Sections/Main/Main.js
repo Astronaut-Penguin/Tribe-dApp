@@ -78,6 +78,7 @@ const MainSection = ({ id }) => {
 					<a
 						title="Telegram"
 						href="https://t.me/tribeen"
+						target="_blank"
 						className={styles.Social}
 					>
 						<img src={Telegram} alt="Telegram" />
@@ -85,6 +86,7 @@ const MainSection = ({ id }) => {
 					<a
 						title="Twitter"
 						href="https://twitter.com/tribebsc"
+						target="_blank"
 						className={styles.Social}
 					>
 						<img src={Twitter} alt="Twitter" />
@@ -92,6 +94,7 @@ const MainSection = ({ id }) => {
 					<a
 						title="Pancake"
 						href="https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af"
+						target="_blank"
 						className={styles.Social}
 					>
 						<img src={Pancake} alt="Pancake" />
@@ -99,6 +102,7 @@ const MainSection = ({ id }) => {
 					<a
 						title="BSCScan"
 						href="https://bscscan.com/token/0xc34c85a3d7a84212b6234146773f7939a931a8af"
+						target="_blank"
 						className={styles.Social}
 					>
 						<img src={Bsc} alt="BSCScan" />
