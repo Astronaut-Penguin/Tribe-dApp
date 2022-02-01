@@ -19,7 +19,7 @@ const OurTeamSection = ({ id }) => {
 								character={1}
 								name={'Penguin'}
 								rol={'CTO'}
-								style={{ position: 'absolute', left: '0px', top: '50px' }}
+								style={{ position: 'absolute', left: '0px', top: '90px' }}
 							/>
 							<CardTeam
 								character={8}
@@ -27,12 +27,17 @@ const OurTeamSection = ({ id }) => {
 								rol={'CEO'}
 								rol2={'Co-Founder'}
 							/>
-							<CardTeam
-								character={6}
-								name={'Fabrizio'}
-								rol={'CMO'}
+							<CardTeam 
+								character={6} 
+								name={'Fabrizio'} 
+								rol={'CMO'} 
 								rol2={'Co-Founder'}
-								style={{ position: 'absolute', right: '0px', top: '50px' }}
+							/>
+							<CardTeam 
+								character={11} 
+								name={'Tomas'} 
+								rol={'CFO'} 
+								style={{ position: 'absolute', right: '0px', top: '90px' }}
 							/>
 						</div>
 						<div className={styles.TeamContainer}>
@@ -40,14 +45,19 @@ const OurTeamSection = ({ id }) => {
 								character={5}
 								name={'Elias'}
 								rol={'CCO'}
-								style={{ position: 'absolute', left: '0px', top: '50px' }}
+								style={{ top: '20px' }}
 							/>
-							<CardTeam character={11} name={'Tomas'} rol={'CFO'} />
 							<CardTeam
 								character={3}
 								name={'Astro'}
 								rol={'Project Manager'}
-								style={{ position: 'absolute', right: '0px', top: '50px' }}
+								style={{ position: 'absolute', right: '0px', top: '80px' }}
+							/>
+							<CardTeam 
+								character={2} 
+								name={'Agus'} 
+								rol={'Design Team Lead'}
+								style={{ position: 'absolute', left: '0px', top: '80px' }}
 							/>
 						</div>
 						<div className={styles.TeamContainer}>
@@ -55,14 +65,19 @@ const OurTeamSection = ({ id }) => {
 								character={4}
 								name={'Diego'}
 								rol={'UX/IX Specialist'}
-								style={{ position: 'absolute', left: '0px', top: '50px' }}
+								style={{ position: 'absolute', left: '0px', top: '80px' }}
 							/>
-							<CardTeam character={2} name={'Agus'} rol={'Design Team Lead'} />
+							<CardTeam
+								character={7}
+								name={'Facu'}
+								rol={'Full Stack Developer'}
+								style={{ top: '25px' }}
+							/>
 							<CardTeam
 								character={10}
 								name={'Flor'}
 								rol={'Graphic Design'}
-								style={{ position: 'absolute', right: '0px', top: '50px' }}
+								style={{ position: 'absolute', right: '0px', top: '80px' }}
 							/>
 						</div>
 						<div style={{ marginTop: '40px' }}>
@@ -70,11 +85,6 @@ const OurTeamSection = ({ id }) => {
 								character={9}
 								name={'Fede'}
 								rol={'Front-end Developer'}
-							/>
-							<CardTeam
-								character={7}
-								name={'Facu'}
-								rol={'Full Stack Developer'}
 							/>
 						</div>
 					</div>
@@ -85,13 +95,13 @@ const OurTeamSection = ({ id }) => {
 								character={5}
 								name={'Elias'}
 								rol={'CCO'}
-								style={{ position: 'absolute', left: '0px', top: '150px' }}
+								style={{ position: 'absolute', left: '0px', top: '170px' }}
 							/>
 							<CardTeam
 								character={1}
 								name={'Penguin'}
 								rol={'CTO'}
-								style={{ position: 'absolute', left: '160px', top: '60px' }}
+								style={{ position: 'absolute', left: '125px', top: '60px' }}
 							/>
 							<CardTeam
 								character={8}
@@ -104,13 +114,18 @@ const OurTeamSection = ({ id }) => {
 								name={'Fabrizio'}
 								rol={'CMO'}
 								rol2={'Co-Founder'}
-								style={{ position: 'absolute', right: '160px', top: '60px' }}
 							/>
 							<CardTeam
 								character={11}
 								name={'Tomas'}
 								rol={'CFO'}
-								style={{ position: 'absolute', right: '0px', top: '150px' }}
+								style={{ position: 'absolute', right: '125px', top: '60px' }}
+							/>
+							<CardTeam
+								character={3}
+								name={'Astro'}
+								rol={'Project Manager'}
+								style={{ position: 'absolute', right: '0px', top: '170px' }}
 							/>
 						</div>
 						<div
@@ -121,12 +136,6 @@ const OurTeamSection = ({ id }) => {
 								character={4}
 								name={'Diego'}
 								rol={'UX/IX Specialist'}
-								style={{ position: 'absolute', left: '80px', top: '80px' }}
-							/>
-							<CardTeam
-								character={3}
-								name={'Astro'}
-								rol={'Project Manager'}
 								style={{ margin: '0px 25px 0px 0px' }}
 							/>
 							<CardTeam
@@ -139,21 +148,21 @@ const OurTeamSection = ({ id }) => {
 								character={7}
 								name={'Facu'}
 								rol={'Full Stack Developer'}
-								style={{ position: 'absolute', right: '80px', top: '80px' }}
+								style={{ position: 'absolute', right: '80px', top: '100px' }}
 							/>
-						</div>
-						<div className={styles.TeamContainer}>
 							<CardTeam
 								character={10}
 								name={'Flor'}
 								rol={'Graphic Design'}
-								style={{ margin: '0px 25px 0px 0px' }}
+								style={{ position: 'absolute', left: '80px', top: '100px' }}
 							/>
+						</div>
+						<div className={styles.TeamContainer}>
 							<CardTeam
 								character={9}
 								name={'Fede'}
 								rol={'Front-end Developer'}
-								style={{ margin: '0px 0px 0px 25px' }}
+								style={{ margin: '0px 0px 0px 0px' }}
 							/>
 						</div>
 					</div>
