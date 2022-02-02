@@ -32,6 +32,7 @@ const MainSection = ({ id }) => {
 
 				<div className={styles.Content}>
 					<div className={styles.Celebrities}>
+						<p style={{ margin: 0 }}>We launch</p>
 						<div className={styles.MainText}>
 							<Flicking
 								circular={true}
@@ -43,7 +44,6 @@ const MainSection = ({ id }) => {
 								<p>Brands</p>
 								<p>Artists</p>
 								<p>Sports</p>
-								<p>We Launch</p>
 							</Flicking>
 							<span className={styles.GradientText}> TribePop </span>
 						</div>
