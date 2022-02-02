@@ -78,7 +78,7 @@ const CollectionsSection = ({ id }) => {
 							</div> */}
 						</ViewportSlot>
 					</Flicking>
-					<div className={styles.ArroContainer}>
+					<div className={styles.ArrowContainer}>
 						<span className="flicking-arrow-prev is-outside">
 							<img src={LeftArrow} />
 						</span>
