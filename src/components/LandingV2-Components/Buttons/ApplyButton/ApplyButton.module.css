@@ -16,7 +16,7 @@
 	padding: 2px;
 	border: none;
 	border-radius: 9px;
-	background: none;
+	background-color: #ef0086;
 
 	text-align: center;
 
@@ -34,7 +34,7 @@
 	margin: 0px;
 }
 
-.Text::before {
+/* .Text::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -52,7 +52,7 @@
 
 .Text:hover::before {
 	background: none;
-}
+} */
 
 /********************************/
 
