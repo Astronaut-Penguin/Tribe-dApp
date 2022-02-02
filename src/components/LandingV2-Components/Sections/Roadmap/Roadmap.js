@@ -32,9 +32,7 @@ const RoadmapSection = ({ id }) => {
 								<p className={styles.RoadTextLeft}>
 									Start parallel tests for our own NFT marketplace
 								</p>
-								<p className={styles.RoadTextLeft}>
-									Update to Tribe v1.3
-								</p>
+								<p className={styles.RoadTextLeft}>Update to Tribe v1.3</p>
 							</div>
 							<div className={styles.DashLeft}></div>
 							<div className={styles.PercentTop}>
@@ -71,7 +69,7 @@ const RoadmapSection = ({ id }) => {
 									Q3 2022
 								</h1>
 								<p className={styles.RoadTextLeft}>
-									First public tests of the game For Q3 2022
+									First public tests of the game
 								</p>
 								<p className={styles.RoadTextLeft}>
 									Integration of Metaverse and VR to the game
