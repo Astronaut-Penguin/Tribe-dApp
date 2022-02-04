@@ -49,7 +49,7 @@ const TribepopSection = ({ id }) => {
 					</div>
 
 					<img className={styles.Stroke} src={Stroke} />
-					<p className={styles.Text} style={{ marginTop: '16px' }}>
+					<p className={styles.Text} style={{ marginTop: '0px' }}>
 						All TribePop will be used in our <br />
 						<span style={{ color: '#d2219a' }}>
 							<b>Metaverse RPG Game</b>

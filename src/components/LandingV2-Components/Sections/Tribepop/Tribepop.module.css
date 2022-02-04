@@ -54,9 +54,7 @@
 }
 
 .Stroke {
-	width: 170px;
-	height: 2px;
-	margin-top: 25px;
+	margin: 15px 0px;
 	border-radius: 8px;
 	align-items: center;
 }
@@ -147,10 +145,7 @@
 		margin-top: 35px;
 	}
 	.Stroke {
-		width: 35%;
-		height: auto;
-		margin-top: 10px;
-		margin-bottom: 15px;
+		margin: 15px 0px;
 	}
 	.Social {
 		margin-top: 45px;
@@ -262,10 +257,7 @@
 		margin-top: 35px;
 	}
 	.Stroke {
-		width: 25%;
-		height: auto;
-		margin-top: 10px;
-		margin-bottom: 15px;
+		margin: 20px 0px;
 	}
 	.Social {
 		margin-top: 45px;
