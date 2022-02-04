@@ -32,7 +32,7 @@ const MainSection = ({ id }) => {
 
 				<div className={styles.Content}>
 					<div className={styles.Celebrities}>
-						<p style={{ margin: 0 }}>We launch</p>
+						<p style={{ margin: 0, textAlign: 'center' }}>We launch</p>
 						<div className={styles.MainText}>
 							<Flicking
 								circular={true}
