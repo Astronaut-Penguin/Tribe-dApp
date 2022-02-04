@@ -7,7 +7,6 @@
 	display: flex;
 	width: 100%;
 	max-width: 1200px;
-	height: 650px;
 
 	padding: 180px 0px 0px 0px;
 	text-align: center;
@@ -157,9 +156,6 @@
 
 /* MOBILE MEDIUM AND LARGE */
 @media only screen and (max-width: 767px) {
-	.Container {
-		height: 650px;
-	}
 	.Text {
 		width: calc(75% - 10px);
 	}
