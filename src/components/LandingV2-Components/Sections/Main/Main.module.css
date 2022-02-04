@@ -222,7 +222,7 @@
 		max-width: 340px;
 	}
 	.Text {
-		font-size: 18px;
+		font-size: 17px;
 		line-height: 24px;
 	}
 	.TribeText {
@@ -231,6 +231,9 @@
 		margin-top: 75px;
 	}
 	.Images {
+		display: flex;
+		width: 100%;
+		justify-content: center;
 		margin-top: 50px;
 	}
 }
