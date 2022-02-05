@@ -7,7 +7,7 @@ import React, { useEffect, useState, createRef } from 'react';
 import styles from './MobileNavBar.module.css';
 
 //- Flicking Imports
-import Flicking from '@egjs/react-flicking';
+import Flicking, { FlickingError } from '@egjs/react-flicking';
 
 //- React Router Hash Link Imports
 import { HashLink } from 'react-router-hash-link';
@@ -19,9 +19,20 @@ const MobileNavBar = ({ sections }) => {
 	//- SELECTED STATE
 	const [s, setS] = useState(0);
 
+	const flicking = createRef();
+
 	///////////////
 	// FUNCTIONS //
 	///////////////
+
+	const moveToPanel = async () => {
+		try {
+			await flicking.next();
+		} catch (e) {
+			console.log(e instanceof FlickingError); // true
+			console.log(e.code);
+		}
+	};
 
 	useEffect(() => {
 		sections.map((value, i) => {
@@ -32,6 +43,7 @@ const MobileNavBar = ({ sections }) => {
 					.scrollIntoView({ behavior: 'smooth', block: 'start' });
 			}
 		});
+		console.log(flicking);
 	}, [s]);
 
 	////////////
@@ -41,6 +53,7 @@ const MobileNavBar = ({ sections }) => {
 	return (
 		<nav className={styles.Container}>
 			<Flicking
+				ref={flicking}
 				className={`${styles.NavContainer}`}
 				onChanged={(e) => {
 					setS(e.index);
@@ -54,6 +67,7 @@ const MobileNavBar = ({ sections }) => {
 						key={i}
 						onClick={() => {
 							setS(i);
+							moveToPanel();
 						}}
 					>
 						<p className={styles.Link}>{value}</p>

@@ -34,10 +34,12 @@ const sections = [
 	'Home',
 	'Features',
 	'TribePop',
+	'Collections',
 	'Tiers',
 	'RoadMap',
 	'Team',
 	'Apply',
+	'Faq',
 ];
 
 const LandingV2 = () => {
@@ -52,7 +54,7 @@ const LandingV2 = () => {
 				<RoadmapSection id={'RoadMap'} />
 				<OurTeamSection id={'Team'} />
 				<ApplySection id={'Apply'} />
-				<FaqSection />
+				<FaqSection id={'Faq'} />
 				<Footer />
 			</div>
 		</>
