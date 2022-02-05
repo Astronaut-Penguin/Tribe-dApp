@@ -25,9 +25,9 @@ const MobileNavBar = ({ sections }) => {
 	// FUNCTIONS //
 	///////////////
 
-	const moveToPanel = async () => {
+	const moveToPanel = async (n) => {
 		try {
-			await flicking.next();
+			await flicking.current.moveTo(n);
 		} catch (e) {
 			console.log(e instanceof FlickingError); // true
 			console.log(e.code);
@@ -43,7 +43,6 @@ const MobileNavBar = ({ sections }) => {
 					.scrollIntoView({ behavior: 'smooth', block: 'start' });
 			}
 		});
-		console.log(flicking);
 	}, [s]);
 
 	////////////
@@ -67,7 +66,7 @@ const MobileNavBar = ({ sections }) => {
 						key={i}
 						onClick={() => {
 							setS(i);
-							moveToPanel();
+							moveToPanel(i);
 						}}
 					>
 						<p className={styles.Link}>{value}</p>
