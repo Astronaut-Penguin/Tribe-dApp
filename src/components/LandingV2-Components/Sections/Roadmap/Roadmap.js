@@ -23,16 +23,21 @@ const RoadmapSection = ({ id }) => {
 								<h1 className={`${styles.RoadTitle} ${styles.Right}`}>
 									Q1 2022
 								</h1>
-								<p className={styles.RoadTextLeft}>
-									Begin metaverse planning and gameplay
-								</p>
-								<p className={styles.RoadTextLeft}>
-									Listing in a CEX of the Top 10 of CMC
-								</p>
-								<p className={styles.RoadTextLeft}>
-									Start parallel tests for our own NFT marketplace
-								</p>
-								<p className={styles.RoadTextLeft}>Update to Tribe v1.3</p>
+								<li className={styles.RoadTextLeft}>
+									Launch collections of celebrities and brands from worldwide ⏳
+								</li>
+								<li className={styles.RoadTextLeft}>
+									Begin metaverse planning and gameplay ⏳
+								</li>
+								<li className={styles.RoadTextLeft}>
+									Listing in a CEX of the Top 10 of CMC ⏳
+								</li>
+								<li className={styles.RoadTextLeft}>
+									Start parallel tests for our own NFT marketplace ⏳
+								</li>
+								<li className={styles.RoadTextLeft}>
+									Update to Tribe v1.3 ⏳
+								</li>
 							</div>
 							<div className={styles.DashLeft}></div>
 							<div className={styles.PercentTop}>
@@ -48,15 +53,15 @@ const RoadmapSection = ({ id }) => {
 								<h1 className={`${styles.RoadTitle} ${styles.Left}`}>
 									Q2 2022
 								</h1>
-								<p className={styles.RoadTextRight}>
-									Tribe v2 Release (Landing Page + Pitch Deck)
-								</p>
-								<p className={styles.RoadTextRight}>
-									Metaverse development and game (First tests)
-								</p>
-								<p className={styles.RoadTextRight}>
-									VR TribePop NFT Beta Testing
-								</p>
+								<li className={styles.RoadTextRight}>
+									Tribe v2 Release (Landing Page + Pitch Deck) ⏳
+								</li>
+								<li className={styles.RoadTextRight}>
+									Metaverse development and game (First tests) ⏳
+								</li>
+								<li className={styles.RoadTextRight}>
+									VR TribePop NFT Beta Testing ⏳
+								</li>
 							</div>
 							<div className={styles.Percent}></div>
 							<div className={styles.TitleLine}></div>
@@ -68,12 +73,12 @@ const RoadmapSection = ({ id }) => {
 								<h1 className={`${styles.RoadTitle} ${styles.Right}`}>
 									Q3 2022
 								</h1>
-								<p className={styles.RoadTextLeft}>
-									First public tests of the game
-								</p>
-								<p className={styles.RoadTextLeft}>
-									Integration of Metaverse and VR to the game
-								</p>
+								<li className={styles.RoadTextLeft}>
+									First public tests of the game ⏳
+								</li>
+								<li className={styles.RoadTextLeft}>
+									Integration of Metaverse and VR to the game ⏳
+								</li>
 							</div>
 							<div className={styles.DashLeft}></div>
 							<div className={styles.Percent}></div>
@@ -87,9 +92,9 @@ const RoadmapSection = ({ id }) => {
 								<h1 className={`${styles.RoadTitle} ${styles.Left}`}>
 									Q4 2022
 								</h1>
-								<p className={styles.RoadTextRight}>
-									Minimum viable product (MVP)
-								</p>
+								<li className={styles.RoadTextRight}>
+									Minimum viable product (MVP) ⏳
+								</li>
 							</div>
 							<div className={styles.Percent}></div>
 							<div className={styles.TitleLine}></div>

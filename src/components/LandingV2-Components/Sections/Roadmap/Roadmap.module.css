@@ -183,7 +183,7 @@
 .Img {
 	width: 68px;
 	height: auto;
-	margin-right: 0.2px;
+	margin-right: -2px;
 	margin-bottom: 1px;
 }
 
@@ -286,6 +286,9 @@
 		width: 24%;
 		right: 215px;
 	}
+	.Img {
+		margin-right: -1px;
+	}
 }
 
 @media only screen and (min-width: 407px) and (max-width: 426px) {
@@ -362,7 +365,6 @@
 		position: absolute;
 		left: calc(50% - 5px);
 	}
-
 	.Title {
 		font-family: Lato;
 		font-style: normal;
@@ -378,60 +380,51 @@
 		color: #ffffff;
 		text-shadow: 1px 1px 2px black;
 	}
-
 	.StepContainer {
 		display: inline-block;
 		width: 100%;
 
 		text-align: center;
 	}
-
 	.RoadLeftContainer {
 		display: flex;
 		flex-direction: row;
 		margin-top: 30px;
 		justify-content: left;
 	}
-
 	.RoadRightContainer {
 		display: flex;
 		margin-top: 30px;
 		justify-content: right;
 	}
-
 	.ContentLeft {
 		display: inline-block;
 		width: 33%;
 		margin-left: 10%;
 	}
-
 	.ContentRight {
 		display: inline-block;
 		width: 33%;
 		margin-right: 10%;
 		margin-left: 10px;
 	}
-
 	.RoadTitle {
 		color: white;
 		font-size: 26px;
 		font-weight: 700;
 	}
-
 	.RoadTextLeft {
 		color: white;
 		font-size: 16px;
 		font-weight: 400;
 		text-align: right;
 	}
-
 	.RoadTextRight {
 		color: white;
 		font-size: 16px;
 		font-weight: 400;
 		text-align: left;
 	}
-
 	.Percent {
 		display: flex;
 		position: absolute;
@@ -452,29 +445,23 @@
 		font-size: 24px;
 		font-weight: 700;
 	}
-
 	.PercentTop {
 		left: calc(50% - 42px);
 	}
-
 	.Right {
 		margin-right: 30px;
 		margin-top: 10px;
 	}
-
 	.Left {
 		margin-left: 35px;
 		margin-top: 10px;
 	}
-
 	.TitleLine {
 		display: none;
 	}
-
 	.TitleLineTop {
 		display: none;
 	}
-
 	.PCTitleLineTop {
 		display: inline-block;
 		width: 16%;
@@ -486,7 +473,6 @@
 		position: absolute;
 		border-radius: 5px;
 	}
-
 	.PCTitleLineLeft {
 		display: inline-block;
 		width: 15%;
@@ -498,7 +484,6 @@
 		position: absolute;
 		border-radius: 5px;
 	}
-
 	.PCTitleLineRight {
 		display: inline-block;
 		width: 14.5%;
@@ -671,6 +656,10 @@
 		margin-top: 30px;
 		position: absolute;
 		border-radius: 5px;
+	}
+	
+	.Img {
+		margin-right: -0.9px;
 	}
 }
 
