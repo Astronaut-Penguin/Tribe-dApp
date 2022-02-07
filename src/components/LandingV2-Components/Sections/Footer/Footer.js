@@ -149,14 +149,14 @@ const Footer = () => {
 						>
 							<img src={Asset32} alt="Coingecko" />
 						</a>
-						<a
+						{/* <a
 							title="Reddit"
 							href="https://reddit.com/r/tribebsc"
 							target="_blank"
 							className={styles.Social}
 						>
 							<img src={Reddit} alt="Reddit" />
-						</a>
+						</a> */}
 					</div>
 
 					<div className={styles.Text}>
