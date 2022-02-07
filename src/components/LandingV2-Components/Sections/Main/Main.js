@@ -81,7 +81,7 @@ const MainSection = ({ id }) => {
 						target="_blank"
 						className={styles.Social}
 					>
-						<img src={Telegram} alt="Telegram" />
+						<img className={styles.Img} src={Telegram} alt="Telegram" />
 					</a>
 					<a
 						title="Twitter"
@@ -89,7 +89,7 @@ const MainSection = ({ id }) => {
 						target="_blank"
 						className={styles.Social}
 					>
-						<img src={Twitter} alt="Twitter" />
+						<img className={styles.Img} src={Twitter} alt="Twitter" />
 					</a>
 					<a
 						title="Pancake"
@@ -97,7 +97,7 @@ const MainSection = ({ id }) => {
 						target="_blank"
 						className={styles.Social}
 					>
-						<img src={Pancake} alt="Pancake" />
+						<img className={styles.Img} src={Pancake} alt="Pancake" />
 					</a>
 					<a
 						title="BSCScan"
@@ -105,7 +105,7 @@ const MainSection = ({ id }) => {
 						target="_blank"
 						className={styles.Social}
 					>
-						<img src={Bsc} alt="BSCScan" />
+						<img className={styles.Img} src={Bsc} alt="BSCScan" />
 					</a>
 				</div>
 			</div>
