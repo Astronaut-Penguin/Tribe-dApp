@@ -104,6 +104,10 @@
 	display: none;
 }
 
+.ArrowContainer {
+	display: none;
+}
+
 .ArrowRight {
 	display: none;
 }

@@ -30,7 +30,9 @@ const CollectionsSection = ({ id }) => {
 	//- SELECTED STATE
 	const [s, setS] = useState(0);
 
-	const [plugins, setPlugins] = useState([new Arrow({ parentEl: document.body })]);
+	const [plugins, setPlugins] = useState([
+		new Arrow({ parentEl: document.body }),
+	]);
 
 	////////////
 	// RENDER //
@@ -47,7 +49,6 @@ const CollectionsSection = ({ id }) => {
 						circular={true}
 						onChanged={(e) => {
 							setS(e.index);
-							console.log(e.index);
 						}}
 						defaultIndex={0}
 						plugins={plugins}
@@ -55,16 +56,19 @@ const CollectionsSection = ({ id }) => {
 						renderOnlyVisible={true}
 					>
 						{data.data.map((value, i) => {
-							return (
-								<div className={styles.Card}>
-									<img
-										src={value.collections.logo}
-										className={`${styles.Img} ${
-											s == i ? styles.Selected : styles.NotSelected
-										}`}
-									/>
-								</div>
-							);
+							if (value.collections) {
+								return (
+									<div className={styles.Card}>
+										<img
+											src={value.collections.logo}
+											className={`${styles.Img} ${
+												s == i ? styles.Selected : styles.NotSelected
+											}`}
+										/>
+									</div>
+								);
+							} else {
+							}
 						})}
 
 						<ViewportSlot>
@@ -78,7 +82,7 @@ const CollectionsSection = ({ id }) => {
 							</div> */}
 						</ViewportSlot>
 					</Flicking>
-					<div className={styles.ArroContainer}>
+					<div className={styles.ArrowContainer}>
 						<span className="flicking-arrow-prev is-outside">
 							<img src={LeftArrow} />
 						</span>
@@ -88,34 +92,41 @@ const CollectionsSection = ({ id }) => {
 					</div>
 				</div>
 				{data.data.map((value, i) => {
-					return (
-						<div
-							className={`${styles.TextContainer} ${
-								s == i ? styles.TextSelected : styles.TextNotSelected
-							}`}
-						>
-							<h3>{value.name}</h3>
-							<p>{value.collections.description}</p>
-						</div>
-					);
+					if (value.collections) {
+						return (
+							<div
+								className={`${styles.TextContainer} ${
+									s == i ? styles.TextSelected : styles.TextNotSelected
+								}`}
+							>
+								<h3>{value.name}</h3>
+								<p>{value.collections.description}</p>
+							</div>
+						);
+					} else {
+					}
 				})}
 
 				<div className={styles.DotsContainer}>
-					<div className={`${styles.TextContainer} ${
-						s == 0 ? styles.DotSelected : styles.DotNotSelected}`}>
-					</div>
+					<div
+						className={`${styles.TextContainer} ${
+							s == 0 ? styles.DotSelected : styles.DotNotSelected
+						}`}
+					></div>
 				</div>
 				<div className={styles.DotsContainer}>
-					<div className={`${styles.TextContainer} ${
-						s == 1 ? styles.DotSelected : styles.DotNotSelected}`}>
-					</div>
+					<div
+						className={`${styles.TextContainer} ${
+							s == 1 ? styles.DotSelected : styles.DotNotSelected
+						}`}
+					></div>
 				</div>
 
 				<br />
-				<Link to='dashboard/celebrity-nfts'>
-				<div className={styles.ButtonContainer}>
-					<ApplyButton text={'View All Collections'} onClick={{}} />
-				</div>
+				<Link to="dashboard/celebrity-nfts">
+					<div className={styles.ButtonContainer}>
+						<ApplyButton text={'View All Collections'} onClick={{}} />
+					</div>
 				</Link>
 			</div>
 		</>
