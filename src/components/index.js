@@ -13,7 +13,7 @@ export { default as FeatureSection } from './LandingV2-Components/Sections/Featu
 export { default as MainSection } from './LandingV2-Components/Sections/Main/Main';
 export { default as TribepopSection } from './LandingV2-Components/Sections/Tribepop/Tribepop';
 export { default as TiersSection } from './LandingV2-Components/Sections/Tiers/Tiers';
-export { default as FaqSection } from './LandingV2-Components/Sections/FAQ/Faq';
+export { default as FaqList } from './LandingV2-Components/Sections/FAQV2/FaqList';
 export { default as OurTeamSection } from './LandingV2-Components/Sections/OurTeam/OurTeam';
 export { default as RoadmapSection } from './LandingV2-Components/Sections/Roadmap/Roadmap';
 export { default as CollectionsSection } from './LandingV2-Components/Sections/Collections/Collections';
