@@ -102,8 +102,9 @@ const BuyModal = ({
 
 	//const enabled = nftDetails ? nftDetails.enabled : false;
 	const balance = nftDetails ? nftDetails.balance : 0;
-	const balanceTribex = nftDetails ? nftDetails.balanceTribex : 0;
-	const allowance = nftDetails ? nftDetails.allowance : 0;
+	//allowance cambiada para tomar siempre true, 
+	//si se cambia a tribex o custom token se pone el comentario inferior
+	const allowance = 1 // nftDetails ? nftDetails.allowance : 0;
 
 	//agregar la promesa de onclick a los dos purchase button, uno es el mobile el otro el web
 	return (
