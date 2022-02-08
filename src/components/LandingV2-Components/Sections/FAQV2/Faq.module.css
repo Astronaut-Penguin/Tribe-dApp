@@ -20,15 +20,39 @@
 	margin: 0px auto 20px auto;
 }
 
+@keyframes spin {
+	from { transform: rotate(90deg); }
+	to { transform: rotate(0deg); }
+}
+
+@keyframes spinOpen {
+	from { transform: rotate(-90deg); }
+	to { transform: rotate(0deg); }
+}
+
 .Img {
+	animation-name: spin;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
 	width: 26px;
 	height: auto;
 	margin-right: 15px;
+	margin-bottom: 4px;
+}
+
+.ImgOpen {
+	animation-name: spinOpen;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	width: 26px;
+	height: auto;
+	margin-right: 15px;
+	margin-bottom: 4px;
 }
 
 .Question {
     display: inline-block;
-	overflow: hidden;
+	overflow: show;
 
 	color: white;
 	font-family: Lato;
@@ -93,6 +117,10 @@
 		width: 90%;
     }
     .Img {
+		display: inline-block;
+		width: 34px;
+	}
+	.ImgOpen {
 		display: inline-block;
 		width: 34px;
 	}

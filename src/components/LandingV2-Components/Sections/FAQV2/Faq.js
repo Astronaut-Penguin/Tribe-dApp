@@ -26,7 +26,7 @@ const FaqSection = props => {
         <div className="faq-question">
             <span>
                 <p className={styles.Question}>{isOpen ? (
-                    <img className={styles.Img} src={TriangleOpen} />
+                    <img className={styles.ImgOpen} src={TriangleOpen} />
                 ) : (
                     <img className={styles.Img} src={Triangle} />
                 )}{question}</p>
