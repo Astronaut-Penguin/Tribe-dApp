@@ -145,6 +145,11 @@
 	transform: scale(1.2);
 }
 
+.Img {
+	width: 25px;
+	height: auto;
+}
+
 /* LARGE IMAGE */
 .CharactersLarge {
 	display: none;
@@ -189,6 +194,10 @@
 	.Images {
 		margin-top: 40px;
 	}
+	.Img {
+		width: 25px;
+		height: auto;
+	}
 }
 
 /* PC */
@@ -231,5 +240,9 @@
 		width: 100%;
 		justify-content: center;
 		margin-top: 50px;
+	}
+	.Img {
+		width: 30px;
+		height: auto;
 	}
 }
