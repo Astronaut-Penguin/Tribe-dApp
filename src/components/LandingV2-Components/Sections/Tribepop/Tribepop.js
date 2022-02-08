@@ -5,8 +5,8 @@ import React from 'react';
 import styles from './Tribepop.module.css';
 
 //- Import Images
-import PlebCharacter from './assets/PlebCharacter.png';
-import LargePlebCharacter from './assets/LargePlebCharacter.png';
+import PlebCharacter from './assets/baby.png';
+import LargePlebCharacter from './assets/baby.png';
 import Stroke from './assets/Stroke.png';
 
 //- Page Images Imports

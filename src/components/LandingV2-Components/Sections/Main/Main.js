@@ -20,7 +20,7 @@ import Twitter from './assets/Twitter.png';
 import Pancake from './assets/Pankake.png';
 import Bsc from './assets/bsc-8 2.png';
 import PanButton from './assets/PanButton.png';
-import Kings from './assets/Group_23.png';
+import Kings from './assets/Tribepop.png';
 
 const MainSection = ({ id }) => {
 	const [plugins, setPlugins] = useState([new AutoPlay()]);
