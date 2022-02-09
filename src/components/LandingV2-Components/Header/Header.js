@@ -28,8 +28,6 @@ const Header = ({ sections }) => {
 	useEffect(() => {
 		window.addEventListener('scroll', (e) => {
 			setScrolled(Math.round(window.scrollY));
-			// console.log(Math.round(window.scrollY));
-			// console.log(document.getElementById('Features').offsetTop);
 		});
 		sections.map((value, i) => {
 			tops.push(document.getElementById(value).offsetTop);
@@ -38,8 +36,6 @@ const Header = ({ sections }) => {
 					document.getElementById(value).clientHeight,
 			);
 		});
-		// console.log(tops);
-		// console.log(bottoms);
 	}, []);
 
 	////////////

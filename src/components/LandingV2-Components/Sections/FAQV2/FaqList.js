@@ -31,9 +31,9 @@ const faqsData = [
 	},
 ];
 
-const FaqList = () => {
+const FaqList = ({ id }) => {
 	return (
-		<div className={styles.Container}>
+		<div className={styles.Container} id={id}>
 			<h2 className={styles.Title}>FAQ</h2>
 			<StyledFaqsList>
 				{faqsData.map((faq, i) => (

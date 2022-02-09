@@ -57,7 +57,7 @@ const LandingV2 = () => {
 				<OurTeamSection id={'Team'} />
 				<ApplySection id={'Apply'} />
 
-				<FaqList />
+				<FaqList id={'Faq'} />
 				<Footer />
 			</div>
 		</>
