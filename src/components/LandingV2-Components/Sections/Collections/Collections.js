@@ -82,14 +82,14 @@ const CollectionsSection = ({ id }) => {
 							</div> */}
 						</ViewportSlot>
 					</Flicking>
-					<div className={styles.ArrowContainer}>
+					{/* <div className={styles.ArrowContainer}>
 						<span className="flicking-arrow-prev is-outside">
 							<img src={LeftArrow} />
 						</span>
 						<span className="flicking-arrow-next is-outside">
 							<img src={RightArrow} />
 						</span>
-					</div>
+					</div> */}
 				</div>
 				{data.data.map((value, i) => {
 					if (value.collections) {
