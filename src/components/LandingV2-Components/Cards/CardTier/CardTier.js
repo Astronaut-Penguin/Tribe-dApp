@@ -14,9 +14,9 @@ import FlatButton from '../../Buttons/FlatButton/FlatButton';
 // image: STRING - Url de la imagen
 // logo: STRING - Url del logo
 
-const CardNFT = ({ onClick, allocation, price, image, logo }) => {
+const CardNFT = ({ onClick, allocation, price, image, logo, index, s }) => {
 	return (
-		<div className={styles.NftCard}>
+		<div className={`${styles.NftCard} ${s == index ? styles.Selected : styles.NotSelected}`}>
 			<img src={image} className={styles.NftImage} />
 			<img src={logo} className={styles.NftLogo} />
 

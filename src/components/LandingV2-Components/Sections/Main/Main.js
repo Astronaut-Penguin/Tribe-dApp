@@ -20,7 +20,7 @@ import Twitter from './assets/Twitter.png';
 import Pancake from './assets/Pankake.png';
 import Bsc from './assets/bsc-8 2.png';
 import PanButton from './assets/PanButton.png';
-import Kings from './assets/Group_23.png';
+import Kings from './assets/Tribepop.png';
 
 const MainSection = ({ id }) => {
 	const [plugins, setPlugins] = useState([new AutoPlay()]);
@@ -32,6 +32,7 @@ const MainSection = ({ id }) => {
 
 				<div className={styles.Content}>
 					<div className={styles.Celebrities}>
+						<p style={{ margin: 0, textAlign: 'center' }}>We launch</p>
 						<div className={styles.MainText}>
 							<Flicking
 								circular={true}
@@ -49,31 +50,62 @@ const MainSection = ({ id }) => {
 						<p>on the Metaverse</p>
 					</div>
 					<p className={styles.Text} style={{ marginTop: '15px' }}>
-						We launch NFTs. <br />
-						We build the future.
+						We launch NFTs <br />
+						We build the future
 					</p>
 					<img className={styles.Characters} src={Kings} />
 
 					<p className={styles.TribeText}>
 						Buy <b>TRIBE Tokens</b> on
 					</p>
-					<FlatButton text={'PancakeSwap'} big />
+					<FlatButton
+						text={'PancakeSwap'}
+						big
+						onClick={() => {
+							window
+								.open(
+									'https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af',
+									'_blank',
+								)
+								.focus();
+						}}
+					/>
 					<p className={styles.Text} style={{ marginTop: '8px' }}>
 						Exclusively on <img src={Binance} /> <b>Binance Smart Chain</b>
 					</p>
 				</div>
 				<div className={styles.Images}>
-					<a title="Telegram" href="/" className={styles.Social}>
-						<img src={Telegram} alt="Telegram" />
+					<a
+						title="Telegram"
+						href="https://t.me/tribeen"
+						target="_blank"
+						className={styles.Social}
+					>
+						<img className={styles.Img} src={Telegram} alt="Telegram" />
 					</a>
-					<a title="Twitter" href="/" className={styles.Social}>
-						<img src={Twitter} alt="Twitter" />
+					<a
+						title="Twitter"
+						href="https://twitter.com/tribebsc"
+						target="_blank"
+						className={styles.Social}
+					>
+						<img className={styles.Img} src={Twitter} alt="Twitter" />
 					</a>
-					<a title="Pancake" href="/" className={styles.Social}>
-						<img src={Pancake} alt="Pancake" />
+					<a
+						title="Pancake"
+						href="https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af"
+						target="_blank"
+						className={styles.Social}
+					>
+						<img className={styles.Img} src={Pancake} alt="Pancake" />
 					</a>
-					<a title="BSCScan" href="/" className={styles.Social}>
-						<img src={Bsc} alt="BSCScan" />
+					<a
+						title="BSCScan"
+						href="https://bscscan.com/token/0xc34c85a3d7a84212b6234146773f7939a931a8af"
+						target="_blank"
+						className={styles.Social}
+					>
+						<img className={styles.Img} src={Bsc} alt="BSCScan" />
 					</a>
 				</div>
 			</div>

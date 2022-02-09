@@ -27,79 +27,160 @@ const Footer = () => {
 	return (
 		<section className={styles.Container}>
 			<div>
-				<img className={styles.logotribe} src={TribeLogo} />
+				<img className={styles.logotribe} src={TribeLogoPc} />
 				<img className={styles.LogoTribePc} src={TribeLogoPc} />
 			</div>
 
 			<div className={styles.Content}>
 				<div className={styles.Buttons}>
 					<ApplyButton
-						text={'WhitePaper v3.1'}
+						text={'Pitch Deck v1.3'}
 						paper
 						style={{ margin: '4px' }}
+						onClick={() => {
+							window
+								.open('https://docs.tribetoken.app/pitch', '_blank')
+								.focus();
+						}}
 					/>
 					<div className={styles.Space}></div>
 					<ApplyButton
 						text={'SolidProof Audit Report'}
 						solid
 						style={{ margin: '4px' }}
+						onClick={() => {
+							window
+								.open(
+									'https://github.com/solidproof/smart-contract-audits/blob/main/SmartContract_Audit_Solidproof_Tribe.pdf',
+									'_blank',
+								)
+								.focus();
+						}}
 					/>
 				</div>
 
 				<div>
 					<div className={styles.Images}>
-						<a title="Telegram" href="/" className={styles.Social}>
+						<a
+							title="Telegram"
+							href="https://t.me/tribeen"
+							target="_blank"
+							className={styles.Social}
+						>
 							<img src={Telegram} alt="Telegram" />
 						</a>
-						<a title="Twitter" href="/" className={styles.Social}>
+						<a
+							title="Twitter"
+							href="https://twitter.com/tribebsc"
+							target="_blank"
+							className={styles.Social}
+						>
 							<img src={Twitter} alt="Twitter" />
 						</a>
-						<a title="Pancake" href="/" className={styles.Social}>
+						<a
+							title="Pancake"
+							href="https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af"
+							target="_blank"
+							className={styles.Social}
+						>
 							<img src={Pankake} alt="Pancake" />
 						</a>
-						<a title="BSCScan" href="/" className={styles.Social}>
+						<a
+							title="BSCScan"
+							href="https://bscscan.com/token/0xc34c85a3d7a84212b6234146773f7939a931a8af"
+							target="_blank"
+							className={styles.Social}
+						>
 							<img src={BSC} alt="BSCScan" />
 						</a>
-						<a title="Intagram" href="/" className={styles.Social}>
+						<a
+							title="Intagram"
+							href="https://instagram.com/tribebsc"
+							target="_blank"
+							className={styles.Social}
+						>
 							<img src={Instagram} alt="Instagram" />
 						</a>
-						<a title="Github" href="/" className={styles.Social}>
+						<a
+							title="Github"
+							href="https://github.com/TribeBSC"
+							target="_blank"
+							className={styles.Social}
+						>
 							<img src={Github} alt="Github" />
 						</a>
-						<a title="Team FInance" href="/" className={styles.Social}>
+						<a
+							title="Team FInance"
+							href="https://www.team.finance/view-coin/0xC34c85a3D7a84212b6234146773f7939a931a8AF?name=Tribe&symbol=TRIBEX"
+							target="_blank"
+							className={styles.Social}
+						>
 							<img src={Finance} alt="Team FInance" />
 						</a>
-						<a title="SolidProof" href="/" className={styles.Social}>
+						<a
+							title="SolidProof"
+							href="https://github.com/solidproof/smart-contract-audits/blob/main/SmartContract_Audit_Solidproof_Tribe.pdf"
+							target="_blank"
+							className={styles.Social}
+						>
 							<img src={Solidproof} alt="SolidProof" />
 						</a>
-						<a title="Medium" href="/" className={styles.Social}>
+						<a
+							title="Medium"
+							href="https://medium.com/@TribeBsc"
+							target="_blank"
+							className={styles.Social}
+						>
 							<img src={LogoM} alt="Medium" />
 						</a>
-						<a title="CoinmarketCap" href="/" className={styles.Social}>
+						<a
+							title="CoinmarketCap"
+							href="https://coinmarketcap.com/es/currencies/tribex/"
+							target="_blank"
+							className={styles.Social}
+						>
 							<img src={Asset30} alt="CoinmarketCap" />
 						</a>
-						<a title="Coingecko" href="/" className={styles.Social}>
+						<a
+							title="Coingecko"
+							href="https://www.coingecko.com/en/coins/tribe-token"
+							target="_blank"
+							className={styles.Social}
+						>
 							<img src={Asset32} alt="Coingecko" />
 						</a>
-						<a title="Reddit" href="/" className={styles.Social}>
+						{/* <a
+							title="Reddit"
+							href="https://reddit.com/r/tribebsc"
+							target="_blank"
+							className={styles.Social}
+						>
 							<img src={Reddit} alt="Reddit" />
-						</a>
+						</a> */}
 					</div>
 
 					<div className={styles.Text}>
-						<a title="Tokenomics" href="/">
+						<a title="Tokenomics" href="https://docs.tribetoken.app/pitch" target="_blank">
 							Tokenomics
 						</a>
-						<a title="Audit Report" href="/">
+						<a
+							title="Audit Report"
+							href="https://github.com/solidproof/smart-contract-audits/blob/main/SmartContract_Audit_Solidproof_Tribe.pdf"
+							target="_blank"
+						>
 							Audit Report
 						</a>
-						<a title="Locks & Vestings" href="/">
+						<a
+							title="Locks & Vestings"
+							href="https://www.team.finance/view-coin/0xC34c85a3D7a84212b6234146773f7939a931a8AF?name=Tribe&symbol=TRIBEX"
+							target="_blank"
+						>
 							Locks & Vestings
 						</a>
-						<a title="KYC Compliance" href="/">
+						{/* <a title="KYC Compliance" href="/">
 							KYC Compliance
-						</a>
-						<a title="Contact us" href="/">
+						</a> */}
+						<a title="Contact us" href="https://t.me/tribeen" target="_blank">
 							Contact us
 						</a>
 					</div>

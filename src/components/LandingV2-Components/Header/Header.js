@@ -56,7 +56,11 @@ const Header = ({ sections }) => {
 				<NavBar sections={sections} />
 				<div className={styles.Button}>
 					<Link to="/dashboard">
-						<FlatButton mid text={'Enter Application'} />
+						<FlatButton
+							mid
+							text={'Enter Application'}
+							style={{ width: 'auto' }}
+						/>
 					</Link>
 				</div>
 			</div>

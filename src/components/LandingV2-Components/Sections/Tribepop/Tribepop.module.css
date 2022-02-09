@@ -8,7 +8,6 @@
 	width: 100%;
 	max-width: 800px;
 
-	margin: 0;
 	padding: 130px 0px 100px 0px;
 
 	text-align: center;
@@ -54,7 +53,7 @@
 }
 
 .Stroke {
-	margin-top: 8px;
+	margin: 15px 0px;
 	border-radius: 8px;
 	align-items: center;
 }
@@ -62,75 +61,20 @@
 /* Social CONTAINER */
 .Social {
 	display: flex;
-	width: 300px;
+	width: 350px;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	margin-top: 20px;
 }
 
-.Social > a {
-	display: inline-block;
-	width: 84px;
-	height: 14px;
-	text-indent: -9999px;
-	align-items: center;
-	text-align: center;
+.Social > img {
 	margin: 5px;
-
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
 }
 
-/* 8888888888888888888888888888888 */
-/* /////////////////////// */
-/* Page Images Mobile Size */
-/* /////////////////////// */
-
-.Coin {
-	background-image: url(./assets/coinmarketMOBILE.png);
-}
-
-.Coin:hover {
-	background-image: url(./assets/coinmarketMOBILEhover.png);
-}
-
-.Pancake {
-	background-image: url(./assets/pancakeMOBILE.png);
-}
-
-.Pancake:hover {
-	background-image: url(./assets/pancakeMOBILEhover.png);
-}
-
-.Solid {
-}
-
-.Meme {
-	background-image: url(./assets/memepadMOBILE.png);
-}
-
-.Meme:hover {
-	background-image: url(./assets/memepadMOBILEhover.png);
-}
-
-.Gecko {
-	width: 60px !important;
-	background-image: url(./assets/CoingekoMOBILE.png);
-}
-
-.Gecko:hover {
-	background-image: url(./assets/CoingekoMOBILEhover.png);
-}
-
-.Bsc {
-	width: 55px !important;
-	background-image: url(./assets/bscMOBILE.png);
-}
-
-.Bsc:hover {
-	background-image: url(./assets/bscMOBILEhover.png);
+.Social > .Pc {
+	display: none;
 }
 
 /* 8888888888888888888888888888888 */
@@ -138,6 +82,10 @@
 /* LARGE IMAGE */
 .LargeCharacters {
 	display: none;
+}
+
+.Characters {
+	margin-bottom: 20px;
 }
 
 /*/////////*/
@@ -148,6 +96,13 @@
 @media only screen and (min-width: 358px) and (max-width: 767px) {
 	.Text {
 		width: calc(75% - 10px);
+	}
+	.TextContainer {
+		width: 370px;
+	}
+	.Social {
+		align-items: center;
+		text-align: center;
 	}
 }
 
@@ -193,83 +148,16 @@
 		margin-top: 35px;
 	}
 	.Stroke {
-		width: 35%;
-		height: auto;
-		margin-top: 10px;
-		margin-bottom: 15px;
+		margin: 15px 0px;
 	}
 	.Social {
 		margin-top: 45px;
-	}
-}
-
-/* PC */
-@media only screen and (min-width: 1024px) {
-	.Container {
-		padding: 80px 0px 0px 0px;
-	}
-	.Subcontainer {
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.TribePop {
-		font-family: Lato;
-		font-style: normal;
-		font-weight: 800;
-		font-size: 38px;
-		line-height: 30px;
-
-		max-width: 340px;
-		display: inline-block;
-		margin-top: 55px;
-		align-items: center;
-		text-align: center;
-		letter-spacing: -0.017em;
-
-		color: #ffffff;
-		text-shadow: 1px 1px 2px black;
-	}
-	.Characters {
-		display: none;
-	}
-	.LargeCharacters {
-		display: flex;
-		float: left;
-		height: 420px;
-		width: auto;
-		margin: 10px;
-	}
-	.Text {
-		font-weight: 500;
-		font-size: 18px;
-		line-height: 22px;
-		margin-top: 35px;
-	}
-	.Stroke {
-		width: 25%;
-		height: auto;
-		margin-top: 10px;
-		margin-bottom: 15px;
-	}
-	.Social {
-		margin-top: 45px;
-	}
-
-	/* 8888888888888888888888888888888 */
-	/* /////////////////////// */
-	/* Page Images Mobile Size */
-	/* /////////////////////// */
-
-	.Social {
 		width: 100%;
 	}
-
 	.Social > a {
 		width: 200px !important;
 		height: 30px !important;
 	}
-
 	.Coin {
 		background-image: url(./assets/coinmarketPC.png);
 	}
@@ -312,5 +200,69 @@
 
 	.Bsc:hover {
 		background-image: url(./assets/bscPChover.png);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.Social {
+		width: 100%;
+	}
+	.Social > .Mobile {
+		display: none;
+	}
+
+	.Social > .Pc {
+		display: inline-block;
+	}
+}
+
+/* PC */
+@media only screen and (min-width: 1024px) {
+	.Container {
+		padding: 80px 0px 0px 0px;
+	}
+	.Subcontainer {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.TribePop {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 38px;
+		line-height: 30px;
+
+		max-width: 340px;
+		display: inline-block;
+		margin-top: 55px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: -0.017em;
+
+		color: #ffffff;
+		text-shadow: 1px 1px 2px black;
+	}
+	.Characters {
+		display: none;
+	}
+	.LargeCharacters {
+		display: flex;
+		float: left;
+		height: 400px;
+		width: auto;
+		margin: 10px 10px 60px 10px;
+	}
+	.Text {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 22px;
+		margin-top: 35px;
+	}
+	.Stroke {
+		margin: 20px 0px;
+	}
+	.Social {
+		margin-top: 45px;
 	}
 }

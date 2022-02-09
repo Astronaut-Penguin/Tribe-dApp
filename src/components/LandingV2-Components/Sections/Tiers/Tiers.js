@@ -1,5 +1,5 @@
 //- Import React
-import React from 'react';
+import React, { useState } from 'react';
 
 //- Import Styles
 import styles from './Tiers.module.css';
@@ -20,19 +20,40 @@ import Flicking from '@egjs/react-flicking';
 import '@egjs/react-flicking/dist/flicking.css';
 
 const TiersSection = ({ id }) => {
+	//- SELECTED STATE
+	const [luminous, setLuminous] = useState(1)
+	
 	return (
 		<section className={styles.CardContainer} id={id}>
 			<div className={styles.TiersContainer}>
 				<h2 className={styles.Tiers}>Tiers</h2>
 			</div>
-			<Flicking circular={true} defaultIndex={1} className={styles.Carousel}>
+
+			<Flicking 
+			circular={false}
+			onChanged={(e) => {
+				setLuminous(e.index);
+				console.log(e.index);
+			}} 
+			defaultIndex={1} 
+			className={styles.Carousel}> 
+
 				<div className={styles.Card}>
-					<CardTier
-						onClick={'/'}
+					<CardTier 
+						onClick={() => {
+							window
+								.open(
+									'https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af',
+									'_blank',
+								)
+								.focus();
+						}}
 						price={'2,500'}
 						allocation={'5 out of 10'}
 						image={Caveman}
 						logo={CavemanLogo}
+						s={luminous}
+						index={0}
 					/>
 					<h3>
 						Access to Level 1 <br /> NFTs
@@ -40,11 +61,20 @@ const TiersSection = ({ id }) => {
 				</div>
 				<div className={styles.Card}>
 					<CardTier
-						onClick={'/'}
+						onClick={() => {
+							window
+								.open(
+									'https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af',
+									'_blank',
+								)
+								.focus();
+						}}
 						price={'50,000'}
 						allocation={'Guaranteed Allocation'}
 						image={CryptoKing}
 						logo={CryptoKingLogo}
+						s={luminous}
+						index={1}
 					/>
 					<h3>
 						Access to Exclusive <br /> NFTs
@@ -52,11 +82,20 @@ const TiersSection = ({ id }) => {
 				</div>
 				<div className={styles.Card}>
 					<CardTier
-						onClick={'/'}
+						onClick={() => {
+							window
+								.open(
+									'https://pancakeswap.finance/swap?outputCurrency=0xc34c85a3d7a84212b6234146773f7939a931a8af',
+									'_blank',
+								)
+								.focus();
+						}}
 						price={'17,500'}
 						allocation={'7 out of 10'}
 						image={Gladiator}
 						logo={GladiatorLogo}
+						s={luminous}
+						index={2}
 					/>
 					<h3>
 						Access to Level 2 <br /> NFTs

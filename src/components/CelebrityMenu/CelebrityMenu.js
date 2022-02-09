@@ -18,11 +18,10 @@ const CelebrityMenu = ({ cards }) => {
 			<div className="nft-banner-container">
 				<div className="banner-container-content">
 					<div>
-						<h2>Celebrity & Brands TRIBEPOP NFTs</h2>
+						<h2>TRIBEPOP NFTs</h2>
 						<p>
-							Each TRIBEPOP is a re-creation of a celebrity or brand and these
-							will be characters ready to use in our next role-playing game in
-							our metaverse!
+						Each TRIBEPOP is a characters ready to use in our next role-playing
+						game in our metaverse!
 						</p>
 						<p>
 							You can only buy them at this value in this unique opportunity,

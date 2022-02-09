@@ -48,7 +48,7 @@ function Projects(props) {
       <div className="project-banner-container">
         <div className="banner-container-content">
           <div>
-            <h2>Launchpad Celebrity NFTs</h2>
+            <h2>Launchpad TRIBEPOP NFTs</h2>
             <p>View upcoming projects and our past launches</p>
           </div>
           <div className="banner-img">

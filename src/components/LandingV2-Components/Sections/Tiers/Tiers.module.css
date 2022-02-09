@@ -5,11 +5,13 @@
 .CardContainer {
 	width: 100%;
 	padding: 150px 0px 50px 0px;
+	
 }
 
 .Card {
 	display: inline-block;
 	margin: 10px;
+	
 }
 
 .Tiers {
@@ -55,6 +57,7 @@
 	}
 	.Card {
 		display: inline-block;
+		
 	}
 	.Tiers {
 		font-family: Lato;

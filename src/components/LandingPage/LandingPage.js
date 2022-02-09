@@ -485,7 +485,7 @@ function LandingPage() {
                 <div>
                   <div className="copyright-text ">
                     <span>Copyright © 2021. All Rights Reserved.</span>
-                    <span>Developed by<a href="https://www.saleheennoor.com" target='_blank' rel='noreferrer'> Tribe Dev Team.</a></span>
+                    <span>Developed by<a href="" target='_blank' rel='noreferrer'> Tribe Dev Team.</a></span>
                   </div>
                 </div>
               </div>

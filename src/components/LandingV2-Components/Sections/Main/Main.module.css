@@ -7,10 +7,8 @@
 	display: flex;
 	width: 100%;
 	max-width: 1200px;
-	min-height: 100vh;
 
-	margin: 0;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 	text-align: center;
 
 	box-sizing: border-box;
@@ -38,7 +36,7 @@
 	display: inline-block;
 	margin-top: 35px;
 	align-items: center;
-	text-align: right;
+	text-align: center;
 	letter-spacing: -0.017em;
 
 	color: #ffffff;
@@ -52,11 +50,12 @@
 .AnimatedText {
 	display: inline-block;
 	width: auto;
-	height: 40px;
+	height: 35px;
 
-	text-align: right;
-
+	text-align: center;
 	overflow: hidden;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .AnimatedText > p {
@@ -138,12 +137,17 @@
 
 .Social {
 	display: inline-block;
-	margin: 13px;
+	margin: 16px;
 	transition: transform 300ms ease-in-out;
 }
 
 .Social:hover {
 	transform: scale(1.2);
+}
+
+.Img {
+	width: 25px;
+	height: auto;
 }
 
 /* LARGE IMAGE */
@@ -164,7 +168,7 @@
 		width: calc(75% - 10px);
 	}
 	.Characters {
-		width: 60%;
+		width: 68%;
 	}
 }
 
@@ -172,8 +176,7 @@
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 	.Subcontainer {
 		max-width: 768px;
-		margin-left: auto;
-		margin-right: auto;
+		padding: 0px 0px 20px 0px;
 	}
 	.Characters {
 		display: none;
@@ -189,14 +192,19 @@
 		margin-top: 75px;
 	}
 	.Images {
-		margin-top: 55px;
+		margin-top: 40px;
+	}
+	.Img {
+		width: 25px;
+		height: auto;
 	}
 }
 
 /* PC */
 @media only screen and (min-width: 1024px) {
 	.Container {
-		padding-top: 80px;
+		min-height: 700px;
+		padding: 100px 0px 0px 0px;
 	}
 	.Subcontainer {
 		max-width: 900px;
@@ -209,7 +217,7 @@
 	.CharactersLarge {
 		display: flex;
 		float: left;
-		height: 420px;
+		height: 500px;
 		width: auto;
 		margin: 10px;
 	}
@@ -219,7 +227,7 @@
 		max-width: 340px;
 	}
 	.Text {
-		font-size: 18px;
+		font-size: 17px;
 		line-height: 24px;
 	}
 	.TribeText {
@@ -228,6 +236,13 @@
 		margin-top: 75px;
 	}
 	.Images {
-		margin-top: 58px;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		margin-top: 50px;
+	}
+	.Img {
+		width: 30px;
+		height: auto;
 	}
 }

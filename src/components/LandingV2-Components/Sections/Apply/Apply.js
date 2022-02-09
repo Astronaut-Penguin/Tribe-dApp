@@ -13,10 +13,10 @@ const ApplySection = ({ id }) => {
 		<section className={styles.Container} id={id}>
 			<div className={styles.Subcontainer}>
 				<CardNFT
-					name={'The Pleb'}
+					name={'The Chad'}
 					colection={'Caveman NFT'}
 					price={'0.09 BNB'}
-					image={'./assets/memepad/nft/Pleb.png'}
+					image={'./assets/memepad/nft/Chad.jpg'}
 				/>
 				<div className={styles.Content}>
 					<div className={styles.TribePop}>
@@ -28,7 +28,12 @@ const ApplySection = ({ id }) => {
 						share your creations and shape your future.
 					</p>
 					<div className={styles.ButtonContainer}>
-						<ApplyButton text={'Apply Now'} />
+						<ApplyButton
+							text={'Apply Now'}
+							onClick={() => {
+								window.open('mailto:info@tribetoken.app').focus();
+							}}
+						/>
 					</div>
 				</div>
 			</div>

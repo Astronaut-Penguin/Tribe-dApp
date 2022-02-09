@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import tribeNFT from './tribeNFT.json';
-import Web3 from "web3";
+import Web3 from 'web3';
 import { nftIds, nftState } from './purchaseNFTInitialStates';
 
 export const initializeNFT = createAsyncThunk(
@@ -9,9 +9,9 @@ export const initializeNFT = createAsyncThunk(
 		const { web3 } = thunkAPI.getState().web3;
 		const tribexTokenContract = new web3.eth.Contract(
 			tribeNFT.tribexTokenAbi,
-			tribeNFT.tribexTokenAddress
-		  );
-		thunkAPI.dispatch(nftSlice.actions.setContract({tribexTokenContract}));
+			tribeNFT.tribexTokenAddress,
+		);
+		thunkAPI.dispatch(nftSlice.actions.setContract({ tribexTokenContract }));
 		for (let i = 0; i < nftIds.length; ++i) {
 			thunkAPI.dispatch(initNFT(nftIds[i]));
 		}
@@ -92,7 +92,10 @@ export const loadNFTInfo = createAsyncThunk(
 		try {
 			const { address } = thunkAPI.getState().web3;
 			const { tribexTokenContract } = thunkAPI.getState().nft;
-			const { nftContract } = thunkAPI.getState().nft[action]; 
+			const { nftContract } = thunkAPI.getState().nft[action];
+
+			//descoment this if web uses custom token contract like tribex
+			/*
 			const responses = await Promise.all([
 				nftContract.methods.balanceOf(address).call(),
 				tribexTokenContract.methods
@@ -100,16 +103,21 @@ export const loadNFTInfo = createAsyncThunk(
                 .call(),
 		        tribexTokenContract.methods.balanceOf(address).call(),
 			]);
+			*/
+			const responses = await Promise.all([
+				nftContract.methods.balanceOf(address).call(),
+			]);
 			const enabledBoolean = true;
 			const balance = Number(responses[0]);
-			const allowance = Number(responses[1]);
-			const balanceTribex = Number(responses[2]);
+			const allowance = 10000000000000000000000; //Number(responses[1])
+			const balanceTribex = 10000000000000000000000; //Number(responses[2])
+
 			return {
 				balance,
 				enabledBoolean,
 				nftId: action,
 				allowance,
-				balanceTribex
+				balanceTribex,
 			};
 		} catch (error) {
 			console.log('Error in loading info for nft:', error);
@@ -123,8 +131,8 @@ export const buyNFT = createAsyncThunk('Buy NFT', async (action, thunkAPI) => {
 		const { address } = thunkAPI.getState().web3;
 		const { nftContract } = thunkAPI.getState().nft[action.id];
 		await nftContract.methods
-			.mint(String(action.amount * 10 ** 18))
-			.send({ value: 0, from: address });
+			.mint()
+			.send({ value: action.amount * 10 ** 18, from: address });
 		thunkAPI.dispatch(loadNFTInfo(action.id));
 	} catch (error) {
 		console.log('Cant Buy NFT: ', error);
@@ -132,31 +140,31 @@ export const buyNFT = createAsyncThunk('Buy NFT', async (action, thunkAPI) => {
 });
 
 export const approveTokens = createAsyncThunk(
-	"ApproveTokens",
+	'ApproveTokens',
 	async (action, thunkAPI) => {
-	  try {
-		const { address } = thunkAPI.getState().web3;
-		const { tribexTokenContract } = thunkAPI.getState().nft;
-		const maxUint = Web3.utils
-		  .toBN(2)
-		  .pow(Web3.utils.toBN(256))
-		  .sub(Web3.utils.toBN(1));
-		await tribexTokenContract.methods
-		  .approve(tribeNFT[action.id].nftAddress, maxUint)
-		  .send({ from: address });
-		thunkAPI.dispatch(loadNFTInfo(action));
-	  } catch (error) {
-		console.log("Error in loading info:", error);
-		throw error;
-	  }
-	}
-  );
+		try {
+			const { address } = thunkAPI.getState().web3;
+			const { tribexTokenContract } = thunkAPI.getState().nft;
+			const maxUint = Web3.utils
+				.toBN(2)
+				.pow(Web3.utils.toBN(256))
+				.sub(Web3.utils.toBN(1));
+			await tribexTokenContract.methods
+				.approve(tribeNFT[action.id].nftAddress, maxUint)
+				.send({ from: address });
+			thunkAPI.dispatch(loadNFTInfo(action));
+		} catch (error) {
+			console.log('Error in loading info:', error);
+			throw error;
+		}
+	},
+);
 
 const nftSlice = createSlice({
 	name: 'NFTReducer',
 	initialState: nftState,
 	reducers: {
-		setContract: (state, action) => {      
+		setContract: (state, action) => {
 			state.tribexTokenContract = action.payload.tribexTokenContract;
 		},
 	},

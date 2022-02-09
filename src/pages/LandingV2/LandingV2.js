@@ -13,9 +13,10 @@ import {
 	TribepopSection,
 	TiersSection,
 	RoadmapSection,
+	CollectionsSection,
 	OurTeamSection,
 	ApplySection,
-	FaqSection,
+	FaqList,
 } from '../../components';
 
 //- Footer Imports
@@ -34,6 +35,7 @@ const sections = [
 	'Home',
 	'Features',
 	'TribePop',
+	'Collections',
 	'Tiers',
 	'RoadMap',
 	'Team',
@@ -49,11 +51,13 @@ const LandingV2 = () => {
 				<MainSection id={'Home'} />
 				<FeatureSection id={'Features'} />
 				<TribepopSection id={'TribePop'} />
+				<CollectionsSection id={'Collections'} />
 				<TiersSection id={'Tiers'} />
 				<RoadmapSection id={'RoadMap'} />
 				<OurTeamSection id={'Team'} />
 				<ApplySection id={'Apply'} />
-				<FaqSection id={'Faq'} />
+
+				<FaqList />
 				<Footer />
 			</div>
 		</>

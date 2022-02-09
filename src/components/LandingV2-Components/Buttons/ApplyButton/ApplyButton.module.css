@@ -16,7 +16,7 @@
 	padding: 2px;
 	border: none;
 	border-radius: 9px;
-	background: none;
+	background-color: #ef0086;
 
 	text-align: center;
 
@@ -34,7 +34,7 @@
 	margin: 0px;
 }
 
-.Text::before {
+/* .Text::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -52,7 +52,7 @@
 
 .Text:hover::before {
 	background: none;
-}
+} */
 
 /********************************/
 
@@ -88,6 +88,7 @@
 .Paper {
 	font-size: 16px;
 	font-weight: 500;
+	background-color: transparent;
 }
 
 .Paper > .PaperLogo {
@@ -100,9 +101,30 @@
 	align-items: center;
 }
 
+.Paper > .Text::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 3px;
+	border-radius: 9px;
+
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: destination-out;
+	mask-composite: exclude;
+	background: linear-gradient(to bottom, rgb(169, 1, 250), rgb(255, 28, 198));
+}
+
+.Paper > .Text:hover::before {
+	background: none;
+}
+
 .Solid {
 	font-size: 15px;
 	font-weight: 500;
+	background-color: transparent;
 }
 
 .Solid > .SolidLogo {
@@ -113,4 +135,24 @@
 	margin-right: 10px;
 	justify-content: center;
 	align-items: center;
+}
+
+.Solid > .Text::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 3px;
+	border-radius: 9px;
+
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: destination-out;
+	mask-composite: exclude;
+	background: linear-gradient(to bottom, rgb(169, 1, 250), rgb(255, 28, 198));
+}
+
+.Solid > .Text:hover::before {
+	background: none;
 }

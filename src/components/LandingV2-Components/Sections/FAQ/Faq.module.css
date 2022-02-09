@@ -27,10 +27,10 @@
 
 .Hr {
 	background: white;
-	width: 100%;
-	height: 2px;
+	width: 80%;
+	height: 0.5px;
 	padding: 0;
-	margin: 0px 0px 20px 0px;
+	margin: 0px auto 20px auto;
 }
 
 /* 88888888888888888888888888888888 */
