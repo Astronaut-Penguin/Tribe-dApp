@@ -34,7 +34,7 @@ const faqsData = [
 const FaqList = () => {
 	return (
 		<div className={styles.Container}>
-			<h2 className={styles.Title}>Frequently Asked Questions</h2>
+			<h2 className={styles.Title}>FAQ</h2>
 			<StyledFaqsList>
 				{faqsData.map((faq, i) => (
 					<FaqSection
