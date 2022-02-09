@@ -46,18 +46,28 @@ const MobileNavBar = ({ sections, scrolled, tops, bottoms }) => {
 		});
 	}, [s]);
 
-	useEffect(() => {
+	const setSelected = () => {
 		sections.map((value, i) => {
 			if (
 				Math.round(window.scrollY) >= tops[i] &&
-				Math.round(window.scrollY) <= bottoms[i] - 1 &&
-				!isMoving
+				Math.round(window.scrollY) <= bottoms[i] - 1
 			) {
 				setS(i);
 				moveToPanel(i);
 			} else {
 			}
 		});
+	};
+
+	useEffect(() => {
+		if (!isMoving) {
+			setSelected();
+		} else {
+			const timer = setTimeout(function () {
+				setMoving(false);
+				clearInterval(timer);
+			}, 500);
+		}
 	}, [scrolled]);
 
 	// useEffect(() => {
@@ -78,6 +88,7 @@ const MobileNavBar = ({ sections, scrolled, tops, bottoms }) => {
 				ref={flicking}
 				className={`${styles.NavContainer}`}
 				onChanged={(e) => {
+					setMoving(true);
 					setS(e.index);
 				}}
 			>
