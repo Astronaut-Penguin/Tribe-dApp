@@ -34,13 +34,6 @@ const NavBar = ({ sections }) => {
 		});
 	}, [s]);
 
-	useEffect(() => {
-		window.addEventListener('scroll', (e) => {
-			console.log(Math.round(window.scrollY));
-			console.log(document.getElementById('Features').offsetTop);
-		});
-	}, []);
-
 	////////////
 	// RENDER //
 	////////////

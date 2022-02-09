@@ -34,7 +34,6 @@ const sections = [
 	'Home',
 	'Features',
 	'TribePop',
-	'Collections',
 	'Tiers',
 	'RoadMap',
 	'Team',
