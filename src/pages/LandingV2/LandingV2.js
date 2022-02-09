@@ -40,6 +40,7 @@ const sections = [
 	'RoadMap',
 	'Team',
 	'Apply',
+	'Faq',
 ];
 
 const LandingV2 = () => {

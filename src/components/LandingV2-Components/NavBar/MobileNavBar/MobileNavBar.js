@@ -7,21 +7,33 @@ import React, { useEffect, useState, createRef } from 'react';
 import styles from './MobileNavBar.module.css';
 
 //- Flicking Imports
-import Flicking from '@egjs/react-flicking';
+import Flicking, { FlickingError } from '@egjs/react-flicking';
 
 //- React Router Hash Link Imports
 import { HashLink } from 'react-router-hash-link';
 
-const MobileNavBar = ({ sections }) => {
+const MobileNavBar = ({ sections, scrolled, tops, bottoms }) => {
 	////////////
 	// STATES //
 	////////////
 	//- SELECTED STATE
 	const [s, setS] = useState(0);
+	const [isMoving, setMoving] = useState(false);
+
+	const flicking = createRef();
 
 	///////////////
 	// FUNCTIONS //
 	///////////////
+
+	const moveToPanel = async (n) => {
+		try {
+			await flicking.current.moveTo(n);
+		} catch (e) {
+			// console.log(e instanceof FlickingError); // true
+			// console.log(e.code);
+		}
+	};
 
 	useEffect(() => {
 		sections.map((value, i) => {
@@ -34,6 +46,28 @@ const MobileNavBar = ({ sections }) => {
 		});
 	}, [s]);
 
+	useEffect(() => {
+		sections.map((value, i) => {
+			if (
+				Math.round(window.scrollY) >= tops[i] &&
+				Math.round(window.scrollY) <= bottoms[i] - 1 &&
+				!isMoving
+			) {
+				setS(i);
+				moveToPanel(i);
+			} else {
+			}
+		});
+	}, [scrolled]);
+
+	// useEffect(() => {
+	// 	const interval = setInterval(() => {
+	// 		setMoving(false);
+	// 		console.log('Clear inverval');
+	// 		clearInterval(interval);
+	// 	}, 2000);
+	// }, [isMoving]);
+
 	////////////
 	// RENDER //
 	////////////
@@ -41,6 +75,7 @@ const MobileNavBar = ({ sections }) => {
 	return (
 		<nav className={styles.Container}>
 			<Flicking
+				ref={flicking}
 				className={`${styles.NavContainer}`}
 				onChanged={(e) => {
 					setS(e.index);
@@ -53,7 +88,9 @@ const MobileNavBar = ({ sections }) => {
 						}`}
 						key={i}
 						onClick={() => {
+							setMoving(true);
 							setS(i);
+							moveToPanel(i);
 						}}
 					>
 						<p className={styles.Link}>{value}</p>
