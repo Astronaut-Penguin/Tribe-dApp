@@ -19,6 +19,10 @@ const Header = ({ sections }) => {
 
 	// Scrolled value
 	const [scrolled, setScrolled] = useState(0);
+	// Set the timer that stop the scroll
+	const [timer, setTimer] = useState(null);
+	// Set if the scroll is stoped
+	const [isMoving, setMoving] = useState(false);
 	// Sections Boxes sizes
 	// Top Size Array
 	const [tops, setTops] = useState([]);
@@ -26,9 +30,13 @@ const Header = ({ sections }) => {
 	const [bottoms, setBottoms] = useState([]);
 
 	useEffect(() => {
-		window.addEventListener('scroll', (e) => {
-			setScrolled(Math.round(window.scrollY));
-		});
+		window.addEventListener(
+			'scroll',
+			(e) => {
+				setScrolled(Math.round(window.scrollY));
+			},
+			false,
+		);
 		sections.map((value, i) => {
 			tops.push(document.getElementById(value).offsetTop);
 			bottoms.push(
@@ -49,7 +57,16 @@ const Header = ({ sections }) => {
 					Tribe
 				</a>
 
-				<NavBar sections={sections} />
+				{window.matchMedia('(min-width: 1024px)').matches ? (
+					<NavBar
+						sections={sections}
+						tops={tops}
+						bottoms={bottoms}
+						scrolled={scrolled}
+					/>
+				) : (
+					''
+				)}
 				<div className={styles.Button}>
 					<Link to="/dashboard">
 						<FlatButton
@@ -60,12 +77,16 @@ const Header = ({ sections }) => {
 					</Link>
 				</div>
 			</div>
-			<MobileNavBar
-				sections={sections}
-				tops={tops}
-				bottoms={bottoms}
-				scrolled={scrolled}
-			/>
+			{window.matchMedia('(max-width: 1024px)').matches ? (
+				<MobileNavBar
+					sections={sections}
+					tops={tops}
+					bottoms={bottoms}
+					scrolled={scrolled}
+				/>
+			) : (
+				''
+			)}
 		</header>
 	);
 };

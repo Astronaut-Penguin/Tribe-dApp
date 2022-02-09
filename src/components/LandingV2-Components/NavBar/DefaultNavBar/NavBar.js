@@ -12,12 +12,13 @@ import { HashLink } from 'react-router-hash-link';
 // Hay que añadir un Listener para que tome cuando el valor scrollTop de cada sección
 // cambia de 0 a 1 para cambiar los elementos en la navbar.
 
-const NavBar = ({ sections }) => {
+const NavBar = ({ sections, scrolled, tops, bottoms }) => {
 	////////////
 	// STATES //
 	////////////
 	//- SELECTED STATE
 	const [s, setS] = useState();
+	const [isMoving, setMoving] = useState(false);
 
 	///////////////
 	// FUNCTIONS //
@@ -33,6 +34,29 @@ const NavBar = ({ sections }) => {
 			}
 		});
 	}, [s]);
+
+	const setSelected = () => {
+		sections.map((value, i) => {
+			if (
+				Math.round(window.scrollY) >= tops[i] &&
+				Math.round(window.scrollY) <= bottoms[i] - 1
+			) {
+				setS(i);
+			} else {
+			}
+		});
+	};
+
+	useEffect(() => {
+		if (!isMoving) {
+			setSelected();
+		} else {
+			const timer = setTimeout(function () {
+				setMoving(false);
+				clearInterval(timer);
+			}, 700);
+		}
+	}, [scrolled]);
 
 	////////////
 	// RENDER //
@@ -63,6 +87,7 @@ const NavBar = ({ sections }) => {
 								}`}
 								key={i}
 								onClick={() => {
+									setMoving(true);
 									setS(i);
 									document
 										.getElementById(value)
