@@ -84,8 +84,6 @@
 	);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-
-	border: 1px solid black; /* rgb(169, 1, 250) */
 }
 
 .NftDataContainer > h4 {

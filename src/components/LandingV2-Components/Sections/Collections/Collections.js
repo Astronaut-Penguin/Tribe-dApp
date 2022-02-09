@@ -51,7 +51,7 @@ const CollectionsSection = ({ id }) => {
 							setS(e.index);
 						}}
 						defaultIndex={0}
-						plugins={plugins}
+						// plugins={plugins}
 						className={styles.Carousel}
 						renderOnlyVisible={true}
 					>
