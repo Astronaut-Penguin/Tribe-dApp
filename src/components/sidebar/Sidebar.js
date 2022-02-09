@@ -70,7 +70,7 @@ function Sidebar(props) {
 										/>
 									</svg>
 								</span>
-								Celebrity NFTs
+								TRIBEPOP NFTs
 							</NavLink>
 						</li>
 						<li className="Sidebar_item__rJc2e Sidebar_itemActive__11Rxt">

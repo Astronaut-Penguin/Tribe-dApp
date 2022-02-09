@@ -44,7 +44,7 @@ function Dashboard(props) {
 
 	useEffect(() => {
 		if (location.pathname === '/dashboard/celebrity-nfts') {
-			setTitle('Celebrity NFTs');
+			setTitle('TRIBEPOP NFTs');
 		} else if (location.pathname === '/dashboard/staking') {
 			setTitle('Staking');
 		}
