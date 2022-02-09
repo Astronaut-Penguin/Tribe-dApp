@@ -249,9 +249,9 @@
 	.LargeCharacters {
 		display: flex;
 		float: left;
-		height: 420px;
+		height: 400px;
 		width: auto;
-		margin: 10px;
+		margin: 10px 10px 40px 10px;
 	}
 	.Text {
 		font-weight: 500;
