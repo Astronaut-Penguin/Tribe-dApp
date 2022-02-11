@@ -1,6 +1,7 @@
 //- Import React
 import React, { useEffect, useState, createRef } from 'react';
 import { Link } from 'react-router-dom';
+
 //- Import Styles
 import styles from './Collections.module.css';
 
