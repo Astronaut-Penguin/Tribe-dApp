@@ -23,7 +23,7 @@ const CardNFT = ({ onClick, allocation, price, image, logo, index, s }) => {
 			<div className={styles.NftDataContainer}>
                 <h5>{price} $TRIBEX</h5>
                 <h4>Required Staked Tokens</h4>    
-				<br /><h4>Odds Ratios</h4>
+				<h6>Odds Ratios</h6>
 				<h2>{allocation}</h2>
                 <h3>Buy On</h3>
                 <FlatButton text={'PancakeSwap'} onClick={onClick} small />

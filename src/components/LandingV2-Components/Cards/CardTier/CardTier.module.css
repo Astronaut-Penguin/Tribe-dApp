@@ -10,9 +10,7 @@
 
 	overflow: hidden;
 	border-radius: 9px;
-	background-color: white;
-
-	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+	background-color: transparent;
 
 	transition: transform 0.2s ease-in;
 }
@@ -20,11 +18,11 @@
 .NftCard:hover {
 	transform: scale(1.05);
 	transition: transform 0.3s ease-in;
-	box-shadow: 0px 0px 10px whitesmoke;
+	/* box-shadow: 0px 0px 10px whitesmoke; */
 }
 
 .Selected {
-	box-shadow: 0px 0px 10px whitesmoke;
+	/* box-shadow: 0px 0px 10px whitesmoke; */
 	transition: transform 0.4s ease-in;
 }
 
@@ -68,35 +66,36 @@
 }
 
 .NftDataContainer > h5 {
-	color: #868686;
+	color: white;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 18px;
-	line-height: 18px;
+	font-size: 15px;
+	line-height: 15px;
 	text-align: center;
 	padding: 3px !important;
-
-	background: linear-gradient(
-		to right,
-		rgb(255, 1, 126),
-		rgb(169, 1, 250),
-		rgb(3, 238, 254)
-	);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 }
 
 .NftDataContainer > h4 {
-	/* display: flex; */
-	color: #000000;
+	color: #b6006d;
 	font-style: normal;
-	font-weight: 700;
-	font-size: 10px;
-	line-height: 7px;
+	font-weight: 800;
+	font-size: 14px;
+	line-height: 10px;
 	text-align: center;
 }
 
+.NftDataContainer > h6 {
+	color: white;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 10px;
+	line-height: 7px;
+	text-align: center;
+	margin-top: 20px;
+}
+
 .NftDataContainer h2 {
+	color: white;
 	font-style: normal;
 	font-weight: 800;
 	font-size: 15px;
@@ -108,10 +107,10 @@
 }
 
 .NftDataContainer > h3 {
-	color: #000000;
+	color: white;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 9px;
+	font-size: 11px;
 	line-height: 8px;
 	margin-top: 14px !important;
 }
@@ -140,6 +139,10 @@
 		line-height: 16px;
 	}
 	.NftDataContainer h4 {
+		font-size: 12px;
+		line-height: 10px;
+	}
+	.NftDataContainer h6 {
 		font-size: 12px;
 		line-height: 10px;
 	}
@@ -176,12 +179,16 @@
 		line-height: 17px;
 	}
 	.NftDataContainer h4 {
-		font-size: 13px;
+		font-size: 16px;
+		line-height: 14px;
+	}
+	.NftDataContainer h6 {
+		font-size: 12px;
 		line-height: 12px;
 	}
 	.NftDataContainer h5 {
-		font-size: 23px;
-		line-height: 21px;
+		font-size: 18px;
+		line-height: 18px;
 	}
 	.Selected {
 		box-shadow: none;
