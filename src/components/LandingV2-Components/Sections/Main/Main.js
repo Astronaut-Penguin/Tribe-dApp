@@ -49,7 +49,7 @@ const MainSection = ({ id }) => {
 						</div>
 						<p>on the Metaverse</p>
 					</div>
-					<p className={styles.Text} style={{ marginTop: '15px' }}>
+					<p className={styles.Text} style={{ marginTop: '40px', marginBottom: '8px' }}>
 						We launch NFTs <br />
 						We build the future
 					</p>
