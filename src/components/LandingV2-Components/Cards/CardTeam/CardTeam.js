@@ -13,6 +13,9 @@ import FedeCEO from './assets/FedeCEO.png';
 import FedeDev from './assets/FedeDev.png';
 import FlorDesign from './assets/FlorDesign.png';
 import TomasCFO from './assets/TomasCFO.png';
+import EgorGraphic from './assets/EgorGraphic.png';
+import JadonDesign from './assets/JadonDesign.png';
+import LucasCCO from './assets/LucasCCO.png';
 import Circulo from './assets/Circulo.png';
 
 const TeamCard = ({ name, rol, rol2, character, style }) => {
@@ -32,7 +35,10 @@ const TeamCard = ({ name, rol, rol2, character, style }) => {
 					(character == 8 ? FedeCEO : '') +
 					(character == 9 ? FedeDev : '') +
 					(character == 10 ? FlorDesign : '') +
-					(character == 11 ? TomasCFO : '')
+					(character == 11 ? TomasCFO : '') +
+					(character == 12 ? EgorGraphic : '') +
+					(character == 13 ? JadonDesign : '') +
+					(character == 14 ? LucasCCO : '')
 				}
 			/>
 			<p className={styles.Text}>
