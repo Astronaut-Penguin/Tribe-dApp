@@ -93,7 +93,7 @@
 
 @media only screen and (min-width: 1024px) {
 	.CardContainer {
-		width: 960px;
+		width: 768px;
 		padding: 80px 0px 40px 0px;
 	}
 	.TiersContainer {
