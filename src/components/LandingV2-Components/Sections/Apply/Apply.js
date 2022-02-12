@@ -12,6 +12,10 @@ const ApplySection = ({ id }) => {
 	return (
 		<section className={styles.Container} id={id}>
 			<div className={styles.Subcontainer}>
+				<div className={styles.TribePopMobile}>
+					Apply for your
+					<span className={styles.GradientText}> TribePop NFTs </span>
+				</div>
 				<CardNFT
 					name={'The Chad'}
 					colection={'Caveman NFT'}

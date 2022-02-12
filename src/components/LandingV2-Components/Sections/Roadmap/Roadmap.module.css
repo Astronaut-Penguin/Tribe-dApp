@@ -45,7 +45,7 @@
 .Central {
 	display: inline-block;
 	width: 5px;
-	height: 77%;
+	height: 75%;
 	margin-top: 40px;
 
 	background-color: none;
@@ -58,8 +58,24 @@
 
 /********************************/
 
+.TitleContainer {
+	text-align: center;
+}
+
 .Title {
-	display: none;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 38px;
+	line-height: 38px;
+	display: inline-block;
+
+	margin-bottom: 40px;
+	align-items: center;
+	text-align: center;
+	letter-spacing: -0.017em;
+	color: #ffffff;
+	text-shadow: 1px 1px 2px black;
 }
 
 /********************************/
@@ -241,7 +257,7 @@
 
 @media only screen and (min-width: 321px) and (max-width: 356px) {
 	.Central {
-		height: 76%;
+		height: 74%;
 	}
 	.PercentTop {
 		left: calc(20% - 35px);
@@ -256,7 +272,7 @@
 
 @media only screen and (min-width: 357px) and (max-width: 375px) {
 	.Central {
-		height: 76%;
+		height: 73%;
 	}
 	.PercentTop {
 		left: calc(20% - 35px);
@@ -273,7 +289,7 @@
 
 @media only screen and (min-width: 375px) and (max-width: 426px) {
 	.Central {
-		height: 76%;
+		height: 73%;
 	}
 	.PercentTop {
 		left: calc(20% - 35px);
@@ -293,7 +309,7 @@
 
 @media only screen and (min-width: 407px) and (max-width: 426px) {
 	.Central {
-		height: 76%;
+		height: 73%;
 	}
 }
 
@@ -301,7 +317,7 @@
 
 @media only screen and (min-width: 426px) and (max-width: 500px) {
 	.Central {
-		height: 76%;
+		height: 72%;
 	}
 	.PercentTop {
 		left: calc(20% - 35px);
@@ -318,7 +334,7 @@
 
 @media only screen and (min-width: 501px) and (max-width: 600px) {
 	.Central {
-		height: 74%;
+		height: 72%;
 	}
 	.RoadTitle {
 		color: white;
@@ -361,24 +377,15 @@
 
 @media only screen and (min-width: 600px) and (max-width: 768px) {
 	.Central {
-		height: 70%;
+		height: 71%;
 		position: absolute;
 		left: calc(50% - 5px);
 	}
 	.Title {
-		font-family: Lato;
-		font-style: normal;
-		font-weight: 800;
-		font-size: 48px;
-		line-height: 48px;
-		display: inline-block;
+		font-size: 44px;
+		line-height: 44px;
 
 		margin-bottom: 40px;
-		align-items: center;
-		text-align: center;
-		letter-spacing: -0.017em;
-		color: #ffffff;
-		text-shadow: 1px 1px 2px black;
 	}
 	.StepContainer {
 		display: inline-block;
@@ -681,7 +688,7 @@
 
 @media only screen and (min-width: 858px) and (max-width: 1100px) {
 	.Central {
-		height: 69%;
+		height: 71%;
 	}
 }
 
