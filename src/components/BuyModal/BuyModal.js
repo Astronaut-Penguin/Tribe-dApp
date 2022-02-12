@@ -195,7 +195,7 @@ const BuyModal = ({
 									<p>Purchase NFT</p>
 								</button>
 							)}
-							{done === true && (allowance <= 0 || !allowance) && connected && (
+							{/*done === true && (allowance <= 0 || !allowance) && connected && (
 								<button
 									onClick={() => {
 										dispatch(approveTokens({ id: nftId }));
@@ -204,7 +204,7 @@ const BuyModal = ({
 								>
 									<p>Approve NFT</p>
 								</button>
-							)}
+							)*/}
 							{/*!enabled && done === true && (
 							<div className={styles.CelebrityModalDisable}>
 								<p>You need more allocation</p>
@@ -273,7 +273,7 @@ const BuyModal = ({
 								<p>Purchase NFT</p>
 							</button>
 						)}
-						{done === true && (allowance <= 0 || !allowance) && connected && (
+						{/*done === true && (allowance <= 0 || !allowance) && connected && (
 							<button
 								onClick={() => {
 									dispatch(approveTokens({ id: nftId }));
@@ -282,7 +282,7 @@ const BuyModal = ({
 							>
 								<p>Approve NFT</p>
 							</button>
-						)}
+							)*/}
 						{/*!enabled && done === true && (
 							<div className={styles.CelebrityModalDisable}>
 								<p>You need more allocation</p>
