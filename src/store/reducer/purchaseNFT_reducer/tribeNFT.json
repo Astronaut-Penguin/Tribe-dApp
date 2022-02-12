@@ -1,6 +1,6 @@
 {
   "nft1": {
-    "nftAbi": [
+    "nftAbi":[
       {
         "inputs": [
           {
@@ -24,13 +24,13 @@
             "type": "uint256"
           },
           {
-            "internalType": "contract IERC20",
-            "name": "_paidToken",
-            "type": "address"
+            "internalType": "uint256",
+            "name": "_cost",
+            "type": "uint256"
           },
           {
             "internalType": "uint256",
-            "name": "_cost",
+            "name": "_MAXLIMIT",
             "type": "uint256"
           }
         ],
@@ -132,6 +132,19 @@
         "type": "event"
       },
       {
+        "inputs": [],
+        "name": "MAXLIMIT",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
         "inputs": [
           {
             "internalType": "address",
@@ -179,19 +192,6 @@
           }
         ],
         "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "contract IERC20",
-            "name": "_newPaidToken",
-            "type": "address"
-          }
-        ],
-        "name": "changePaidToken",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -252,35 +252,9 @@
       },
       {
         "inputs": [],
-        "name": "lock",
-        "outputs": [
-          {
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
-        "name": "lockContractMinting",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint256",
-            "name": "_amount",
-            "type": "uint256"
-          }
-        ],
         "name": "mint",
         "outputs": [],
-        "stateMutability": "nonpayable",
+        "stateMutability": "payable",
         "type": "function"
       },
       {
@@ -330,19 +304,6 @@
       },
       {
         "inputs": [],
-        "name": "paidToken",
-        "outputs": [
-          {
-            "internalType": "contract IERC20",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
         "name": "pause",
         "outputs": [],
         "stateMutability": "nonpayable",
@@ -359,19 +320,6 @@
           }
         ],
         "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "removeWhitelistUserAmountByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -672,52 +620,14 @@
         "type": "function"
       },
       {
-        "inputs": [
-          {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "whitelistUserAmountByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "name": "whitelistedAmount",
-        "outputs": [
-          {
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint256",
-            "name": "_amount",
-            "type": "uint256"
-          }
-        ],
+        "inputs": [],
         "name": "withdraw",
         "outputs": [],
-        "stateMutability": "nonpayable",
+        "stateMutability": "payable",
         "type": "function"
       }
     ],
-    "nftAddress": "0x9eFDea4019346a0F96392D28E90bEEA77F5360a9"
+    "nftAddress": "0x21d5e35794c655D9a5695cAe351b055DDE8D3fc7"
   },
   "nft2": {
     "nftAbi": [
@@ -744,13 +654,13 @@
             "type": "uint256"
           },
           {
-            "internalType": "contract IERC20",
-            "name": "_paidToken",
-            "type": "address"
+            "internalType": "uint256",
+            "name": "_cost",
+            "type": "uint256"
           },
           {
             "internalType": "uint256",
-            "name": "_cost",
+            "name": "_MAXLIMIT",
             "type": "uint256"
           }
         ],
@@ -852,6 +762,19 @@
         "type": "event"
       },
       {
+        "inputs": [],
+        "name": "MAXLIMIT",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
         "inputs": [
           {
             "internalType": "address",
@@ -899,19 +822,6 @@
           }
         ],
         "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "contract IERC20",
-            "name": "_newPaidToken",
-            "type": "address"
-          }
-        ],
-        "name": "changePaidToken",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -972,35 +882,9 @@
       },
       {
         "inputs": [],
-        "name": "lock",
-        "outputs": [
-          {
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
-        "name": "lockContractMinting",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint256",
-            "name": "_amount",
-            "type": "uint256"
-          }
-        ],
         "name": "mint",
         "outputs": [],
-        "stateMutability": "nonpayable",
+        "stateMutability": "payable",
         "type": "function"
       },
       {
@@ -1050,19 +934,6 @@
       },
       {
         "inputs": [],
-        "name": "paidToken",
-        "outputs": [
-          {
-            "internalType": "contract IERC20",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
         "name": "pause",
         "outputs": [],
         "stateMutability": "nonpayable",
@@ -1079,19 +950,6 @@
           }
         ],
         "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "removeWhitelistUserAmountByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -1392,52 +1250,14 @@
         "type": "function"
       },
       {
-        "inputs": [
-          {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "whitelistUserAmountByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "name": "whitelistedAmount",
-        "outputs": [
-          {
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint256",
-            "name": "_amount",
-            "type": "uint256"
-          }
-        ],
+        "inputs": [],
         "name": "withdraw",
         "outputs": [],
-        "stateMutability": "nonpayable",
+        "stateMutability": "payable",
         "type": "function"
       }
     ],
-    "nftAddress": "0x6CA6047e7C953565461209906124fDce4EFF4Ac9"
+    "nftAddress": "0x21d5e35794c655D9a5695cAe351b055DDE8D3fc7"
   },
   "nft3": {
     "nftAbi": [
@@ -1464,13 +1284,13 @@
             "type": "uint256"
           },
           {
-            "internalType": "contract IERC20",
-            "name": "_paidToken",
-            "type": "address"
+            "internalType": "uint256",
+            "name": "_cost",
+            "type": "uint256"
           },
           {
             "internalType": "uint256",
-            "name": "_cost",
+            "name": "_MAXLIMIT",
             "type": "uint256"
           }
         ],
@@ -1572,6 +1392,19 @@
         "type": "event"
       },
       {
+        "inputs": [],
+        "name": "MAXLIMIT",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
         "inputs": [
           {
             "internalType": "address",
@@ -1619,19 +1452,6 @@
           }
         ],
         "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "contract IERC20",
-            "name": "_newPaidToken",
-            "type": "address"
-          }
-        ],
-        "name": "changePaidToken",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -1692,35 +1512,9 @@
       },
       {
         "inputs": [],
-        "name": "lock",
-        "outputs": [
-          {
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
-        "name": "lockContractMinting",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint256",
-            "name": "_amount",
-            "type": "uint256"
-          }
-        ],
         "name": "mint",
         "outputs": [],
-        "stateMutability": "nonpayable",
+        "stateMutability": "payable",
         "type": "function"
       },
       {
@@ -1770,19 +1564,6 @@
       },
       {
         "inputs": [],
-        "name": "paidToken",
-        "outputs": [
-          {
-            "internalType": "contract IERC20",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
         "name": "pause",
         "outputs": [],
         "stateMutability": "nonpayable",
@@ -1799,19 +1580,6 @@
           }
         ],
         "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "removeWhitelistUserAmountByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -2112,52 +1880,14 @@
         "type": "function"
       },
       {
-        "inputs": [
-          {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "whitelistUserAmountByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "name": "whitelistedAmount",
-        "outputs": [
-          {
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint256",
-            "name": "_amount",
-            "type": "uint256"
-          }
-        ],
+        "inputs": [],
         "name": "withdraw",
         "outputs": [],
-        "stateMutability": "nonpayable",
+        "stateMutability": "payable",
         "type": "function"
       }
     ],
-    "nftAddress": "0x349C5D0Bc0a701957dc4d328F12532e64eb81c3a"
+    "nftAddress": "0x21d5e35794c655D9a5695cAe351b055DDE8D3fc7"
   },
   "nft4": {
     "nftAbi": [
@@ -2184,13 +1914,13 @@
             "type": "uint256"
           },
           {
-            "internalType": "contract IERC20",
-            "name": "_paidToken",
-            "type": "address"
+            "internalType": "uint256",
+            "name": "_cost",
+            "type": "uint256"
           },
           {
             "internalType": "uint256",
-            "name": "_cost",
+            "name": "_MAXLIMIT",
             "type": "uint256"
           }
         ],
@@ -2292,6 +2022,19 @@
         "type": "event"
       },
       {
+        "inputs": [],
+        "name": "MAXLIMIT",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
         "inputs": [
           {
             "internalType": "address",
@@ -2339,19 +2082,6 @@
           }
         ],
         "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "contract IERC20",
-            "name": "_newPaidToken",
-            "type": "address"
-          }
-        ],
-        "name": "changePaidToken",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -2412,35 +2142,9 @@
       },
       {
         "inputs": [],
-        "name": "lock",
-        "outputs": [
-          {
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
-        "name": "lockContractMinting",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint256",
-            "name": "_amount",
-            "type": "uint256"
-          }
-        ],
         "name": "mint",
         "outputs": [],
-        "stateMutability": "nonpayable",
+        "stateMutability": "payable",
         "type": "function"
       },
       {
@@ -2490,19 +2194,6 @@
       },
       {
         "inputs": [],
-        "name": "paidToken",
-        "outputs": [
-          {
-            "internalType": "contract IERC20",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
         "name": "pause",
         "outputs": [],
         "stateMutability": "nonpayable",
@@ -2519,19 +2210,6 @@
           }
         ],
         "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "removeWhitelistUserAmountByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -2832,55 +2510,17 @@
         "type": "function"
       },
       {
-        "inputs": [
-          {
-            "internalType": "address[]",
-            "name": "_user",
-            "type": "address[]"
-          }
-        ],
-        "name": "whitelistUserAmountByList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "name": "whitelistedAmount",
-        "outputs": [
-          {
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint256",
-            "name": "_amount",
-            "type": "uint256"
-          }
-        ],
+        "inputs": [],
         "name": "withdraw",
         "outputs": [],
-        "stateMutability": "nonpayable",
+        "stateMutability": "payable",
         "type": "function"
       }
     ],
-    "nftAddress": "0x9cCC1757175F49288d89314b429e966936CD8116"
+    "nftAddress": "0x21d5e35794c655D9a5695cAe351b055DDE8D3fc7"
   },
     "tribexTokenAbi": [{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"spender","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"inputs":[],"name":"activateAntiWhale","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"spender","type":"address"}],"name":"allowance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"antiWhaleActivated","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"deActivateAntiWhale","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"subtractedValue","type":"uint256"}],"name":"decreaseAllowance","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"endDate","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"addedValue","type":"uint256"}],"name":"increaseAllowance","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"isWhale","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"limitWhale","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_startDate","type":"uint256"},{"internalType":"uint256","name":"_endDate","type":"uint256"},{"internalType":"uint256","name":"_limitWhale","type":"uint256"}],"name":"setAntiWhale","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"startDate","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transfer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"sender","type":"address"},{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transferFrom","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"}],
     "tribexTokenAddress": "0xc34c85a3d7a84212b6234146773f7939a931a8af",
-    "prefix": "https://bscscan.com/address/",
-    "network": 56
+    "prefix": "https://testnet.bscscan.com/address/",
+    "network": 97
 }
