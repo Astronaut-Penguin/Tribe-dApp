@@ -213,7 +213,7 @@ const CelebrityView = ({
 					</div>
 
 					<h2>🎁 You can buy any quantity you want of any TRIBEPOP NFT 🎁</h2>
-					<h2>🔥 All the TRIBEX collected will be burned 🔥</h2>
+
 
 					<div id="card-container" className="celebrity-nft-container">
 						{cards}
