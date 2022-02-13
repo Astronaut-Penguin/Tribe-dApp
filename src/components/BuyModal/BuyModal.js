@@ -182,7 +182,7 @@ const BuyModal = ({
 							</div>
 							<div className={styles.CelebrityModalPriceContainer}>
 								<div className={styles.CelebrityModalBnb}></div>
-								<p>{price} TRIBEX</p>
+								<p>{price} BNB</p>
 								<div className={styles.CelebrityModalBnb}></div>
 							</div>
 							{done === true && allowance > 0 && connected && (
@@ -260,7 +260,7 @@ const BuyModal = ({
 						</div>
 						<div className={styles.CelebrityModalPriceContainer}>
 							<div className={styles.CelebrityModalBnb}></div>
-							<p>{price} TRIBEX</p>
+							<p>{price} BNB</p>
 							<div className={styles.CelebrityModalBnb}></div>
 						</div>
 						{done === true && allowance > 0 && connected && (
