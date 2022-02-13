@@ -54,7 +54,7 @@
 .CelebrityNftDataContainer {
 	display: flex;
 	height: 25%;
-	padding: 0px 20px 0px 20px;
+	padding: 0px 15px 0px 20px;
 	margin: 0px;
 }
 
@@ -90,7 +90,7 @@
 
 .CelebrityNftPrice {
 	display: flex;
-	width: 35%;
+	width: 41%;
 	flex-direction: column;
 	justify-content: center;
 }

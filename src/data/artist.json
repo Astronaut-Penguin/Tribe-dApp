@@ -126,7 +126,7 @@
             "banner": "./assets/memepad/Babyswap Banner.jpg",
 			"nfts": [
 				{
-					"name": "BabyInBlack ",
+					"name": "BabyInBlack",
 					"colection": "Open Edition NFT",
 					"image": "undefined",
 					"video": "./assets/memepad/nft/BabyInBlack.mp4",
@@ -136,7 +136,7 @@
 					"viewcontract": "https://bscscan.com/address/0x30bafd5997c5d41203e5241b3a6b49a8e580f0dd"
 				},
 				{
-					"name": "BabyFarmer ",
+					"name": "BabyFarmer",
 					"colection": "Caveman NFT",
 					"image": "./assets/memepad/nft/BabyFarmer.png",
 					"video": "undefined",

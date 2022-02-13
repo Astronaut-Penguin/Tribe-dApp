@@ -212,9 +212,6 @@ const CelebrityView = ({
 						</div>
 					</div>
 
-					<h2>🎁 You can buy any quantity you want of any TRIBEPOP NFT 🎁</h2>
-
-
 					<div id="card-container" className="celebrity-nft-container">
 						{cards}
 					</div>
