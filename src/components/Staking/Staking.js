@@ -50,10 +50,16 @@ function Staking() {
 					<div>
 						<h2>TRIBE Staking Pools</h2>
 						<p>Get rewarded by staking (or freezing) your $TRIBEX</p>
-					</div>
+					</div>{
+					
+					/*
+					ESTO ES EL BANNER 
+					
 					<div className="banner-img">
 						<img src={threeCharacters} alt=" Three Characters" />
 					</div>
+					
+					*/}
 				</div>
 			</div> }
 
