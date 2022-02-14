@@ -34,7 +34,7 @@
 	animation-name: spin;
 	animation-duration: 0.5s;
 	animation-iteration-count: 1;
-	width: 26px;
+	width: 24px;
 	height: auto;
 	margin-right: 15px;
 	margin-bottom: 4px;
@@ -44,7 +44,7 @@
 	animation-name: spinOpen;
 	animation-duration: 0.5s;
 	animation-iteration-count: 1;
-	width: 26px;
+	width: 24px;
 	height: auto;
 	margin-right: 15px;
 	margin-bottom: 4px;
@@ -118,11 +118,11 @@
     }
     .Img {
 		display: inline-block;
-		width: 34px;
+		width: 26px;
 	}
 	.ImgOpen {
 		display: inline-block;
-		width: 34px;
+		width: 26px;
 	}
 	.Hr {
 		width: 85%;

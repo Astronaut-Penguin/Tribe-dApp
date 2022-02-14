@@ -85,10 +85,10 @@ const CollectionsSection = ({ id }) => {
 					</Flicking>
 					{/* <div className={styles.ArrowContainer}>
 						<span className="flicking-arrow-prev is-outside">
-							<img src={LeftArrow} />
+							<img className={styles.ArrowLeft} src={LeftArrow} />
 						</span>
 						<span className="flicking-arrow-next is-outside">
-							<img src={RightArrow} />
+							<img className={styles.ArrowRight} src={RightArrow} />
 						</span>
 					</div> */}
 				</div>
