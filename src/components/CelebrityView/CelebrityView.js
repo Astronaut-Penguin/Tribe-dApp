@@ -98,6 +98,8 @@ const CelebrityView = ({
 				colection={value.colection}
 				//URL de la imagen
 				image={value.image}
+				//Preview del VIDEO
+				thumbnail={value.thumbnail}
 				//URL del video
 				video={value.video}
 				//Precio
