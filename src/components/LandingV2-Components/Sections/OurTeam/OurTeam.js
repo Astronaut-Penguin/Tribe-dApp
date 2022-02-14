@@ -44,6 +44,12 @@ const OurTeamSection = ({ id }) => {
 							<CardTeam
 								character={5}
 								name={'Elias'}
+								rol={'TribePop´s PM'}
+								style={{ top: '20px' }}
+							/>
+							<CardTeam
+								character={14}
+								name={'Lucas'}
 								rol={'CCO'}
 								style={{ top: '20px' }}
 							/>
@@ -80,11 +86,23 @@ const OurTeamSection = ({ id }) => {
 								style={{ position: 'absolute', right: '0px', top: '80px' }}
 							/>
 						</div>
-						<div style={{ marginTop: '40px' }}>
+						<div className={styles.TeamContainer} style={{ marginTop: '40px' }}>
+							<CardTeam
+								character={13}
+								name={'Jadon'}
+								rol={'Graphic Design'}
+								style={{ position: 'absolute', left: '0px', top: '60px' }}
+							/>
 							<CardTeam
 								character={9}
 								name={'Fede'}
 								rol={'Front-end Developer'}
+							/>
+							<CardTeam
+								character={12}
+								name={'Egor'}
+								rol={'Graphic Animation'}
+								style={{ position: 'absolute', right: '0px', top: '60px' }}
 							/>
 						</div>
 					</div>
@@ -94,7 +112,7 @@ const OurTeamSection = ({ id }) => {
 							<CardTeam
 								character={5}
 								name={'Elias'}
-								rol={'CCO'}
+								rol={'TribePop´s PM'}
 								style={{ position: 'absolute', left: '0px', top: '170px' }}
 							/>
 							<CardTeam
@@ -136,33 +154,50 @@ const OurTeamSection = ({ id }) => {
 								character={4}
 								name={'Diego'}
 								rol={'UX/IX Specialist'}
-								style={{ margin: '0px 25px 0px 0px' }}
+								style={{ margin: '50px 25px 0px 0px' }}
+							/>
+							<CardTeam
+								character={14}
+								name={'Lucas'}
+								rol={'CCO'}
 							/>
 							<CardTeam
 								character={2}
 								name={'Agus'}
 								rol={'Design Team Lead'}
-								style={{ margin: '0px 0px 0px 25px' }}
+								style={{ margin: '50px 0px 0px 25px' }}
 							/>
 							<CardTeam
 								character={7}
 								name={'Facu'}
 								rol={'Full Stack Developer'}
-								style={{ position: 'absolute', right: '80px', top: '100px' }}
+								style={{ position: 'absolute', right: '30px', top: '130px' }}
 							/>
 							<CardTeam
 								character={10}
 								name={'Flor'}
 								rol={'Graphic Design'}
-								style={{ position: 'absolute', left: '80px', top: '100px' }}
+								style={{ position: 'absolute', left: '30px', top: '130px' }}
 							/>
 						</div>
 						<div className={styles.TeamContainer}>
+							<CardTeam
+								character={13}
+								name={'Jadon'}
+								rol={'Graphic Design'}
+								style={{ margin: '50px 55px 0px 0px' }}
+							/>
 							<CardTeam
 								character={9}
 								name={'Fede'}
 								rol={'Front-end Developer'}
 								style={{ margin: '0px 0px 0px 0px' }}
+							/>
+							<CardTeam
+								character={12}
+								name={'Egor'}
+								rol={'Graphic Animation'}
+								style={{ margin: '50px 0px 0px 50px' }}
 							/>
 						</div>
 					</div>
