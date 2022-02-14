@@ -249,17 +249,13 @@
 	}
 	.ArrowLeft {
 		display: inline-block;
-		width: 40px;
+		width: 33px;
 		height: auto;
-		margin-top: -20px;
-		margin-left: -15px;
 	}
 	.ArrowRight {
 		display: inline-block;
-		width: 40px;
+		width: 33px;
 		height: auto;
-		margin-top: -20px;
-		margin-right: -15px;
 	}
 	.DotsContainer {
 		display: none;
