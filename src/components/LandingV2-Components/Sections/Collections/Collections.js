@@ -124,11 +124,21 @@ const CollectionsSection = ({ id }) => {
 				</div>
 
 				<br />
-				<Link to="dashboard/celebrity-nfts">
+				{/* <Link to="dashboard/celebrity-nfts">
 					<div className={styles.ButtonContainer}>
 						<ApplyButton text={'View All Collections'} onClick={{}} />
 					</div>
-				</Link>
+				</Link> */}
+				<div className={styles.ButtonContainer}>
+					<ApplyButton text={'View All Collections'} onClick={() => {
+							window
+								.open(
+									'https://tribetoken.app/#/dashboard/celebrity-nfts',
+									'_blank',
+								)
+								.focus();
+						}} />
+				</div>
 			</div>
 		</>
 	);
