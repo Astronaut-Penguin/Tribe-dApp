@@ -24,19 +24,19 @@ const RoadmapSection = ({ id }) => {
 									Q1 2022
 								</h1>
 								<li className={styles.RoadTextLeft}>
-									Launch collections of celebrities and brands from worldwide ⏳
+									Launch the first Celebrity TribePop collection ⏳
 								</li>
 								<li className={styles.RoadTextLeft}>
-									Begin metaverse planning and gameplay ⏳
+									Begin metaverse planning and gameplay ✅
 								</li>
 								<li className={styles.RoadTextLeft}>
 									Listing in a CEX of the Top 10 of CMC ⏳
 								</li>
 								<li className={styles.RoadTextLeft}>
-									Start parallel tests for our own NFT marketplace ⏳
+									Start parallel tests for our own NFT marketplace ✅
 								</li>
 								<li className={styles.RoadTextLeft}>
-									Update to Tribe v1.3 ⏳
+									Update to Tribe v1.3 ✅
 								</li>
 							</div>
 							<div className={styles.DashLeft}></div>
