@@ -133,7 +133,7 @@
 	display: inline-block;
 	align-items: center;
 	text-align: center;
-	margin-top: 25px;
+	margin-top: 30px;
 }
 
 .Social {
@@ -193,7 +193,7 @@
 		margin-top: 75px;
 	}
 	.Images {
-		margin-top: 40px;
+		margin-top: 45px;
 	}
 	.Img {
 		width: 25px;
@@ -240,7 +240,7 @@
 		display: flex;
 		width: 100%;
 		justify-content: center;
-		margin-top: 50px;
+		margin-top: 85px;
 	}
 	.Img {
 		width: 30px;

@@ -1,5 +1,5 @@
 //- Import React
-import React, { useEffect, useState, createRef } from 'react';
+import React, { useEffect, useState, createRef, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 //- Import Styles
@@ -30,10 +30,19 @@ import data from '../../../../data/artist.json';
 const CollectionsSection = ({ id }) => {
 	//- SELECTED STATE
 	const [s, setS] = useState(0);
+	const [items, setItems] = useState([]);
 
 	const [plugins, setPlugins] = useState([
 		new Arrow({ parentEl: document.body }),
 	]);
+
+	useMemo(() => {
+		data.data.map((value, i) => {
+			if (value.collections) {
+				items.push(value);
+			}
+		});
+	}, []);
 
 	////////////
 	// RENDER //
@@ -56,7 +65,7 @@ const CollectionsSection = ({ id }) => {
 						className={styles.Carousel}
 						renderOnlyVisible={true}
 					>
-						{data.data.map((value, i) => {
+						{items.map((value, i) => {
 							if (value.collections) {
 								return (
 									<div className={styles.Card}>
@@ -92,7 +101,7 @@ const CollectionsSection = ({ id }) => {
 						</span>
 					</div> */}
 				</div>
-				{data.data.map((value, i) => {
+				{items.map((value, i) => {
 					if (value.collections) {
 						return (
 							<div
@@ -124,11 +133,24 @@ const CollectionsSection = ({ id }) => {
 				</div>
 
 				<br />
-				<Link to="dashboard/celebrity-nfts">
+				{/* <Link to="dashboard/celebrity-nfts">
 					<div className={styles.ButtonContainer}>
 						<ApplyButton text={'View All Collections'} onClick={{}} />
 					</div>
-				</Link>
+				</Link> */}
+				<div className={styles.ButtonContainer}>
+					<ApplyButton
+						text={'View All Collections'}
+						onClick={() => {
+							window
+								.open(
+									'https://tribetoken.app/#/dashboard/celebrity-nfts',
+									'_blank',
+								)
+								.focus();
+						}}
+					/>
+				</div>
 			</div>
 		</>
 	);

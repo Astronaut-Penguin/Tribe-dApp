@@ -68,13 +68,26 @@ const Header = ({ sections }) => {
 					''
 				)}
 				<div className={styles.Button}>
-					<Link to="/dashboard">
+					{/* <Link to="/dashboard">
 						<FlatButton
 							mid
 							text={'Enter Application'}
 							style={{ width: 'auto' }}
 						/>
-					</Link>
+					</Link> */}
+					<FlatButton
+						mid
+						text={'Enter Application'}
+						style={{ width: 'auto' }}
+						onClick={() => {
+							window
+								.open(
+									'https://tribetoken.app/#/dashboard/staking',
+									'_blank',
+								)
+								.focus();
+						}} 
+					/>
 				</div>
 			</div>
 			{window.matchMedia('(max-width: 1024px)').matches ? (
