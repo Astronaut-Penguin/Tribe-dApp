@@ -56,7 +56,10 @@
 					"cutoffDate": "February 14, 2022 14:00:00 UTC",
 					"viewcontract": "https://bscscan.com/address/0x34c37f0818737825646ce3cf40724a7dd91465b0"
 				}
-            ]
+            ],
+			"collections":{
+				"logo": "./assets/babyswap.png"
+			}
 		},
 		{
 			"state": "completed",
