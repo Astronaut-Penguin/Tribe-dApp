@@ -21,13 +21,21 @@
 }
 
 @keyframes spin {
-	from { transform: rotate(90deg); }
-	to { transform: rotate(0deg); }
+	from {
+		transform: rotate(90deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
 }
 
 @keyframes spinOpen {
-	from { transform: rotate(-90deg); }
-	to { transform: rotate(0deg); }
+	from {
+		transform: rotate(-90deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
 }
 
 .Img {
@@ -51,7 +59,7 @@
 }
 
 .Question {
-    display: inline-block;
+	display: inline-block;
 	overflow: show;
 
 	color: white;
@@ -64,7 +72,7 @@
 }
 
 .Answer {
-    display: inline-block;
+	display: inline-block;
 	overflow: hidden;
 
 	color: white;
@@ -75,7 +83,6 @@
 	padding-left: 48px;
 	width: 85%;
 }
-
 
 @media screen and (min-width: 425px) {
 	/* .Container {
@@ -98,25 +105,25 @@
 		font-size: 42px;
 		line-height: 42px;
 	}
-    .Question {
-        font-family: Lato;
+	.Question {
+		font-family: Lato;
 		font-style: normal;
 		font-weight: 600;
 		font-size: 26px;
 		line-height: 26px;
 		padding-left: 62px;
 		width: 100%;
-    }
-    .Answer {
-        font-family: Lato;
+	}
+	.Answer {
+		font-family: Lato;
 		font-style: normal;
 		font-weight: 500;
 		font-size: 18px;
 		line-height: 26px;
 		padding-left: 118px;
 		width: 90%;
-    }
-    .Img {
+	}
+	.Img {
 		display: inline-block;
 		width: 26px;
 	}

@@ -58,7 +58,8 @@
 				}
             ],
 			"collections":{
-				"logo": "./assets/babyswap.png"
+				"logo": "./assets/babyswap.png",
+				"description": "Every brand, athlete, singer, model, actor, among others, that works with TRIBE, has their own TribePop adapted to different situations in their career to create their NFTs."
 			}
 		},
 		{
