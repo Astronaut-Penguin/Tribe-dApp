@@ -38,7 +38,7 @@ const MobileNavBar = ({ sections, scrolled, tops, bottoms }) => {
 	useEffect(() => {
 		sections.map((value, i) => {
 			if (s == i) {
-				window.location = '#/#' + value;
+				// window.location = '#/#' + value;
 				document
 					.getElementById(value)
 					.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -49,8 +49,8 @@ const MobileNavBar = ({ sections, scrolled, tops, bottoms }) => {
 	const setSelected = () => {
 		sections.map((value, i) => {
 			if (
-				Math.round(window.scrollY) >= tops[i] &&
-				Math.round(window.scrollY) <= bottoms[i] - 1
+				Math.round(window.scrollY) + window.innerHeight / 2 >= tops[i] &&
+				Math.round(window.scrollY) + window.innerHeight / 2 <= bottoms[i] - 1
 			) {
 				setS(i);
 				moveToPanel(i);
@@ -70,13 +70,13 @@ const MobileNavBar = ({ sections, scrolled, tops, bottoms }) => {
 		}
 	}, [scrolled]);
 
-	// useEffect(() => {
-	// 	const interval = setInterval(() => {
-	// 		setMoving(false);
-	// 		console.log('Clear inverval');
-	// 		clearInterval(interval);
-	// 	}, 2000);
-	// }, [isMoving]);
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setMoving(false);
+			console.log('Clear inverval');
+			clearInterval(interval);
+		}, 2000);
+	}, [isMoving]);
 
 	////////////
 	// RENDER //
@@ -99,8 +99,11 @@ const MobileNavBar = ({ sections, scrolled, tops, bottoms }) => {
 						}`}
 						key={i}
 						onClick={() => {
-							setMoving(true);
+							// setMoving(true);
 							setS(i);
+							document
+								.getElementById(value)
+								.scrollIntoView({ behavior: 'smooth', block: 'start' });
 							moveToPanel(i);
 						}}
 					>

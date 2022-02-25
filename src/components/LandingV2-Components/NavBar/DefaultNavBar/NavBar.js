@@ -24,23 +24,20 @@ const NavBar = ({ sections, scrolled, tops, bottoms }) => {
 	// FUNCTIONS //
 	///////////////
 
-	useEffect(() => {
-		sections.map((value, i) => {
-			if (s == i) {
-				window.location = '#/#' + value;
-				document
-					.getElementById(value)
-					.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			}
-		});
-	}, [s]);
+	// useEffect(() => {
+	// 	sections.map((value, i) => {
+	// 		if (s == i) {
+	// 			window.location = '#/#' + value;
+	// 			document
+	// 				.getElementById(value)
+	// 				.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	// 		}
+	// 	});
+	// }, [s]);
 
 	const setSelected = () => {
 		sections.map((value, i) => {
-			if (
-				Math.round(window.scrollY) >= tops[i] &&
-				Math.round(window.scrollY) <= bottoms[i] - 1
-			) {
+			if (scrolled >= tops[i] && scrolled <= bottoms[i] - 1) {
 				setS(i);
 			} else {
 			}
@@ -48,14 +45,15 @@ const NavBar = ({ sections, scrolled, tops, bottoms }) => {
 	};
 
 	useEffect(() => {
-		if (!isMoving) {
-			setSelected();
-		} else {
-			const timer = setTimeout(function () {
-				setMoving(false);
-				clearInterval(timer);
-			}, 700);
-		}
+		// if (!isMoving) {
+		// 	setSelected();
+		// } else {
+		// 	const timer = setTimeout(function () {
+		// 		setMoving(false);
+		// 		clearInterval(timer);
+		// 	}, 700);
+		// }
+		setSelected();
 	}, [scrolled]);
 
 	////////////
@@ -87,7 +85,6 @@ const NavBar = ({ sections, scrolled, tops, bottoms }) => {
 								}`}
 								key={i}
 								onClick={() => {
-									setMoving(true);
 									setS(i);
 									document
 										.getElementById(value)

@@ -30,20 +30,26 @@ const Header = ({ sections }) => {
 	const [bottoms, setBottoms] = useState([]);
 
 	useEffect(() => {
-		window.addEventListener(
-			'scroll',
-			(e) => {
-				setScrolled(Math.round(window.scrollY));
-			},
-			false,
-		);
-		sections.map((value, i) => {
-			tops.push(document.getElementById(value).offsetTop);
-			bottoms.push(
-				(bottoms[0] ? bottoms[i - 1] : 0) +
-					document.getElementById(value).clientHeight,
+		const interval = window.setInterval(() => {
+			window.addEventListener(
+				'scroll',
+				(e) => {
+					setScrolled(Math.round(window.scrollY) + window.innerHeight / 2);
+					console.log(Math.round(window.scrollY) + window.innerHeight / 2);
+				},
+				false,
 			);
-		});
+			sections.map((value, i) => {
+				tops.push(document.getElementById(value).offsetTop);
+				bottoms.push(
+					(bottoms[0] ? bottoms[i - 1] : 0) +
+						document.getElementById(value).clientHeight,
+				);
+			});
+
+			window.clearInterval(interval);
+			console.log(tops, bottoms);
+		}, 500);
 	}, []);
 
 	////////////
@@ -81,12 +87,9 @@ const Header = ({ sections }) => {
 						style={{ width: 'auto' }}
 						onClick={() => {
 							window
-								.open(
-									'https://tribetoken.app/#/dashboard/staking',
-									'_blank',
-								)
+								.open('https://tribetoken.app/#/dashboard/staking', '_blank')
 								.focus();
-						}} 
+						}}
 					/>
 				</div>
 			</div>
