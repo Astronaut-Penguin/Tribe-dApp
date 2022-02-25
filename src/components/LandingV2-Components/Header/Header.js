@@ -10,6 +10,8 @@ import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
 import { FlatButton } from '../..';
 import MobileNavBar from '../NavBar/MobileNavBar/MobileNavBar';
+import MobileMenuNavBar from '../NavBar/MobileMenuNavBar/MobileMenuNavBar';
+import Menu from '../NavBar/MobileMenuNavBar/Menu';
 import NavBar from '../NavBar/DefaultNavBar/NavBar';
 
 const Header = ({ sections }) => {
@@ -28,6 +30,9 @@ const Header = ({ sections }) => {
 	const [tops, setTops] = useState([]);
 	// Bottom Size Array
 	const [bottoms, setBottoms] = useState([]);
+
+	//Menu State
+	const [isOpen, setOpen] = useState(false);
 
 	useEffect(() => {
 		const interval = window.setInterval(() => {
@@ -94,12 +99,37 @@ const Header = ({ sections }) => {
 				</div>
 			</div>
 			{window.matchMedia('(max-width: 1024px)').matches ? (
-				<MobileNavBar
-					sections={sections}
-					tops={tops}
-					bottoms={bottoms}
-					scrolled={scrolled}
-				/>
+				// <MobileNavBar
+				// 	sections={sections}
+				// 	tops={tops}
+				// 	bottoms={bottoms}
+				// 	scrolled={scrolled}
+				// />
+				<>
+					<MobileMenuNavBar
+						sections={sections}
+						tops={tops}
+						bottoms={bottoms}
+						scrolled={scrolled}
+						isOpen={(value) => {
+							setOpen(value);
+						}}
+					/>
+					{isOpen ? (
+						<Menu
+							sections={sections}
+							tops={tops}
+							bottoms={bottoms}
+							scrolled={scrolled}
+							open={isOpen}
+							isOpen={(value) => {
+								setOpen(value);
+							}}
+						/>
+					) : (
+						''
+					)}
+				</>
 			) : (
 				''
 			)}

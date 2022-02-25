@@ -18,7 +18,6 @@ const NavBar = ({ sections, scrolled, tops, bottoms }) => {
 	////////////
 	//- SELECTED STATE
 	const [s, setS] = useState();
-	const [isMoving, setMoving] = useState(false);
 
 	///////////////
 	// FUNCTIONS //

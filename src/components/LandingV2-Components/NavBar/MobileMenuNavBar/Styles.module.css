@@ -1,0 +1,43 @@
+/* ///////////////// */
+/* MOBILE NAVBAR CSS */
+/* ///////////////// */
+
+/* CONTAINER */
+.Container {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 80px;
+}
+
+/* ///// */
+/* ITEMS */
+/* ///// */
+
+.Disable {
+	display: none;
+}
+
+.Enable {
+	display: inline-block;
+}
+
+/* SECTION TITLE */
+.Section {
+	color: white;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 26px;
+	text-shadow: 0 0 10px black;
+	border: none;
+	background: none;
+}
+
+/* ITEM ARROW */
+.Section > img {
+	margin-left: 10px;
+}

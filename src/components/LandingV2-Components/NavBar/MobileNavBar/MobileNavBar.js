@@ -1,5 +1,3 @@
-//- Last Updated by Alejo - 15/01/2022
-
 //- React Imports
 import React, { useEffect, useState, createRef } from 'react';
 
@@ -22,9 +20,9 @@ const MobileNavBar = ({ sections, scrolled, tops, bottoms }) => {
 
 	const flicking = createRef();
 
-	///////////////
-	// FUNCTIONS //
-	///////////////
+	////////////////////////
+	// FLICKING FUNCTIONS //
+	////////////////////////
 
 	const moveToPanel = async (n) => {
 		try {
@@ -34,6 +32,30 @@ const MobileNavBar = ({ sections, scrolled, tops, bottoms }) => {
 			// console.log(e.code);
 		}
 	};
+
+	const disable = async () => {
+		try {
+			await flicking.current.disableInput();
+			console.log('Disabled');
+		} catch (e) {
+			// console.log(e instanceof FlickingError); // true
+			// console.log(e.code);
+		}
+	};
+
+	const enable = async () => {
+		try {
+			await flicking.current.enableInput();
+			console.log('Enabled');
+		} catch (e) {
+			// console.log(e instanceof FlickingError); // true
+			// console.log(e.code);
+		}
+	};
+
+	///////////////
+	// FUNCTIONS //
+	///////////////
 
 	useEffect(() => {
 		sections.map((value, i) => {
@@ -66,17 +88,17 @@ const MobileNavBar = ({ sections, scrolled, tops, bottoms }) => {
 			const timer = setTimeout(function () {
 				setMoving(false);
 				clearInterval(timer);
-			}, 500);
+			}, 1500);
 		}
 	}, [scrolled]);
 
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setMoving(false);
-			console.log('Clear inverval');
-			clearInterval(interval);
-		}, 2000);
-	}, [isMoving]);
+	// useEffect(() => {
+	// 	const interval = setInterval(() => {
+	// 		setMoving(false);
+	// 		console.log('Clear inverval');
+	// 		clearInterval(interval);
+	// 	}, 2000);
+	// }, [isMoving]);
 
 	////////////
 	// RENDER //
