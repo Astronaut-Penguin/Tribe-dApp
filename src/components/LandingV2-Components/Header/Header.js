@@ -40,7 +40,7 @@ const Header = ({ sections }) => {
 				'scroll',
 				(e) => {
 					setScrolled(Math.round(window.scrollY) + window.innerHeight / 2);
-					console.log(Math.round(window.scrollY) + window.innerHeight / 2);
+					// console.log(Math.round(window.scrollY) + window.innerHeight / 2);
 				},
 				false,
 			);
@@ -53,7 +53,7 @@ const Header = ({ sections }) => {
 			});
 
 			window.clearInterval(interval);
-			console.log(tops, bottoms);
+			// console.log(tops, bottoms);
 		}, 500);
 	}, []);
 
@@ -111,8 +111,12 @@ const Header = ({ sections }) => {
 						tops={tops}
 						bottoms={bottoms}
 						scrolled={scrolled}
-						isOpen={(value) => {
-							setOpen(value);
+						open={isOpen}
+						isOpen={() => {
+							setOpen(true);
+						}}
+						isClosed={() => {
+							setOpen(false);
 						}}
 					/>
 					{isOpen ? (
@@ -121,7 +125,6 @@ const Header = ({ sections }) => {
 							tops={tops}
 							bottoms={bottoms}
 							scrolled={scrolled}
-							open={isOpen}
 							isOpen={(value) => {
 								setOpen(value);
 							}}

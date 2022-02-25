@@ -40,6 +40,7 @@ const Menu = ({ sections, scrolled, tops, bottoms, isOpen }) => {
 						className={`${styles.Item} ${
 							s == i ? styles.Enable : styles.Disable
 						}`}
+						key={i}
 						onClick={() => {
 							setS(i);
 							isOpen(false);

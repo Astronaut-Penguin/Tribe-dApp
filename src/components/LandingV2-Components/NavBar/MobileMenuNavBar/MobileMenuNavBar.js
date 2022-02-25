@@ -6,6 +6,7 @@ import styles from './Styles.module.css';
 
 // Img Arrow
 import Arrow from './assets/arrow.svg';
+import Cross from './assets/cross.svg';
 
 //Component
 const MobileMenuNavBar = ({
@@ -15,6 +16,7 @@ const MobileMenuNavBar = ({
 	bottoms,
 	open,
 	isOpen,
+	isClosed,
 }) => {
 	////////////
 	// STATES //
@@ -52,11 +54,20 @@ const MobileMenuNavBar = ({
 							s == i ? styles.Enable : styles.Disable
 						}`}
 						onClick={() => {
-							isOpen(true);
+							if (open) {
+								isClosed();
+							} else {
+								isOpen();
+							}
 						}}
+						key={i}
 					>
 						{value}
-						<img src={Arrow} alt="arrow down" width={20} />
+						<img
+							src={!open ? Arrow : Cross}
+							alt={!open ? 'Arrow down' : 'Close cross'}
+							width={20}
+						/>
 					</button>
 				);
 			})}

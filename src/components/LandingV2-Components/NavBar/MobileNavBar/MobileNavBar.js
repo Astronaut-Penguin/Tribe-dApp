@@ -36,7 +36,6 @@ const MobileNavBar = ({ sections, scrolled, tops, bottoms }) => {
 	const disable = async () => {
 		try {
 			await flicking.current.disableInput();
-			console.log('Disabled');
 		} catch (e) {
 			// console.log(e instanceof FlickingError); // true
 			// console.log(e.code);
@@ -46,7 +45,6 @@ const MobileNavBar = ({ sections, scrolled, tops, bottoms }) => {
 	const enable = async () => {
 		try {
 			await flicking.current.enableInput();
-			console.log('Enabled');
 		} catch (e) {
 			// console.log(e instanceof FlickingError); // true
 			// console.log(e.code);
