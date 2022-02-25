@@ -62,7 +62,11 @@ const Header = ({ sections }) => {
 	////////////
 
 	return (
-		<header className={styles.Container}>
+		<header
+			className={`${styles.Container} ${
+				isOpen ? styles.Blacked : styles.Transparent
+			}`}
+		>
 			<div className={styles.Subcontainer}>
 				<a className={styles.Logo} href="">
 					Tribe

@@ -6,17 +6,23 @@
 	align-items: center;
 
 	line-height: 0 !important;
+	padding: 20px 20px 0px 20px;
 
+	position: fixed;
+	z-index: 5;
+}
+
+.Transparent {
 	background: linear-gradient(
 		180deg,
 		#000000 0%,
 		rgba(0, 0, 0, 0.5) 50%,
 		rgba(0, 0, 0, 0) 100%
 	);
-	padding: 20px 20px 0px 20px;
+}
 
-	position: fixed;
-	z-index: 5;
+.Blacked {
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 /****************************************/
